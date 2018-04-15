@@ -20,12 +20,24 @@ namespace GUI
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             frmLogin frm = new frmLogin();
-            frm.Show();
-        }
+            if(frm.ShowDialog()==DialogResult.OK)
+            {
+                //xử lí
 
+                this.Hide();
+                frmQuanLi quanLi = new frmQuanLi();
+                quanLi.Closed += (s, args) => this.Close();
+                quanLi.Show();
+            }
+            else if (frm.ShowDialog() == DialogResult.Cancel)
+                frm.Close();
+        }
         private void btnSeller_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmSeller frm = new frmSeller();
+            frm.Closed += (s, args) => this.Close();
+            frm.Show();
         }
     }
 }

@@ -57,11 +57,29 @@
     <Compile Include="frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQuanLi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLi.Designer.cs">
+      <DependentUpon>frmQuanLi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSeller.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSeller.Designer.cs">
       <DependentUpon>frmSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTheatre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTheatre.Designer.cs">
+      <DependentUpon>frmTheatre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinDatVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinDatVe.Designer.cs">
+      <DependentUpon>frmThongTinDatVe.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,23 +89,31 @@
     <EmbeddedResource Include="frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLi.resx">
+      <DependentUpon>frmQuanLi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSeller.resx">
       <DependentUpon>frmSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTheatre.resx">
+      <DependentUpon>frmTheatre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinDatVe.resx">
+      <DependentUpon>frmThongTinDatVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -108,16 +134,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\security.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\login_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\security1.png" />
+    <None Include="Resources\Apps-Dialog-Shutdown-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Apps-Dialog-Shutdown-icon.png" />
+    <None Include="Resources\security.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

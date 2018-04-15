@@ -16,5 +16,23 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void frmSeller_Load(object sender, EventArgs e)
+        {
+            dtpThoiGian.Value = DateTime.Now;
+        }
+
+        private void lvLichChieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvLichChieu.SelectedItems.Count > 0)
+            {
+                //Xu lí
+                frmTheatre frm = new frmTheatre();
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
+        }
     }
 }
