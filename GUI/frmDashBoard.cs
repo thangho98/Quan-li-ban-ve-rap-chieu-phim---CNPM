@@ -19,25 +19,31 @@ namespace GUI
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
+			this.Hide();
             frmLogin frm = new frmLogin();
-            if(frm.ShowDialog()==DialogResult.OK)
-            {
-                //xử lí
+			frm.ShowDialog();
 
-                this.Hide();
+            while (frm.DialogResult == DialogResult.OK)
+            {
                 frmQuanLi quanLi = new frmQuanLi();
-                quanLi.Closed += (s, args) => this.Close();
-                quanLi.Show();
+				frm.Hide();
+				quanLi.ShowDialog();
+				frm.ShowDialog();
             }
-            else if (frm.ShowDialog() == DialogResult.Cancel)
-                frm.Close();
+
+			if (frm.DialogResult == DialogResult.Cancel)
+			{
+				frm.Close();
+			}
+			this.Show();
         }
+
         private void btnSeller_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmSeller frm = new frmSeller();
-            frm.Closed += (s, args) => this.Close();
-            frm.Show();
+			frm.ShowDialog();
+            this.Show();
         }
     }
 }

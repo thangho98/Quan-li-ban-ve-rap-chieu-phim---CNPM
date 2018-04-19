@@ -10,6 +10,5 @@ namespace DTO
     {
         string Ma { get; set; }
         string Ten { get; set; }
-        string 
     }
 }
