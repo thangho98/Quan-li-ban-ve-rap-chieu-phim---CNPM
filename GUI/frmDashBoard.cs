@@ -19,23 +19,10 @@ namespace GUI
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-			this.Hide();
-            frmLogin frm = new frmLogin();
-			frm.ShowDialog();
-
-            while (frm.DialogResult == DialogResult.OK)
-            {
-                frmQuanLi quanLi = new frmQuanLi();
-				frm.Hide();
-				quanLi.ShowDialog();
-				frm.ShowDialog();
-            }
-
-			if (frm.DialogResult == DialogResult.Cancel)
-			{
-				frm.Close();
-			}
-			this.Show();
+            frmAdmin frm = new frmAdmin();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void btnSeller_Click(object sender, EventArgs e)

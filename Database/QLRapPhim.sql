@@ -71,7 +71,7 @@ GO
 CREATE TABLE TheLoai
 (
 	id VARCHAR(50) PRIMARY KEY,
-	TenLoai NVARCHAR(100) NOT NULL,
+	TenTheLoai NVARCHAR(100) NOT NULL,
 	MoTa NVARCHAR(100)
 )
 GO
@@ -91,8 +91,7 @@ GO
 CREATE TABLE SuatChieu
 (
 	id VARCHAR(50) PRIMARY KEY,
-	NgayChieu DATE NOT NULL,
-	GioChieu TIME,
+	ThoiGianChieu DATETIME NOT NULL,
 	idPhong VARCHAR(50) NOT NULL,
 	idPhim VARCHAR(50) NOT NULL,
 
@@ -154,7 +153,7 @@ VALUES
 	'NV00', -- id - int
 	N'admin', -- hoTen - nvarchar(100)
 	GETDATE(), -- ngaySinh - date
-	N'207 Quốc lộ 13', -- diaChi - nvarchar(100)
+	N'admin', -- diaChi - nvarchar(100)
 	123456789  -- soCMND - int
 )
 GO
@@ -162,12 +161,23 @@ GO
 SELECT * FROM dbo.NhanVien
 GO
 
-CREATE PROC USP_GetNVByCMND
-@CMND int
-AS
-BEGIN
-	SELECT * FROM dbo.NhanVien WHERE @CMND = CMND
-END
+INSERT INTO dbo.TaiKhoan
+( UserName, Pass, LoaiTK, idNV )
+VALUES
+(
+	'admin',
+	N'admin',
+	'1',
+	'NV00'
+)
 GO
 
-EXEC dbo.USP_GetNVByCMND @CMND = 123456789 -- int
+SELECT * FROM dbo.TaiKhoan
+
+CREATE PROC USP_Login
+@userName nvarchar(1000), @pass nvarchar(1000)
+AS
+BEGIN
+	SELECT * FROM dbo.TaiKhoan WHERE UserName = @userName AND Pass = @pass
+END
+GO

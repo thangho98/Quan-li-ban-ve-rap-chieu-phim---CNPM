@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Genre.cs" />
+    <Compile Include="DTO\Cinema.cs" />
+    <Compile Include="DTO\Customer.cs" />
+    <Compile Include="DTO\Movie.cs" />
+    <Compile Include="DTO\MovieByGenre.cs" />
+    <Compile Include="DTO\Promotion.cs" />
+    <Compile Include="DTO\ScreenType.cs" />
+    <Compile Include="DTO\ShowTimes.cs" />
+    <Compile Include="DTO\Staff.cs" />
+    <Compile Include="DTO\SupportScreenType.cs" />
+    <Compile Include="DTO\Ticket.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,11 +69,11 @@
     <Compile Include="frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuanLi.cs">
+    <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuanLi.Designer.cs">
-      <DependentUpon>frmQuanLi.cs</DependentUpon>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSeller.cs">
       <SubType>Form</SubType>
@@ -89,8 +101,8 @@
     <EmbeddedResource Include="frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuanLi.resx">
-      <DependentUpon>frmQuanLi.cs</DependentUpon>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSeller.resx">
       <DependentUpon>frmSeller.cs</DependentUpon>
@@ -124,20 +136,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{218a47cd-7864-41df-ac8b-597877dda3f7}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{e70534ee-3724-43a5-aa22-ea7567ccfb92}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{bd9ed413-ef99-4824-9021-284559a0749e}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\login_icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

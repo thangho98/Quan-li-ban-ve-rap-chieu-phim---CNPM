@@ -71,8 +71,9 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1130, 83);
+            this.panel2.Size = new System.Drawing.Size(1042, 72);
             this.panel2.TabIndex = 9;
             // 
             // label5
@@ -81,8 +82,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1130, 83);
+            this.label5.Size = new System.Drawing.Size(1042, 72);
             this.label5.TabIndex = 0;
             this.label5.Text = "Lịch Chiếu Phim";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,35 +96,39 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(703, 63);
+            this.panel1.Size = new System.Drawing.Size(700, 54);
             this.panel1.TabIndex = 14;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(509, 14);
+            this.button1.Location = new System.Drawing.Point(407, 12);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 36);
+            this.button1.Size = new System.Drawing.Size(94, 31);
             this.button1.TabIndex = 2;
             this.button1.Text = "Tìm";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(158, 15);
+            this.textBox1.Location = new System.Drawing.Point(126, 13);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 36);
+            this.textBox1.Size = new System.Drawing.Size(248, 30);
             this.textBox1.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Yellow;
-            this.label7.Location = new System.Drawing.Point(23, 18);
+            this.label7.Location = new System.Drawing.Point(18, 16);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 29);
+            this.label7.Size = new System.Drawing.Size(102, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "Tên Phim:";
             // 
@@ -130,9 +136,10 @@
             // 
             this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 83);
+            this.panel3.Location = new System.Drawing.Point(0, 72);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(427, 544);
+            this.panel3.Size = new System.Drawing.Size(342, 506);
             this.panel3.TabIndex = 15;
             // 
             // groupBox1
@@ -150,8 +157,10 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(427, 544);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox1.Size = new System.Drawing.Size(342, 506);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi Tiết:";
@@ -160,86 +169,96 @@
             // 
             this.dtpThoiGian.CustomFormat = "dd/MM/yyyy";
             this.dtpThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpThoiGian.Location = new System.Drawing.Point(29, 383);
+            this.dtpThoiGian.Location = new System.Drawing.Point(23, 330);
+            this.dtpThoiGian.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtpThoiGian.Name = "dtpThoiGian";
-            this.dtpThoiGian.Size = new System.Drawing.Size(360, 36);
+            this.dtpThoiGian.Size = new System.Drawing.Size(289, 30);
             this.dtpThoiGian.TabIndex = 6;
             this.dtpThoiGian.Value = new System.DateTime(2018, 4, 15, 10, 8, 45, 0);
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(29, 287);
+            this.comboBox4.Location = new System.Drawing.Point(23, 247);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(360, 37);
+            this.comboBox4.Size = new System.Drawing.Size(289, 33);
             this.comboBox4.TabIndex = 5;
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(29, 478);
+            this.comboBox3.Location = new System.Drawing.Point(23, 412);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(360, 37);
+            this.comboBox3.Size = new System.Drawing.Size(289, 33);
             this.comboBox3.TabIndex = 5;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(29, 185);
+            this.comboBox2.Location = new System.Drawing.Point(23, 159);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(360, 37);
+            this.comboBox2.Size = new System.Drawing.Size(289, 33);
             this.comboBox2.TabIndex = 5;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(29, 89);
+            this.comboBox1.Location = new System.Drawing.Point(23, 77);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(360, 37);
+            this.comboBox1.Size = new System.Drawing.Size(289, 33);
             this.comboBox1.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 433);
+            this.label6.Location = new System.Drawing.Point(19, 373);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 29);
+            this.label6.Size = new System.Drawing.Size(62, 25);
             this.label6.TabIndex = 4;
             this.label6.Text = "Phim:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 341);
+            this.label4.Location = new System.Drawing.Point(19, 294);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 29);
+            this.label4.Size = new System.Drawing.Size(103, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Thời Gian:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 242);
+            this.label3.Location = new System.Drawing.Point(23, 209);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 29);
+            this.label3.Size = new System.Drawing.Size(117, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nguồn Gốc:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 142);
+            this.label2.Location = new System.Drawing.Point(23, 122);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 29);
+            this.label2.Size = new System.Drawing.Size(95, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Thể Loại:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 46);
+            this.label1.Location = new System.Drawing.Point(23, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 29);
+            this.label1.Size = new System.Drawing.Size(55, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Loại:";
             // 
@@ -248,18 +267,20 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(427, 83);
+            this.panel4.Location = new System.Drawing.Point(342, 72);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(703, 544);
+            this.panel4.Size = new System.Drawing.Size(700, 506);
             this.panel4.TabIndex = 16;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.lvLichChieu);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 63);
+            this.panel5.Location = new System.Drawing.Point(0, 54);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(703, 481);
+            this.panel5.Size = new System.Drawing.Size(700, 452);
             this.panel5.TabIndex = 15;
             // 
             // lvLichChieu
@@ -276,8 +297,9 @@
             this.lvLichChieu.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.lvLichChieu.Location = new System.Drawing.Point(0, 0);
+            this.lvLichChieu.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.lvLichChieu.Name = "lvLichChieu";
-            this.lvLichChieu.Size = new System.Drawing.Size(703, 481);
+            this.lvLichChieu.Size = new System.Drawing.Size(700, 452);
             this.lvLichChieu.TabIndex = 0;
             this.lvLichChieu.UseCompatibleStateImageBehavior = false;
             this.lvLichChieu.View = System.Windows.Forms.View.Details;
@@ -305,15 +327,15 @@
             // 
             // frmSeller
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(1130, 627);
+            this.ClientSize = new System.Drawing.Size(1042, 578);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmSeller";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSeller";

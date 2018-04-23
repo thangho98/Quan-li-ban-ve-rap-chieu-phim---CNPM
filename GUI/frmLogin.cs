@@ -17,14 +17,25 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-        }
-
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
+            frmDashBoard frm = new frmDashBoard();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

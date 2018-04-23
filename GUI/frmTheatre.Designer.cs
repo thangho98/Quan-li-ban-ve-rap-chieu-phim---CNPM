@@ -40,22 +40,22 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuDatVe});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(123, 28);
             // 
             // mnuDatVe
             // 
             this.mnuDatVe.Name = "mnuDatVe";
-            this.mnuDatVe.Size = new System.Drawing.Size(210, 24);
+            this.mnuDatVe.Size = new System.Drawing.Size(122, 24);
             this.mnuDatVe.Text = "Đặt Vé";
             this.mnuDatVe.Click += new System.EventHandler(this.mnuDatVe_Click);
             // 
             // frmTheatre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 529);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.ClientSize = new System.Drawing.Size(490, 456);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmTheatre";
             this.Text = "Theatre";
             this.Load += new System.EventHandler(this.frmTheatre_Load);

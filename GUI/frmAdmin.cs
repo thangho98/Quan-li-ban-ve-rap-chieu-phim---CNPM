@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmQuanLi : Form
+    public partial class frmAdmin : Form
     {
-        public frmQuanLi()
+        public frmAdmin()
         {
             InitializeComponent();
         }

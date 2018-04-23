@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmQuanLi
+    partial class frmAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // frmQuanLi
+            // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 390);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.Name = "frmQuanLi";
-            this.Text = "frmQuanLi";
+            this.ClientSize = new System.Drawing.Size(861, 507);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Name = "frmAdmin";
+            this.Text = "Admin";
             this.ResumeLayout(false);
 
         }
