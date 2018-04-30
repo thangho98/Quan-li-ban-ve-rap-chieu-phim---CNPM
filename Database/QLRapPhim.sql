@@ -117,7 +117,7 @@ GO
 CREATE TABLE CheDoKM
 (
 	id VARCHAR(50) PRIMARY KEY,
-	TenKM NVARCHAR NOT NULL, --1:Vé thường || 2:Vé Học sinh - Sinh viên
+	TenKM NVARCHAR NOT NULL,
 	MoTa NVARCHAR,
 	NgayBatDau DATE NOT NULL DEFAULT GETDATE(),
 	NgayKetThuc DATE NOT NULL,
@@ -129,14 +129,16 @@ GO
 CREATE TABLE Ve
 (
 	id VARCHAR(50) PRIMARY KEY,
-	LoaiVe INT NOT NULL, --1:Vé thường || 2:Vé Học sinh - Sinh viên
+	LoaiVe INT  DEFAULT '0', --0: Vé người lớn || 1: Vé học sinh - sinh viên || 2: vé trẻ em
 	idSuatChieu VARCHAR(50),
-	idGheNgoi VARCHAR(50),
+	MaGheNgoi VARCHAR(50),
+	LoaiGheNgoi INT NOT NULL,--0: Ghế Thường || 1: Ghế Vip
 	idKhachHang VARCHAR(50) DEFAULT 'GUEST',
 	idCheDoKM VARCHAR(50) DEFAULT '0',
 	GiaVe FLOAT NOT NULL, --(??) Đi vào trong idSuatChieu=>idPhong=>lấy ra idLoaiManHinh. 
 	--Với mỗi loại vé kết hợp loại màn hình sẽ ra 1 giá vé tương ứng
 	--(vd : vé thường + 2D = 100k; vé hssv + 2D = 60k)
+	TinhTrang NVARCHAR(50) NOT NULL DEFAULT 'Đã Bán' -- 'Đã Bán' or 'Chưa Bán'
 
 	FOREIGN KEY (idSuatChieu) REFERENCES dbo.SuatChieu(id),
 	FOREIGN KEY (idCheDoKM) REFERENCES dbo.CheDoKM(id),
