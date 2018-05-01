@@ -175,6 +175,7 @@ VALUES
 GO
 
 SELECT * FROM dbo.TaiKhoan
+GO
 
 CREATE PROC USP_Login
 @userName nvarchar(1000), @pass nvarchar(1000)
@@ -183,3 +184,6 @@ BEGIN
 	SELECT * FROM dbo.TaiKhoan WHERE UserName = @userName AND Pass = @pass
 END
 GO
+
+EXEC dbo.USP_Login @userName =  N'', -- nvarchar(1000)
+    @pass = N'' -- nvarchar(1000)
