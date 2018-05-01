@@ -9,7 +9,7 @@ namespace GUI.DTO
 {
     public class Customer
     {
-        Customer(string iD, string name, DateTime birth, string address,
+        public Customer(string iD, string name, DateTime birth, string address,
             string phone, int identityCard, int point)
         {
             this.ID = iD;
@@ -21,7 +21,7 @@ namespace GUI.DTO
             this.Point = point;
         }
 
-        Customer(DataRow row)
+        public Customer(DataRow row)
         {
             this.ID = row["id"].ToString();
             this.Name = row["HoTen"].ToString();

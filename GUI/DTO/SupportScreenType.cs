@@ -9,13 +9,13 @@ namespace GUI.DTO
 {
     public class SupportScreenType
     {
-        SupportScreenType(string movieID, string screenType)
+        public SupportScreenType(string movieID, string screenType)
         {
             this.MovieID = movieID;
             this.ScreenType = screenType;
         }
 
-        SupportScreenType(DataRow row)
+        public SupportScreenType(DataRow row)
         {
             this.MovieID = row["idPhim"].ToString();
             this.ScreenType = row["idLoaiManHinh"].ToString();

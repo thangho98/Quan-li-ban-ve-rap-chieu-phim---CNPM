@@ -10,7 +10,7 @@ namespace GUI.DTO
     public class Movie
     {
 
-        Movie(string iD, string name, float time, string director)
+        public Movie(string iD, string name, float time, string director)
         {
             this.ID = iD;
             this.Name = name;
@@ -18,7 +18,7 @@ namespace GUI.DTO
             this.Director = director;
         }
 
-        Movie(DataRow row)
+        public Movie(DataRow row)
         {
             this.ID = row["id"].ToString();
             this.Name = row["TenPhim"].ToString();

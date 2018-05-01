@@ -9,13 +9,13 @@ namespace GUI.DTO
 {
     public class ScreenType
     {
-        ScreenType(string iD, string name)
+        public ScreenType(string iD, string name)
         {
             this.ID = iD;
             this.Name = name;
         }
 
-        ScreenType(DataRow row)
+        public ScreenType(DataRow row)
         {
             this.ID = row["id"].ToString();
             this.Name = row["TenMH"].ToString();
@@ -24,5 +24,11 @@ namespace GUI.DTO
         public string ID { get; set; }
 
         public string Name { get; set; }
+
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }
+

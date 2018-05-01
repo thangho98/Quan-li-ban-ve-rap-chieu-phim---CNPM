@@ -21,8 +21,8 @@ namespace GUI.DTO
         {
             this.UserName = row["UserName"].ToString();
             this.Password = row["Pass"].ToString();
-            this.StaffID = row["idNV"].ToString();
             this.Type = (int)row["LoaiTK"];
+            this.StaffID = row["idNV"].ToString();
         }
 
 

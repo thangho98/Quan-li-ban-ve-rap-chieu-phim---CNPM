@@ -10,23 +10,17 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmAdmin : Form
+    public partial class frmConnectData : Form
     {
-        public frmAdmin()
+        public frmConnectData()
         {
             InitializeComponent();
         }
 
-        private void btnControl_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-        }
-
-        private void frmAdmin_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void btnData_Click(object sender, EventArgs e)
-        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

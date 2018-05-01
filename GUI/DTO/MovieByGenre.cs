@@ -9,13 +9,13 @@ namespace GUI.DTO
 {
     public class MovieByGenre
     {
-        MovieByGenre(string movieID, string genre)
+        public MovieByGenre(string movieID, string genre)
         {
             this.MovieID = movieID;
             this.Genre = genre;
         }
 
-        MovieByGenre(DataRow row)
+        public MovieByGenre(DataRow row)
         {
             this.MovieID = row["idPhim"].ToString();
             this.Genre = row["idTheLoai"].ToString();

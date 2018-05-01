@@ -33,7 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\GenreDAO.cs" />
+    <Compile Include="DAO\ScreenTypeDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Genre.cs" />
     <Compile Include="DTO\Cinema.cs" />
@@ -57,6 +64,12 @@
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\SupportScreenType.cs" />
     <Compile Include="DTO\Ticket.cs" />
+    <Compile Include="frmConnectData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnectData.Designer.cs">
+      <DependentUpon>frmConnectData.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,14 +100,17 @@
     <Compile Include="frmTheatre.Designer.cs">
       <DependentUpon>frmTheatre.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThongTinDatVe.cs">
+    <Compile Include="frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThongTinDatVe.Designer.cs">
-      <DependentUpon>frmThongTinDatVe.cs</DependentUpon>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConnectData.resx">
+      <DependentUpon>frmConnectData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,9 +126,10 @@
     <EmbeddedResource Include="frmTheatre.resx">
       <DependentUpon>frmTheatre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThongTinDatVe.resx">
-      <DependentUpon>frmThongTinDatVe.cs</DependentUpon>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -136,16 +153,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\login_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Apps-Dialog-Shutdown-icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\security.png" />
+    <None Include="Resources\LoginIconAppl.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
+    <None Include="Resources\New-Database-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

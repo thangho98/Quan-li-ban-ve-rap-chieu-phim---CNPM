@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GUI.DAO;
+using GUI.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +21,25 @@ namespace GUI
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            frmDashBoard frm = new frmDashBoard();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            string userName = txtUsername.Text;
+            string passWord = txtPassword.Text;
+            if (Login(userName, passWord))
+            {
+                Account loginAccount = AccountDAO.GetAccountByUserName(userName);
+                frmDashBoard frm = new frmDashBoard(loginAccount);
+                this.Hide();
+                frm.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+            }
+        }
+
+        private bool Login(string userName, string passWord)
+        {
+            return AccountDAO.Login(userName, passWord);
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
@@ -33,9 +50,10 @@ namespace GUI
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void mnuSetting_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmConnectData frm = new frmConnectData();
+            frm.ShowDialog();
         }
     }
 }

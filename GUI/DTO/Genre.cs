@@ -21,7 +21,10 @@ namespace GUI.DTO
         {
             this.ID = row["id"].ToString();
             this.Name = row["TenTheLoai"].ToString();
-            this.Desc = row["MoTa"].ToString();
+            if (row["MoTa"].ToString() != "")
+                this.Desc = row["MoTa"].ToString();
+            else
+                this.Desc = "";
         }
 
         public string ID { get; set; }
@@ -29,6 +32,11 @@ namespace GUI.DTO
         public string Name { get; set; }
         
         public string Desc { get; set; }
+
+        public override string ToString()
+        {
+            return this.Name;
+        }
 
     }
 }

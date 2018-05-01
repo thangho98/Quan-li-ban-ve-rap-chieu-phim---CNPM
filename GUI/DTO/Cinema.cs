@@ -9,7 +9,7 @@ namespace GUI.DTO
 {
     public class Cinema
     {
-        Cinema(string iD, string name, string screenType, int seats,
+        public Cinema(string iD, string name, string screenType, int seats,
             float area, string status)
         {
             this.ID = iD;
@@ -20,7 +20,7 @@ namespace GUI.DTO
             this.Status = status;
         }
 
-        Cinema(DataRow row)
+        public Cinema(DataRow row)
         {
             this.ID = row["id"].ToString();
             this.Name = row["TenPhong"].ToString();

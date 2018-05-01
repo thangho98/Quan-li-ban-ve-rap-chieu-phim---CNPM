@@ -9,7 +9,7 @@ namespace GUI.DTO
 {
     public class Promotion//Chế độ khuyến mãi
     {
-        Promotion(string iD, string name, string desc, DateTime starTime,
+        public Promotion(string iD, string name, string desc, DateTime starTime,
             DateTime endTime, int point, float rates)
         {
             this.ID = iD;
@@ -21,7 +21,7 @@ namespace GUI.DTO
             this.Rates = rates;
         }
 
-        Promotion(DataRow row)
+        public Promotion(DataRow row)
         {
             this.ID = row["id"].ToString();
             this.Name = row["TenKM"].ToString();

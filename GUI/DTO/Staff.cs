@@ -9,7 +9,7 @@ namespace GUI.DTO
 {
     public class Staff
     {
-        Staff(string iD, string name, DateTime birth, string address,
+        public Staff(string iD, string name, DateTime birth, string address,
             string phone, int identityCard)
         {
             this.ID = iD;
@@ -20,7 +20,7 @@ namespace GUI.DTO
             this.IdentityCard = identityCard;
         }
 
-        Staff(DataRow row)
+        public Staff(DataRow row)
         {
             this.ID = row["id"].ToString();
             this.Name = row["HoTen"].ToString();

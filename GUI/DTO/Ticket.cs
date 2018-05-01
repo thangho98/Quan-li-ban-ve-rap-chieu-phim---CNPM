@@ -9,9 +9,8 @@ namespace GUI.DTO
 {
     public class Ticket
     {
-
-        Ticket(string iD, int type, string showTimesID, int seat, string customerID, 
-            string promotionID, float price)
+        public Ticket(string iD, int type, string showTimesID, int seat, string customerID, 
+            string promotionID, float price, string status)
         {
             this.ID = iD;
             this.Type = type;
@@ -20,9 +19,10 @@ namespace GUI.DTO
             this.CustomerID = customerID;
             this.PromotionID = promotionID;
             this.Price = price;
+            this.Status = status;
         }
 
-        Ticket(DataRow row)
+        public Ticket(DataRow row)
         {
             this.ID = row["id"].ToString();
             this.Type = (int)row["LoaiVe"];
@@ -31,6 +31,7 @@ namespace GUI.DTO
             this.CustomerID = row["idKhachHang"].ToString();
             this.PromotionID = row["idCheDoKM"].ToString();
             this.Price = (float)row["GiaVe"];
+            this.Status =row["TrangThai"].ToString();
         }
 
         public string ID { get; set; }
@@ -46,5 +47,7 @@ namespace GUI.DTO
         public string PromotionID { get; set; }
 
         public float Price { get; set; }
+
+        public string Status { get; set; }
     }
 }

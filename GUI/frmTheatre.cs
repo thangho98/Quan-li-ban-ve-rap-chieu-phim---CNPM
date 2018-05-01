@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,79 +13,91 @@ namespace GUI
 {
     public partial class frmTheatre : Form
     {
+        int SIZE = 30;
+        DateTime time = new DateTime();
+
         public frmTheatre()
         {
             InitializeComponent();
         }
-        
+
         private void frmTheatre_Load(object sender, EventArgs e)
         {
-            XuLiVeGheLenGiaoDien(120);
+            time = DateTime.Now.AddHours(2.5);
+            LoadSeats();
+            lblInformation.Text = "CGV Hung Vuong | Cinema 1 | Hello Co Tien";
+            lblTime.Text = DateTime.Now.ToShortDateString() + " | "
+                + DateTime.Now.ToShortTimeString() + " - "
+                + time.ToShortTimeString();
+            
         }
 
-        private void XuLiVeGheLenGiaoDien(int Ghe)
+        private void LoadSeats()
         {
-            TableLayoutPanel pnGhe = new TableLayoutPanel();
-            pnGhe.AutoScroll = true;
-            pnGhe.ContextMenuStrip = contextMenuStrip1;
-            pnGhe.Dock = DockStyle.Fill;
-            pnGhe.RowCount = 10;
-            for(int i =0;i<pnGhe.RowCount;i++)
+            flpSeat.Controls.Clear();
+
+            List<Ticket> SeatList= new List<Ticket>();
+
+            //foreach (Ticket item in SeatList)
+            //{
+            //    Button btnSeat = new Button() { Width = SIZE, Height =SIZE };
+            //    btnSeat.Text = item.Seat + Environment.NewLine + item.Status;
+            //    btnSeat.Click += btnSeat_Click;
+            //    btnSeat.Tag = item;
+
+            //    switch (item.Status)
+            //    {
+            //        case "Chưa Bán":
+            //            btnSeat.BackColor = Color.Aqua;
+            //            break;
+            //        default:
+            //            btnSeat.BackColor = Color.LightPink;
+            //            break;
+            //    }
+
+            //    flpSeat.Controls.Add(btnSeat);
+            //}
+
+            for (int i = 65; i <= 75; i++)
             {
-                pnGhe.RowStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            }
-            pnGhe.ColumnCount = Ghe / 10;
-            double percent = 100 / Ghe;
-            for (int i = 0; i < pnGhe.ColumnCount; i++)
-            {
-                pnGhe.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            }
-            this.Controls.Add(pnGhe);
-            int ghe = 1;
-            for (int i = 0; i < pnGhe.RowCount; i++)
-            {
-                for (int j = 0; j < pnGhe.ColumnCount; j++)
+                for (int j = 1; j <= 14; j++)
                 {
-                    Label lblGhe = new Label();
-                    lblGhe.Text = ghe + "";
-                    lblGhe.AutoSize = false;
-                    lblGhe.Dock = DockStyle.Fill;
-                    lblGhe.TextAlign = ContentAlignment.MiddleCenter;
-                    lblGhe.Width = lblGhe.Height = 50;
-                    lblGhe.BackColor = Color.White;
-                    pnGhe.Controls.Add(lblGhe, j, i);
-                    ghe++;
-                    lblGhe.Click += LblGhe_Click;
+                    Button btnSeat = new Button() { Width = SIZE + 20, Height = SIZE };
+                    btnSeat.Text = "" + (char)i + j;
+                    btnSeat.BackColor = Color.White;
+                    btnSeat.FlatAppearance.BorderSize = 2;
+                    btnSeat.FlatStyle = FlatStyle.Flat;
+                    if (i > 68 && j > 3 && j < 12)
+                        btnSeat.ForeColor = Color.Red;
+                    else btnSeat.ForeColor = Color.Green;
+                    btnSeat.Click += BtnSeat_Click;
+                    flpSeat.Controls.Add(btnSeat);
                 }
             }
         }
 
-        private void LblGhe_Click(object sender, EventArgs e)
+
+        private void BtnSeat_Click(object sender, EventArgs e)
         {
-            Label lblGhe = sender as Label;
-            if (lblGhe.BackColor == Color.White)
-                lblGhe.BackColor = Color.Green;
-            else if (lblGhe.BackColor == Color.Green)
-                lblGhe.BackColor = Color.White;
-            else if (lblGhe.BackColor == Color.Yellow)
+            Button btnSeat = sender as Button;
+            if (btnSeat.BackColor == Color.White)
+                btnSeat.BackColor = Color.Aqua;
+            else if (btnSeat.BackColor == Color.Aqua)
+                btnSeat.BackColor = Color.White;
+            else if (btnSeat.BackColor == Color.Yellow)
             {
-                MessageBox.Show("Ghế số [" + lblGhe.Text + "] đã có người đặt vé");
+                MessageBox.Show("Ghế số [" + btnSeat.Text + "] đã có người đặt vé");
             }
         }
 
-        private void mnuDatVe_Click(object sender, EventArgs e)
+        private void ckbCustomer_CheckedChanged(object sender, EventArgs e)
         {
-            frmThongTinDatVe frm = new frmThongTinDatVe();
-            if(frm.ShowDialog()==DialogResult.OK)
+            if (ckbCustomer.Checked == true)
             {
-                if(frm.ckbThanhVien.Checked ==true)
+                frmCustomer frm = new frmCustomer();
+                if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    //Xử lí
-                    MessageBox.Show("");
-                }
-                {
-                    //Xử lí
-                    MessageBox.Show("Bạn đã mua vé...");
+
                 }
             }
         }
