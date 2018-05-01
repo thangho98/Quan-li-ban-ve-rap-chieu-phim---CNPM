@@ -97,6 +97,7 @@
 			// 
 			// btnLogIn
 			// 
+			this.btnLogIn.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.btnLogIn.ForeColor = System.Drawing.Color.Red;
 			this.btnLogIn.Image = global::GUI.Properties.Resources.security;
 			this.btnLogIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
