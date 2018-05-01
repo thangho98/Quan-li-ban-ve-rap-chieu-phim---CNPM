@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmThongTinDatVe : Form
+    public partial class frmCustomer : Form
     {
-        public frmThongTinDatVe()
+        public frmCustomer()
         {
             InitializeComponent();
         }
@@ -20,16 +20,6 @@ namespace GUI
         private void frmThongTinDatVe_Load(object sender, EventArgs e)
         {
             
-        }
-
-        private void ckbThanhVien_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckbThanhVien.Checked == true)
-            {
-                pnThanhVien.Enabled = true;
-            }
-            else
-                pnThanhVien.Enabled = false;
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)

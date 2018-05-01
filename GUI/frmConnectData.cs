@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmQuanLi : Form
+    public partial class frmConnectData : Form
     {
-        public frmQuanLi()
+        public frmConnectData()
         {
             InitializeComponent();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }
