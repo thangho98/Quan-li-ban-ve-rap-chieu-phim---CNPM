@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI.DAO;
+using GUI.DTO;
 
 namespace GUI
 {
@@ -15,6 +17,31 @@ namespace GUI
         public frmSeller()
         {
             InitializeComponent();
+
+            LoadGenre();
+            LoadScreenType();
+        }
+
+        private void LoadScreenType()
+        {
+            cboScreenType.Items.Clear();
+            DataTable data = ScreenTypeDAO.GetListScreenType();
+            foreach (DataRow row in data.Rows)
+            {
+                ScreenType type = new ScreenType(row["id"].ToString(),row["TenMH"].ToString());
+                cboScreenType.Items.Add(type);
+            }
+        }
+        
+        private void LoadGenre()
+        {
+            cboGenre.Items.Clear();
+            DataTable data = GenreDAO.GetListGenre();
+            foreach (DataRow row in data.Rows)
+            {
+                Genre genre = new Genre(row["id"].ToString(), row["TenTheLoai"].ToString());
+                cboGenre.Items.Add(genre);
+            }
         }
 
         private void frmSeller_Load(object sender, EventArgs e)

@@ -73,9 +73,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login_icon {
+        internal static System.Drawing.Bitmap LoginIconAppl {
             get {
-                object obj = ResourceManager.GetObject("login_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("LoginIconAppl", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,19 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap security {
+        internal static System.Drawing.Bitmap New_Database_icon {
             get {
-                object obj = ResourceManager.GetObject("security", resourceCulture);
+                object obj = ResourceManager.GetObject("New-Database-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_icon {
+            get {
+                object obj = ResourceManager.GetObject("search-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

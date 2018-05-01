@@ -33,7 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\GenreDAO.cs" />
+    <Compile Include="DAO\ScreenTypeDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Genre.cs" />
+    <Compile Include="DTO\Cinema.cs" />
+    <Compile Include="DTO\Customer.cs" />
+    <Compile Include="DTO\Movie.cs" />
+    <Compile Include="DTO\MovieByGenre.cs" />
+    <Compile Include="DTO\Promotion.cs" />
+    <Compile Include="DTO\ScreenType.cs" />
+    <Compile Include="DTO\ShowTimes.cs" />
+    <Compile Include="DTO\Staff.cs" />
+    <Compile Include="DTO\SupportScreenType.cs" />
+    <Compile Include="DTO\Ticket.cs" />
+    <Compile Include="frmConnectData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnectData.Designer.cs">
+      <DependentUpon>frmConnectData.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,11 +82,11 @@
     <Compile Include="frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuanLi.cs">
+    <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuanLi.Designer.cs">
-      <DependentUpon>frmQuanLi.cs</DependentUpon>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSeller.cs">
       <SubType>Form</SubType>
@@ -75,22 +100,25 @@
     <Compile Include="frmTheatre.Designer.cs">
       <DependentUpon>frmTheatre.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThongTinDatVe.cs">
+    <Compile Include="frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThongTinDatVe.Designer.cs">
-      <DependentUpon>frmThongTinDatVe.cs</DependentUpon>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConnectData.resx">
+      <DependentUpon>frmConnectData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuanLi.resx">
-      <DependentUpon>frmQuanLi.cs</DependentUpon>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSeller.resx">
       <DependentUpon>frmSeller.cs</DependentUpon>
@@ -98,8 +126,8 @@
     <EmbeddedResource Include="frmTheatre.resx">
       <DependentUpon>frmTheatre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThongTinDatVe.resx">
-      <DependentUpon>frmThongTinDatVe.cs</DependentUpon>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,27 +152,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{218a47cd-7864-41df-ac8b-597877dda3f7}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{e70534ee-3724-43a5-aa22-ea7567ccfb92}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{bd9ed413-ef99-4824-9021-284559a0749e}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Apps-Dialog-Shutdown-icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\security.png" />
+    <None Include="Resources\LoginIconAppl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New-Database-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
