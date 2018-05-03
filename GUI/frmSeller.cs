@@ -38,12 +38,13 @@ namespace GUI
             if(cboFilmName.SelectedIndex != -1)
             {
                 Movie movie = cboFilmName.SelectedItem as Movie;
-                LoadFormatMovieByMovie(movie.ID);
+                LoadcboFormatFilm(movie.ID);
             }
         }
 
-        private void LoadFormatMovieByMovie(string movieID)
+        private void LoadcboFormatFilm(string movieID)
         {
+            cboFormatFilm.Text = "";
             cboFormatFilm.Items.Clear();
             DataTable data = FormatMovieDAO.GetListFormatMovieByMovie(movieID);
             foreach (DataRow row in data.Rows)
@@ -73,6 +74,21 @@ namespace GUI
                 lvi.SubItems.Add(showTimes.MovieName);
                 lvi.SubItems.Add(showTimes.Time.ToShortTimeString());
                 lvi.Tag = showTimes;
+
+                string statusShowTimes = TicketDAO.CountTheNumberOfTicketsSoldByShowTime(showTimes.ID)
+                    + "/" + TicketDAO.CountToltalTicketByShowTime(showTimes.ID);
+
+                lvi.SubItems.Add(statusShowTimes);
+
+                float status = (float)TicketDAO.CountTheNumberOfTicketsSoldByShowTime(showTimes.ID)
+                    / TicketDAO.CountToltalTicketByShowTime(showTimes.ID);
+
+                //thêm ảnh status
+                if (status == 1)
+                    lvi.ImageIndex = 2;
+                else if(status > 0.5f)
+                    lvi.ImageIndex = 1;
+                else lvi.ImageIndex = 0;
 
                 lvLichChieu.Items.Add(lvi);
             }

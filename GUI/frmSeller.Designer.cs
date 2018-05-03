@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSeller));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,6 +47,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -196,10 +199,12 @@
             this.lvLichChieu.FullRowSelect = true;
             this.lvLichChieu.GridLines = true;
             this.lvLichChieu.HideSelection = false;
+            this.lvLichChieu.LargeImageList = this.imageList1;
             this.lvLichChieu.Location = new System.Drawing.Point(0, 0);
             this.lvLichChieu.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.lvLichChieu.Name = "lvLichChieu";
             this.lvLichChieu.Size = new System.Drawing.Size(708, 506);
+            this.lvLichChieu.SmallImageList = this.imageList1;
             this.lvLichChieu.TabIndex = 0;
             this.lvLichChieu.UseCompatibleStateImageBehavior = false;
             this.lvLichChieu.View = System.Windows.Forms.View.Details;
@@ -207,8 +212,8 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Mã Phòng";
-            this.columnHeader1.Width = 150;
+            this.columnHeader1.Text = "Tên Phòng Chiếu";
+            this.columnHeader1.Width = 154;
             // 
             // columnHeader3
             // 
@@ -224,6 +229,14 @@
             // 
             this.columnHeader2.Text = "Tình Trạng";
             this.columnHeader2.Width = 150;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "green-icon.png");
+            this.imageList1.Images.SetKeyName(1, "yellow_icon.png");
+            this.imageList1.Images.SetKeyName(2, "red-icon.png");
             // 
             // frmSeller
             // 
@@ -267,5 +280,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

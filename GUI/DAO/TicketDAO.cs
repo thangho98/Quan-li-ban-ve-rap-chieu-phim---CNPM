@@ -14,5 +14,15 @@ namespace GUI.DAO
             string query = "select * from Ve where idLichChieu = '" + showTimesID + "'";
             return DataProvider.ExecuteQuery(query);
         }
+        public static int CountToltalTicketByShowTime(string showTimesID)
+        {
+            string query = "Select count (id) from Ve where idLichChieu ='" + showTimesID + "'";
+            return (int)DataProvider.ExecuteScalar(query);
+        }
+        public static int CountTheNumberOfTicketsSoldByShowTime(string showTimesID)
+        {
+            string query = "Select count (id) from Ve where idLichChieu ='" + showTimesID + "' and TrangThai = 1 ";
+            return (int)DataProvider.ExecuteScalar(query);
+        }
     }
 }
