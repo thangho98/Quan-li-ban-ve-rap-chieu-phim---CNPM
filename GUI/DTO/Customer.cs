@@ -28,8 +28,8 @@ namespace GUI.DTO
             this.BirthDate = DateTime.Parse(row["NgaySinh"].ToString());
             this.Address = row["DiaChi"].ToString();
             this.Phone = row["SDT"].ToString();
-            this.IdentityCard = int.Parse(row["CMND"].ToString());
-            this.Point = int.Parse(row["DiemTichLuy"].ToString());
+            this.IdentityCard = (int)row["CMND"];
+            this.Point = (int)row["DiemTichLuy"];
         }
 
         public string ID { get; set; }

@@ -49,9 +49,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\CinemaDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\FormatMovieDAO.cs" />
     <Compile Include="DAO\GenreDAO.cs" />
+    <Compile Include="DAO\MovieDAO.cs" />
     <Compile Include="DAO\ScreenTypeDAO.cs" />
+    <Compile Include="DAO\ShowTimesDAO.cs" />
+    <Compile Include="DAO\TicketDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Genre.cs" />
     <Compile Include="DTO\Cinema.cs" />
@@ -62,7 +67,7 @@
     <Compile Include="DTO\ScreenType.cs" />
     <Compile Include="DTO\ShowTimes.cs" />
     <Compile Include="DTO\Staff.cs" />
-    <Compile Include="DTO\SupportScreenType.cs" />
+    <Compile Include="DTO\FormatMovie.cs" />
     <Compile Include="DTO\Ticket.cs" />
     <Compile Include="frmConnectData.cs">
       <SubType>Form</SubType>

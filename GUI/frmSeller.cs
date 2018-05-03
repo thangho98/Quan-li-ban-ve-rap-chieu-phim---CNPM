@@ -18,43 +18,73 @@ namespace GUI
         {
             InitializeComponent();
 
-            LoadGenre();
-            LoadScreenType();
-        }
-
-        private void LoadScreenType()
-        {
-            cboScreenType.Items.Clear();
-            DataTable data = ScreenTypeDAO.GetListScreenType();
-            foreach (DataRow row in data.Rows)
-            {
-                ScreenType type = new ScreenType(row["id"].ToString(),row["TenMH"].ToString());
-                cboScreenType.Items.Add(type);
-            }
-        }
-        
-        private void LoadGenre()
-        {
-            cboGenre.Items.Clear();
-            DataTable data = GenreDAO.GetListGenre();
-            foreach (DataRow row in data.Rows)
-            {
-                Genre genre = new Genre(row["id"].ToString(), row["TenTheLoai"].ToString());
-                cboGenre.Items.Add(genre);
-            }
-        }
-
-        private void frmSeller_Load(object sender, EventArgs e)
-        {
             dtpThoiGian.Value = DateTime.Now;
+            LoadMovie();
+        }
+
+        private void LoadMovie()
+        {
+            cboFilmName.Items.Clear();
+            DataTable data = MovieDAO.GetListMovie(dtpThoiGian.Value.Date);
+            foreach (DataRow row in data.Rows)
+            {
+                Movie movie = new Movie(row);
+                cboFilmName.Items.Add(movie);
+            }
+        }
+
+        private void cboFilmName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cboFilmName.SelectedIndex != -1)
+            {
+                Movie movie = cboFilmName.SelectedItem as Movie;
+                LoadFormatMovieByMovie(movie.ID);
+            }
+        }
+
+        private void LoadFormatMovieByMovie(string movieID)
+        {
+            cboFormatFilm.Items.Clear();
+            DataTable data = FormatMovieDAO.GetListFormatMovieByMovie(movieID);
+            foreach (DataRow row in data.Rows)
+            {
+                FormatMovie format = new FormatMovie(row);
+                cboFormatFilm.Items.Add(format);
+            }
+        }
+
+        private void cboFormatFilm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cboFormatFilm.SelectedIndex != -1)
+            {
+                lvLichChieu.Items.Clear();
+                FormatMovie format = cboFormatFilm.SelectedItem as FormatMovie;
+                LoadListShowTimeByFilm(format.ID);
+            }
+        }
+
+        private void LoadListShowTimeByFilm(string formatMovieID)
+        {
+            DataTable data = ShowTimesDAO.GetListShowTimeByFormatMovie(formatMovieID);
+            foreach(DataRow row in data.Rows)
+            {
+                ShowTimes showTimes = new ShowTimes(row);
+                ListViewItem lvi = new ListViewItem(showTimes.CinemaName);
+                lvi.SubItems.Add(showTimes.MovieName);
+                lvi.SubItems.Add(showTimes.Time.ToShortTimeString());
+                lvi.Tag = showTimes;
+
+                lvLichChieu.Items.Add(lvi);
+            }
         }
 
         private void lvLichChieu_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lvLichChieu.SelectedItems.Count > 0)
             {
-                //Xu lí
-                frmTheatre frm = new frmTheatre();
+                ShowTimes showTimes = lvLichChieu.SelectedItems[0].Tag as ShowTimes;
+                Movie movie = cboFilmName.SelectedItem as Movie;
+                frmTheatre frm = new frmTheatre(showTimes,movie);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
 

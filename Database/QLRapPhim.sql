@@ -88,7 +88,7 @@ CREATE TABLE PhanLoaiPhim --Quan hệ giữa Phim và LoaiPhim là quan hệ n-n
 )
 GO
 
-CREATE TABLE SuatChieu
+CREATE TABLE LichChieu
 (
 	id VARCHAR(50) PRIMARY KEY,
 	ThoiGianChieu DATETIME NOT NULL,
@@ -130,15 +130,15 @@ CREATE TABLE Ve
 (
 	id VARCHAR(50) PRIMARY KEY,
 	LoaiVe INT  DEFAULT '0', --0: Vé người lớn || 1: Vé học sinh - sinh viên || 2: vé trẻ em
-	idSuatChieu VARCHAR(50),
+	idLichChieu VARCHAR(50),
 	MaGheNgoi VARCHAR(50),
 	LoaiGheNgoi INT NOT NULL,--0: Ghế Thường || 1: Ghế Vip
-	idKhachHang VARCHAR(50) DEFAULT 'GUEST',
-	idCheDoKM VARCHAR(50) DEFAULT '0',
-	GiaVe FLOAT NOT NULL, --(??) Đi vào trong idSuatChieu=>idPhong=>lấy ra idLoaiManHinh. 
+	add idKhachHang VARCHAR(50),
+	idCheDoKM VARCHAR(50),
+	GiaVe FLOAT, --(??) Đi vào trong idSuatChieu=>idPhong=>lấy ra idLoaiManHinh. 
 	--Với mỗi loại vé kết hợp loại màn hình sẽ ra 1 giá vé tương ứng
 	--(vd : vé thường + 2D = 100k; vé hssv + 2D = 60k)
-	TinhTrang NVARCHAR(50) NOT NULL DEFAULT 'Đã Bán' -- 'Đã Bán' or 'Chưa Bán'
+	alter table Ve add TinhTrang INT NOT NULL DEFAULT '0' --0: 'Chưa Bán' || 1: 'Đã Bán'
 
 	FOREIGN KEY (idSuatChieu) REFERENCES dbo.SuatChieu(id),
 	FOREIGN KEY (idCheDoKM) REFERENCES dbo.CheDoKM(id),
@@ -146,7 +146,7 @@ CREATE TABLE Ve
 )
 GO
 
-
+update ve set GiaVe = 100000 where LoaiGheNgoi = 1
 
 INSERT INTO dbo.NhanVien
 ( id, hoTen, ngaySinh, diaChi, CMND )
@@ -183,3 +183,21 @@ BEGIN
 	SELECT * FROM dbo.TaiKhoan WHERE UserName = @userName AND Pass = @pass
 END
 GO
+
+
+
+DECLARE @i INT = 1
+
+WHILE @i <= 100
+BEGIN
+	INSERT 
+	[dbo].[Ve] 
+	([id], [LoaiVe], [idLichChieu], [MaGheNgoi], [LoaiGheNgoi], [idKhachHang], [idCheDoKM], [GiaVe], [TinhTrang]) 
+	VALUES 
+	(N'LC01_V' + CAST(@i AS nvarchar(100)), 0, N'LC01', CAST(@i AS nvarchar(100)), 0, NULL, NULL, NULL, 0)
+	SET @i = @i + 1
+END
+GO
+
+select * from Phim where DAY(GETDATE()) <= DAY(NgayKetThuc) and MONTH(GETDATE()) <= MONTH(NgayKetThuc) and YEAR(GETDATE()) <= YEAR(NgayKetThuc)
+select * from Phim where GETDATE() <= NgayKetThuc

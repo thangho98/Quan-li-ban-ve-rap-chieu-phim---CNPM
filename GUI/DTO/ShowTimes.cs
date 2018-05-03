@@ -9,28 +9,32 @@ namespace GUI.DTO
 {
     public class ShowTimes
     {
-        public ShowTimes(string iD, DateTime time, string cinemaID, string FilmID)
+        public ShowTimes(string iD, DateTime time, string cinemaName, string formatMovieID, string movieName)
         {
             this.ID = iD;
+            this.CinemaName = cinemaName;
+            this.MovieName = movieName;
             this.Time = time;
-            this.CinemaID = cinemaID;
-            this.FilmID = FilmID;
+            this.FormatMovieID = formatMovieID;
         }
 
         public ShowTimes(DataRow row)
         {
             this.ID = row["id"].ToString();
+            this.CinemaName = row["TenPhong"].ToString();
+            this.MovieName = row["TenPhim"].ToString();
             this.Time = (DateTime)row["ThoiGianChieu"];
-            this.CinemaID = row["idPhong"].ToString();
-            this.FilmID = row["idPhim"].ToString();
+            this.FormatMovieID = row["idDinhDang"].ToString();
         }
 
         public string ID { get; set; }
 
         public DateTime Time { get; set; }
 
-        public string CinemaID { get; set; }
+        public string CinemaName { get; set; }
 
-        public string FilmID { get; set; }
+        public string FormatMovieID { get; set; }
+
+        public string MovieName { get; set; }
     }
 }

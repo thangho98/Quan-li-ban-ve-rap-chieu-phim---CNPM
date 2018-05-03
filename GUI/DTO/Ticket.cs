@@ -9,13 +9,15 @@ namespace GUI.DTO
 {
     public class Ticket
     {
-        public Ticket(string iD, int type, string showTimesID, int seat, string customerID, 
-            string promotionID, float price, string status)
+        public Ticket(string iD, int type, string showTimesID, string seatName
+            ,int typeSeat, string customerID, string promotionID, float price,
+            int status)
         {
             this.ID = iD;
             this.Type = type;
             this.ShowTimesID = showTimesID;
-            this.Seat = seat;
+            this.SeatName = seatName;
+            this.TypeSeat = TypeSeat;
             this.CustomerID = customerID;
             this.PromotionID = promotionID;
             this.Price = price;
@@ -26,12 +28,16 @@ namespace GUI.DTO
         {
             this.ID = row["id"].ToString();
             this.Type = (int)row["LoaiVe"];
-            this.ShowTimesID = row["idSuatChieu"].ToString();
-            this.Seat = (int)row["GheNgoi"];
+            this.ShowTimesID = row["idLichChieu"].ToString();
+            this.SeatName = row["MaGheNgoi"].ToString();
+            this.TypeSeat = (int)row["LoaiGheNgoi"];
             this.CustomerID = row["idKhachHang"].ToString();
             this.PromotionID = row["idCheDoKM"].ToString();
-            this.Price = (float)row["GiaVe"];
-            this.Status =row["TrangThai"].ToString();
+            if (row["GiaVe"].ToString() == "")
+                this.Price = 0;
+            else
+                this.Price = float.Parse(row["GiaVe"].ToString());
+            this.Status =(int)row["TrangThai"];
         }
 
         public string ID { get; set; }
@@ -40,7 +46,9 @@ namespace GUI.DTO
 
         public string ShowTimesID { get; set; }
 
-        public int Seat { get; set; }
+        public string SeatName { get; set; }
+
+        public int TypeSeat { get; set; }
 
         public string CustomerID { get; set; }
 
@@ -48,6 +56,6 @@ namespace GUI.DTO
 
         public float Price { get; set; }
 
-        public string Status { get; set; }
+        public int Status { get; set; }
     }
 }
