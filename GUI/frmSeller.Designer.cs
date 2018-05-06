@@ -119,6 +119,7 @@
             this.dtpThoiGian.Size = new System.Drawing.Size(289, 30);
             this.dtpThoiGian.TabIndex = 3;
             this.dtpThoiGian.Value = new System.DateTime(2018, 4, 15, 10, 8, 45, 0);
+            this.dtpThoiGian.ValueChanged += new System.EventHandler(this.dtpThoiGian_ValueChanged);
             // 
             // cboFilmName
             // 

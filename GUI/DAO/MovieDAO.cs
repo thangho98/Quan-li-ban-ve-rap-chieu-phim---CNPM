@@ -10,7 +10,7 @@ namespace GUI.DAO
 {
     public class MovieDAO
     {
-        public static List<Movie> GetListMovie(DateTime date)
+        public static List<Movie> GetListMovieByDate(DateTime date)
         {
             List<Movie> listMovie = new List<Movie>();
             DataTable data = DataProvider.ExecuteQuery("select * from Phim where @Date <= NgayKetThuc",new object[] { date });

@@ -22,13 +22,13 @@ namespace GUI
         private void frmSeller_Load(object sender, EventArgs e)
         {
             dtpThoiGian.Value = DateTime.Now;
-            LoadMovie();
+            //LoadMovie(dtpThoiGian.Value);
             timer1.Start();
         }
 
-        private void LoadMovie()
+        private void LoadMovie(DateTime date)
         {
-            cboFilmName.DataSource = MovieDAO.GetListMovie(DateTime.Now);
+            cboFilmName.DataSource = MovieDAO.GetListMovieByDate(date);
             cboFilmName.DisplayMember = "Name";
         }
 
@@ -101,6 +101,11 @@ namespace GUI
                 this.OnLoad(null);
                 this.Show();
             }
+        }
+
+        private void dtpThoiGian_ValueChanged(object sender, EventArgs e)
+        {
+            LoadMovie(dtpThoiGian.Value);
         }
     }
 }
