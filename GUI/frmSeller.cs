@@ -83,24 +83,24 @@ namespace GUI
             }
         }
 
-        private void lvLichChieu_SelectedIndexChanged(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //Load lại form để cập nhật cơ sở dữ liệu
+            this.OnLoad(null);
+        }
+
+        private void lvLichChieu_Click(object sender, EventArgs e)
         {
             if (lvLichChieu.SelectedItems.Count > 0)
             {
                 ShowTimes showTimes = lvLichChieu.SelectedItems[0].Tag as ShowTimes;
                 Movie movie = cboFilmName.SelectedItem as Movie;
-                frmTheatre frm = new frmTheatre(showTimes,movie);
-                if (frm.ShowDialog() == DialogResult.OK)
-                {
-
-                }
+                frmTheatre frm = new frmTheatre(showTimes, movie);
+                this.Hide();
+                frm.ShowDialog();
+                this.OnLoad(null);
+                this.Show();
             }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            //Load lại form để cập nhật cơ sở dữ liệu
-            this.OnLoad(null);
         }
     }
 }

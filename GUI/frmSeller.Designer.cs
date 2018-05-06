@@ -210,7 +210,7 @@
             this.lvLichChieu.TabIndex = 0;
             this.lvLichChieu.UseCompatibleStateImageBehavior = false;
             this.lvLichChieu.View = System.Windows.Forms.View.Details;
-            this.lvLichChieu.SelectedIndexChanged += new System.EventHandler(this.lvLichChieu_SelectedIndexChanged);
+            this.lvLichChieu.Click += new System.EventHandler(this.lvLichChieu_Click);
             // 
             // columnHeader5
             // 
