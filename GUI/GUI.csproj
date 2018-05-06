@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\CinemaDAO.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\FormatMovieDAO.cs" />
     <Compile Include="DAO\GenreDAO.cs" />

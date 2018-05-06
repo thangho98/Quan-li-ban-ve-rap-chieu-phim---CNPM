@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSeller));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -41,10 +43,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lvLichChieu = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -188,32 +193,39 @@
             // lvLichChieu
             // 
             this.lvLichChieu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
             this.columnHeader1,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader2});
             this.lvLichChieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvLichChieu.FullRowSelect = true;
-            this.lvLichChieu.GridLines = true;
             this.lvLichChieu.HideSelection = false;
+            this.lvLichChieu.LargeImageList = this.imageList1;
             this.lvLichChieu.Location = new System.Drawing.Point(0, 0);
             this.lvLichChieu.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.lvLichChieu.Name = "lvLichChieu";
             this.lvLichChieu.Size = new System.Drawing.Size(708, 506);
+            this.lvLichChieu.SmallImageList = this.imageList1;
             this.lvLichChieu.TabIndex = 0;
             this.lvLichChieu.UseCompatibleStateImageBehavior = false;
             this.lvLichChieu.View = System.Windows.Forms.View.Details;
             this.lvLichChieu.SelectedIndexChanged += new System.EventHandler(this.lvLichChieu_SelectedIndexChanged);
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "";
+            this.columnHeader5.Width = 38;
+            // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Mã Phòng";
-            this.columnHeader1.Width = 150;
+            this.columnHeader1.Text = "Tên Phòng Chiếu";
+            this.columnHeader1.Width = 167;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Tên Phim";
-            this.columnHeader3.Width = 250;
+            this.columnHeader3.Width = 213;
             // 
             // columnHeader4
             // 
@@ -224,6 +236,20 @@
             // 
             this.columnHeader2.Text = "Tình Trạng";
             this.columnHeader2.Width = 150;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "green-icon.png");
+            this.imageList1.Images.SetKeyName(1, "yellow_icon.png");
+            this.imageList1.Images.SetKeyName(2, "red-icon.png");
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 30000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmSeller
             // 
@@ -239,6 +265,7 @@
             this.Name = "frmSeller";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSeller";
+            this.Load += new System.EventHandler(this.frmSeller_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -267,5 +294,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

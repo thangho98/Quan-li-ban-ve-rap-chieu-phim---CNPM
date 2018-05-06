@@ -9,19 +9,20 @@ namespace GUI.DTO
 {
     public class Ticket
     {
+        public Ticket() { }
+
         public Ticket(string iD, int type, string showTimesID, string seatName
-            ,int typeSeat, string customerID, string promotionID, float price,
+            , string customerID, string promotionID, float price,
             int status)
         {
             this.ID = iD;
             this.Type = type;
             this.ShowTimesID = showTimesID;
             this.SeatName = seatName;
-            this.TypeSeat = TypeSeat;
             this.CustomerID = customerID;
             this.PromotionID = promotionID;
-            this.Price = price;
             this.Status = status;
+            this.Price = price;
         }
 
         public Ticket(DataRow row)
@@ -30,14 +31,13 @@ namespace GUI.DTO
             this.Type = (int)row["LoaiVe"];
             this.ShowTimesID = row["idLichChieu"].ToString();
             this.SeatName = row["MaGheNgoi"].ToString();
-            this.TypeSeat = (int)row["LoaiGheNgoi"];
             this.CustomerID = row["idKhachHang"].ToString();
             this.PromotionID = row["idCheDoKM"].ToString();
-            if (row["GiaVe"].ToString() == "")
+            this.Status =(int)row["TrangThai"];
+            if (row["TienBanVe"].ToString() == "")
                 this.Price = 0;
             else
-                this.Price = float.Parse(row["GiaVe"].ToString());
-            this.Status =(int)row["TrangThai"];
+                this.Price = float.Parse(row["TienBanVe"].ToString());
         }
 
         public string ID { get; set; }
@@ -47,8 +47,6 @@ namespace GUI.DTO
         public string ShowTimesID { get; set; }
 
         public string SeatName { get; set; }
-
-        public int TypeSeat { get; set; }
 
         public string CustomerID { get; set; }
 

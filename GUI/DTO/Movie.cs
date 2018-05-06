@@ -55,10 +55,5 @@ namespace GUI.DTO
         public int YearProduction { get; set; }
 
         public string Director { get; set; }
-
-        public override string ToString()
-        {
-            return this.Name;
-        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,9 +10,16 @@ namespace GUI.DAO
 {
     public class MovieDAO
     {
-        public static DataTable GetListMovie(DateTime date)
+        public static List<Movie> GetListMovie(DateTime date)
         {
-            return DataProvider.ExecuteQuery("select * from Phim where @Date <= NgayKetThuc",new object[] { date });
+            List<Movie> listMovie = new List<Movie>();
+            DataTable data = DataProvider.ExecuteQuery("select * from Phim where @Date <= NgayKetThuc",new object[] { date });
+            foreach (DataRow row in data.Rows)
+            {
+                Movie movie = new Movie(row);
+                listMovie.Add(movie);
+            }
+            return listMovie;
         }
     }
 }

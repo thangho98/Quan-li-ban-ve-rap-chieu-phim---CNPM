@@ -9,13 +9,15 @@ namespace GUI.DTO
 {
     public class ShowTimes
     {
-        public ShowTimes(string iD, DateTime time, string cinemaName, string formatMovieID, string movieName)
+        public ShowTimes(string iD, DateTime time, string cinemaName, 
+            string formatMovieID, string movieName, float ticketPrice)
         {
             this.ID = iD;
             this.CinemaName = cinemaName;
             this.MovieName = movieName;
             this.Time = time;
             this.FormatMovieID = formatMovieID;
+            this.TicketPrice = ticketPrice;
         }
 
         public ShowTimes(DataRow row)
@@ -25,6 +27,10 @@ namespace GUI.DTO
             this.MovieName = row["TenPhim"].ToString();
             this.Time = (DateTime)row["ThoiGianChieu"];
             this.FormatMovieID = row["idDinhDang"].ToString();
+            if (row["GiaVe"].ToString() == "")
+                this.TicketPrice = 0;
+            else
+                this.TicketPrice = float.Parse(row["GiaVe"].ToString());
         }
 
         public string ID { get; set; }
@@ -36,5 +42,7 @@ namespace GUI.DTO
         public string FormatMovieID { get; set; }
 
         public string MovieName { get; set; }
+
+        public float TicketPrice { get; set; }
     }
 }

@@ -10,13 +10,12 @@ namespace GUI.DTO
     public class Cinema
     {
         public Cinema(string iD, string name, string screenType, int seats,
-            string vipSeats, string status, int row, int seatInRow)
+            string status, int row, int seatInRow)
         {
             this.ID = iD;
             this.Name = name;
             this.ScreenTypeID = screenType;
             this.Seats = seats;
-            this.VipSeats = vipSeats;
             this.Status = status;
             this.Row = row;
             this.SeatInRow = seatInRow;
@@ -28,7 +27,6 @@ namespace GUI.DTO
             this.Name = row["TenPhong"].ToString();
             this.ScreenTypeID = row["idManHinh"].ToString();
             this.Seats = (int)row["SoChoNgoi"];
-            this.VipSeats = row["GheVip"].ToString();
             this.Status = row["TinhTrang"].ToString();
             this.Row = (int)row["SoHangGhe"];
             this.SeatInRow = (int)row["SoGheMotHang"];
@@ -41,8 +39,6 @@ namespace GUI.DTO
         public string ScreenTypeID { get; set; }
 
         public int Seats { get; set; }
-
-        public string VipSeats { get; set; }
 
         public string Status { get; set; }
 
