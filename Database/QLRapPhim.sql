@@ -140,7 +140,6 @@ CREATE TABLE Ve
 	LoaiVe INT  DEFAULT '0', --0: Vé người lớn || 1: Vé học sinh - sinh viên || 2: vé trẻ em
 	idLichChieu VARCHAR(50),
 	MaGheNgoi VARCHAR(50),
-	LoaiGheNgoi INT NOT NULL,--0: Ghế Thường || 1: Ghế Vip
 	idKhachHang VARCHAR(50),
 	idCheDoKM VARCHAR(50),
 	TrangThai INT NOT NULL DEFAULT '0', --0: 'Chưa Bán' || 1: 'Đã Bán'
@@ -218,7 +217,6 @@ INSERT [dbo].[DinhDangPhim] ([id], [idPhim], [idLoaiManHinh]) VALUES (N'DD02', N
 INSERT [dbo].[DinhDangPhim] ([id], [idPhim], [idLoaiManHinh]) VALUES (N'DD03', N'P02', N'MH01')
 INSERT [dbo].[DinhDangPhim] ([id], [idPhim], [idLoaiManHinh]) VALUES (N'DD04', N'P03', N'MH02')
 
-INSERT [dbo].[LichChieu] ([id], [ThoiGianChieu], [idPhong], [idDinhDang]) VALUES (N'LC01', CAST(N'2018-05-02T08:50:00.000' AS DateTime), N'PC01', N'DD01')
 INSERT [dbo].[LichChieu] ([id], [ThoiGianChieu], [idPhong], [idDinhDang], [GiaVe]) VALUES (N'LC01', CAST(N'2018-05-02T08:50:00.000' AS DateTime), N'PC01', N'DD01', 85000.0000)
 INSERT [dbo].[LichChieu] ([id], [ThoiGianChieu], [idPhong], [idDinhDang], [GiaVe]) VALUES (N'LC02', CAST(N'2018-05-02T08:05:00.000' AS DateTime), N'PC02', N'DD01', 85000.0000)
 INSERT [dbo].[LichChieu] ([id], [ThoiGianChieu], [idPhong], [idDinhDang], [GiaVe]) VALUES (N'LC03', CAST(N'2018-05-02T08:10:00.000' AS DateTime), N'PC03', N'DD02', 85000.0000)
