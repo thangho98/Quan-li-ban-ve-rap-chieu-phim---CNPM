@@ -13,7 +13,7 @@ namespace GUI.DAO
 
         private DataProvider() { }
 
-        private static string connectionSTR = "Data Source=ADMINISTRATOR;Initial Catalog=QuanLyRapPhim;Integrated Security=True";
+        private static string connectionSTR = "Data Source=ADMINISTRATOR;Initial Catalog=QLRP;Integrated Security=True";
 
         public static DataTable ExecuteQuery(string query, object[] parameter = null)
         {

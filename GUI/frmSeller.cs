@@ -28,7 +28,7 @@ namespace GUI
 
         private void LoadMovie()
         {
-            cboFilmName.DataSource = MovieDAO.GetListMovie(DateTime.Now);
+            cboFilmName.DataSource = MovieDAO.GetListMovieByDate(DateTime.Now);
             cboFilmName.DisplayMember = "Name";
         }
 

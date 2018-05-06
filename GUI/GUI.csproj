@@ -55,6 +55,7 @@
     <Compile Include="DAO\FormatMovieDAO.cs" />
     <Compile Include="DAO\GenreDAO.cs" />
     <Compile Include="DAO\MovieDAO.cs" />
+    <Compile Include="DAO\RevenueDAO.cs" />
     <Compile Include="DAO\ScreenTypeDAO.cs" />
     <Compile Include="DAO\ShowTimesDAO.cs" />
     <Compile Include="DAO\TicketDAO.cs" />

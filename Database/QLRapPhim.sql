@@ -365,3 +365,15 @@ INSERT [dbo].[Ve] ([id], [LoaiVe], [idLichChieu], [MaGheNgoi], [idKhachHang], [i
 INSERT [dbo].[Ve] ([id], [LoaiVe], [idLichChieu], [MaGheNgoi], [idKhachHang], [idCheDoKM], [TrangThai], [TienBanVe]) VALUES (139, 0, N'LC01', N'K13', NULL, N'0', 1, 0.0000)
 INSERT [dbo].[Ve] ([id], [LoaiVe], [idLichChieu], [MaGheNgoi], [idKhachHang], [idCheDoKM], [TrangThai], [TienBanVe]) VALUES (140, 0, N'LC01', N'K14', NULL, N'0', 1, 0.0000)
 SET IDENTITY_INSERT [dbo].[Ve] OFF
+GO
+
+CREATE PROC USP_GetRevenueByMovieAndDate
+@idMovie VARCHAR(50), @fromDate date, @toDate date
+AS
+BEGIN
+	SELECT P.TenPhim AS [Tên phim], CONVERT(DATE, LC.ThoiGianChieu) AS [Ngày chiếu], CONVERT(TIME(0),LC.ThoiGianChieu) AS [Giờ chiếu], COUNT(V.id) AS [Số vé đã bán], SUM(TienBanVe) AS [Tiền vé]
+	FROM dbo.Ve AS V, dbo.LichChieu AS LC, dbo.DinhDangPhim AS DDP, Phim AS P
+	WHERE V.idLichChieu = LC.id AND LC.idDinhDang = DDP.id AND DDP.idPhim = P.id AND V.TrangThai = 1 AND P.id = @idMovie AND LC.ThoiGianChieu >= @fromDate AND LC.ThoiGianChieu <= @toDate
+	GROUP BY idLichChieu, P.TenPhim, LC.ThoiGianChieu
+END
+GO
