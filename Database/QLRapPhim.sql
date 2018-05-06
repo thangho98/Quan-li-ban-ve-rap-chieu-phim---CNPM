@@ -152,39 +152,6 @@ CREATE TABLE Ve
 )
 GO
 
-<<<<<<< HEAD
-update ve set GiaVe = 100000 where LoaiGheNgoi = 1
-
-INSERT INTO dbo.NhanVien
-( id, hoTen, ngaySinh, diaChi, CMND )
-VALUES  
-( 
-	'NV00', -- id - int
-	N'admin', -- hoTen - nvarchar(100)
-	GETDATE(), -- ngaySinh - date
-	N'admin', -- diaChi - nvarchar(100)
-	123456789  -- soCMND - int
-)
-GO
-
-SELECT * FROM dbo.NhanVien
-GO
-
-INSERT INTO dbo.TaiKhoan
-( UserName, Pass, LoaiTK, idNV )
-VALUES
-(
-	'admin',
-	N'admin',
-	'1',
-	'NV00'
-)
-GO
-
-SELECT * FROM dbo.TaiKhoan
-GO
-=======
->>>>>>> feature/doublefeel
 
 CREATE PROC USP_Login
 @userName nvarchar(1000), @pass nvarchar(1000)
@@ -195,13 +162,9 @@ END
 GO
 
 
-<<<<<<< HEAD
-DECLARE @i INT = 1
-=======
 SET IDENTITY_INSERT Ve OFF
 GO
 
->>>>>>> feature/doublefeel
 
 INSERT [dbo].[TheLoai] ([id], [TenTheLoai], [MoTa]) VALUES (N'TL01', N'Hành Động', NULL)
 INSERT [dbo].[TheLoai] ([id], [TenTheLoai], [MoTa]) VALUES (N'TL02', N'Hoạt Hình', NULL)
@@ -404,10 +367,3 @@ INSERT [dbo].[Ve] ([id], [LoaiVe], [idLichChieu], [MaGheNgoi], [idKhachHang], [i
 INSERT [dbo].[Ve] ([id], [LoaiVe], [idLichChieu], [MaGheNgoi], [idKhachHang], [idCheDoKM], [TrangThai], [TienBanVe]) VALUES (139, 0, N'LC01', N'K13', NULL, N'0', 1, 0.0000)
 INSERT [dbo].[Ve] ([id], [LoaiVe], [idLichChieu], [MaGheNgoi], [idKhachHang], [idCheDoKM], [TrangThai], [TienBanVe]) VALUES (140, 0, N'LC01', N'K14', NULL, N'0', 1, 0.0000)
 SET IDENTITY_INSERT [dbo].[Ve] OFF
-
-
-<<<<<<< HEAD
-select * from Phim where DAY(GETDATE()) <= DAY(NgayKetThuc) and MONTH(GETDATE()) <= MONTH(NgayKetThuc) and YEAR(GETDATE()) <= YEAR(NgayKetThuc)
-select * from Phim where GETDATE() <= NgayKetThuc
-=======
->>>>>>> feature/doublefeel
