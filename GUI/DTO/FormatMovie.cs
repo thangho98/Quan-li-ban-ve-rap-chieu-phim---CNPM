@@ -28,10 +28,5 @@ namespace GUI.DTO
         public string MovieName { get; set; }
 
         public string ScreenTypeName { get; set; }
-
-        public override string ToString()
-        {
-            return this.ScreenTypeName;
-        }
     }
 }
