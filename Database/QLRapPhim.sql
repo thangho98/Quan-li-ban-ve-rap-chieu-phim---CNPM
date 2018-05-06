@@ -368,4 +368,14 @@ INSERT [dbo].[Ve] ([id], [LoaiVe], [idLichChieu], [MaGheNgoi], [idKhachHang], [i
 INSERT [dbo].[Ve] ([id], [LoaiVe], [idLichChieu], [MaGheNgoi], [idKhachHang], [idCheDoKM], [TrangThai], [TienBanVe]) VALUES (140, 0, N'LC01', N'K14', NULL, N'0', 1, 0.0000)
 SET IDENTITY_INSERT [dbo].[Ve] OFF
 
-
+CREATE PROC USP_GetListShowTimeByFormatMovie
+@ID varchar(50), @Date Datetime
+AS
+BEGIN
+	select l.id, pc.TenPhong, p.TenPhim, l.ThoiGianChieu, d.id as idDinhDang, l.GiaVe 
+	from Phim p ,DinhDangPhim d, LichChieu l, PhongChieu pc
+	where p.id = d.idPhim and d.id = l.idDinhDang and l.idPhong = pc.id
+	and d.id = @ID and CONVERT(DATE, @Date) = CONVERT(DATE, L.ThoiGianChieu)
+	order by l.ThoiGianChieu
+END
+GO

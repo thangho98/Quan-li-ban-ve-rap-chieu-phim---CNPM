@@ -54,7 +54,7 @@ namespace GUI
 
         private void LoadListShowTimeByFilm(string formatMovieID)
         {
-            DataTable data = ShowTimesDAO.GetListShowTimeByFormatMovie(formatMovieID);
+            DataTable data = ShowTimesDAO.GetListShowTimeByFormatMovie(formatMovieID,dtpThoiGian.Value);
             foreach(DataRow row in data.Rows)
             {
                 ShowTimes showTimes = new ShowTimes(row);
