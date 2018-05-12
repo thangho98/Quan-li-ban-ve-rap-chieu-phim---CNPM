@@ -58,6 +58,7 @@
     <Compile Include="DAO\RevenueDAO.cs" />
     <Compile Include="DAO\ScreenTypeDAO.cs" />
     <Compile Include="DAO\ShowTimesDAO.cs" />
+    <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\TicketDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Genre.cs" />

@@ -14,5 +14,10 @@ namespace GUI.DAO
             string query = "Select * from KhachHang where id = '" + customerID + "' and HoTen = N'" + name + "'";
             return DataProvider.ExecuteQuery(query);
         }
+
+        public static DataTable GetListCustomer()
+        {
+            return DataProvider.ExecuteQuery("EXEC USP_GetCustomer");
+        }
     }
 }

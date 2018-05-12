@@ -56,6 +56,46 @@ namespace GUI
 			LoadRevenue(cboSelectMovie.SelectedValue.ToString(), dtmFromDate.Value, dtmToDate.Value);
 			txtDoanhThu.Text = GetSumRevenue().ToString() + " VNĐ";
 		}
-		#endregion
-	}
+        #endregion
+
+        #region Nhân Viên
+        void LoadStaffList()
+        {
+            dtgvStaff.DataSource = StaffDAO.GetListStaff();
+        }
+
+        private void btnShowStaff_Click(object sender, EventArgs e)
+        {
+            LoadStaffList();
+        }
+        void AddStaff(string id, string hoTen, DateTime ngaySinh, string diaChi, string sdt, int cmnd)
+        {
+            if (StaffDAO.InsertStaff(id, hoTen, ngaySinh, diaChi, sdt, cmnd))
+            {
+                MessageBox.Show("Thêm tài khoản thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm tài khoản thất bại");
+            }
+        }
+        private void btnAddStaff_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
+        #region Khách Hàng
+        void LoadCustomer()
+        {
+            dtgvCustomer.DataSource = CustomerDAO.GetListCustomer();
+        }
+        private void btnShowCustomer_Click(object sender, EventArgs e)
+        {
+            LoadCustomer();
+        }
+        #endregion
+
+    }
 }
