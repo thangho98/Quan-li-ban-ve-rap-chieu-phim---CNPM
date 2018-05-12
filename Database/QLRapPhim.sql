@@ -377,3 +377,28 @@ BEGIN
 	GROUP BY idLichChieu, P.TenPhim, LC.ThoiGianChieu
 END
 GO
+
+CREATE PROC USP_GetStaff
+AS
+BEGIN
+	SELECT id AS [Mã nhân viên], HoTen AS [Họ tên], NgaySinh AS [Ngày sinh], DiaChi AS [Địa chỉ], SDT AS [SĐT], CMND AS [CMND]
+	FROM dbo.NhanVien
+END
+GO
+
+CREATE PROC USP_GetCustomer
+AS
+BEGIN
+	SELECT id AS [Mã khách hàng], HoTen AS [Họ tên], NgaySinh AS [Ngày sinh], DiaChi AS [Địa chỉ], SDT AS [SĐT], CMND AS [CMND], DiemTichLuy AS [Điểm tích lũy]
+	FROM dbo.KhachHang
+END
+GO
+
+CREATE PROC USP_InsertStaff
+@idStaff VARCHAR(50), @hoTen NVARCHAR(100), @ngaySinh date, @diaChi NVARCHAR(100), @sdt VARCHAR(100), @cmnd INT
+AS
+BEGIN
+	INSERT dbo.NhanVien (id, HoTen, NgaySinh, DiaChi, SDT, CMND)
+	VALUES (@idStaff, @hoTen, @ngaySinh, @diaChi, @sdt, @cmnd)
+END
+GO
