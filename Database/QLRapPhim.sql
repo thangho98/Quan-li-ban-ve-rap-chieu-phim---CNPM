@@ -402,3 +402,17 @@ BEGIN
 	VALUES (@idStaff, @hoTen, @ngaySinh, @diaChi, @sdt, @cmnd)
 END
 GO
+
+CREATE PROC USP_UpdateAccount
+@username NVARCHAR(100), @pass NVARCHAR(1000), @newPass NVARCHAR(1000)
+AS
+BEGIN
+	DECLARE @isRightPass INT = 0
+	SELECT @isRightPass = COUNT(*) FROM dbo.TaiKhoan WHERE UserName = @username AND Pass = @pass
+
+	IF (@isRightPass = 1)
+	BEGIN
+		UPDATE dbo.TaiKhoan SET Pass = @newPass WHERE UserName = @username
+    END
+END
+GO

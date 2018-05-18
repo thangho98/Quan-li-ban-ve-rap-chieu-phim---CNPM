@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class frmAdmin : Form
     {
-        public frmAdmin()
+		public frmAdmin()
         {
             InitializeComponent();
 

@@ -72,6 +72,12 @@
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\FormatMovie.cs" />
     <Compile Include="DTO\Ticket.cs" />
+    <Compile Include="frmAccountSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountSettings.Designer.cs">
+      <DependentUpon>frmAccountSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConnectData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAccountSettings.resx">
+      <DependentUpon>frmAccountSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConnectData.resx">
       <DependentUpon>frmConnectData.cs</DependentUpon>
     </EmbeddedResource>
