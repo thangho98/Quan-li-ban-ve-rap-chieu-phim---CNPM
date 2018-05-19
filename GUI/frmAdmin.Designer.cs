@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tpAccount = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -54,10 +53,20 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.tpCustomer = new System.Windows.Forms.TabPage();
+            this.btnShowCustomer = new System.Windows.Forms.Button();
+            this.dtgvCustomer = new System.Windows.Forms.DataGridView();
             this.tpStaff = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnAddStaff = new System.Windows.Forms.Button();
+            this.txtStaffINumber = new System.Windows.Forms.TextBox();
+            this.txtStaffBirth = new System.Windows.Forms.TextBox();
+            this.txtStaffPhone = new System.Windows.Forms.TextBox();
+            this.txtStaffName = new System.Windows.Forms.TextBox();
+            this.txtStaffAddress = new System.Windows.Forms.TextBox();
+            this.txtStaffId = new System.Windows.Forms.TextBox();
+            this.btnShowStaff = new System.Windows.Forms.Button();
             this.dtgvStaff = new System.Windows.Forms.DataGridView();
             this.tpData = new System.Windows.Forms.TabPage();
             this.tcData = new System.Windows.Forms.TabControl();
@@ -213,16 +222,12 @@
             this.dtmToDate = new System.Windows.Forms.DateTimePicker();
             this.dtmFromDate = new System.Windows.Forms.DateTimePicker();
             this.tcAdmin = new System.Windows.Forms.TabControl();
-            this.btnShowStaff = new System.Windows.Forms.Button();
-            this.dtgvCustomer = new System.Windows.Forms.DataGridView();
-            this.btnShowCustomer = new System.Windows.Forms.Button();
-            this.txtStaffId = new System.Windows.Forms.TextBox();
-            this.txtStaffName = new System.Windows.Forms.TextBox();
-            this.txtBirthDate = new System.Windows.Forms.TextBox();
-            this.txtStaffAddress = new System.Windows.Forms.TextBox();
-            this.txtStaffPhone = new System.Windows.Forms.TextBox();
-            this.txtStaffINumber = new System.Windows.Forms.TextBox();
-            this.btnAddStaff = new System.Windows.Forms.Button();
+            this.lblStaffID = new System.Windows.Forms.Label();
+            this.lblStaffName = new System.Windows.Forms.Label();
+            this.lblStaffBirth = new System.Windows.Forms.Label();
+            this.lblStaffAddress = new System.Windows.Forms.Label();
+            this.lblStaffPhone = new System.Windows.Forms.Label();
+            this.lblStaffINumber = new System.Windows.Forms.Label();
             this.tpAccount.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -236,6 +241,7 @@
             this.panel29.SuspendLayout();
             this.pnSearch.SuspendLayout();
             this.tpCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).BeginInit();
             this.tpStaff.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -316,7 +322,6 @@
             this.tpRevenue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRevenue)).BeginInit();
             this.tcAdmin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // tpAccount
@@ -324,7 +329,7 @@
             this.tpAccount.Controls.Add(this.panel7);
             this.tpAccount.Location = new System.Drawing.Point(4, 31);
             this.tpAccount.Name = "tpAccount";
-            this.tpAccount.Size = new System.Drawing.Size(1066, 618);
+            this.tpAccount.Size = new System.Drawing.Size(1060, 583);
             this.tpAccount.TabIndex = 6;
             this.tpAccount.Text = "Tài Khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
@@ -336,7 +341,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1066, 618);
+            this.panel7.Size = new System.Drawing.Size(1060, 583);
             this.panel7.TabIndex = 1;
             // 
             // panel10
@@ -346,7 +351,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(0, 64);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1066, 554);
+            this.panel10.Size = new System.Drawing.Size(1060, 519);
             this.panel10.TabIndex = 10;
             // 
             // panel23
@@ -356,7 +361,7 @@
             this.panel23.Location = new System.Drawing.Point(0, 0);
             this.panel23.Margin = new System.Windows.Forms.Padding(4);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(693, 554);
+            this.panel23.Size = new System.Drawing.Size(687, 519);
             this.panel23.TabIndex = 12;
             // 
             // dataGridView10
@@ -366,7 +371,7 @@
             this.dataGridView10.Location = new System.Drawing.Point(0, 0);
             this.dataGridView10.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(693, 554);
+            this.dataGridView10.Size = new System.Drawing.Size(687, 519);
             this.dataGridView10.TabIndex = 0;
             // 
             // panel25
@@ -376,10 +381,10 @@
             this.panel25.Controls.Add(this.panel27);
             this.panel25.Controls.Add(this.panel80);
             this.panel25.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel25.Location = new System.Drawing.Point(693, 0);
+            this.panel25.Location = new System.Drawing.Point(687, 0);
             this.panel25.Margin = new System.Windows.Forms.Padding(4);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(373, 554);
+            this.panel25.Size = new System.Drawing.Size(373, 519);
             this.panel25.TabIndex = 11;
             // 
             // btnResetPassword
@@ -495,7 +500,7 @@
             this.panel29.Location = new System.Drawing.Point(0, 0);
             this.panel29.Margin = new System.Windows.Forms.Padding(4);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(1066, 64);
+            this.panel29.Size = new System.Drawing.Size(1060, 64);
             this.panel29.TabIndex = 9;
             // 
             // pnSearch
@@ -577,6 +582,25 @@
             this.tpCustomer.Text = "Khách Hàng";
             this.tpCustomer.UseVisualStyleBackColor = true;
             // 
+            // btnShowCustomer
+            // 
+            this.btnShowCustomer.Location = new System.Drawing.Point(172, 34);
+            this.btnShowCustomer.Name = "btnShowCustomer";
+            this.btnShowCustomer.Size = new System.Drawing.Size(75, 23);
+            this.btnShowCustomer.TabIndex = 1;
+            this.btnShowCustomer.Text = "button1";
+            this.btnShowCustomer.UseVisualStyleBackColor = true;
+            this.btnShowCustomer.Click += new System.EventHandler(this.btnShowCustomer_Click);
+            // 
+            // dtgvCustomer
+            // 
+            this.dtgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvCustomer.Location = new System.Drawing.Point(8, 92);
+            this.dtgvCustomer.Name = "dtgvCustomer";
+            this.dtgvCustomer.RowTemplate.Height = 24;
+            this.dtgvCustomer.Size = new System.Drawing.Size(240, 150);
+            this.dtgvCustomer.TabIndex = 0;
+            // 
             // tpStaff
             // 
             this.tpStaff.Controls.Add(this.panel1);
@@ -607,9 +631,15 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.lblStaffINumber);
+            this.panel4.Controls.Add(this.lblStaffBirth);
+            this.panel4.Controls.Add(this.lblStaffPhone);
+            this.panel4.Controls.Add(this.lblStaffAddress);
+            this.panel4.Controls.Add(this.lblStaffName);
+            this.panel4.Controls.Add(this.lblStaffID);
             this.panel4.Controls.Add(this.btnAddStaff);
             this.panel4.Controls.Add(this.txtStaffINumber);
-            this.panel4.Controls.Add(this.txtBirthDate);
+            this.panel4.Controls.Add(this.txtStaffBirth);
             this.panel4.Controls.Add(this.txtStaffPhone);
             this.panel4.Controls.Add(this.txtStaffName);
             this.panel4.Controls.Add(this.txtStaffAddress);
@@ -623,19 +653,73 @@
             this.panel4.Size = new System.Drawing.Size(1060, 583);
             this.panel4.TabIndex = 12;
             // 
+            // btnAddStaff
+            // 
+            this.btnAddStaff.Location = new System.Drawing.Point(423, 163);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(90, 32);
+            this.btnAddStaff.TabIndex = 3;
+            this.btnAddStaff.Text = "Thêm";
+            this.btnAddStaff.UseVisualStyleBackColor = true;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
+            // 
+            // txtStaffINumber
+            // 
+            this.txtStaffINumber.Location = new System.Drawing.Point(509, 127);
+            this.txtStaffINumber.Name = "txtStaffINumber";
+            this.txtStaffINumber.Size = new System.Drawing.Size(190, 30);
+            this.txtStaffINumber.TabIndex = 2;
+            // 
+            // txtStaffBirth
+            // 
+            this.txtStaffBirth.Location = new System.Drawing.Point(146, 127);
+            this.txtStaffBirth.Name = "txtStaffBirth";
+            this.txtStaffBirth.Size = new System.Drawing.Size(190, 30);
+            this.txtStaffBirth.TabIndex = 2;
+            // 
+            // txtStaffPhone
+            // 
+            this.txtStaffPhone.Location = new System.Drawing.Point(509, 91);
+            this.txtStaffPhone.Name = "txtStaffPhone";
+            this.txtStaffPhone.Size = new System.Drawing.Size(190, 30);
+            this.txtStaffPhone.TabIndex = 2;
+            // 
+            // txtStaffName
+            // 
+            this.txtStaffName.Location = new System.Drawing.Point(146, 91);
+            this.txtStaffName.Name = "txtStaffName";
+            this.txtStaffName.Size = new System.Drawing.Size(190, 30);
+            this.txtStaffName.TabIndex = 2;
+            // 
+            // txtStaffAddress
+            // 
+            this.txtStaffAddress.Location = new System.Drawing.Point(509, 55);
+            this.txtStaffAddress.Name = "txtStaffAddress";
+            this.txtStaffAddress.Size = new System.Drawing.Size(190, 30);
+            this.txtStaffAddress.TabIndex = 2;
+            // 
+            // txtStaffId
+            // 
+            this.txtStaffId.Location = new System.Drawing.Point(146, 55);
+            this.txtStaffId.Name = "txtStaffId";
+            this.txtStaffId.Size = new System.Drawing.Size(190, 30);
+            this.txtStaffId.TabIndex = 2;
+            // 
+            // btnShowStaff
+            // 
+            this.btnShowStaff.Location = new System.Drawing.Point(870, 163);
+            this.btnShowStaff.Name = "btnShowStaff";
+            this.btnShowStaff.Size = new System.Drawing.Size(88, 35);
+            this.btnShowStaff.TabIndex = 1;
+            this.btnShowStaff.Text = "Xem";
+            this.btnShowStaff.UseVisualStyleBackColor = true;
+            this.btnShowStaff.Click += new System.EventHandler(this.btnShowStaff_Click);
+            // 
             // dtgvStaff
             // 
             this.dtgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvStaff.Location = new System.Drawing.Point(4, 203);
+            this.dtgvStaff.Location = new System.Drawing.Point(16, 202);
             this.dtgvStaff.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvStaff.Name = "dtgvStaff";
             this.dtgvStaff.Size = new System.Drawing.Size(942, 363);
@@ -647,7 +731,7 @@
             this.tpData.Location = new System.Drawing.Point(4, 31);
             this.tpData.Name = "tpData";
             this.tpData.Padding = new System.Windows.Forms.Padding(3);
-            this.tpData.Size = new System.Drawing.Size(1066, 618);
+            this.tpData.Size = new System.Drawing.Size(1060, 583);
             this.tpData.TabIndex = 1;
             this.tpData.Text = "Dữ Liệu";
             this.tpData.UseVisualStyleBackColor = true;
@@ -665,7 +749,7 @@
             this.tcData.Location = new System.Drawing.Point(3, 3);
             this.tcData.Name = "tcData";
             this.tcData.SelectedIndex = 0;
-            this.tcData.Size = new System.Drawing.Size(1060, 612);
+            this.tcData.Size = new System.Drawing.Size(1054, 577);
             this.tcData.TabIndex = 0;
             // 
             // tpScreenType
@@ -673,7 +757,7 @@
             this.tpScreenType.Controls.Add(this.panel2);
             this.tpScreenType.Location = new System.Drawing.Point(4, 31);
             this.tpScreenType.Name = "tpScreenType";
-            this.tpScreenType.Size = new System.Drawing.Size(1052, 577);
+            this.tpScreenType.Size = new System.Drawing.Size(1046, 542);
             this.tpScreenType.TabIndex = 3;
             this.tpScreenType.Text = "Loại màn hình";
             this.tpScreenType.UseVisualStyleBackColor = true;
@@ -685,7 +769,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1052, 577);
+            this.panel2.Size = new System.Drawing.Size(1046, 542);
             this.panel2.TabIndex = 0;
             // 
             // panel13
@@ -695,7 +779,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(0, 64);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1052, 513);
+            this.panel13.Size = new System.Drawing.Size(1046, 478);
             this.panel13.TabIndex = 10;
             // 
             // panel14
@@ -705,7 +789,7 @@
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(672, 513);
+            this.panel14.Size = new System.Drawing.Size(666, 478);
             this.panel14.TabIndex = 12;
             // 
             // dataGridView2
@@ -715,7 +799,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(672, 513);
+            this.dataGridView2.Size = new System.Drawing.Size(666, 478);
             this.dataGridView2.TabIndex = 0;
             // 
             // panel19
@@ -723,10 +807,10 @@
             this.panel19.Controls.Add(this.panel20);
             this.panel19.Controls.Add(this.panel21);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel19.Location = new System.Drawing.Point(672, 0);
+            this.panel19.Location = new System.Drawing.Point(666, 0);
             this.panel19.Margin = new System.Windows.Forms.Padding(4);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(380, 513);
+            this.panel19.Size = new System.Drawing.Size(380, 478);
             this.panel19.TabIndex = 11;
             // 
             // panel20
@@ -799,7 +883,7 @@
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1052, 64);
+            this.panel11.Size = new System.Drawing.Size(1046, 64);
             this.panel11.TabIndex = 9;
             // 
             // panel73
@@ -876,7 +960,7 @@
             this.tpCinema.Location = new System.Drawing.Point(4, 31);
             this.tpCinema.Name = "tpCinema";
             this.tpCinema.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCinema.Size = new System.Drawing.Size(1031, 532);
+            this.tpCinema.Size = new System.Drawing.Size(1046, 542);
             this.tpCinema.TabIndex = 1;
             this.tpCinema.Text = "Phòng Chiếu";
             this.tpCinema.UseVisualStyleBackColor = true;
@@ -888,7 +972,7 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel22.Location = new System.Drawing.Point(3, 3);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(1025, 526);
+            this.panel22.Size = new System.Drawing.Size(1040, 536);
             this.panel22.TabIndex = 1;
             // 
             // panel24
@@ -898,7 +982,7 @@
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel24.Location = new System.Drawing.Point(0, 64);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1025, 462);
+            this.panel24.Size = new System.Drawing.Size(1040, 472);
             this.panel24.TabIndex = 10;
             // 
             // panel28
@@ -908,7 +992,7 @@
             this.panel28.Location = new System.Drawing.Point(0, 0);
             this.panel28.Margin = new System.Windows.Forms.Padding(4);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(645, 462);
+            this.panel28.Size = new System.Drawing.Size(660, 472);
             this.panel28.TabIndex = 12;
             // 
             // dataGridView3
@@ -918,7 +1002,7 @@
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(645, 462);
+            this.dataGridView3.Size = new System.Drawing.Size(660, 472);
             this.dataGridView3.TabIndex = 0;
             // 
             // panel30
@@ -926,10 +1010,10 @@
             this.panel30.Controls.Add(this.panel31);
             this.panel30.Controls.Add(this.panel32);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel30.Location = new System.Drawing.Point(645, 0);
+            this.panel30.Location = new System.Drawing.Point(660, 0);
             this.panel30.Margin = new System.Windows.Forms.Padding(4);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(380, 462);
+            this.panel30.Size = new System.Drawing.Size(380, 472);
             this.panel30.TabIndex = 11;
             // 
             // panel31
@@ -1002,7 +1086,7 @@
             this.panel33.Location = new System.Drawing.Point(0, 0);
             this.panel33.Margin = new System.Windows.Forms.Padding(4);
             this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(1025, 64);
+            this.panel33.Size = new System.Drawing.Size(1040, 64);
             this.panel33.TabIndex = 9;
             // 
             // panel74
@@ -1078,7 +1162,7 @@
             this.tpGenre.Controls.Add(this.panel34);
             this.tpGenre.Location = new System.Drawing.Point(4, 31);
             this.tpGenre.Name = "tpGenre";
-            this.tpGenre.Size = new System.Drawing.Size(1031, 532);
+            this.tpGenre.Size = new System.Drawing.Size(1052, 577);
             this.tpGenre.TabIndex = 2;
             this.tpGenre.Text = "Thể Loại";
             this.tpGenre.UseVisualStyleBackColor = true;
@@ -1090,7 +1174,7 @@
             this.panel34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel34.Location = new System.Drawing.Point(0, 0);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(1031, 532);
+            this.panel34.Size = new System.Drawing.Size(1052, 577);
             this.panel34.TabIndex = 1;
             // 
             // panel35
@@ -1100,7 +1184,7 @@
             this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel35.Location = new System.Drawing.Point(0, 64);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(1031, 468);
+            this.panel35.Size = new System.Drawing.Size(1052, 513);
             this.panel35.TabIndex = 10;
             // 
             // panel36
@@ -1110,7 +1194,7 @@
             this.panel36.Location = new System.Drawing.Point(0, 0);
             this.panel36.Margin = new System.Windows.Forms.Padding(4);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(651, 468);
+            this.panel36.Size = new System.Drawing.Size(672, 513);
             this.panel36.TabIndex = 12;
             // 
             // dataGridView4
@@ -1120,7 +1204,7 @@
             this.dataGridView4.Location = new System.Drawing.Point(0, 0);
             this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(651, 468);
+            this.dataGridView4.Size = new System.Drawing.Size(672, 513);
             this.dataGridView4.TabIndex = 0;
             // 
             // panel37
@@ -1128,10 +1212,10 @@
             this.panel37.Controls.Add(this.panel38);
             this.panel37.Controls.Add(this.panel39);
             this.panel37.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel37.Location = new System.Drawing.Point(651, 0);
+            this.panel37.Location = new System.Drawing.Point(672, 0);
             this.panel37.Margin = new System.Windows.Forms.Padding(4);
             this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(380, 468);
+            this.panel37.Size = new System.Drawing.Size(380, 513);
             this.panel37.TabIndex = 11;
             // 
             // panel38
@@ -1204,7 +1288,7 @@
             this.panel40.Location = new System.Drawing.Point(0, 0);
             this.panel40.Margin = new System.Windows.Forms.Padding(4);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(1031, 64);
+            this.panel40.Size = new System.Drawing.Size(1052, 64);
             this.panel40.TabIndex = 9;
             // 
             // panel75
@@ -1281,7 +1365,7 @@
             this.tpFilm.Location = new System.Drawing.Point(4, 31);
             this.tpFilm.Name = "tpFilm";
             this.tpFilm.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFilm.Size = new System.Drawing.Size(1031, 532);
+            this.tpFilm.Size = new System.Drawing.Size(1052, 577);
             this.tpFilm.TabIndex = 0;
             this.tpFilm.Text = "Phim";
             this.tpFilm.UseVisualStyleBackColor = true;
@@ -1293,7 +1377,7 @@
             this.panel41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel41.Location = new System.Drawing.Point(3, 3);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(1025, 526);
+            this.panel41.Size = new System.Drawing.Size(1046, 571);
             this.panel41.TabIndex = 1;
             // 
             // panel42
@@ -1303,7 +1387,7 @@
             this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel42.Location = new System.Drawing.Point(0, 64);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(1025, 462);
+            this.panel42.Size = new System.Drawing.Size(1046, 507);
             this.panel42.TabIndex = 10;
             // 
             // panel43
@@ -1313,7 +1397,7 @@
             this.panel43.Location = new System.Drawing.Point(0, 0);
             this.panel43.Margin = new System.Windows.Forms.Padding(4);
             this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(645, 462);
+            this.panel43.Size = new System.Drawing.Size(666, 507);
             this.panel43.TabIndex = 12;
             // 
             // dataGridView5
@@ -1323,7 +1407,7 @@
             this.dataGridView5.Location = new System.Drawing.Point(0, 0);
             this.dataGridView5.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(645, 462);
+            this.dataGridView5.Size = new System.Drawing.Size(666, 507);
             this.dataGridView5.TabIndex = 0;
             // 
             // panel44
@@ -1331,10 +1415,10 @@
             this.panel44.Controls.Add(this.panel45);
             this.panel44.Controls.Add(this.panel46);
             this.panel44.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel44.Location = new System.Drawing.Point(645, 0);
+            this.panel44.Location = new System.Drawing.Point(666, 0);
             this.panel44.Margin = new System.Windows.Forms.Padding(4);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(380, 462);
+            this.panel44.Size = new System.Drawing.Size(380, 507);
             this.panel44.TabIndex = 11;
             // 
             // panel45
@@ -1407,7 +1491,7 @@
             this.panel47.Location = new System.Drawing.Point(0, 0);
             this.panel47.Margin = new System.Windows.Forms.Padding(4);
             this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(1025, 64);
+            this.panel47.Size = new System.Drawing.Size(1046, 64);
             this.panel47.TabIndex = 9;
             // 
             // panel76
@@ -1483,7 +1567,7 @@
             this.tpShowTimes.Controls.Add(this.panel48);
             this.tpShowTimes.Location = new System.Drawing.Point(4, 31);
             this.tpShowTimes.Name = "tpShowTimes";
-            this.tpShowTimes.Size = new System.Drawing.Size(1031, 532);
+            this.tpShowTimes.Size = new System.Drawing.Size(1052, 577);
             this.tpShowTimes.TabIndex = 6;
             this.tpShowTimes.Text = "Lịch Chiếu";
             this.tpShowTimes.UseVisualStyleBackColor = true;
@@ -1495,7 +1579,7 @@
             this.panel48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel48.Location = new System.Drawing.Point(0, 0);
             this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(1031, 532);
+            this.panel48.Size = new System.Drawing.Size(1052, 577);
             this.panel48.TabIndex = 1;
             // 
             // panel49
@@ -1505,7 +1589,7 @@
             this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel49.Location = new System.Drawing.Point(0, 64);
             this.panel49.Name = "panel49";
-            this.panel49.Size = new System.Drawing.Size(1031, 468);
+            this.panel49.Size = new System.Drawing.Size(1052, 513);
             this.panel49.TabIndex = 10;
             // 
             // panel50
@@ -1515,7 +1599,7 @@
             this.panel50.Location = new System.Drawing.Point(0, 0);
             this.panel50.Margin = new System.Windows.Forms.Padding(4);
             this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(651, 468);
+            this.panel50.Size = new System.Drawing.Size(672, 513);
             this.panel50.TabIndex = 12;
             // 
             // dataGridView6
@@ -1525,7 +1609,7 @@
             this.dataGridView6.Location = new System.Drawing.Point(0, 0);
             this.dataGridView6.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(651, 468);
+            this.dataGridView6.Size = new System.Drawing.Size(672, 513);
             this.dataGridView6.TabIndex = 0;
             // 
             // panel51
@@ -1533,10 +1617,10 @@
             this.panel51.Controls.Add(this.panel52);
             this.panel51.Controls.Add(this.panel53);
             this.panel51.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel51.Location = new System.Drawing.Point(651, 0);
+            this.panel51.Location = new System.Drawing.Point(672, 0);
             this.panel51.Margin = new System.Windows.Forms.Padding(4);
             this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(380, 468);
+            this.panel51.Size = new System.Drawing.Size(380, 513);
             this.panel51.TabIndex = 11;
             // 
             // panel52
@@ -1609,7 +1693,7 @@
             this.panel54.Location = new System.Drawing.Point(0, 0);
             this.panel54.Margin = new System.Windows.Forms.Padding(4);
             this.panel54.Name = "panel54";
-            this.panel54.Size = new System.Drawing.Size(1031, 64);
+            this.panel54.Size = new System.Drawing.Size(1052, 64);
             this.panel54.TabIndex = 9;
             // 
             // panel77
@@ -1685,7 +1769,7 @@
             this.tpTicket.Controls.Add(this.panel55);
             this.tpTicket.Location = new System.Drawing.Point(4, 31);
             this.tpTicket.Name = "tpTicket";
-            this.tpTicket.Size = new System.Drawing.Size(1031, 532);
+            this.tpTicket.Size = new System.Drawing.Size(1052, 577);
             this.tpTicket.TabIndex = 4;
             this.tpTicket.Text = "Vé";
             this.tpTicket.UseVisualStyleBackColor = true;
@@ -1697,7 +1781,7 @@
             this.panel55.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel55.Location = new System.Drawing.Point(0, 0);
             this.panel55.Name = "panel55";
-            this.panel55.Size = new System.Drawing.Size(1031, 532);
+            this.panel55.Size = new System.Drawing.Size(1052, 577);
             this.panel55.TabIndex = 1;
             // 
             // panel56
@@ -1707,7 +1791,7 @@
             this.panel56.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel56.Location = new System.Drawing.Point(0, 64);
             this.panel56.Name = "panel56";
-            this.panel56.Size = new System.Drawing.Size(1031, 468);
+            this.panel56.Size = new System.Drawing.Size(1052, 513);
             this.panel56.TabIndex = 10;
             // 
             // panel57
@@ -1717,7 +1801,7 @@
             this.panel57.Location = new System.Drawing.Point(0, 0);
             this.panel57.Margin = new System.Windows.Forms.Padding(4);
             this.panel57.Name = "panel57";
-            this.panel57.Size = new System.Drawing.Size(651, 468);
+            this.panel57.Size = new System.Drawing.Size(672, 513);
             this.panel57.TabIndex = 12;
             // 
             // dataGridView7
@@ -1727,7 +1811,7 @@
             this.dataGridView7.Location = new System.Drawing.Point(0, 0);
             this.dataGridView7.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(651, 468);
+            this.dataGridView7.Size = new System.Drawing.Size(672, 513);
             this.dataGridView7.TabIndex = 0;
             // 
             // panel58
@@ -1735,10 +1819,10 @@
             this.panel58.Controls.Add(this.panel59);
             this.panel58.Controls.Add(this.panel60);
             this.panel58.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel58.Location = new System.Drawing.Point(651, 0);
+            this.panel58.Location = new System.Drawing.Point(672, 0);
             this.panel58.Margin = new System.Windows.Forms.Padding(4);
             this.panel58.Name = "panel58";
-            this.panel58.Size = new System.Drawing.Size(380, 468);
+            this.panel58.Size = new System.Drawing.Size(380, 513);
             this.panel58.TabIndex = 11;
             // 
             // panel59
@@ -1811,7 +1895,7 @@
             this.panel61.Location = new System.Drawing.Point(0, 0);
             this.panel61.Margin = new System.Windows.Forms.Padding(4);
             this.panel61.Name = "panel61";
-            this.panel61.Size = new System.Drawing.Size(1031, 64);
+            this.panel61.Size = new System.Drawing.Size(1052, 64);
             this.panel61.TabIndex = 9;
             // 
             // panel78
@@ -1887,7 +1971,7 @@
             this.tpPromotion.Controls.Add(this.panel62);
             this.tpPromotion.Location = new System.Drawing.Point(4, 31);
             this.tpPromotion.Name = "tpPromotion";
-            this.tpPromotion.Size = new System.Drawing.Size(1031, 532);
+            this.tpPromotion.Size = new System.Drawing.Size(1052, 577);
             this.tpPromotion.TabIndex = 5;
             this.tpPromotion.Text = "Khuyến mãi";
             this.tpPromotion.UseVisualStyleBackColor = true;
@@ -1899,7 +1983,7 @@
             this.panel62.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel62.Location = new System.Drawing.Point(0, 0);
             this.panel62.Name = "panel62";
-            this.panel62.Size = new System.Drawing.Size(1031, 532);
+            this.panel62.Size = new System.Drawing.Size(1052, 577);
             this.panel62.TabIndex = 1;
             // 
             // panel63
@@ -1909,7 +1993,7 @@
             this.panel63.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel63.Location = new System.Drawing.Point(0, 64);
             this.panel63.Name = "panel63";
-            this.panel63.Size = new System.Drawing.Size(1031, 468);
+            this.panel63.Size = new System.Drawing.Size(1052, 513);
             this.panel63.TabIndex = 10;
             // 
             // panel64
@@ -1919,7 +2003,7 @@
             this.panel64.Location = new System.Drawing.Point(0, 0);
             this.panel64.Margin = new System.Windows.Forms.Padding(4);
             this.panel64.Name = "panel64";
-            this.panel64.Size = new System.Drawing.Size(651, 468);
+            this.panel64.Size = new System.Drawing.Size(672, 513);
             this.panel64.TabIndex = 12;
             // 
             // dataGridView8
@@ -1929,7 +2013,7 @@
             this.dataGridView8.Location = new System.Drawing.Point(0, 0);
             this.dataGridView8.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(651, 468);
+            this.dataGridView8.Size = new System.Drawing.Size(672, 513);
             this.dataGridView8.TabIndex = 0;
             // 
             // panel65
@@ -1937,10 +2021,10 @@
             this.panel65.Controls.Add(this.panel66);
             this.panel65.Controls.Add(this.panel67);
             this.panel65.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel65.Location = new System.Drawing.Point(651, 0);
+            this.panel65.Location = new System.Drawing.Point(672, 0);
             this.panel65.Margin = new System.Windows.Forms.Padding(4);
             this.panel65.Name = "panel65";
-            this.panel65.Size = new System.Drawing.Size(380, 468);
+            this.panel65.Size = new System.Drawing.Size(380, 513);
             this.panel65.TabIndex = 11;
             // 
             // panel66
@@ -2013,7 +2097,7 @@
             this.panel68.Location = new System.Drawing.Point(0, 0);
             this.panel68.Margin = new System.Windows.Forms.Padding(4);
             this.panel68.Name = "panel68";
-            this.panel68.Size = new System.Drawing.Size(1031, 64);
+            this.panel68.Size = new System.Drawing.Size(1052, 64);
             this.panel68.TabIndex = 9;
             // 
             // panel79
@@ -2211,92 +2295,59 @@
             this.tcAdmin.Size = new System.Drawing.Size(1068, 618);
             this.tcAdmin.TabIndex = 0;
             // 
-            // btnShowStaff
+            // lblStaffID
             // 
-            this.btnShowStaff.Location = new System.Drawing.Point(250, 14);
-            this.btnShowStaff.Name = "btnShowStaff";
-            this.btnShowStaff.Size = new System.Drawing.Size(88, 35);
-            this.btnShowStaff.TabIndex = 1;
-            this.btnShowStaff.Text = "Xem";
-            this.btnShowStaff.UseVisualStyleBackColor = true;
-            this.btnShowStaff.Click += new System.EventHandler(this.btnShowStaff_Click);
+            this.lblStaffID.AutoSize = true;
+            this.lblStaffID.Location = new System.Drawing.Point(30, 58);
+            this.lblStaffID.Name = "lblStaffID";
+            this.lblStaffID.Size = new System.Drawing.Size(79, 22);
+            this.lblStaffID.TabIndex = 4;
+            this.lblStaffID.Text = "Mã NV :";
             // 
-            // dtgvCustomer
+            // lblStaffName
             // 
-            this.dtgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvCustomer.Location = new System.Drawing.Point(8, 92);
-            this.dtgvCustomer.Name = "dtgvCustomer";
-            this.dtgvCustomer.RowTemplate.Height = 24;
-            this.dtgvCustomer.Size = new System.Drawing.Size(240, 150);
-            this.dtgvCustomer.TabIndex = 0;
+            this.lblStaffName.AutoSize = true;
+            this.lblStaffName.Location = new System.Drawing.Point(30, 94);
+            this.lblStaffName.Name = "lblStaffName";
+            this.lblStaffName.Size = new System.Drawing.Size(73, 22);
+            this.lblStaffName.TabIndex = 4;
+            this.lblStaffName.Text = "Họ tên :";
             // 
-            // btnShowCustomer
+            // lblStaffBirth
             // 
-            this.btnShowCustomer.Location = new System.Drawing.Point(172, 34);
-            this.btnShowCustomer.Name = "btnShowCustomer";
-            this.btnShowCustomer.Size = new System.Drawing.Size(75, 23);
-            this.btnShowCustomer.TabIndex = 1;
-            this.btnShowCustomer.Text = "button1";
-            this.btnShowCustomer.UseVisualStyleBackColor = true;
-            this.btnShowCustomer.Click += new System.EventHandler(this.btnShowCustomer_Click);
+            this.lblStaffBirth.AutoSize = true;
+            this.lblStaffBirth.Location = new System.Drawing.Point(30, 127);
+            this.lblStaffBirth.Name = "lblStaffBirth";
+            this.lblStaffBirth.Size = new System.Drawing.Size(99, 22);
+            this.lblStaffBirth.TabIndex = 4;
+            this.lblStaffBirth.Text = "Ngày sinh :";
             // 
-            // txtStaffId
+            // lblStaffAddress
             // 
-            this.txtStaffId.Location = new System.Drawing.Point(74, 56);
-            this.txtStaffId.Name = "txtStaffId";
-            this.txtStaffId.Size = new System.Drawing.Size(190, 30);
-            this.txtStaffId.TabIndex = 2;
-            this.txtStaffId.Text = "Mã NV";
+            this.lblStaffAddress.AutoSize = true;
+            this.lblStaffAddress.Location = new System.Drawing.Point(391, 58);
+            this.lblStaffAddress.Name = "lblStaffAddress";
+            this.lblStaffAddress.Size = new System.Drawing.Size(79, 22);
+            this.lblStaffAddress.TabIndex = 4;
+            this.lblStaffAddress.Text = "Địa chỉ :";
             // 
-            // txtStaffName
+            // lblStaffPhone
             // 
-            this.txtStaffName.Location = new System.Drawing.Point(74, 92);
-            this.txtStaffName.Name = "txtStaffName";
-            this.txtStaffName.Size = new System.Drawing.Size(190, 30);
-            this.txtStaffName.TabIndex = 2;
-            this.txtStaffName.Text = "Họ tên";
+            this.lblStaffPhone.AutoSize = true;
+            this.lblStaffPhone.Location = new System.Drawing.Point(391, 94);
+            this.lblStaffPhone.Name = "lblStaffPhone";
+            this.lblStaffPhone.Size = new System.Drawing.Size(73, 22);
+            this.lblStaffPhone.TabIndex = 4;
+            this.lblStaffPhone.Text = "Số ĐT :";
             // 
-            // txtBirthDate
+            // lblStaffINumber
             // 
-            this.txtBirthDate.Location = new System.Drawing.Point(74, 128);
-            this.txtBirthDate.Name = "txtBirthDate";
-            this.txtBirthDate.Size = new System.Drawing.Size(190, 30);
-            this.txtBirthDate.TabIndex = 2;
-            this.txtBirthDate.Text = "Ngày sinh";
-            // 
-            // txtStaffAddress
-            // 
-            this.txtStaffAddress.Location = new System.Drawing.Point(311, 56);
-            this.txtStaffAddress.Name = "txtStaffAddress";
-            this.txtStaffAddress.Size = new System.Drawing.Size(190, 30);
-            this.txtStaffAddress.TabIndex = 2;
-            this.txtStaffAddress.Text = "Địa chỉ";
-            // 
-            // txtStaffPhone
-            // 
-            this.txtStaffPhone.Location = new System.Drawing.Point(311, 92);
-            this.txtStaffPhone.Name = "txtStaffPhone";
-            this.txtStaffPhone.Size = new System.Drawing.Size(190, 30);
-            this.txtStaffPhone.TabIndex = 2;
-            this.txtStaffPhone.Text = "Số ĐT";
-            // 
-            // txtStaffINumber
-            // 
-            this.txtStaffINumber.Location = new System.Drawing.Point(311, 128);
-            this.txtStaffINumber.Name = "txtStaffINumber";
-            this.txtStaffINumber.Size = new System.Drawing.Size(190, 30);
-            this.txtStaffINumber.TabIndex = 2;
-            this.txtStaffINumber.Text = "CMND";
-            // 
-            // btnAddStaff
-            // 
-            this.btnAddStaff.Location = new System.Drawing.Point(411, 164);
-            this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(90, 32);
-            this.btnAddStaff.TabIndex = 3;
-            this.btnAddStaff.Text = "Thêm";
-            this.btnAddStaff.UseVisualStyleBackColor = true;
-            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
+            this.lblStaffINumber.AutoSize = true;
+            this.lblStaffINumber.Location = new System.Drawing.Point(391, 127);
+            this.lblStaffINumber.Name = "lblStaffINumber";
+            this.lblStaffINumber.Size = new System.Drawing.Size(79, 22);
+            this.lblStaffINumber.TabIndex = 4;
+            this.lblStaffINumber.Text = "CMND :";
             // 
             // frmAdmin
             // 
@@ -2326,6 +2377,7 @@
             this.pnSearch.ResumeLayout(false);
             this.pnSearch.PerformLayout();
             this.tpCustomer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).EndInit();
             this.tpStaff.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -2429,7 +2481,6 @@
             this.tpRevenue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRevenue)).EndInit();
             this.tcAdmin.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2625,10 +2676,16 @@
         private System.Windows.Forms.Button btnShowCustomer;
         private System.Windows.Forms.TextBox txtStaffId;
         private System.Windows.Forms.TextBox txtStaffINumber;
-        private System.Windows.Forms.TextBox txtBirthDate;
+        private System.Windows.Forms.TextBox txtStaffBirth;
         private System.Windows.Forms.TextBox txtStaffPhone;
         private System.Windows.Forms.TextBox txtStaffName;
         private System.Windows.Forms.TextBox txtStaffAddress;
         private System.Windows.Forms.Button btnAddStaff;
+        private System.Windows.Forms.Label lblStaffID;
+        private System.Windows.Forms.Label lblStaffINumber;
+        private System.Windows.Forms.Label lblStaffBirth;
+        private System.Windows.Forms.Label lblStaffPhone;
+        private System.Windows.Forms.Label lblStaffAddress;
+        private System.Windows.Forms.Label lblStaffName;
     }
 }

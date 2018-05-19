@@ -13,13 +13,18 @@ namespace GUI
 {
     public partial class frmAdmin : Form
     {
+        BindingSource staffList = new BindingSource();
+
 		public frmAdmin()
         {
             InitializeComponent();
 
 			LoadComboBoxRevenue();
 			LoadDateTimePickerRevenue();//Set "Từ ngày" & "Cuối ngày" về đầu tháng & cuối tháng
-			
+
+            staffList.DataSource = StaffDAO.GetListStaff();
+            dtgvStaff.DataSource = staffList;
+            AddStaffBinding();
         }
 
 		#region Doanh Thu
@@ -61,12 +66,22 @@ namespace GUI
         #region Nhân Viên
         void LoadStaffList()
         {
-            dtgvStaff.DataSource = StaffDAO.GetListStaff();
+            staffList.DataSource = StaffDAO.GetListStaff();
         }
 
         private void btnShowStaff_Click(object sender, EventArgs e)
         {
             LoadStaffList();
+        }
+        void AddStaffBinding()
+        {
+            txtStaffId.DataBindings.Add("Text", dtgvStaff.DataSource, "Mã nhân viên", true, DataSourceUpdateMode.Never);
+            txtStaffName.DataBindings.Add("Text", dtgvStaff.DataSource, "Họ tên", true, DataSourceUpdateMode.Never);
+            txtStaffBirth.DataBindings.Add("Text", dtgvStaff.DataSource, "Ngày sinh", true, DataSourceUpdateMode.Never);
+            txtStaffAddress.DataBindings.Add("Text", dtgvStaff.DataSource, "Địa chỉ", true, DataSourceUpdateMode.Never);
+            txtStaffPhone.DataBindings.Add("Text", dtgvStaff.DataSource, "SĐT", true, DataSourceUpdateMode.Never);
+            txtStaffINumber.DataBindings.Add("Text", dtgvStaff.DataSource, "CMND", true, DataSourceUpdateMode.Never);
+
         }
         void AddStaff(string id, string hoTen, DateTime ngaySinh, string diaChi, string sdt, int cmnd)
         {
@@ -81,7 +96,14 @@ namespace GUI
         }
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
-
+            string staffId = txtStaffId.Text;
+            string staffName = txtStaffName.Text;
+            DateTime staffBirth = DateTime.Parse(txtStaffBirth.Text);
+            string staffAddress = txtStaffAddress.Text;
+            string staffPhone = txtStaffPhone.Text;
+            int staffINumber = Int32.Parse(txtStaffINumber.Text);
+            AddStaff(staffId, staffName, staffBirth, staffAddress, staffPhone, staffINumber);
+            LoadStaffList();
         }
 
         #endregion

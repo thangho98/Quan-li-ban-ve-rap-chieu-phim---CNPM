@@ -16,7 +16,7 @@ namespace GUI.DAO
 
         public static bool InsertStaff(string id, string hoTen, DateTime ngaySinh, string diaChi, string sdt, int cmnd)
         {
-            int result = DataProvider.ExecuteNonQuery("EXEC USP_InsertStaff", new object[] {id, hoTen, ngaySinh, diaChi, sdt, cmnd});
+            int result = DataProvider.ExecuteNonQuery("EXEC USP_InsertStaff @idStaff , @hoTen , @ngaySinh , @diaChi , @sdt , @cmnd ", new object[] {id, hoTen, ngaySinh, diaChi, sdt, cmnd});
             return result > 0;
         }
 }
