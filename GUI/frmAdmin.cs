@@ -1,4 +1,5 @@
 ﻿using GUI.DAO;
+using GUI.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,11 +20,11 @@ namespace GUI
         {
             InitializeComponent();
 
-			LoadComboBoxRevenue();
-			LoadDateTimePickerRevenue();//Set "Từ ngày" & "Cuối ngày" về đầu tháng & cuối tháng
+			dtgvStaff.DataSource = staffList;
 
-            staffList.DataSource = StaffDAO.GetListStaff();
-            dtgvStaff.DataSource = staffList;
+			LoadComboBoxRevenue();
+			LoadDateTimePickerRevenue();//Set "Từ ngày" & "Đến ngày ngày" về đầu tháng & cuối tháng
+			LoadStaffList();
             AddStaffBinding();
         }
 
@@ -83,6 +84,9 @@ namespace GUI
             txtStaffINumber.DataBindings.Add("Text", dtgvStaff.DataSource, "CMND", true, DataSourceUpdateMode.Never);
 
         }
+
+
+		//Thêm Staff
         void AddStaff(string id, string hoTen, DateTime ngaySinh, string diaChi, string sdt, int cmnd)
         {
             if (StaffDAO.InsertStaff(id, hoTen, ngaySinh, diaChi, sdt, cmnd))
@@ -106,10 +110,69 @@ namespace GUI
             LoadStaffList();
         }
 
-        #endregion
+		//Sửa Staff
+		void UpdateStaff(string id, string hoTen, DateTime ngaySinh, string diaChi, string sdt, int cmnd)
+		{
+			if (StaffDAO.UpdateStaff(id, hoTen, ngaySinh, diaChi, sdt, cmnd))
+			{
+				MessageBox.Show("Sửa tài khoản thành công");
+			}
+			else
+			{
+				MessageBox.Show("Sửa tài khoản thất bại");
+			}
+		}
+		private void btnUpdateStaff_Click(object sender, EventArgs e)
+		{
+			string staffId = txtStaffId.Text;
+			string staffName = txtStaffName.Text;
+			DateTime staffBirth = DateTime.Parse(txtStaffBirth.Text);
+			string staffAddress = txtStaffAddress.Text;
+			string staffPhone = txtStaffPhone.Text;
+			int staffINumber = Int32.Parse(txtStaffINumber.Text);
+			UpdateStaff(staffId, staffName, staffBirth, staffAddress, staffPhone, staffINumber);
+			LoadStaffList();
+		}
 
-        #region Khách Hàng
-        void LoadCustomer()
+		//Xóa Staff
+		void DeleteStaff(string id)
+		{
+			if (StaffDAO.DeleteStaff(id))
+			{
+				MessageBox.Show("Xóa tài khoản thành công");
+			}
+			else
+			{
+				MessageBox.Show("Xóa tài khoản thất bại");
+			}
+		}
+		private void btnDeleteStaff_Click(object sender, EventArgs e)
+		{
+			string staffId = txtStaffId.Text;
+			DeleteStaff(staffId);
+			LoadStaffList();
+		}
+
+		//Tìm kiếm Staff
+		private void btnSearchStaff_Click(object sender, EventArgs e)
+		{
+			string staffName = txtSearchStaff.Text;
+			DataTable staffSearchList = StaffDAO.SearchStaffByName(staffName);
+			staffList.DataSource = staffSearchList;
+		}
+
+		private void txtSearchStaff_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				btnSearchStaff.PerformClick();
+				e.SuppressKeyPress = true;//Tắt tiếng *ting của windows
+			}
+		}
+		#endregion
+
+		#region Khách Hàng
+		void LoadCustomer()
         {
             dtgvCustomer.DataSource = CustomerDAO.GetListCustomer();
         }
@@ -117,7 +180,8 @@ namespace GUI
         {
             LoadCustomer();
         }
-        #endregion
 
-    }
+		#endregion
+		
+	}
 }

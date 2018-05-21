@@ -52,7 +52,7 @@ namespace GUI
 			}
 			else
 			{
-				if (AccountDAO.UpdateAccount(username, confirmPass, newPass))
+				if (AccountDAO.UpdateAccountPassword(username, confirmPass, newPass))
 				{
 					MessageBox.Show("Cập nhật thành công!");
 				}
