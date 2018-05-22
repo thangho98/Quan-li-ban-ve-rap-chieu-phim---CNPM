@@ -59,6 +59,8 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.btnSearchStaff = new System.Windows.Forms.Button();
+			this.txtSearchStaff = new System.Windows.Forms.TextBox();
 			this.lblStaffINumber = new System.Windows.Forms.Label();
 			this.lblStaffBirth = new System.Windows.Forms.Label();
 			this.lblStaffPhone = new System.Windows.Forms.Label();
@@ -230,8 +232,27 @@
 			this.dtmToDate = new System.Windows.Forms.DateTimePicker();
 			this.dtmFromDate = new System.Windows.Forms.DateTimePicker();
 			this.tcAdmin = new System.Windows.Forms.TabControl();
-			this.txtSearchStaff = new System.Windows.Forms.TextBox();
-			this.btnSearchStaff = new System.Windows.Forms.Button();
+			this.grpStaff = new System.Windows.Forms.GroupBox();
+			this.grpCustomer = new System.Windows.Forms.GroupBox();
+			this.lblCusID = new System.Windows.Forms.Label();
+			this.txtCusID = new System.Windows.Forms.TextBox();
+			this.txtCusAddress = new System.Windows.Forms.TextBox();
+			this.lblCusINumber = new System.Windows.Forms.Label();
+			this.txtCusName = new System.Windows.Forms.TextBox();
+			this.lblCusBirth = new System.Windows.Forms.Label();
+			this.txtCusPhone = new System.Windows.Forms.TextBox();
+			this.lblCusPhone = new System.Windows.Forms.Label();
+			this.txtCusBirth = new System.Windows.Forms.TextBox();
+			this.lblCusAddress = new System.Windows.Forms.Label();
+			this.txtCusINumber = new System.Windows.Forms.TextBox();
+			this.lblCusName = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
+			this.textBox21 = new System.Windows.Forms.TextBox();
+			this.btnDeleteCustomer = new System.Windows.Forms.Button();
+			this.btnUpdateCustomer = new System.Windows.Forms.Button();
+			this.btnAddCustomer = new System.Windows.Forms.Button();
+			this.lblCusPoint = new System.Windows.Forms.Label();
+			this.nudPoint = new System.Windows.Forms.NumericUpDown();
 			this.tpAccount.SuspendLayout();
 			this.panel7.SuspendLayout();
 			this.panel10.SuspendLayout();
@@ -326,6 +347,9 @@
 			this.tpRevenue.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvRevenue)).BeginInit();
 			this.tcAdmin.SuspendLayout();
+			this.grpStaff.SuspendLayout();
+			this.grpCustomer.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudPoint)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tpAccount
@@ -577,6 +601,12 @@
 			// 
 			// tpCustomer
 			// 
+			this.tpCustomer.Controls.Add(this.button1);
+			this.tpCustomer.Controls.Add(this.textBox21);
+			this.tpCustomer.Controls.Add(this.btnDeleteCustomer);
+			this.tpCustomer.Controls.Add(this.btnUpdateCustomer);
+			this.tpCustomer.Controls.Add(this.btnAddCustomer);
+			this.tpCustomer.Controls.Add(this.grpCustomer);
 			this.tpCustomer.Controls.Add(this.btnShowCustomer);
 			this.tpCustomer.Controls.Add(this.dtgvCustomer);
 			this.tpCustomer.Location = new System.Drawing.Point(4, 28);
@@ -588,21 +618,25 @@
 			// 
 			// btnShowCustomer
 			// 
-			this.btnShowCustomer.Location = new System.Drawing.Point(172, 34);
+			this.btnShowCustomer.Location = new System.Drawing.Point(26, 168);
 			this.btnShowCustomer.Name = "btnShowCustomer";
-			this.btnShowCustomer.Size = new System.Drawing.Size(75, 23);
+			this.btnShowCustomer.Size = new System.Drawing.Size(90, 32);
 			this.btnShowCustomer.TabIndex = 1;
-			this.btnShowCustomer.Text = "button1";
+			this.btnShowCustomer.Text = "Xem";
 			this.btnShowCustomer.UseVisualStyleBackColor = true;
 			this.btnShowCustomer.Click += new System.EventHandler(this.btnShowCustomer_Click);
 			// 
 			// dtgvCustomer
 			// 
+			this.dtgvCustomer.AllowUserToAddRows = false;
+			this.dtgvCustomer.AllowUserToDeleteRows = false;
+			this.dtgvCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dtgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dtgvCustomer.Location = new System.Drawing.Point(8, 92);
+			this.dtgvCustomer.Location = new System.Drawing.Point(23, 206);
 			this.dtgvCustomer.Name = "dtgvCustomer";
+			this.dtgvCustomer.ReadOnly = true;
 			this.dtgvCustomer.RowTemplate.Height = 24;
-			this.dtgvCustomer.Size = new System.Drawing.Size(240, 150);
+			this.dtgvCustomer.Size = new System.Drawing.Size(970, 372);
 			this.dtgvCustomer.TabIndex = 0;
 			// 
 			// tpStaff
@@ -635,23 +669,12 @@
 			// 
 			// panel4
 			// 
+			this.panel4.Controls.Add(this.grpStaff);
 			this.panel4.Controls.Add(this.btnSearchStaff);
 			this.panel4.Controls.Add(this.txtSearchStaff);
-			this.panel4.Controls.Add(this.lblStaffINumber);
-			this.panel4.Controls.Add(this.lblStaffBirth);
-			this.panel4.Controls.Add(this.lblStaffPhone);
-			this.panel4.Controls.Add(this.lblStaffAddress);
-			this.panel4.Controls.Add(this.lblStaffName);
-			this.panel4.Controls.Add(this.lblStaffID);
 			this.panel4.Controls.Add(this.btnDeleteStaff);
 			this.panel4.Controls.Add(this.btnUpdateStaff);
 			this.panel4.Controls.Add(this.btnAddStaff);
-			this.panel4.Controls.Add(this.txtStaffINumber);
-			this.panel4.Controls.Add(this.txtStaffBirth);
-			this.panel4.Controls.Add(this.txtStaffPhone);
-			this.panel4.Controls.Add(this.txtStaffName);
-			this.panel4.Controls.Add(this.txtStaffAddress);
-			this.panel4.Controls.Add(this.txtStaffId);
 			this.panel4.Controls.Add(this.btnShowStaff);
 			this.panel4.Controls.Add(this.dtgvStaff);
 			this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -662,11 +685,30 @@
 			this.panel4.Size = new System.Drawing.Size(1060, 586);
 			this.panel4.TabIndex = 12;
 			// 
+			// btnSearchStaff
+			// 
+			this.btnSearchStaff.BackgroundImage = global::GUI.Properties.Resources.search_icon;
+			this.btnSearchStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnSearchStaff.Location = new System.Drawing.Point(932, 169);
+			this.btnSearchStaff.Name = "btnSearchStaff";
+			this.btnSearchStaff.Size = new System.Drawing.Size(26, 26);
+			this.btnSearchStaff.TabIndex = 6;
+			this.btnSearchStaff.UseVisualStyleBackColor = true;
+			this.btnSearchStaff.Click += new System.EventHandler(this.btnSearchStaff_Click);
+			// 
+			// txtSearchStaff
+			// 
+			this.txtSearchStaff.Location = new System.Drawing.Point(794, 169);
+			this.txtSearchStaff.Name = "txtSearchStaff";
+			this.txtSearchStaff.Size = new System.Drawing.Size(132, 26);
+			this.txtSearchStaff.TabIndex = 5;
+			this.txtSearchStaff.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchStaff_KeyDown);
+			// 
 			// lblStaffINumber
 			// 
 			this.lblStaffINumber.AutoSize = true;
 			this.lblStaffINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffINumber.Location = new System.Drawing.Point(391, 127);
+			this.lblStaffINumber.Location = new System.Drawing.Point(408, 108);
 			this.lblStaffINumber.Name = "lblStaffINumber";
 			this.lblStaffINumber.Size = new System.Drawing.Size(69, 19);
 			this.lblStaffINumber.TabIndex = 4;
@@ -676,7 +718,7 @@
 			// 
 			this.lblStaffBirth.AutoSize = true;
 			this.lblStaffBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffBirth.Location = new System.Drawing.Point(30, 127);
+			this.lblStaffBirth.Location = new System.Drawing.Point(24, 108);
 			this.lblStaffBirth.Name = "lblStaffBirth";
 			this.lblStaffBirth.Size = new System.Drawing.Size(85, 19);
 			this.lblStaffBirth.TabIndex = 4;
@@ -686,7 +728,7 @@
 			// 
 			this.lblStaffPhone.AutoSize = true;
 			this.lblStaffPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffPhone.Location = new System.Drawing.Point(391, 94);
+			this.lblStaffPhone.Location = new System.Drawing.Point(408, 75);
 			this.lblStaffPhone.Name = "lblStaffPhone";
 			this.lblStaffPhone.Size = new System.Drawing.Size(61, 19);
 			this.lblStaffPhone.TabIndex = 4;
@@ -696,7 +738,7 @@
 			// 
 			this.lblStaffAddress.AutoSize = true;
 			this.lblStaffAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffAddress.Location = new System.Drawing.Point(391, 58);
+			this.lblStaffAddress.Location = new System.Drawing.Point(408, 39);
 			this.lblStaffAddress.Name = "lblStaffAddress";
 			this.lblStaffAddress.Size = new System.Drawing.Size(65, 19);
 			this.lblStaffAddress.TabIndex = 4;
@@ -706,7 +748,7 @@
 			// 
 			this.lblStaffName.AutoSize = true;
 			this.lblStaffName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffName.Location = new System.Drawing.Point(30, 94);
+			this.lblStaffName.Location = new System.Drawing.Point(24, 75);
 			this.lblStaffName.Name = "lblStaffName";
 			this.lblStaffName.Size = new System.Drawing.Size(63, 19);
 			this.lblStaffName.TabIndex = 4;
@@ -716,7 +758,7 @@
 			// 
 			this.lblStaffID.AutoSize = true;
 			this.lblStaffID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffID.Location = new System.Drawing.Point(30, 58);
+			this.lblStaffID.Location = new System.Drawing.Point(24, 39);
 			this.lblStaffID.Name = "lblStaffID";
 			this.lblStaffID.Size = new System.Drawing.Size(69, 19);
 			this.lblStaffID.TabIndex = 4;
@@ -724,7 +766,7 @@
 			// 
 			// btnDeleteStaff
 			// 
-			this.btnDeleteStaff.Location = new System.Drawing.Point(670, 163);
+			this.btnDeleteStaff.Location = new System.Drawing.Point(646, 163);
 			this.btnDeleteStaff.Name = "btnDeleteStaff";
 			this.btnDeleteStaff.Size = new System.Drawing.Size(90, 32);
 			this.btnDeleteStaff.TabIndex = 3;
@@ -734,7 +776,7 @@
 			// 
 			// btnUpdateStaff
 			// 
-			this.btnUpdateStaff.Location = new System.Drawing.Point(548, 163);
+			this.btnUpdateStaff.Location = new System.Drawing.Point(524, 163);
 			this.btnUpdateStaff.Name = "btnUpdateStaff";
 			this.btnUpdateStaff.Size = new System.Drawing.Size(90, 32);
 			this.btnUpdateStaff.TabIndex = 3;
@@ -744,7 +786,7 @@
 			// 
 			// btnAddStaff
 			// 
-			this.btnAddStaff.Location = new System.Drawing.Point(423, 163);
+			this.btnAddStaff.Location = new System.Drawing.Point(399, 163);
 			this.btnAddStaff.Name = "btnAddStaff";
 			this.btnAddStaff.Size = new System.Drawing.Size(90, 32);
 			this.btnAddStaff.TabIndex = 3;
@@ -754,49 +796,55 @@
 			// 
 			// txtStaffINumber
 			// 
-			this.txtStaffINumber.Location = new System.Drawing.Point(509, 127);
+			this.txtStaffINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffINumber.Location = new System.Drawing.Point(503, 108);
 			this.txtStaffINumber.Name = "txtStaffINumber";
 			this.txtStaffINumber.Size = new System.Drawing.Size(190, 26);
 			this.txtStaffINumber.TabIndex = 2;
 			// 
 			// txtStaffBirth
 			// 
-			this.txtStaffBirth.Location = new System.Drawing.Point(146, 127);
+			this.txtStaffBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffBirth.Location = new System.Drawing.Point(122, 108);
 			this.txtStaffBirth.Name = "txtStaffBirth";
 			this.txtStaffBirth.Size = new System.Drawing.Size(190, 26);
 			this.txtStaffBirth.TabIndex = 2;
 			// 
 			// txtStaffPhone
 			// 
-			this.txtStaffPhone.Location = new System.Drawing.Point(509, 91);
+			this.txtStaffPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffPhone.Location = new System.Drawing.Point(503, 72);
 			this.txtStaffPhone.Name = "txtStaffPhone";
 			this.txtStaffPhone.Size = new System.Drawing.Size(190, 26);
 			this.txtStaffPhone.TabIndex = 2;
 			// 
 			// txtStaffName
 			// 
-			this.txtStaffName.Location = new System.Drawing.Point(146, 91);
+			this.txtStaffName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffName.Location = new System.Drawing.Point(122, 72);
 			this.txtStaffName.Name = "txtStaffName";
 			this.txtStaffName.Size = new System.Drawing.Size(190, 26);
 			this.txtStaffName.TabIndex = 2;
 			// 
 			// txtStaffAddress
 			// 
-			this.txtStaffAddress.Location = new System.Drawing.Point(509, 55);
+			this.txtStaffAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffAddress.Location = new System.Drawing.Point(503, 36);
 			this.txtStaffAddress.Name = "txtStaffAddress";
 			this.txtStaffAddress.Size = new System.Drawing.Size(190, 26);
 			this.txtStaffAddress.TabIndex = 2;
 			// 
 			// txtStaffId
 			// 
-			this.txtStaffId.Location = new System.Drawing.Point(146, 55);
+			this.txtStaffId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffId.Location = new System.Drawing.Point(122, 36);
 			this.txtStaffId.Name = "txtStaffId";
 			this.txtStaffId.Size = new System.Drawing.Size(190, 26);
 			this.txtStaffId.TabIndex = 2;
 			// 
 			// btnShowStaff
 			// 
-			this.btnShowStaff.Location = new System.Drawing.Point(870, 163);
+			this.btnShowStaff.Location = new System.Drawing.Point(16, 160);
 			this.btnShowStaff.Name = "btnShowStaff";
 			this.btnShowStaff.Size = new System.Drawing.Size(88, 35);
 			this.btnShowStaff.TabIndex = 1;
@@ -814,7 +862,7 @@
 			this.dtgvStaff.Margin = new System.Windows.Forms.Padding(4);
 			this.dtgvStaff.Name = "dtgvStaff";
 			this.dtgvStaff.ReadOnly = true;
-			this.dtgvStaff.Size = new System.Drawing.Size(942, 363);
+			this.dtgvStaff.Size = new System.Drawing.Size(942, 375);
 			this.dtgvStaff.TabIndex = 0;
 			// 
 			// tpData
@@ -982,28 +1030,26 @@
 			// 
 			this.panel73.Controls.Add(this.button43);
 			this.panel73.Controls.Add(this.textBox23);
-			this.panel73.Location = new System.Drawing.Point(679, 17);
+			this.panel73.Location = new System.Drawing.Point(670, 17);
 			this.panel73.Name = "panel73";
 			this.panel73.Size = new System.Drawing.Size(373, 31);
 			this.panel73.TabIndex = 7;
 			// 
 			// button43
 			// 
-			this.button43.Dock = System.Windows.Forms.DockStyle.Right;
 			this.button43.Image = global::GUI.Properties.Resources.search_icon;
-			this.button43.Location = new System.Drawing.Point(346, 0);
+			this.button43.Location = new System.Drawing.Point(343, 0);
 			this.button43.Name = "button43";
-			this.button43.Size = new System.Drawing.Size(27, 31);
+			this.button43.Size = new System.Drawing.Size(31, 31);
 			this.button43.TabIndex = 7;
 			this.button43.UseVisualStyleBackColor = true;
 			// 
 			// textBox23
 			// 
-			this.textBox23.Dock = System.Windows.Forms.DockStyle.Left;
 			this.textBox23.Location = new System.Drawing.Point(0, 0);
 			this.textBox23.Multiline = true;
 			this.textBox23.Name = "textBox23";
-			this.textBox23.Size = new System.Drawing.Size(349, 31);
+			this.textBox23.Size = new System.Drawing.Size(337, 31);
 			this.textBox23.TabIndex = 6;
 			// 
 			// button9
@@ -1185,7 +1231,7 @@
 			// 
 			this.panel74.Controls.Add(this.button44);
 			this.panel74.Controls.Add(this.textBox24);
-			this.panel74.Location = new System.Drawing.Point(673, 17);
+			this.panel74.Location = new System.Drawing.Point(663, 17);
 			this.panel74.Name = "panel74";
 			this.panel74.Size = new System.Drawing.Size(373, 31);
 			this.panel74.TabIndex = 8;
@@ -1194,19 +1240,18 @@
 			// 
 			this.button44.Dock = System.Windows.Forms.DockStyle.Right;
 			this.button44.Image = global::GUI.Properties.Resources.search_icon;
-			this.button44.Location = new System.Drawing.Point(346, 0);
+			this.button44.Location = new System.Drawing.Point(342, 0);
 			this.button44.Name = "button44";
-			this.button44.Size = new System.Drawing.Size(27, 31);
+			this.button44.Size = new System.Drawing.Size(31, 31);
 			this.button44.TabIndex = 7;
 			this.button44.UseVisualStyleBackColor = true;
 			// 
 			// textBox24
 			// 
-			this.textBox24.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.textBox24.Location = new System.Drawing.Point(0, 0);
+			this.textBox24.Location = new System.Drawing.Point(6, 0);
 			this.textBox24.Multiline = true;
 			this.textBox24.Name = "textBox24";
-			this.textBox24.Size = new System.Drawing.Size(373, 31);
+			this.textBox24.Size = new System.Drawing.Size(330, 31);
 			this.textBox24.TabIndex = 6;
 			// 
 			// button13
@@ -1387,7 +1432,7 @@
 			// 
 			this.panel75.Controls.Add(this.button45);
 			this.panel75.Controls.Add(this.textBox25);
-			this.panel75.Location = new System.Drawing.Point(675, 14);
+			this.panel75.Location = new System.Drawing.Point(669, 15);
 			this.panel75.Name = "panel75";
 			this.panel75.Size = new System.Drawing.Size(373, 31);
 			this.panel75.TabIndex = 8;
@@ -1396,19 +1441,18 @@
 			// 
 			this.button45.Dock = System.Windows.Forms.DockStyle.Right;
 			this.button45.Image = global::GUI.Properties.Resources.search_icon;
-			this.button45.Location = new System.Drawing.Point(346, 0);
+			this.button45.Location = new System.Drawing.Point(342, 0);
 			this.button45.Name = "button45";
-			this.button45.Size = new System.Drawing.Size(27, 31);
+			this.button45.Size = new System.Drawing.Size(31, 31);
 			this.button45.TabIndex = 7;
 			this.button45.UseVisualStyleBackColor = true;
 			// 
 			// textBox25
 			// 
-			this.textBox25.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBox25.Location = new System.Drawing.Point(0, 0);
 			this.textBox25.Multiline = true;
 			this.textBox25.Name = "textBox25";
-			this.textBox25.Size = new System.Drawing.Size(373, 31);
+			this.textBox25.Size = new System.Drawing.Size(336, 31);
 			this.textBox25.TabIndex = 6;
 			// 
 			// button17
@@ -1590,7 +1634,7 @@
 			// 
 			this.panel76.Controls.Add(this.button46);
 			this.panel76.Controls.Add(this.textBox26);
-			this.panel76.Location = new System.Drawing.Point(667, 14);
+			this.panel76.Location = new System.Drawing.Point(664, 14);
 			this.panel76.Name = "panel76";
 			this.panel76.Size = new System.Drawing.Size(373, 31);
 			this.panel76.TabIndex = 8;
@@ -1599,19 +1643,18 @@
 			// 
 			this.button46.Dock = System.Windows.Forms.DockStyle.Right;
 			this.button46.Image = global::GUI.Properties.Resources.search_icon;
-			this.button46.Location = new System.Drawing.Point(346, 0);
+			this.button46.Location = new System.Drawing.Point(342, 0);
 			this.button46.Name = "button46";
-			this.button46.Size = new System.Drawing.Size(27, 31);
+			this.button46.Size = new System.Drawing.Size(31, 31);
 			this.button46.TabIndex = 7;
 			this.button46.UseVisualStyleBackColor = true;
 			// 
 			// textBox26
 			// 
-			this.textBox26.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBox26.Location = new System.Drawing.Point(0, 0);
 			this.textBox26.Multiline = true;
 			this.textBox26.Name = "textBox26";
-			this.textBox26.Size = new System.Drawing.Size(373, 31);
+			this.textBox26.Size = new System.Drawing.Size(336, 31);
 			this.textBox26.TabIndex = 6;
 			// 
 			// button21
@@ -1792,7 +1835,7 @@
 			// 
 			this.panel77.Controls.Add(this.button47);
 			this.panel77.Controls.Add(this.textBox27);
-			this.panel77.Location = new System.Drawing.Point(675, 17);
+			this.panel77.Location = new System.Drawing.Point(669, 17);
 			this.panel77.Name = "panel77";
 			this.panel77.Size = new System.Drawing.Size(373, 31);
 			this.panel77.TabIndex = 8;
@@ -1801,19 +1844,18 @@
 			// 
 			this.button47.Dock = System.Windows.Forms.DockStyle.Right;
 			this.button47.Image = global::GUI.Properties.Resources.search_icon;
-			this.button47.Location = new System.Drawing.Point(346, 0);
+			this.button47.Location = new System.Drawing.Point(342, 0);
 			this.button47.Name = "button47";
-			this.button47.Size = new System.Drawing.Size(27, 31);
+			this.button47.Size = new System.Drawing.Size(31, 31);
 			this.button47.TabIndex = 7;
 			this.button47.UseVisualStyleBackColor = true;
 			// 
 			// textBox27
 			// 
-			this.textBox27.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.textBox27.Location = new System.Drawing.Point(0, 0);
+			this.textBox27.Location = new System.Drawing.Point(1, 0);
 			this.textBox27.Multiline = true;
 			this.textBox27.Name = "textBox27";
-			this.textBox27.Size = new System.Drawing.Size(373, 31);
+			this.textBox27.Size = new System.Drawing.Size(335, 31);
 			this.textBox27.TabIndex = 6;
 			// 
 			// button25
@@ -1994,7 +2036,7 @@
 			// 
 			this.panel78.Controls.Add(this.button48);
 			this.panel78.Controls.Add(this.textBox28);
-			this.panel78.Location = new System.Drawing.Point(679, 14);
+			this.panel78.Location = new System.Drawing.Point(676, 14);
 			this.panel78.Name = "panel78";
 			this.panel78.Size = new System.Drawing.Size(367, 31);
 			this.panel78.TabIndex = 8;
@@ -2003,19 +2045,18 @@
 			// 
 			this.button48.Dock = System.Windows.Forms.DockStyle.Right;
 			this.button48.Image = global::GUI.Properties.Resources.search_icon;
-			this.button48.Location = new System.Drawing.Point(340, 0);
+			this.button48.Location = new System.Drawing.Point(336, 0);
 			this.button48.Name = "button48";
-			this.button48.Size = new System.Drawing.Size(27, 31);
+			this.button48.Size = new System.Drawing.Size(31, 31);
 			this.button48.TabIndex = 7;
 			this.button48.UseVisualStyleBackColor = true;
 			// 
 			// textBox28
 			// 
-			this.textBox28.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.textBox28.Location = new System.Drawing.Point(0, 0);
+			this.textBox28.Location = new System.Drawing.Point(-6, 0);
 			this.textBox28.Multiline = true;
 			this.textBox28.Name = "textBox28";
-			this.textBox28.Size = new System.Drawing.Size(367, 31);
+			this.textBox28.Size = new System.Drawing.Size(336, 31);
 			this.textBox28.TabIndex = 6;
 			// 
 			// button29
@@ -2196,7 +2237,7 @@
 			// 
 			this.panel79.Controls.Add(this.button49);
 			this.panel79.Controls.Add(this.textBox29);
-			this.panel79.Location = new System.Drawing.Point(675, 16);
+			this.panel79.Location = new System.Drawing.Point(667, 16);
 			this.panel79.Name = "panel79";
 			this.panel79.Size = new System.Drawing.Size(376, 31);
 			this.panel79.TabIndex = 8;
@@ -2205,19 +2246,18 @@
 			// 
 			this.button49.Dock = System.Windows.Forms.DockStyle.Right;
 			this.button49.Image = global::GUI.Properties.Resources.search_icon;
-			this.button49.Location = new System.Drawing.Point(349, 0);
+			this.button49.Location = new System.Drawing.Point(345, 0);
 			this.button49.Name = "button49";
-			this.button49.Size = new System.Drawing.Size(27, 31);
+			this.button49.Size = new System.Drawing.Size(31, 31);
 			this.button49.TabIndex = 7;
 			this.button49.UseVisualStyleBackColor = true;
 			// 
 			// textBox29
 			// 
-			this.textBox29.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.textBox29.Location = new System.Drawing.Point(0, 0);
+			this.textBox29.Location = new System.Drawing.Point(3, 0);
 			this.textBox29.Multiline = true;
 			this.textBox29.Name = "textBox29";
-			this.textBox29.Size = new System.Drawing.Size(376, 31);
+			this.textBox29.Size = new System.Drawing.Size(336, 31);
 			this.textBox29.TabIndex = 6;
 			// 
 			// button33
@@ -2351,8 +2391,9 @@
 			// 
 			// cboSelectMovie
 			// 
+			this.cboSelectMovie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboSelectMovie.FormattingEnabled = true;
-			this.cboSelectMovie.Location = new System.Drawing.Point(102, 16);
+			this.cboSelectMovie.Location = new System.Drawing.Point(102, 13);
 			this.cboSelectMovie.Name = "cboSelectMovie";
 			this.cboSelectMovie.Size = new System.Drawing.Size(349, 27);
 			this.cboSelectMovie.TabIndex = 1;
@@ -2390,24 +2431,232 @@
 			this.tcAdmin.Size = new System.Drawing.Size(1068, 618);
 			this.tcAdmin.TabIndex = 0;
 			// 
-			// txtSearchStaff
+			// grpStaff
 			// 
-			this.txtSearchStaff.Location = new System.Drawing.Point(826, 34);
-			this.txtSearchStaff.Name = "txtSearchStaff";
-			this.txtSearchStaff.Size = new System.Drawing.Size(100, 26);
-			this.txtSearchStaff.TabIndex = 5;
-			this.txtSearchStaff.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchStaff_KeyDown);
+			this.grpStaff.BackColor = System.Drawing.Color.Transparent;
+			this.grpStaff.Controls.Add(this.lblStaffID);
+			this.grpStaff.Controls.Add(this.txtStaffId);
+			this.grpStaff.Controls.Add(this.txtStaffAddress);
+			this.grpStaff.Controls.Add(this.lblStaffINumber);
+			this.grpStaff.Controls.Add(this.txtStaffName);
+			this.grpStaff.Controls.Add(this.lblStaffBirth);
+			this.grpStaff.Controls.Add(this.txtStaffPhone);
+			this.grpStaff.Controls.Add(this.lblStaffPhone);
+			this.grpStaff.Controls.Add(this.txtStaffBirth);
+			this.grpStaff.Controls.Add(this.lblStaffAddress);
+			this.grpStaff.Controls.Add(this.txtStaffINumber);
+			this.grpStaff.Controls.Add(this.lblStaffName);
+			this.grpStaff.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.grpStaff.Location = new System.Drawing.Point(150, 12);
+			this.grpStaff.Name = "grpStaff";
+			this.grpStaff.Size = new System.Drawing.Size(706, 145);
+			this.grpStaff.TabIndex = 7;
+			this.grpStaff.TabStop = false;
+			this.grpStaff.Text = "Thông tin nhân viên";
 			// 
-			// btnSearchStaff
+			// grpCustomer
 			// 
-			this.btnSearchStaff.BackgroundImage = global::GUI.Properties.Resources.search_icon;
-			this.btnSearchStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnSearchStaff.Location = new System.Drawing.Point(932, 34);
-			this.btnSearchStaff.Name = "btnSearchStaff";
-			this.btnSearchStaff.Size = new System.Drawing.Size(26, 26);
-			this.btnSearchStaff.TabIndex = 6;
-			this.btnSearchStaff.UseVisualStyleBackColor = true;
-			this.btnSearchStaff.Click += new System.EventHandler(this.btnSearchStaff_Click);
+			this.grpCustomer.BackColor = System.Drawing.Color.Transparent;
+			this.grpCustomer.Controls.Add(this.nudPoint);
+			this.grpCustomer.Controls.Add(this.lblCusID);
+			this.grpCustomer.Controls.Add(this.txtCusID);
+			this.grpCustomer.Controls.Add(this.txtCusAddress);
+			this.grpCustomer.Controls.Add(this.lblCusINumber);
+			this.grpCustomer.Controls.Add(this.txtCusName);
+			this.grpCustomer.Controls.Add(this.lblCusBirth);
+			this.grpCustomer.Controls.Add(this.txtCusPhone);
+			this.grpCustomer.Controls.Add(this.lblCusPhone);
+			this.grpCustomer.Controls.Add(this.lblCusPoint);
+			this.grpCustomer.Controls.Add(this.txtCusBirth);
+			this.grpCustomer.Controls.Add(this.lblCusAddress);
+			this.grpCustomer.Controls.Add(this.txtCusINumber);
+			this.grpCustomer.Controls.Add(this.lblCusName);
+			this.grpCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.grpCustomer.Location = new System.Drawing.Point(23, 17);
+			this.grpCustomer.Name = "grpCustomer";
+			this.grpCustomer.Size = new System.Drawing.Size(985, 145);
+			this.grpCustomer.TabIndex = 8;
+			this.grpCustomer.TabStop = false;
+			this.grpCustomer.Text = "Thông tin khách hàng";
+			// 
+			// lblCusID
+			// 
+			this.lblCusID.AutoSize = true;
+			this.lblCusID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusID.Location = new System.Drawing.Point(24, 39);
+			this.lblCusID.Name = "lblCusID";
+			this.lblCusID.Size = new System.Drawing.Size(70, 19);
+			this.lblCusID.TabIndex = 4;
+			this.lblCusID.Text = "Mã KH :";
+			// 
+			// txtCusID
+			// 
+			this.txtCusID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusID.Location = new System.Drawing.Point(125, 36);
+			this.txtCusID.Name = "txtCusID";
+			this.txtCusID.Size = new System.Drawing.Size(190, 26);
+			this.txtCusID.TabIndex = 2;
+			// 
+			// txtCusAddress
+			// 
+			this.txtCusAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusAddress.Location = new System.Drawing.Point(503, 36);
+			this.txtCusAddress.Name = "txtCusAddress";
+			this.txtCusAddress.Size = new System.Drawing.Size(190, 26);
+			this.txtCusAddress.TabIndex = 2;
+			// 
+			// lblCusINumber
+			// 
+			this.lblCusINumber.AutoSize = true;
+			this.lblCusINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusINumber.Location = new System.Drawing.Point(409, 108);
+			this.lblCusINumber.Name = "lblCusINumber";
+			this.lblCusINumber.Size = new System.Drawing.Size(69, 19);
+			this.lblCusINumber.TabIndex = 4;
+			this.lblCusINumber.Text = "CMND :";
+			// 
+			// txtCusName
+			// 
+			this.txtCusName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusName.Location = new System.Drawing.Point(125, 72);
+			this.txtCusName.Name = "txtCusName";
+			this.txtCusName.Size = new System.Drawing.Size(190, 26);
+			this.txtCusName.TabIndex = 2;
+			// 
+			// lblCusBirth
+			// 
+			this.lblCusBirth.AutoSize = true;
+			this.lblCusBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusBirth.Location = new System.Drawing.Point(24, 108);
+			this.lblCusBirth.Name = "lblCusBirth";
+			this.lblCusBirth.Size = new System.Drawing.Size(85, 19);
+			this.lblCusBirth.TabIndex = 4;
+			this.lblCusBirth.Text = "Ngày sinh :";
+			// 
+			// txtCusPhone
+			// 
+			this.txtCusPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusPhone.Location = new System.Drawing.Point(503, 72);
+			this.txtCusPhone.Name = "txtCusPhone";
+			this.txtCusPhone.Size = new System.Drawing.Size(190, 26);
+			this.txtCusPhone.TabIndex = 2;
+			// 
+			// lblCusPhone
+			// 
+			this.lblCusPhone.AutoSize = true;
+			this.lblCusPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusPhone.Location = new System.Drawing.Point(409, 75);
+			this.lblCusPhone.Name = "lblCusPhone";
+			this.lblCusPhone.Size = new System.Drawing.Size(61, 19);
+			this.lblCusPhone.TabIndex = 4;
+			this.lblCusPhone.Text = "Số ĐT :";
+			// 
+			// txtCusBirth
+			// 
+			this.txtCusBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusBirth.Location = new System.Drawing.Point(125, 108);
+			this.txtCusBirth.Name = "txtCusBirth";
+			this.txtCusBirth.Size = new System.Drawing.Size(190, 26);
+			this.txtCusBirth.TabIndex = 2;
+			// 
+			// lblCusAddress
+			// 
+			this.lblCusAddress.AutoSize = true;
+			this.lblCusAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusAddress.Location = new System.Drawing.Point(409, 39);
+			this.lblCusAddress.Name = "lblCusAddress";
+			this.lblCusAddress.Size = new System.Drawing.Size(65, 19);
+			this.lblCusAddress.TabIndex = 4;
+			this.lblCusAddress.Text = "Địa chỉ :";
+			// 
+			// txtCusINumber
+			// 
+			this.txtCusINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusINumber.Location = new System.Drawing.Point(503, 108);
+			this.txtCusINumber.Name = "txtCusINumber";
+			this.txtCusINumber.Size = new System.Drawing.Size(190, 26);
+			this.txtCusINumber.TabIndex = 2;
+			// 
+			// lblCusName
+			// 
+			this.lblCusName.AutoSize = true;
+			this.lblCusName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusName.Location = new System.Drawing.Point(24, 75);
+			this.lblCusName.Name = "lblCusName";
+			this.lblCusName.Size = new System.Drawing.Size(63, 19);
+			this.lblCusName.TabIndex = 4;
+			this.lblCusName.Text = "Họ tên :";
+			// 
+			// button1
+			// 
+			this.button1.BackgroundImage = global::GUI.Properties.Resources.search_icon;
+			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.button1.Location = new System.Drawing.Point(967, 174);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(26, 26);
+			this.button1.TabIndex = 13;
+			this.button1.UseVisualStyleBackColor = true;
+			// 
+			// textBox21
+			// 
+			this.textBox21.Location = new System.Drawing.Point(829, 174);
+			this.textBox21.Name = "textBox21";
+			this.textBox21.Size = new System.Drawing.Size(132, 26);
+			this.textBox21.TabIndex = 12;
+			// 
+			// btnDeleteCustomer
+			// 
+			this.btnDeleteCustomer.Location = new System.Drawing.Point(635, 168);
+			this.btnDeleteCustomer.Name = "btnDeleteCustomer";
+			this.btnDeleteCustomer.Size = new System.Drawing.Size(90, 32);
+			this.btnDeleteCustomer.TabIndex = 9;
+			this.btnDeleteCustomer.Text = "Xóa";
+			this.btnDeleteCustomer.UseVisualStyleBackColor = true;
+			this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
+			// 
+			// btnUpdateCustomer
+			// 
+			this.btnUpdateCustomer.Location = new System.Drawing.Point(513, 168);
+			this.btnUpdateCustomer.Name = "btnUpdateCustomer";
+			this.btnUpdateCustomer.Size = new System.Drawing.Size(90, 32);
+			this.btnUpdateCustomer.TabIndex = 10;
+			this.btnUpdateCustomer.Text = "Sửa";
+			this.btnUpdateCustomer.UseVisualStyleBackColor = true;
+			this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
+			// 
+			// btnAddCustomer
+			// 
+			this.btnAddCustomer.Location = new System.Drawing.Point(388, 168);
+			this.btnAddCustomer.Name = "btnAddCustomer";
+			this.btnAddCustomer.Size = new System.Drawing.Size(90, 32);
+			this.btnAddCustomer.TabIndex = 11;
+			this.btnAddCustomer.Text = "Thêm";
+			this.btnAddCustomer.UseVisualStyleBackColor = true;
+			this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+			// 
+			// lblCusPoint
+			// 
+			this.lblCusPoint.AutoSize = true;
+			this.lblCusPoint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusPoint.Location = new System.Drawing.Point(765, 39);
+			this.lblCusPoint.Name = "lblCusPoint";
+			this.lblCusPoint.Size = new System.Drawing.Size(106, 19);
+			this.lblCusPoint.TabIndex = 4;
+			this.lblCusPoint.Text = "Điểm tích lũy :";
+			// 
+			// nudPoint
+			// 
+			this.nudPoint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nudPoint.Location = new System.Drawing.Point(895, 37);
+			this.nudPoint.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.nudPoint.Name = "nudPoint";
+			this.nudPoint.Size = new System.Drawing.Size(75, 26);
+			this.nudPoint.TabIndex = 5;
+			this.nudPoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// frmAdmin
 			// 
@@ -2437,6 +2686,7 @@
 			this.pnSearch.ResumeLayout(false);
 			this.pnSearch.PerformLayout();
 			this.tpCustomer.ResumeLayout(false);
+			this.tpCustomer.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).EndInit();
 			this.tpStaff.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
@@ -2541,6 +2791,11 @@
 			this.tpRevenue.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvRevenue)).EndInit();
 			this.tcAdmin.ResumeLayout(false);
+			this.grpStaff.ResumeLayout(false);
+			this.grpStaff.PerformLayout();
+			this.grpCustomer.ResumeLayout(false);
+			this.grpCustomer.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudPoint)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -2751,5 +3006,26 @@
 		private System.Windows.Forms.Button btnDeleteStaff;
 		private System.Windows.Forms.Button btnSearchStaff;
 		private System.Windows.Forms.TextBox txtSearchStaff;
+		private System.Windows.Forms.GroupBox grpStaff;
+		private System.Windows.Forms.GroupBox grpCustomer;
+		private System.Windows.Forms.Label lblCusID;
+		private System.Windows.Forms.TextBox txtCusID;
+		private System.Windows.Forms.TextBox txtCusAddress;
+		private System.Windows.Forms.Label lblCusINumber;
+		private System.Windows.Forms.TextBox txtCusName;
+		private System.Windows.Forms.Label lblCusBirth;
+		private System.Windows.Forms.TextBox txtCusPhone;
+		private System.Windows.Forms.Label lblCusPhone;
+		private System.Windows.Forms.TextBox txtCusBirth;
+		private System.Windows.Forms.Label lblCusAddress;
+		private System.Windows.Forms.TextBox txtCusINumber;
+		private System.Windows.Forms.Label lblCusName;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.TextBox textBox21;
+		private System.Windows.Forms.Button btnDeleteCustomer;
+		private System.Windows.Forms.Button btnUpdateCustomer;
+		private System.Windows.Forms.Button btnAddCustomer;
+		private System.Windows.Forms.NumericUpDown nudPoint;
+		private System.Windows.Forms.Label lblCusPoint;
 	}
 }

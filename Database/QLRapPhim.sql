@@ -386,6 +386,15 @@ BEGIN
 END
 GO
 
+CREATE PROC USP_InsertStaff
+@idStaff VARCHAR(50), @hoTen NVARCHAR(100), @ngaySinh date, @diaChi NVARCHAR(100), @sdt VARCHAR(100), @cmnd INT
+AS
+BEGIN
+	INSERT dbo.NhanVien (id, HoTen, NgaySinh, DiaChi, SDT, CMND)
+	VALUES (@idStaff, @hoTen, @ngaySinh, @diaChi, @sdt, @cmnd)
+END
+GO
+
 CREATE PROC USP_GetCustomer
 AS
 BEGIN
@@ -394,12 +403,12 @@ BEGIN
 END
 GO
 
-CREATE PROC USP_InsertStaff
-@idStaff VARCHAR(50), @hoTen NVARCHAR(100), @ngaySinh date, @diaChi NVARCHAR(100), @sdt VARCHAR(100), @cmnd INT
+CREATE PROC USP_InsertCustomer
+@idCus VARCHAR(50), @hoTen NVARCHAR(100), @ngaySinh date, @diaChi NVARCHAR(100), @sdt VARCHAR(100), @cmnd INT
 AS
 BEGIN
-	INSERT dbo.NhanVien (id, HoTen, NgaySinh, DiaChi, SDT, CMND)
-	VALUES (@idStaff, @hoTen, @ngaySinh, @diaChi, @sdt, @cmnd)
+	INSERT dbo.KhachHang (id, HoTen, NgaySinh, DiaChi, SDT, CMND, DiemTichLuy)
+	VALUES (@idCus, @hoTen, @ngaySinh, @diaChi, @sdt, @cmnd, 0)
 END
 GO
 

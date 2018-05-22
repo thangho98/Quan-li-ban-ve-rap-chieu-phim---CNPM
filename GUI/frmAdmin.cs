@@ -15,20 +15,27 @@ namespace GUI
     public partial class frmAdmin : Form
     {
         BindingSource staffList = new BindingSource();
+		BindingSource customerList = new BindingSource();
 
 		public frmAdmin()
         {
             InitializeComponent();
 
-			dtgvStaff.DataSource = staffList;
+			LoadRevenue();
+			
+			LoadStaff();
 
-			LoadComboBoxRevenue();
-			LoadDateTimePickerRevenue();//Set "Từ ngày" & "Đến ngày ngày" về đầu tháng & cuối tháng
-			LoadStaffList();
-            AddStaffBinding();
+			LoadCustomer();
         }
 
 		#region Doanh Thu
+		void LoadRevenue()
+		{
+			LoadComboBoxRevenue();
+			LoadDateTimePickerRevenue();//Set "Từ ngày" & "Đến ngày ngày" về đầu tháng & cuối tháng
+			LoadRevenue(cboSelectMovie.SelectedValue.ToString(), dtmFromDate.Value, dtmToDate.Value);
+		}
+
 		void LoadComboBoxRevenue()
 		{
 			cboSelectMovie.DataSource = MovieDAO.GetListMovie();
@@ -55,16 +62,23 @@ namespace GUI
 		void LoadRevenue(string idMovie, DateTime fromDate, DateTime toDate)
 		{
 			dtgvRevenue.DataSource = RevenueDAO.GetRevenue(idMovie, fromDate, toDate);
+			txtDoanhThu.Text = GetSumRevenue().ToString() + " VNĐ";
 		}
 
 		private void btnShowRevenue_Click(object sender, EventArgs e)
 		{
 			LoadRevenue(cboSelectMovie.SelectedValue.ToString(), dtmFromDate.Value, dtmToDate.Value);
-			txtDoanhThu.Text = GetSumRevenue().ToString() + " VNĐ";
 		}
-        #endregion
+		#endregion
 
-        #region Nhân Viên
+		#region Nhân Viên
+		void LoadStaff()
+		{
+			dtgvStaff.DataSource = staffList;
+			LoadStaffList();
+			AddStaffBinding();
+		}
+
         void LoadStaffList()
         {
             staffList.DataSource = StaffDAO.GetListStaff();
@@ -91,11 +105,11 @@ namespace GUI
         {
             if (StaffDAO.InsertStaff(id, hoTen, ngaySinh, diaChi, sdt, cmnd))
             {
-                MessageBox.Show("Thêm tài khoản thành công");
+                MessageBox.Show("Thêm nhân viên thành công");
             }
             else
             {
-                MessageBox.Show("Thêm tài khoản thất bại");
+                MessageBox.Show("Thêm nhân viên thất bại");
             }
         }
         private void btnAddStaff_Click(object sender, EventArgs e)
@@ -115,11 +129,11 @@ namespace GUI
 		{
 			if (StaffDAO.UpdateStaff(id, hoTen, ngaySinh, diaChi, sdt, cmnd))
 			{
-				MessageBox.Show("Sửa tài khoản thành công");
+				MessageBox.Show("Sửa nhân viên thành công");
 			}
 			else
 			{
-				MessageBox.Show("Sửa tài khoản thất bại");
+				MessageBox.Show("Sửa nhân viên thất bại");
 			}
 		}
 		private void btnUpdateStaff_Click(object sender, EventArgs e)
@@ -139,11 +153,11 @@ namespace GUI
 		{
 			if (StaffDAO.DeleteStaff(id))
 			{
-				MessageBox.Show("Xóa tài khoản thành công");
+				MessageBox.Show("Xóa nhân viên thành công");
 			}
 			else
 			{
-				MessageBox.Show("Xóa tài khoản thất bại");
+				MessageBox.Show("Xóa nhân viên thất bại");
 			}
 		}
 		private void btnDeleteStaff_Click(object sender, EventArgs e)
@@ -173,15 +187,97 @@ namespace GUI
 
 		#region Khách Hàng
 		void LoadCustomer()
+		{
+			dtgvCustomer.DataSource = customerList;
+			LoadCustomerList();
+			AddCustomerBinding();
+		}
+
+		void LoadCustomerList()
         {
-            dtgvCustomer.DataSource = CustomerDAO.GetListCustomer();
+            customerList.DataSource = CustomerDAO.GetListCustomer();
         }
         private void btnShowCustomer_Click(object sender, EventArgs e)
         {
-            LoadCustomer();
+            LoadCustomerList();
         }
 
+		void AddCustomerBinding()
+		{
+			txtCusID.DataBindings.Add("Text", dtgvCustomer.DataSource, "Mã khách hàng", true, DataSourceUpdateMode.Never);
+			txtCusName.DataBindings.Add("Text", dtgvCustomer.DataSource, "Họ tên", true, DataSourceUpdateMode.Never);
+			txtCusBirth.DataBindings.Add("Text", dtgvCustomer.DataSource, "Ngày sinh", true, DataSourceUpdateMode.Never);
+			txtCusAddress.DataBindings.Add("Text", dtgvCustomer.DataSource, "Địa chỉ", true, DataSourceUpdateMode.Never);
+			txtCusPhone.DataBindings.Add("Text", dtgvCustomer.DataSource, "SĐT", true, DataSourceUpdateMode.Never);
+			txtCusINumber.DataBindings.Add("Text", dtgvCustomer.DataSource, "CMND", true, DataSourceUpdateMode.Never);
+			nudPoint.DataBindings.Add("Value", dtgvCustomer.DataSource, "Điểm tích lũy", true, DataSourceUpdateMode.Never);
+		}
+
+		void InsertCustomer(string id, string hoTen, DateTime ngaySinh, string diaChi, string sdt, int cmnd)
+		{
+			if (CustomerDAO.InsertCustomer(id, hoTen, ngaySinh, diaChi, sdt, cmnd))
+			{
+				MessageBox.Show("Thêm khách hàng thành công");
+			}
+			else
+			{
+				MessageBox.Show("Thêm khách hàng thất bại");
+			}
+		}
+		private void btnAddCustomer_Click(object sender, EventArgs e)
+		{
+			string cusID = txtCusID.Text;
+			string cusName = txtCusName.Text;
+			DateTime cusBirth = DateTime.Parse(txtCusBirth.Text);
+			string cusAddress = txtCusAddress.Text;
+			string cusPhone = txtCusPhone.Text;
+			int cusINumber = Int32.Parse(txtCusINumber.Text);
+			InsertCustomer(cusID, cusName, cusBirth, cusAddress, cusPhone, cusINumber);
+			LoadCustomerList();
+		}
+
+		void UpdateCustomer(string id, string hoTen, DateTime ngaySinh, string diaChi, string sdt, int cmnd, int point)
+		{
+			if (CustomerDAO.UpdateCustomer(id, hoTen, ngaySinh, diaChi, sdt, cmnd, point))
+			{
+				MessageBox.Show("Sửa khách hàng thành công");
+			}
+			else
+			{
+				MessageBox.Show("Sửa khách hàng thất bại");
+			}
+		}
+		private void btnUpdateCustomer_Click(object sender, EventArgs e)
+		{
+			string cusID = txtCusID.Text;
+			string cusName = txtCusName.Text;
+			DateTime cusBirth = DateTime.Parse(txtCusBirth.Text);
+			string cusAddress = txtCusAddress.Text;
+			string cusPhone = txtCusPhone.Text;
+			int cusINumber = Int32.Parse(txtCusINumber.Text);
+			int cusPoint = (int)nudPoint.Value;
+			UpdateCustomer(cusID, cusName, cusBirth, cusAddress, cusPhone, cusINumber, cusPoint);
+			LoadCustomerList();
+		}
+
+		void DeleteCustomer(string id)
+		{
+			if (CustomerDAO.DeleteCustomer(id))
+			{
+				MessageBox.Show("Xóa khách hàng thành công");
+			}
+			else
+			{
+				MessageBox.Show("Xóa khách hàng thất bại");
+			}
+		}
+		private void btnDeleteCustomer_Click(object sender, EventArgs e)
+		{
+			string cusID = txtCusID.Text;
+			DeleteCustomer(cusID);
+			LoadCustomerList();
+		}
 		#endregion
-		
+
 	}
 }
