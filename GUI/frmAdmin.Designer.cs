@@ -53,29 +53,50 @@
 			this.button7 = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
 			this.tpCustomer = new System.Windows.Forms.TabPage();
+			this.btnSearchCus = new System.Windows.Forms.Button();
+			this.txtSearchCus = new System.Windows.Forms.TextBox();
+			this.btnDeleteCustomer = new System.Windows.Forms.Button();
+			this.btnUpdateCustomer = new System.Windows.Forms.Button();
+			this.btnAddCustomer = new System.Windows.Forms.Button();
+			this.grpCustomer = new System.Windows.Forms.GroupBox();
+			this.nudPoint = new System.Windows.Forms.NumericUpDown();
+			this.lblCusID = new System.Windows.Forms.Label();
+			this.txtCusID = new System.Windows.Forms.TextBox();
+			this.txtCusAddress = new System.Windows.Forms.TextBox();
+			this.lblCusINumber = new System.Windows.Forms.Label();
+			this.txtCusName = new System.Windows.Forms.TextBox();
+			this.lblCusBirth = new System.Windows.Forms.Label();
+			this.txtCusPhone = new System.Windows.Forms.TextBox();
+			this.lblCusPhone = new System.Windows.Forms.Label();
+			this.lblCusPoint = new System.Windows.Forms.Label();
+			this.txtCusBirth = new System.Windows.Forms.TextBox();
+			this.lblCusAddress = new System.Windows.Forms.Label();
+			this.txtCusINumber = new System.Windows.Forms.TextBox();
+			this.lblCusName = new System.Windows.Forms.Label();
 			this.btnShowCustomer = new System.Windows.Forms.Button();
 			this.dtgvCustomer = new System.Windows.Forms.DataGridView();
 			this.tpStaff = new System.Windows.Forms.TabPage();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.grpStaff = new System.Windows.Forms.GroupBox();
+			this.lblStaffID = new System.Windows.Forms.Label();
+			this.txtStaffId = new System.Windows.Forms.TextBox();
+			this.txtStaffAddress = new System.Windows.Forms.TextBox();
+			this.lblStaffINumber = new System.Windows.Forms.Label();
+			this.txtStaffName = new System.Windows.Forms.TextBox();
+			this.lblStaffBirth = new System.Windows.Forms.Label();
+			this.txtStaffPhone = new System.Windows.Forms.TextBox();
+			this.lblStaffPhone = new System.Windows.Forms.Label();
+			this.txtStaffBirth = new System.Windows.Forms.TextBox();
+			this.lblStaffAddress = new System.Windows.Forms.Label();
+			this.txtStaffINumber = new System.Windows.Forms.TextBox();
+			this.lblStaffName = new System.Windows.Forms.Label();
 			this.btnSearchStaff = new System.Windows.Forms.Button();
 			this.txtSearchStaff = new System.Windows.Forms.TextBox();
-			this.lblStaffINumber = new System.Windows.Forms.Label();
-			this.lblStaffBirth = new System.Windows.Forms.Label();
-			this.lblStaffPhone = new System.Windows.Forms.Label();
-			this.lblStaffAddress = new System.Windows.Forms.Label();
-			this.lblStaffName = new System.Windows.Forms.Label();
-			this.lblStaffID = new System.Windows.Forms.Label();
 			this.btnDeleteStaff = new System.Windows.Forms.Button();
 			this.btnUpdateStaff = new System.Windows.Forms.Button();
 			this.btnAddStaff = new System.Windows.Forms.Button();
-			this.txtStaffINumber = new System.Windows.Forms.TextBox();
-			this.txtStaffBirth = new System.Windows.Forms.TextBox();
-			this.txtStaffPhone = new System.Windows.Forms.TextBox();
-			this.txtStaffName = new System.Windows.Forms.TextBox();
-			this.txtStaffAddress = new System.Windows.Forms.TextBox();
-			this.txtStaffId = new System.Windows.Forms.TextBox();
 			this.btnShowStaff = new System.Windows.Forms.Button();
 			this.dtgvStaff = new System.Windows.Forms.DataGridView();
 			this.tpData = new System.Windows.Forms.TabPage();
@@ -84,22 +105,19 @@
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel13 = new System.Windows.Forms.Panel();
 			this.panel14 = new System.Windows.Forms.Panel();
-			this.dataGridView2 = new System.Windows.Forms.DataGridView();
+			this.dtgvScreenType = new System.Windows.Forms.DataGridView();
 			this.panel19 = new System.Windows.Forms.Panel();
 			this.panel20 = new System.Windows.Forms.Panel();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
+			this.txtScreenTypeName = new System.Windows.Forms.TextBox();
+			this.lblScreenTypeName = new System.Windows.Forms.Label();
 			this.panel21 = new System.Windows.Forms.Panel();
-			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
+			this.txtScreenTypeID = new System.Windows.Forms.TextBox();
+			this.lblScreenTypeID = new System.Windows.Forms.Label();
 			this.panel11 = new System.Windows.Forms.Panel();
-			this.panel73 = new System.Windows.Forms.Panel();
-			this.button43 = new System.Windows.Forms.Button();
-			this.textBox23 = new System.Windows.Forms.TextBox();
-			this.button9 = new System.Windows.Forms.Button();
-			this.button10 = new System.Windows.Forms.Button();
-			this.button11 = new System.Windows.Forms.Button();
-			this.button12 = new System.Windows.Forms.Button();
+			this.btnShowScreenType = new System.Windows.Forms.Button();
+			this.btnUpdateScreenType = new System.Windows.Forms.Button();
+			this.btnDeleteScreenType = new System.Windows.Forms.Button();
+			this.btnInsertScreenType = new System.Windows.Forms.Button();
 			this.tpCinema = new System.Windows.Forms.TabPage();
 			this.panel22 = new System.Windows.Forms.Panel();
 			this.panel24 = new System.Windows.Forms.Panel();
@@ -124,22 +142,22 @@
 			this.panel34 = new System.Windows.Forms.Panel();
 			this.panel35 = new System.Windows.Forms.Panel();
 			this.panel36 = new System.Windows.Forms.Panel();
-			this.dataGridView4 = new System.Windows.Forms.DataGridView();
+			this.dtgvGenre = new System.Windows.Forms.DataGridView();
 			this.panel37 = new System.Windows.Forms.Panel();
+			this.panel5 = new System.Windows.Forms.Panel();
+			this.txtGenreDesc = new System.Windows.Forms.TextBox();
+			this.lblGenreDesc = new System.Windows.Forms.Label();
 			this.panel38 = new System.Windows.Forms.Panel();
-			this.textBox8 = new System.Windows.Forms.TextBox();
-			this.label9 = new System.Windows.Forms.Label();
+			this.txtGenreName = new System.Windows.Forms.TextBox();
+			this.lblGenreName = new System.Windows.Forms.Label();
 			this.panel39 = new System.Windows.Forms.Panel();
-			this.textBox9 = new System.Windows.Forms.TextBox();
-			this.label10 = new System.Windows.Forms.Label();
+			this.txtGenreID = new System.Windows.Forms.TextBox();
+			this.lblGenreID = new System.Windows.Forms.Label();
 			this.panel40 = new System.Windows.Forms.Panel();
-			this.panel75 = new System.Windows.Forms.Panel();
-			this.button45 = new System.Windows.Forms.Button();
-			this.textBox25 = new System.Windows.Forms.TextBox();
-			this.button17 = new System.Windows.Forms.Button();
-			this.button18 = new System.Windows.Forms.Button();
-			this.button19 = new System.Windows.Forms.Button();
-			this.button20 = new System.Windows.Forms.Button();
+			this.btnShowGenre = new System.Windows.Forms.Button();
+			this.btnUpdateGenre = new System.Windows.Forms.Button();
+			this.btnDeleteGenre = new System.Windows.Forms.Button();
+			this.btnInsertGenre = new System.Windows.Forms.Button();
 			this.tpFilm = new System.Windows.Forms.TabPage();
 			this.panel41 = new System.Windows.Forms.Panel();
 			this.panel42 = new System.Windows.Forms.Panel();
@@ -232,27 +250,6 @@
 			this.dtmToDate = new System.Windows.Forms.DateTimePicker();
 			this.dtmFromDate = new System.Windows.Forms.DateTimePicker();
 			this.tcAdmin = new System.Windows.Forms.TabControl();
-			this.grpStaff = new System.Windows.Forms.GroupBox();
-			this.grpCustomer = new System.Windows.Forms.GroupBox();
-			this.lblCusID = new System.Windows.Forms.Label();
-			this.txtCusID = new System.Windows.Forms.TextBox();
-			this.txtCusAddress = new System.Windows.Forms.TextBox();
-			this.lblCusINumber = new System.Windows.Forms.Label();
-			this.txtCusName = new System.Windows.Forms.TextBox();
-			this.lblCusBirth = new System.Windows.Forms.Label();
-			this.txtCusPhone = new System.Windows.Forms.TextBox();
-			this.lblCusPhone = new System.Windows.Forms.Label();
-			this.txtCusBirth = new System.Windows.Forms.TextBox();
-			this.lblCusAddress = new System.Windows.Forms.Label();
-			this.txtCusINumber = new System.Windows.Forms.TextBox();
-			this.lblCusName = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
-			this.textBox21 = new System.Windows.Forms.TextBox();
-			this.btnDeleteCustomer = new System.Windows.Forms.Button();
-			this.btnUpdateCustomer = new System.Windows.Forms.Button();
-			this.btnAddCustomer = new System.Windows.Forms.Button();
-			this.lblCusPoint = new System.Windows.Forms.Label();
-			this.nudPoint = new System.Windows.Forms.NumericUpDown();
 			this.tpAccount.SuspendLayout();
 			this.panel7.SuspendLayout();
 			this.panel10.SuspendLayout();
@@ -266,11 +263,14 @@
 			this.panel29.SuspendLayout();
 			this.pnSearch.SuspendLayout();
 			this.tpCustomer.SuspendLayout();
+			this.grpCustomer.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudPoint)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).BeginInit();
 			this.tpStaff.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel4.SuspendLayout();
+			this.grpStaff.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvStaff)).BeginInit();
 			this.tpData.SuspendLayout();
 			this.tcData.SuspendLayout();
@@ -278,12 +278,11 @@
 			this.panel2.SuspendLayout();
 			this.panel13.SuspendLayout();
 			this.panel14.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvScreenType)).BeginInit();
 			this.panel19.SuspendLayout();
 			this.panel20.SuspendLayout();
 			this.panel21.SuspendLayout();
 			this.panel11.SuspendLayout();
-			this.panel73.SuspendLayout();
 			this.tpCinema.SuspendLayout();
 			this.panel22.SuspendLayout();
 			this.panel24.SuspendLayout();
@@ -298,12 +297,12 @@
 			this.panel34.SuspendLayout();
 			this.panel35.SuspendLayout();
 			this.panel36.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvGenre)).BeginInit();
 			this.panel37.SuspendLayout();
+			this.panel5.SuspendLayout();
 			this.panel38.SuspendLayout();
 			this.panel39.SuspendLayout();
 			this.panel40.SuspendLayout();
-			this.panel75.SuspendLayout();
 			this.tpFilm.SuspendLayout();
 			this.panel41.SuspendLayout();
 			this.panel42.SuspendLayout();
@@ -347,9 +346,6 @@
 			this.tpRevenue.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvRevenue)).BeginInit();
 			this.tcAdmin.SuspendLayout();
-			this.grpStaff.SuspendLayout();
-			this.grpCustomer.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.nudPoint)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tpAccount
@@ -601,8 +597,8 @@
 			// 
 			// tpCustomer
 			// 
-			this.tpCustomer.Controls.Add(this.button1);
-			this.tpCustomer.Controls.Add(this.textBox21);
+			this.tpCustomer.Controls.Add(this.btnSearchCus);
+			this.tpCustomer.Controls.Add(this.txtSearchCus);
 			this.tpCustomer.Controls.Add(this.btnDeleteCustomer);
 			this.tpCustomer.Controls.Add(this.btnUpdateCustomer);
 			this.tpCustomer.Controls.Add(this.btnAddCustomer);
@@ -615,6 +611,212 @@
 			this.tpCustomer.TabIndex = 3;
 			this.tpCustomer.Text = "Khách Hàng";
 			this.tpCustomer.UseVisualStyleBackColor = true;
+			// 
+			// btnSearchCus
+			// 
+			this.btnSearchCus.BackgroundImage = global::GUI.Properties.Resources.search_icon;
+			this.btnSearchCus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnSearchCus.Location = new System.Drawing.Point(967, 174);
+			this.btnSearchCus.Name = "btnSearchCus";
+			this.btnSearchCus.Size = new System.Drawing.Size(26, 26);
+			this.btnSearchCus.TabIndex = 13;
+			this.btnSearchCus.UseVisualStyleBackColor = true;
+			this.btnSearchCus.Click += new System.EventHandler(this.btnSearchCus_Click);
+			// 
+			// txtSearchCus
+			// 
+			this.txtSearchCus.Location = new System.Drawing.Point(829, 174);
+			this.txtSearchCus.Name = "txtSearchCus";
+			this.txtSearchCus.Size = new System.Drawing.Size(132, 26);
+			this.txtSearchCus.TabIndex = 12;
+			this.txtSearchCus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCus_KeyDown);
+			// 
+			// btnDeleteCustomer
+			// 
+			this.btnDeleteCustomer.Location = new System.Drawing.Point(635, 168);
+			this.btnDeleteCustomer.Name = "btnDeleteCustomer";
+			this.btnDeleteCustomer.Size = new System.Drawing.Size(90, 32);
+			this.btnDeleteCustomer.TabIndex = 9;
+			this.btnDeleteCustomer.Text = "Xóa";
+			this.btnDeleteCustomer.UseVisualStyleBackColor = true;
+			this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
+			// 
+			// btnUpdateCustomer
+			// 
+			this.btnUpdateCustomer.Location = new System.Drawing.Point(513, 168);
+			this.btnUpdateCustomer.Name = "btnUpdateCustomer";
+			this.btnUpdateCustomer.Size = new System.Drawing.Size(90, 32);
+			this.btnUpdateCustomer.TabIndex = 10;
+			this.btnUpdateCustomer.Text = "Sửa";
+			this.btnUpdateCustomer.UseVisualStyleBackColor = true;
+			this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
+			// 
+			// btnAddCustomer
+			// 
+			this.btnAddCustomer.Location = new System.Drawing.Point(388, 168);
+			this.btnAddCustomer.Name = "btnAddCustomer";
+			this.btnAddCustomer.Size = new System.Drawing.Size(90, 32);
+			this.btnAddCustomer.TabIndex = 11;
+			this.btnAddCustomer.Text = "Thêm";
+			this.btnAddCustomer.UseVisualStyleBackColor = true;
+			this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+			// 
+			// grpCustomer
+			// 
+			this.grpCustomer.BackColor = System.Drawing.Color.Transparent;
+			this.grpCustomer.Controls.Add(this.nudPoint);
+			this.grpCustomer.Controls.Add(this.lblCusID);
+			this.grpCustomer.Controls.Add(this.txtCusID);
+			this.grpCustomer.Controls.Add(this.txtCusAddress);
+			this.grpCustomer.Controls.Add(this.lblCusINumber);
+			this.grpCustomer.Controls.Add(this.txtCusName);
+			this.grpCustomer.Controls.Add(this.lblCusBirth);
+			this.grpCustomer.Controls.Add(this.txtCusPhone);
+			this.grpCustomer.Controls.Add(this.lblCusPhone);
+			this.grpCustomer.Controls.Add(this.lblCusPoint);
+			this.grpCustomer.Controls.Add(this.txtCusBirth);
+			this.grpCustomer.Controls.Add(this.lblCusAddress);
+			this.grpCustomer.Controls.Add(this.txtCusINumber);
+			this.grpCustomer.Controls.Add(this.lblCusName);
+			this.grpCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.grpCustomer.Location = new System.Drawing.Point(23, 17);
+			this.grpCustomer.Name = "grpCustomer";
+			this.grpCustomer.Size = new System.Drawing.Size(985, 145);
+			this.grpCustomer.TabIndex = 8;
+			this.grpCustomer.TabStop = false;
+			this.grpCustomer.Text = "Thông tin khách hàng";
+			// 
+			// nudPoint
+			// 
+			this.nudPoint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nudPoint.Location = new System.Drawing.Point(895, 37);
+			this.nudPoint.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.nudPoint.Name = "nudPoint";
+			this.nudPoint.Size = new System.Drawing.Size(75, 26);
+			this.nudPoint.TabIndex = 5;
+			this.nudPoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// lblCusID
+			// 
+			this.lblCusID.AutoSize = true;
+			this.lblCusID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusID.Location = new System.Drawing.Point(24, 39);
+			this.lblCusID.Name = "lblCusID";
+			this.lblCusID.Size = new System.Drawing.Size(70, 19);
+			this.lblCusID.TabIndex = 4;
+			this.lblCusID.Text = "Mã KH :";
+			// 
+			// txtCusID
+			// 
+			this.txtCusID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusID.Location = new System.Drawing.Point(125, 36);
+			this.txtCusID.Name = "txtCusID";
+			this.txtCusID.Size = new System.Drawing.Size(190, 26);
+			this.txtCusID.TabIndex = 2;
+			// 
+			// txtCusAddress
+			// 
+			this.txtCusAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusAddress.Location = new System.Drawing.Point(503, 36);
+			this.txtCusAddress.Name = "txtCusAddress";
+			this.txtCusAddress.Size = new System.Drawing.Size(190, 26);
+			this.txtCusAddress.TabIndex = 2;
+			// 
+			// lblCusINumber
+			// 
+			this.lblCusINumber.AutoSize = true;
+			this.lblCusINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusINumber.Location = new System.Drawing.Point(409, 108);
+			this.lblCusINumber.Name = "lblCusINumber";
+			this.lblCusINumber.Size = new System.Drawing.Size(69, 19);
+			this.lblCusINumber.TabIndex = 4;
+			this.lblCusINumber.Text = "CMND :";
+			// 
+			// txtCusName
+			// 
+			this.txtCusName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusName.Location = new System.Drawing.Point(125, 72);
+			this.txtCusName.Name = "txtCusName";
+			this.txtCusName.Size = new System.Drawing.Size(190, 26);
+			this.txtCusName.TabIndex = 2;
+			// 
+			// lblCusBirth
+			// 
+			this.lblCusBirth.AutoSize = true;
+			this.lblCusBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusBirth.Location = new System.Drawing.Point(24, 108);
+			this.lblCusBirth.Name = "lblCusBirth";
+			this.lblCusBirth.Size = new System.Drawing.Size(85, 19);
+			this.lblCusBirth.TabIndex = 4;
+			this.lblCusBirth.Text = "Ngày sinh :";
+			// 
+			// txtCusPhone
+			// 
+			this.txtCusPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusPhone.Location = new System.Drawing.Point(503, 72);
+			this.txtCusPhone.Name = "txtCusPhone";
+			this.txtCusPhone.Size = new System.Drawing.Size(190, 26);
+			this.txtCusPhone.TabIndex = 2;
+			// 
+			// lblCusPhone
+			// 
+			this.lblCusPhone.AutoSize = true;
+			this.lblCusPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusPhone.Location = new System.Drawing.Point(409, 75);
+			this.lblCusPhone.Name = "lblCusPhone";
+			this.lblCusPhone.Size = new System.Drawing.Size(61, 19);
+			this.lblCusPhone.TabIndex = 4;
+			this.lblCusPhone.Text = "Số ĐT :";
+			// 
+			// lblCusPoint
+			// 
+			this.lblCusPoint.AutoSize = true;
+			this.lblCusPoint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusPoint.Location = new System.Drawing.Point(765, 39);
+			this.lblCusPoint.Name = "lblCusPoint";
+			this.lblCusPoint.Size = new System.Drawing.Size(106, 19);
+			this.lblCusPoint.TabIndex = 4;
+			this.lblCusPoint.Text = "Điểm tích lũy :";
+			// 
+			// txtCusBirth
+			// 
+			this.txtCusBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusBirth.Location = new System.Drawing.Point(125, 108);
+			this.txtCusBirth.Name = "txtCusBirth";
+			this.txtCusBirth.Size = new System.Drawing.Size(190, 26);
+			this.txtCusBirth.TabIndex = 2;
+			// 
+			// lblCusAddress
+			// 
+			this.lblCusAddress.AutoSize = true;
+			this.lblCusAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusAddress.Location = new System.Drawing.Point(409, 39);
+			this.lblCusAddress.Name = "lblCusAddress";
+			this.lblCusAddress.Size = new System.Drawing.Size(65, 19);
+			this.lblCusAddress.TabIndex = 4;
+			this.lblCusAddress.Text = "Địa chỉ :";
+			// 
+			// txtCusINumber
+			// 
+			this.txtCusINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCusINumber.Location = new System.Drawing.Point(503, 108);
+			this.txtCusINumber.Name = "txtCusINumber";
+			this.txtCusINumber.Size = new System.Drawing.Size(190, 26);
+			this.txtCusINumber.TabIndex = 2;
+			// 
+			// lblCusName
+			// 
+			this.lblCusName.AutoSize = true;
+			this.lblCusName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCusName.Location = new System.Drawing.Point(24, 75);
+			this.lblCusName.Name = "lblCusName";
+			this.lblCusName.Size = new System.Drawing.Size(63, 19);
+			this.lblCusName.TabIndex = 4;
+			this.lblCusName.Text = "Họ tên :";
 			// 
 			// btnShowCustomer
 			// 
@@ -685,6 +887,137 @@
 			this.panel4.Size = new System.Drawing.Size(1060, 586);
 			this.panel4.TabIndex = 12;
 			// 
+			// grpStaff
+			// 
+			this.grpStaff.BackColor = System.Drawing.Color.Transparent;
+			this.grpStaff.Controls.Add(this.lblStaffID);
+			this.grpStaff.Controls.Add(this.txtStaffId);
+			this.grpStaff.Controls.Add(this.txtStaffAddress);
+			this.grpStaff.Controls.Add(this.lblStaffINumber);
+			this.grpStaff.Controls.Add(this.txtStaffName);
+			this.grpStaff.Controls.Add(this.lblStaffBirth);
+			this.grpStaff.Controls.Add(this.txtStaffPhone);
+			this.grpStaff.Controls.Add(this.lblStaffPhone);
+			this.grpStaff.Controls.Add(this.txtStaffBirth);
+			this.grpStaff.Controls.Add(this.lblStaffAddress);
+			this.grpStaff.Controls.Add(this.txtStaffINumber);
+			this.grpStaff.Controls.Add(this.lblStaffName);
+			this.grpStaff.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.grpStaff.Location = new System.Drawing.Point(150, 12);
+			this.grpStaff.Name = "grpStaff";
+			this.grpStaff.Size = new System.Drawing.Size(706, 145);
+			this.grpStaff.TabIndex = 7;
+			this.grpStaff.TabStop = false;
+			this.grpStaff.Text = "Thông tin nhân viên";
+			// 
+			// lblStaffID
+			// 
+			this.lblStaffID.AutoSize = true;
+			this.lblStaffID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblStaffID.Location = new System.Drawing.Point(24, 39);
+			this.lblStaffID.Name = "lblStaffID";
+			this.lblStaffID.Size = new System.Drawing.Size(69, 19);
+			this.lblStaffID.TabIndex = 4;
+			this.lblStaffID.Text = "Mã NV :";
+			// 
+			// txtStaffId
+			// 
+			this.txtStaffId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffId.Location = new System.Drawing.Point(122, 36);
+			this.txtStaffId.Name = "txtStaffId";
+			this.txtStaffId.Size = new System.Drawing.Size(190, 26);
+			this.txtStaffId.TabIndex = 2;
+			// 
+			// txtStaffAddress
+			// 
+			this.txtStaffAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffAddress.Location = new System.Drawing.Point(503, 36);
+			this.txtStaffAddress.Name = "txtStaffAddress";
+			this.txtStaffAddress.Size = new System.Drawing.Size(190, 26);
+			this.txtStaffAddress.TabIndex = 2;
+			// 
+			// lblStaffINumber
+			// 
+			this.lblStaffINumber.AutoSize = true;
+			this.lblStaffINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblStaffINumber.Location = new System.Drawing.Point(408, 108);
+			this.lblStaffINumber.Name = "lblStaffINumber";
+			this.lblStaffINumber.Size = new System.Drawing.Size(69, 19);
+			this.lblStaffINumber.TabIndex = 4;
+			this.lblStaffINumber.Text = "CMND :";
+			// 
+			// txtStaffName
+			// 
+			this.txtStaffName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffName.Location = new System.Drawing.Point(122, 72);
+			this.txtStaffName.Name = "txtStaffName";
+			this.txtStaffName.Size = new System.Drawing.Size(190, 26);
+			this.txtStaffName.TabIndex = 2;
+			// 
+			// lblStaffBirth
+			// 
+			this.lblStaffBirth.AutoSize = true;
+			this.lblStaffBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblStaffBirth.Location = new System.Drawing.Point(24, 108);
+			this.lblStaffBirth.Name = "lblStaffBirth";
+			this.lblStaffBirth.Size = new System.Drawing.Size(85, 19);
+			this.lblStaffBirth.TabIndex = 4;
+			this.lblStaffBirth.Text = "Ngày sinh :";
+			// 
+			// txtStaffPhone
+			// 
+			this.txtStaffPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffPhone.Location = new System.Drawing.Point(503, 72);
+			this.txtStaffPhone.Name = "txtStaffPhone";
+			this.txtStaffPhone.Size = new System.Drawing.Size(190, 26);
+			this.txtStaffPhone.TabIndex = 2;
+			// 
+			// lblStaffPhone
+			// 
+			this.lblStaffPhone.AutoSize = true;
+			this.lblStaffPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblStaffPhone.Location = new System.Drawing.Point(408, 75);
+			this.lblStaffPhone.Name = "lblStaffPhone";
+			this.lblStaffPhone.Size = new System.Drawing.Size(61, 19);
+			this.lblStaffPhone.TabIndex = 4;
+			this.lblStaffPhone.Text = "Số ĐT :";
+			// 
+			// txtStaffBirth
+			// 
+			this.txtStaffBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffBirth.Location = new System.Drawing.Point(122, 108);
+			this.txtStaffBirth.Name = "txtStaffBirth";
+			this.txtStaffBirth.Size = new System.Drawing.Size(190, 26);
+			this.txtStaffBirth.TabIndex = 2;
+			// 
+			// lblStaffAddress
+			// 
+			this.lblStaffAddress.AutoSize = true;
+			this.lblStaffAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblStaffAddress.Location = new System.Drawing.Point(408, 39);
+			this.lblStaffAddress.Name = "lblStaffAddress";
+			this.lblStaffAddress.Size = new System.Drawing.Size(65, 19);
+			this.lblStaffAddress.TabIndex = 4;
+			this.lblStaffAddress.Text = "Địa chỉ :";
+			// 
+			// txtStaffINumber
+			// 
+			this.txtStaffINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStaffINumber.Location = new System.Drawing.Point(503, 108);
+			this.txtStaffINumber.Name = "txtStaffINumber";
+			this.txtStaffINumber.Size = new System.Drawing.Size(190, 26);
+			this.txtStaffINumber.TabIndex = 2;
+			// 
+			// lblStaffName
+			// 
+			this.lblStaffName.AutoSize = true;
+			this.lblStaffName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblStaffName.Location = new System.Drawing.Point(24, 75);
+			this.lblStaffName.Name = "lblStaffName";
+			this.lblStaffName.Size = new System.Drawing.Size(63, 19);
+			this.lblStaffName.TabIndex = 4;
+			this.lblStaffName.Text = "Họ tên :";
+			// 
 			// btnSearchStaff
 			// 
 			this.btnSearchStaff.BackgroundImage = global::GUI.Properties.Resources.search_icon;
@@ -703,66 +1036,6 @@
 			this.txtSearchStaff.Size = new System.Drawing.Size(132, 26);
 			this.txtSearchStaff.TabIndex = 5;
 			this.txtSearchStaff.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchStaff_KeyDown);
-			// 
-			// lblStaffINumber
-			// 
-			this.lblStaffINumber.AutoSize = true;
-			this.lblStaffINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffINumber.Location = new System.Drawing.Point(408, 108);
-			this.lblStaffINumber.Name = "lblStaffINumber";
-			this.lblStaffINumber.Size = new System.Drawing.Size(69, 19);
-			this.lblStaffINumber.TabIndex = 4;
-			this.lblStaffINumber.Text = "CMND :";
-			// 
-			// lblStaffBirth
-			// 
-			this.lblStaffBirth.AutoSize = true;
-			this.lblStaffBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffBirth.Location = new System.Drawing.Point(24, 108);
-			this.lblStaffBirth.Name = "lblStaffBirth";
-			this.lblStaffBirth.Size = new System.Drawing.Size(85, 19);
-			this.lblStaffBirth.TabIndex = 4;
-			this.lblStaffBirth.Text = "Ngày sinh :";
-			// 
-			// lblStaffPhone
-			// 
-			this.lblStaffPhone.AutoSize = true;
-			this.lblStaffPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffPhone.Location = new System.Drawing.Point(408, 75);
-			this.lblStaffPhone.Name = "lblStaffPhone";
-			this.lblStaffPhone.Size = new System.Drawing.Size(61, 19);
-			this.lblStaffPhone.TabIndex = 4;
-			this.lblStaffPhone.Text = "Số ĐT :";
-			// 
-			// lblStaffAddress
-			// 
-			this.lblStaffAddress.AutoSize = true;
-			this.lblStaffAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffAddress.Location = new System.Drawing.Point(408, 39);
-			this.lblStaffAddress.Name = "lblStaffAddress";
-			this.lblStaffAddress.Size = new System.Drawing.Size(65, 19);
-			this.lblStaffAddress.TabIndex = 4;
-			this.lblStaffAddress.Text = "Địa chỉ :";
-			// 
-			// lblStaffName
-			// 
-			this.lblStaffName.AutoSize = true;
-			this.lblStaffName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffName.Location = new System.Drawing.Point(24, 75);
-			this.lblStaffName.Name = "lblStaffName";
-			this.lblStaffName.Size = new System.Drawing.Size(63, 19);
-			this.lblStaffName.TabIndex = 4;
-			this.lblStaffName.Text = "Họ tên :";
-			// 
-			// lblStaffID
-			// 
-			this.lblStaffID.AutoSize = true;
-			this.lblStaffID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStaffID.Location = new System.Drawing.Point(24, 39);
-			this.lblStaffID.Name = "lblStaffID";
-			this.lblStaffID.Size = new System.Drawing.Size(69, 19);
-			this.lblStaffID.TabIndex = 4;
-			this.lblStaffID.Text = "Mã NV :";
 			// 
 			// btnDeleteStaff
 			// 
@@ -793,54 +1066,6 @@
 			this.btnAddStaff.Text = "Thêm";
 			this.btnAddStaff.UseVisualStyleBackColor = true;
 			this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
-			// 
-			// txtStaffINumber
-			// 
-			this.txtStaffINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtStaffINumber.Location = new System.Drawing.Point(503, 108);
-			this.txtStaffINumber.Name = "txtStaffINumber";
-			this.txtStaffINumber.Size = new System.Drawing.Size(190, 26);
-			this.txtStaffINumber.TabIndex = 2;
-			// 
-			// txtStaffBirth
-			// 
-			this.txtStaffBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtStaffBirth.Location = new System.Drawing.Point(122, 108);
-			this.txtStaffBirth.Name = "txtStaffBirth";
-			this.txtStaffBirth.Size = new System.Drawing.Size(190, 26);
-			this.txtStaffBirth.TabIndex = 2;
-			// 
-			// txtStaffPhone
-			// 
-			this.txtStaffPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtStaffPhone.Location = new System.Drawing.Point(503, 72);
-			this.txtStaffPhone.Name = "txtStaffPhone";
-			this.txtStaffPhone.Size = new System.Drawing.Size(190, 26);
-			this.txtStaffPhone.TabIndex = 2;
-			// 
-			// txtStaffName
-			// 
-			this.txtStaffName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtStaffName.Location = new System.Drawing.Point(122, 72);
-			this.txtStaffName.Name = "txtStaffName";
-			this.txtStaffName.Size = new System.Drawing.Size(190, 26);
-			this.txtStaffName.TabIndex = 2;
-			// 
-			// txtStaffAddress
-			// 
-			this.txtStaffAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtStaffAddress.Location = new System.Drawing.Point(503, 36);
-			this.txtStaffAddress.Name = "txtStaffAddress";
-			this.txtStaffAddress.Size = new System.Drawing.Size(190, 26);
-			this.txtStaffAddress.TabIndex = 2;
-			// 
-			// txtStaffId
-			// 
-			this.txtStaffId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtStaffId.Location = new System.Drawing.Point(122, 36);
-			this.txtStaffId.Name = "txtStaffId";
-			this.txtStaffId.Size = new System.Drawing.Size(190, 26);
-			this.txtStaffId.TabIndex = 2;
 			// 
 			// btnShowStaff
 			// 
@@ -924,7 +1149,7 @@
 			// 
 			// panel14
 			// 
-			this.panel14.Controls.Add(this.dataGridView2);
+			this.panel14.Controls.Add(this.dtgvScreenType);
 			this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel14.Location = new System.Drawing.Point(0, 0);
 			this.panel14.Margin = new System.Windows.Forms.Padding(4);
@@ -932,15 +1157,19 @@
 			this.panel14.Size = new System.Drawing.Size(666, 484);
 			this.panel14.TabIndex = 12;
 			// 
-			// dataGridView2
+			// dtgvScreenType
 			// 
-			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-			this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-			this.dataGridView2.Name = "dataGridView2";
-			this.dataGridView2.Size = new System.Drawing.Size(666, 484);
-			this.dataGridView2.TabIndex = 0;
+			this.dtgvScreenType.AllowUserToAddRows = false;
+			this.dtgvScreenType.AllowUserToDeleteRows = false;
+			this.dtgvScreenType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dtgvScreenType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dtgvScreenType.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dtgvScreenType.Location = new System.Drawing.Point(0, 0);
+			this.dtgvScreenType.Margin = new System.Windows.Forms.Padding(4);
+			this.dtgvScreenType.Name = "dtgvScreenType";
+			this.dtgvScreenType.ReadOnly = true;
+			this.dtgvScreenType.Size = new System.Drawing.Size(666, 484);
+			this.dtgvScreenType.TabIndex = 0;
 			// 
 			// panel19
 			// 
@@ -955,70 +1184,68 @@
 			// 
 			// panel20
 			// 
-			this.panel20.Controls.Add(this.textBox4);
-			this.panel20.Controls.Add(this.label3);
+			this.panel20.Controls.Add(this.txtScreenTypeName);
+			this.panel20.Controls.Add(this.lblScreenTypeName);
 			this.panel20.Location = new System.Drawing.Point(4, 65);
 			this.panel20.Margin = new System.Windows.Forms.Padding(4);
 			this.panel20.Name = "panel20";
 			this.panel20.Size = new System.Drawing.Size(372, 54);
 			this.panel20.TabIndex = 2;
 			// 
-			// textBox4
+			// txtScreenTypeName
 			// 
-			this.textBox4.Location = new System.Drawing.Point(167, 10);
-			this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(200, 26);
-			this.textBox4.TabIndex = 1;
+			this.txtScreenTypeName.Location = new System.Drawing.Point(167, 10);
+			this.txtScreenTypeName.Margin = new System.Windows.Forms.Padding(4);
+			this.txtScreenTypeName.Name = "txtScreenTypeName";
+			this.txtScreenTypeName.Size = new System.Drawing.Size(200, 26);
+			this.txtScreenTypeName.TabIndex = 1;
 			// 
-			// label3
+			// lblScreenTypeName
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.label3.Location = new System.Drawing.Point(4, 11);
-			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(124, 19);
-			this.label3.TabIndex = 0;
-			this.label3.Text = "Tên danh mục:";
+			this.lblScreenTypeName.AutoSize = true;
+			this.lblScreenTypeName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.lblScreenTypeName.Location = new System.Drawing.Point(4, 11);
+			this.lblScreenTypeName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblScreenTypeName.Name = "lblScreenTypeName";
+			this.lblScreenTypeName.Size = new System.Drawing.Size(123, 19);
+			this.lblScreenTypeName.TabIndex = 0;
+			this.lblScreenTypeName.Text = "Tên màn hình :";
 			// 
 			// panel21
 			// 
-			this.panel21.Controls.Add(this.textBox5);
-			this.panel21.Controls.Add(this.label4);
+			this.panel21.Controls.Add(this.txtScreenTypeID);
+			this.panel21.Controls.Add(this.lblScreenTypeID);
 			this.panel21.Location = new System.Drawing.Point(4, 4);
 			this.panel21.Margin = new System.Windows.Forms.Padding(4);
 			this.panel21.Name = "panel21";
 			this.panel21.Size = new System.Drawing.Size(372, 54);
 			this.panel21.TabIndex = 1;
 			// 
-			// textBox5
+			// txtScreenTypeID
 			// 
-			this.textBox5.Location = new System.Drawing.Point(167, 10);
-			this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.ReadOnly = true;
-			this.textBox5.Size = new System.Drawing.Size(200, 26);
-			this.textBox5.TabIndex = 1;
+			this.txtScreenTypeID.Location = new System.Drawing.Point(167, 10);
+			this.txtScreenTypeID.Margin = new System.Windows.Forms.Padding(4);
+			this.txtScreenTypeID.Name = "txtScreenTypeID";
+			this.txtScreenTypeID.Size = new System.Drawing.Size(200, 26);
+			this.txtScreenTypeID.TabIndex = 1;
 			// 
-			// label4
+			// lblScreenTypeID
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.label4.Location = new System.Drawing.Point(4, 11);
-			this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(31, 19);
-			this.label4.TabIndex = 0;
-			this.label4.Text = "ID:";
+			this.lblScreenTypeID.AutoSize = true;
+			this.lblScreenTypeID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.lblScreenTypeID.Location = new System.Drawing.Point(4, 11);
+			this.lblScreenTypeID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblScreenTypeID.Name = "lblScreenTypeID";
+			this.lblScreenTypeID.Size = new System.Drawing.Size(147, 19);
+			this.lblScreenTypeID.TabIndex = 0;
+			this.lblScreenTypeID.Text = "Mã loại màn hình :";
 			// 
 			// panel11
 			// 
-			this.panel11.Controls.Add(this.panel73);
-			this.panel11.Controls.Add(this.button9);
-			this.panel11.Controls.Add(this.button10);
-			this.panel11.Controls.Add(this.button11);
-			this.panel11.Controls.Add(this.button12);
+			this.panel11.Controls.Add(this.btnShowScreenType);
+			this.panel11.Controls.Add(this.btnUpdateScreenType);
+			this.panel11.Controls.Add(this.btnDeleteScreenType);
+			this.panel11.Controls.Add(this.btnInsertScreenType);
 			this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel11.Location = new System.Drawing.Point(0, 0);
 			this.panel11.Margin = new System.Windows.Forms.Padding(4);
@@ -1026,71 +1253,49 @@
 			this.panel11.Size = new System.Drawing.Size(1046, 64);
 			this.panel11.TabIndex = 9;
 			// 
-			// panel73
+			// btnShowScreenType
 			// 
-			this.panel73.Controls.Add(this.button43);
-			this.panel73.Controls.Add(this.textBox23);
-			this.panel73.Location = new System.Drawing.Point(670, 17);
-			this.panel73.Name = "panel73";
-			this.panel73.Size = new System.Drawing.Size(373, 31);
-			this.panel73.TabIndex = 7;
+			this.btnShowScreenType.Location = new System.Drawing.Point(328, 4);
+			this.btnShowScreenType.Margin = new System.Windows.Forms.Padding(4);
+			this.btnShowScreenType.Name = "btnShowScreenType";
+			this.btnShowScreenType.Size = new System.Drawing.Size(100, 57);
+			this.btnShowScreenType.TabIndex = 3;
+			this.btnShowScreenType.Text = "Xem";
+			this.btnShowScreenType.UseVisualStyleBackColor = true;
+			this.btnShowScreenType.Click += new System.EventHandler(this.btnShowScreenType_Click);
 			// 
-			// button43
+			// btnUpdateScreenType
 			// 
-			this.button43.Image = global::GUI.Properties.Resources.search_icon;
-			this.button43.Location = new System.Drawing.Point(343, 0);
-			this.button43.Name = "button43";
-			this.button43.Size = new System.Drawing.Size(31, 31);
-			this.button43.TabIndex = 7;
-			this.button43.UseVisualStyleBackColor = true;
+			this.btnUpdateScreenType.Location = new System.Drawing.Point(220, 4);
+			this.btnUpdateScreenType.Margin = new System.Windows.Forms.Padding(4);
+			this.btnUpdateScreenType.Name = "btnUpdateScreenType";
+			this.btnUpdateScreenType.Size = new System.Drawing.Size(100, 57);
+			this.btnUpdateScreenType.TabIndex = 2;
+			this.btnUpdateScreenType.Text = "Sửa";
+			this.btnUpdateScreenType.UseVisualStyleBackColor = true;
+			this.btnUpdateScreenType.Click += new System.EventHandler(this.btnUpdateScreenType_Click);
 			// 
-			// textBox23
+			// btnDeleteScreenType
 			// 
-			this.textBox23.Location = new System.Drawing.Point(0, 0);
-			this.textBox23.Multiline = true;
-			this.textBox23.Name = "textBox23";
-			this.textBox23.Size = new System.Drawing.Size(337, 31);
-			this.textBox23.TabIndex = 6;
+			this.btnDeleteScreenType.Location = new System.Drawing.Point(112, 4);
+			this.btnDeleteScreenType.Margin = new System.Windows.Forms.Padding(4);
+			this.btnDeleteScreenType.Name = "btnDeleteScreenType";
+			this.btnDeleteScreenType.Size = new System.Drawing.Size(100, 57);
+			this.btnDeleteScreenType.TabIndex = 1;
+			this.btnDeleteScreenType.Text = "Xóa";
+			this.btnDeleteScreenType.UseVisualStyleBackColor = true;
+			this.btnDeleteScreenType.Click += new System.EventHandler(this.btnDeleteScreenType_Click);
 			// 
-			// button9
+			// btnInsertScreenType
 			// 
-			this.button9.Location = new System.Drawing.Point(328, 4);
-			this.button9.Margin = new System.Windows.Forms.Padding(4);
-			this.button9.Name = "button9";
-			this.button9.Size = new System.Drawing.Size(100, 57);
-			this.button9.TabIndex = 3;
-			this.button9.Text = "Xem";
-			this.button9.UseVisualStyleBackColor = true;
-			// 
-			// button10
-			// 
-			this.button10.Location = new System.Drawing.Point(220, 4);
-			this.button10.Margin = new System.Windows.Forms.Padding(4);
-			this.button10.Name = "button10";
-			this.button10.Size = new System.Drawing.Size(100, 57);
-			this.button10.TabIndex = 2;
-			this.button10.Text = "Sửa";
-			this.button10.UseVisualStyleBackColor = true;
-			// 
-			// button11
-			// 
-			this.button11.Location = new System.Drawing.Point(112, 4);
-			this.button11.Margin = new System.Windows.Forms.Padding(4);
-			this.button11.Name = "button11";
-			this.button11.Size = new System.Drawing.Size(100, 57);
-			this.button11.TabIndex = 1;
-			this.button11.Text = "Xóa";
-			this.button11.UseVisualStyleBackColor = true;
-			// 
-			// button12
-			// 
-			this.button12.Location = new System.Drawing.Point(4, 4);
-			this.button12.Margin = new System.Windows.Forms.Padding(4);
-			this.button12.Name = "button12";
-			this.button12.Size = new System.Drawing.Size(100, 57);
-			this.button12.TabIndex = 0;
-			this.button12.Text = "Thêm";
-			this.button12.UseVisualStyleBackColor = true;
+			this.btnInsertScreenType.Location = new System.Drawing.Point(4, 4);
+			this.btnInsertScreenType.Margin = new System.Windows.Forms.Padding(4);
+			this.btnInsertScreenType.Name = "btnInsertScreenType";
+			this.btnInsertScreenType.Size = new System.Drawing.Size(100, 57);
+			this.btnInsertScreenType.TabIndex = 0;
+			this.btnInsertScreenType.Text = "Thêm";
+			this.btnInsertScreenType.UseVisualStyleBackColor = true;
+			this.btnInsertScreenType.Click += new System.EventHandler(this.btnInsertScreenType_Click);
 			// 
 			// tpCinema
 			// 
@@ -1326,7 +1531,7 @@
 			// 
 			// panel36
 			// 
-			this.panel36.Controls.Add(this.dataGridView4);
+			this.panel36.Controls.Add(this.dtgvGenre);
 			this.panel36.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel36.Location = new System.Drawing.Point(0, 0);
 			this.panel36.Margin = new System.Windows.Forms.Padding(4);
@@ -1334,18 +1539,23 @@
 			this.panel36.Size = new System.Drawing.Size(666, 484);
 			this.panel36.TabIndex = 12;
 			// 
-			// dataGridView4
+			// dtgvGenre
 			// 
-			this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dataGridView4.Location = new System.Drawing.Point(0, 0);
-			this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
-			this.dataGridView4.Name = "dataGridView4";
-			this.dataGridView4.Size = new System.Drawing.Size(666, 484);
-			this.dataGridView4.TabIndex = 0;
+			this.dtgvGenre.AllowUserToAddRows = false;
+			this.dtgvGenre.AllowUserToDeleteRows = false;
+			this.dtgvGenre.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dtgvGenre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dtgvGenre.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dtgvGenre.Location = new System.Drawing.Point(0, 0);
+			this.dtgvGenre.Margin = new System.Windows.Forms.Padding(4);
+			this.dtgvGenre.Name = "dtgvGenre";
+			this.dtgvGenre.ReadOnly = true;
+			this.dtgvGenre.Size = new System.Drawing.Size(666, 484);
+			this.dtgvGenre.TabIndex = 0;
 			// 
 			// panel37
 			// 
+			this.panel37.Controls.Add(this.panel5);
 			this.panel37.Controls.Add(this.panel38);
 			this.panel37.Controls.Add(this.panel39);
 			this.panel37.Dock = System.Windows.Forms.DockStyle.Right;
@@ -1355,72 +1565,100 @@
 			this.panel37.Size = new System.Drawing.Size(380, 484);
 			this.panel37.TabIndex = 11;
 			// 
+			// panel5
+			// 
+			this.panel5.Controls.Add(this.txtGenreDesc);
+			this.panel5.Controls.Add(this.lblGenreDesc);
+			this.panel5.Location = new System.Drawing.Point(4, 127);
+			this.panel5.Margin = new System.Windows.Forms.Padding(4);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(372, 182);
+			this.panel5.TabIndex = 2;
+			// 
+			// txtGenreDesc
+			// 
+			this.txtGenreDesc.Location = new System.Drawing.Point(88, 10);
+			this.txtGenreDesc.Margin = new System.Windows.Forms.Padding(4);
+			this.txtGenreDesc.Multiline = true;
+			this.txtGenreDesc.Name = "txtGenreDesc";
+			this.txtGenreDesc.Size = new System.Drawing.Size(279, 156);
+			this.txtGenreDesc.TabIndex = 1;
+			// 
+			// lblGenreDesc
+			// 
+			this.lblGenreDesc.AutoSize = true;
+			this.lblGenreDesc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.lblGenreDesc.Location = new System.Drawing.Point(4, 11);
+			this.lblGenreDesc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblGenreDesc.Name = "lblGenreDesc";
+			this.lblGenreDesc.Size = new System.Drawing.Size(60, 19);
+			this.lblGenreDesc.TabIndex = 0;
+			this.lblGenreDesc.Text = "Mô tả :";
+			// 
 			// panel38
 			// 
-			this.panel38.Controls.Add(this.textBox8);
-			this.panel38.Controls.Add(this.label9);
+			this.panel38.Controls.Add(this.txtGenreName);
+			this.panel38.Controls.Add(this.lblGenreName);
 			this.panel38.Location = new System.Drawing.Point(4, 65);
 			this.panel38.Margin = new System.Windows.Forms.Padding(4);
 			this.panel38.Name = "panel38";
 			this.panel38.Size = new System.Drawing.Size(372, 54);
 			this.panel38.TabIndex = 2;
 			// 
-			// textBox8
+			// txtGenreName
 			// 
-			this.textBox8.Location = new System.Drawing.Point(167, 10);
-			this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-			this.textBox8.Name = "textBox8";
-			this.textBox8.Size = new System.Drawing.Size(200, 26);
-			this.textBox8.TabIndex = 1;
+			this.txtGenreName.Location = new System.Drawing.Point(167, 10);
+			this.txtGenreName.Margin = new System.Windows.Forms.Padding(4);
+			this.txtGenreName.Name = "txtGenreName";
+			this.txtGenreName.Size = new System.Drawing.Size(200, 26);
+			this.txtGenreName.TabIndex = 1;
 			// 
-			// label9
+			// lblGenreName
 			// 
-			this.label9.AutoSize = true;
-			this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.label9.Location = new System.Drawing.Point(4, 11);
-			this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(124, 19);
-			this.label9.TabIndex = 0;
-			this.label9.Text = "Tên danh mục:";
+			this.lblGenreName.AutoSize = true;
+			this.lblGenreName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.lblGenreName.Location = new System.Drawing.Point(4, 11);
+			this.lblGenreName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblGenreName.Name = "lblGenreName";
+			this.lblGenreName.Size = new System.Drawing.Size(107, 19);
+			this.lblGenreName.TabIndex = 0;
+			this.lblGenreName.Text = "Tên thể loại :";
 			// 
 			// panel39
 			// 
-			this.panel39.Controls.Add(this.textBox9);
-			this.panel39.Controls.Add(this.label10);
+			this.panel39.Controls.Add(this.txtGenreID);
+			this.panel39.Controls.Add(this.lblGenreID);
 			this.panel39.Location = new System.Drawing.Point(4, 4);
 			this.panel39.Margin = new System.Windows.Forms.Padding(4);
 			this.panel39.Name = "panel39";
 			this.panel39.Size = new System.Drawing.Size(372, 54);
 			this.panel39.TabIndex = 1;
 			// 
-			// textBox9
+			// txtGenreID
 			// 
-			this.textBox9.Location = new System.Drawing.Point(167, 10);
-			this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-			this.textBox9.Name = "textBox9";
-			this.textBox9.ReadOnly = true;
-			this.textBox9.Size = new System.Drawing.Size(200, 26);
-			this.textBox9.TabIndex = 1;
+			this.txtGenreID.Location = new System.Drawing.Point(167, 10);
+			this.txtGenreID.Margin = new System.Windows.Forms.Padding(4);
+			this.txtGenreID.Name = "txtGenreID";
+			this.txtGenreID.Size = new System.Drawing.Size(200, 26);
+			this.txtGenreID.TabIndex = 1;
 			// 
-			// label10
+			// lblGenreID
 			// 
-			this.label10.AutoSize = true;
-			this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.label10.Location = new System.Drawing.Point(4, 11);
-			this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(31, 19);
-			this.label10.TabIndex = 0;
-			this.label10.Text = "ID:";
+			this.lblGenreID.AutoSize = true;
+			this.lblGenreID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.lblGenreID.Location = new System.Drawing.Point(4, 11);
+			this.lblGenreID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblGenreID.Name = "lblGenreID";
+			this.lblGenreID.Size = new System.Drawing.Size(100, 19);
+			this.lblGenreID.TabIndex = 0;
+			this.lblGenreID.Text = "Mã thể loại :";
 			// 
 			// panel40
 			// 
-			this.panel40.Controls.Add(this.panel75);
-			this.panel40.Controls.Add(this.button17);
-			this.panel40.Controls.Add(this.button18);
-			this.panel40.Controls.Add(this.button19);
-			this.panel40.Controls.Add(this.button20);
+			this.panel40.Controls.Add(this.btnShowGenre);
+			this.panel40.Controls.Add(this.btnUpdateGenre);
+			this.panel40.Controls.Add(this.btnDeleteGenre);
+			this.panel40.Controls.Add(this.btnInsertGenre);
 			this.panel40.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel40.Location = new System.Drawing.Point(0, 0);
 			this.panel40.Margin = new System.Windows.Forms.Padding(4);
@@ -1428,72 +1666,49 @@
 			this.panel40.Size = new System.Drawing.Size(1046, 64);
 			this.panel40.TabIndex = 9;
 			// 
-			// panel75
+			// btnShowGenre
 			// 
-			this.panel75.Controls.Add(this.button45);
-			this.panel75.Controls.Add(this.textBox25);
-			this.panel75.Location = new System.Drawing.Point(669, 15);
-			this.panel75.Name = "panel75";
-			this.panel75.Size = new System.Drawing.Size(373, 31);
-			this.panel75.TabIndex = 8;
+			this.btnShowGenre.Location = new System.Drawing.Point(328, 4);
+			this.btnShowGenre.Margin = new System.Windows.Forms.Padding(4);
+			this.btnShowGenre.Name = "btnShowGenre";
+			this.btnShowGenre.Size = new System.Drawing.Size(100, 57);
+			this.btnShowGenre.TabIndex = 3;
+			this.btnShowGenre.Text = "Xem";
+			this.btnShowGenre.UseVisualStyleBackColor = true;
+			this.btnShowGenre.Click += new System.EventHandler(this.btnShowGenre_Click);
 			// 
-			// button45
+			// btnUpdateGenre
 			// 
-			this.button45.Dock = System.Windows.Forms.DockStyle.Right;
-			this.button45.Image = global::GUI.Properties.Resources.search_icon;
-			this.button45.Location = new System.Drawing.Point(342, 0);
-			this.button45.Name = "button45";
-			this.button45.Size = new System.Drawing.Size(31, 31);
-			this.button45.TabIndex = 7;
-			this.button45.UseVisualStyleBackColor = true;
+			this.btnUpdateGenre.Location = new System.Drawing.Point(220, 4);
+			this.btnUpdateGenre.Margin = new System.Windows.Forms.Padding(4);
+			this.btnUpdateGenre.Name = "btnUpdateGenre";
+			this.btnUpdateGenre.Size = new System.Drawing.Size(100, 57);
+			this.btnUpdateGenre.TabIndex = 2;
+			this.btnUpdateGenre.Text = "Sửa";
+			this.btnUpdateGenre.UseVisualStyleBackColor = true;
+			this.btnUpdateGenre.Click += new System.EventHandler(this.btnUpdateGenre_Click);
 			// 
-			// textBox25
+			// btnDeleteGenre
 			// 
-			this.textBox25.Location = new System.Drawing.Point(0, 0);
-			this.textBox25.Multiline = true;
-			this.textBox25.Name = "textBox25";
-			this.textBox25.Size = new System.Drawing.Size(336, 31);
-			this.textBox25.TabIndex = 6;
+			this.btnDeleteGenre.Location = new System.Drawing.Point(112, 4);
+			this.btnDeleteGenre.Margin = new System.Windows.Forms.Padding(4);
+			this.btnDeleteGenre.Name = "btnDeleteGenre";
+			this.btnDeleteGenre.Size = new System.Drawing.Size(100, 57);
+			this.btnDeleteGenre.TabIndex = 1;
+			this.btnDeleteGenre.Text = "Xóa";
+			this.btnDeleteGenre.UseVisualStyleBackColor = true;
+			this.btnDeleteGenre.Click += new System.EventHandler(this.btnDeleteGenre_Click);
 			// 
-			// button17
+			// btnInsertGenre
 			// 
-			this.button17.Location = new System.Drawing.Point(328, 4);
-			this.button17.Margin = new System.Windows.Forms.Padding(4);
-			this.button17.Name = "button17";
-			this.button17.Size = new System.Drawing.Size(100, 57);
-			this.button17.TabIndex = 3;
-			this.button17.Text = "Xem";
-			this.button17.UseVisualStyleBackColor = true;
-			// 
-			// button18
-			// 
-			this.button18.Location = new System.Drawing.Point(220, 4);
-			this.button18.Margin = new System.Windows.Forms.Padding(4);
-			this.button18.Name = "button18";
-			this.button18.Size = new System.Drawing.Size(100, 57);
-			this.button18.TabIndex = 2;
-			this.button18.Text = "Sửa";
-			this.button18.UseVisualStyleBackColor = true;
-			// 
-			// button19
-			// 
-			this.button19.Location = new System.Drawing.Point(112, 4);
-			this.button19.Margin = new System.Windows.Forms.Padding(4);
-			this.button19.Name = "button19";
-			this.button19.Size = new System.Drawing.Size(100, 57);
-			this.button19.TabIndex = 1;
-			this.button19.Text = "Xóa";
-			this.button19.UseVisualStyleBackColor = true;
-			// 
-			// button20
-			// 
-			this.button20.Location = new System.Drawing.Point(4, 4);
-			this.button20.Margin = new System.Windows.Forms.Padding(4);
-			this.button20.Name = "button20";
-			this.button20.Size = new System.Drawing.Size(100, 57);
-			this.button20.TabIndex = 0;
-			this.button20.Text = "Thêm";
-			this.button20.UseVisualStyleBackColor = true;
+			this.btnInsertGenre.Location = new System.Drawing.Point(4, 4);
+			this.btnInsertGenre.Margin = new System.Windows.Forms.Padding(4);
+			this.btnInsertGenre.Name = "btnInsertGenre";
+			this.btnInsertGenre.Size = new System.Drawing.Size(100, 57);
+			this.btnInsertGenre.TabIndex = 0;
+			this.btnInsertGenre.Text = "Thêm";
+			this.btnInsertGenre.UseVisualStyleBackColor = true;
+			this.btnInsertGenre.Click += new System.EventHandler(this.btnInsertGenre_Click);
 			// 
 			// tpFilm
 			// 
@@ -2431,233 +2646,6 @@
 			this.tcAdmin.Size = new System.Drawing.Size(1068, 618);
 			this.tcAdmin.TabIndex = 0;
 			// 
-			// grpStaff
-			// 
-			this.grpStaff.BackColor = System.Drawing.Color.Transparent;
-			this.grpStaff.Controls.Add(this.lblStaffID);
-			this.grpStaff.Controls.Add(this.txtStaffId);
-			this.grpStaff.Controls.Add(this.txtStaffAddress);
-			this.grpStaff.Controls.Add(this.lblStaffINumber);
-			this.grpStaff.Controls.Add(this.txtStaffName);
-			this.grpStaff.Controls.Add(this.lblStaffBirth);
-			this.grpStaff.Controls.Add(this.txtStaffPhone);
-			this.grpStaff.Controls.Add(this.lblStaffPhone);
-			this.grpStaff.Controls.Add(this.txtStaffBirth);
-			this.grpStaff.Controls.Add(this.lblStaffAddress);
-			this.grpStaff.Controls.Add(this.txtStaffINumber);
-			this.grpStaff.Controls.Add(this.lblStaffName);
-			this.grpStaff.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.grpStaff.Location = new System.Drawing.Point(150, 12);
-			this.grpStaff.Name = "grpStaff";
-			this.grpStaff.Size = new System.Drawing.Size(706, 145);
-			this.grpStaff.TabIndex = 7;
-			this.grpStaff.TabStop = false;
-			this.grpStaff.Text = "Thông tin nhân viên";
-			// 
-			// grpCustomer
-			// 
-			this.grpCustomer.BackColor = System.Drawing.Color.Transparent;
-			this.grpCustomer.Controls.Add(this.nudPoint);
-			this.grpCustomer.Controls.Add(this.lblCusID);
-			this.grpCustomer.Controls.Add(this.txtCusID);
-			this.grpCustomer.Controls.Add(this.txtCusAddress);
-			this.grpCustomer.Controls.Add(this.lblCusINumber);
-			this.grpCustomer.Controls.Add(this.txtCusName);
-			this.grpCustomer.Controls.Add(this.lblCusBirth);
-			this.grpCustomer.Controls.Add(this.txtCusPhone);
-			this.grpCustomer.Controls.Add(this.lblCusPhone);
-			this.grpCustomer.Controls.Add(this.lblCusPoint);
-			this.grpCustomer.Controls.Add(this.txtCusBirth);
-			this.grpCustomer.Controls.Add(this.lblCusAddress);
-			this.grpCustomer.Controls.Add(this.txtCusINumber);
-			this.grpCustomer.Controls.Add(this.lblCusName);
-			this.grpCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.grpCustomer.Location = new System.Drawing.Point(23, 17);
-			this.grpCustomer.Name = "grpCustomer";
-			this.grpCustomer.Size = new System.Drawing.Size(985, 145);
-			this.grpCustomer.TabIndex = 8;
-			this.grpCustomer.TabStop = false;
-			this.grpCustomer.Text = "Thông tin khách hàng";
-			// 
-			// lblCusID
-			// 
-			this.lblCusID.AutoSize = true;
-			this.lblCusID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCusID.Location = new System.Drawing.Point(24, 39);
-			this.lblCusID.Name = "lblCusID";
-			this.lblCusID.Size = new System.Drawing.Size(70, 19);
-			this.lblCusID.TabIndex = 4;
-			this.lblCusID.Text = "Mã KH :";
-			// 
-			// txtCusID
-			// 
-			this.txtCusID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCusID.Location = new System.Drawing.Point(125, 36);
-			this.txtCusID.Name = "txtCusID";
-			this.txtCusID.Size = new System.Drawing.Size(190, 26);
-			this.txtCusID.TabIndex = 2;
-			// 
-			// txtCusAddress
-			// 
-			this.txtCusAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCusAddress.Location = new System.Drawing.Point(503, 36);
-			this.txtCusAddress.Name = "txtCusAddress";
-			this.txtCusAddress.Size = new System.Drawing.Size(190, 26);
-			this.txtCusAddress.TabIndex = 2;
-			// 
-			// lblCusINumber
-			// 
-			this.lblCusINumber.AutoSize = true;
-			this.lblCusINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCusINumber.Location = new System.Drawing.Point(409, 108);
-			this.lblCusINumber.Name = "lblCusINumber";
-			this.lblCusINumber.Size = new System.Drawing.Size(69, 19);
-			this.lblCusINumber.TabIndex = 4;
-			this.lblCusINumber.Text = "CMND :";
-			// 
-			// txtCusName
-			// 
-			this.txtCusName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCusName.Location = new System.Drawing.Point(125, 72);
-			this.txtCusName.Name = "txtCusName";
-			this.txtCusName.Size = new System.Drawing.Size(190, 26);
-			this.txtCusName.TabIndex = 2;
-			// 
-			// lblCusBirth
-			// 
-			this.lblCusBirth.AutoSize = true;
-			this.lblCusBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCusBirth.Location = new System.Drawing.Point(24, 108);
-			this.lblCusBirth.Name = "lblCusBirth";
-			this.lblCusBirth.Size = new System.Drawing.Size(85, 19);
-			this.lblCusBirth.TabIndex = 4;
-			this.lblCusBirth.Text = "Ngày sinh :";
-			// 
-			// txtCusPhone
-			// 
-			this.txtCusPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCusPhone.Location = new System.Drawing.Point(503, 72);
-			this.txtCusPhone.Name = "txtCusPhone";
-			this.txtCusPhone.Size = new System.Drawing.Size(190, 26);
-			this.txtCusPhone.TabIndex = 2;
-			// 
-			// lblCusPhone
-			// 
-			this.lblCusPhone.AutoSize = true;
-			this.lblCusPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCusPhone.Location = new System.Drawing.Point(409, 75);
-			this.lblCusPhone.Name = "lblCusPhone";
-			this.lblCusPhone.Size = new System.Drawing.Size(61, 19);
-			this.lblCusPhone.TabIndex = 4;
-			this.lblCusPhone.Text = "Số ĐT :";
-			// 
-			// txtCusBirth
-			// 
-			this.txtCusBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCusBirth.Location = new System.Drawing.Point(125, 108);
-			this.txtCusBirth.Name = "txtCusBirth";
-			this.txtCusBirth.Size = new System.Drawing.Size(190, 26);
-			this.txtCusBirth.TabIndex = 2;
-			// 
-			// lblCusAddress
-			// 
-			this.lblCusAddress.AutoSize = true;
-			this.lblCusAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCusAddress.Location = new System.Drawing.Point(409, 39);
-			this.lblCusAddress.Name = "lblCusAddress";
-			this.lblCusAddress.Size = new System.Drawing.Size(65, 19);
-			this.lblCusAddress.TabIndex = 4;
-			this.lblCusAddress.Text = "Địa chỉ :";
-			// 
-			// txtCusINumber
-			// 
-			this.txtCusINumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCusINumber.Location = new System.Drawing.Point(503, 108);
-			this.txtCusINumber.Name = "txtCusINumber";
-			this.txtCusINumber.Size = new System.Drawing.Size(190, 26);
-			this.txtCusINumber.TabIndex = 2;
-			// 
-			// lblCusName
-			// 
-			this.lblCusName.AutoSize = true;
-			this.lblCusName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCusName.Location = new System.Drawing.Point(24, 75);
-			this.lblCusName.Name = "lblCusName";
-			this.lblCusName.Size = new System.Drawing.Size(63, 19);
-			this.lblCusName.TabIndex = 4;
-			this.lblCusName.Text = "Họ tên :";
-			// 
-			// button1
-			// 
-			this.button1.BackgroundImage = global::GUI.Properties.Resources.search_icon;
-			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button1.Location = new System.Drawing.Point(967, 174);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(26, 26);
-			this.button1.TabIndex = 13;
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// textBox21
-			// 
-			this.textBox21.Location = new System.Drawing.Point(829, 174);
-			this.textBox21.Name = "textBox21";
-			this.textBox21.Size = new System.Drawing.Size(132, 26);
-			this.textBox21.TabIndex = 12;
-			// 
-			// btnDeleteCustomer
-			// 
-			this.btnDeleteCustomer.Location = new System.Drawing.Point(635, 168);
-			this.btnDeleteCustomer.Name = "btnDeleteCustomer";
-			this.btnDeleteCustomer.Size = new System.Drawing.Size(90, 32);
-			this.btnDeleteCustomer.TabIndex = 9;
-			this.btnDeleteCustomer.Text = "Xóa";
-			this.btnDeleteCustomer.UseVisualStyleBackColor = true;
-			this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
-			// 
-			// btnUpdateCustomer
-			// 
-			this.btnUpdateCustomer.Location = new System.Drawing.Point(513, 168);
-			this.btnUpdateCustomer.Name = "btnUpdateCustomer";
-			this.btnUpdateCustomer.Size = new System.Drawing.Size(90, 32);
-			this.btnUpdateCustomer.TabIndex = 10;
-			this.btnUpdateCustomer.Text = "Sửa";
-			this.btnUpdateCustomer.UseVisualStyleBackColor = true;
-			this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
-			// 
-			// btnAddCustomer
-			// 
-			this.btnAddCustomer.Location = new System.Drawing.Point(388, 168);
-			this.btnAddCustomer.Name = "btnAddCustomer";
-			this.btnAddCustomer.Size = new System.Drawing.Size(90, 32);
-			this.btnAddCustomer.TabIndex = 11;
-			this.btnAddCustomer.Text = "Thêm";
-			this.btnAddCustomer.UseVisualStyleBackColor = true;
-			this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
-			// 
-			// lblCusPoint
-			// 
-			this.lblCusPoint.AutoSize = true;
-			this.lblCusPoint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCusPoint.Location = new System.Drawing.Point(765, 39);
-			this.lblCusPoint.Name = "lblCusPoint";
-			this.lblCusPoint.Size = new System.Drawing.Size(106, 19);
-			this.lblCusPoint.TabIndex = 4;
-			this.lblCusPoint.Text = "Điểm tích lũy :";
-			// 
-			// nudPoint
-			// 
-			this.nudPoint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.nudPoint.Location = new System.Drawing.Point(895, 37);
-			this.nudPoint.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.nudPoint.Name = "nudPoint";
-			this.nudPoint.Size = new System.Drawing.Size(75, 26);
-			this.nudPoint.TabIndex = 5;
-			this.nudPoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			// 
 			// frmAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2687,12 +2675,17 @@
 			this.pnSearch.PerformLayout();
 			this.tpCustomer.ResumeLayout(false);
 			this.tpCustomer.PerformLayout();
+			this.grpCustomer.ResumeLayout(false);
+			this.grpCustomer.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudPoint)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).EndInit();
 			this.tpStaff.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);
 			this.panel4.ResumeLayout(false);
 			this.panel4.PerformLayout();
+			this.grpStaff.ResumeLayout(false);
+			this.grpStaff.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvStaff)).EndInit();
 			this.tpData.ResumeLayout(false);
 			this.tcData.ResumeLayout(false);
@@ -2700,15 +2693,13 @@
 			this.panel2.ResumeLayout(false);
 			this.panel13.ResumeLayout(false);
 			this.panel14.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvScreenType)).EndInit();
 			this.panel19.ResumeLayout(false);
 			this.panel20.ResumeLayout(false);
 			this.panel20.PerformLayout();
 			this.panel21.ResumeLayout(false);
 			this.panel21.PerformLayout();
 			this.panel11.ResumeLayout(false);
-			this.panel73.ResumeLayout(false);
-			this.panel73.PerformLayout();
 			this.tpCinema.ResumeLayout(false);
 			this.panel22.ResumeLayout(false);
 			this.panel24.ResumeLayout(false);
@@ -2726,15 +2717,15 @@
 			this.panel34.ResumeLayout(false);
 			this.panel35.ResumeLayout(false);
 			this.panel36.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvGenre)).EndInit();
 			this.panel37.ResumeLayout(false);
+			this.panel5.ResumeLayout(false);
+			this.panel5.PerformLayout();
 			this.panel38.ResumeLayout(false);
 			this.panel38.PerformLayout();
 			this.panel39.ResumeLayout(false);
 			this.panel39.PerformLayout();
 			this.panel40.ResumeLayout(false);
-			this.panel75.ResumeLayout(false);
-			this.panel75.PerformLayout();
 			this.tpFilm.ResumeLayout(false);
 			this.panel41.ResumeLayout(false);
 			this.panel42.ResumeLayout(false);
@@ -2791,11 +2782,6 @@
 			this.tpRevenue.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvRevenue)).EndInit();
 			this.tcAdmin.ResumeLayout(false);
-			this.grpStaff.ResumeLayout(false);
-			this.grpStaff.PerformLayout();
-			this.grpCustomer.ResumeLayout(false);
-			this.grpCustomer.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.nudPoint)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -2838,22 +2824,19 @@
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Panel panel13;
 		private System.Windows.Forms.Panel panel14;
-		private System.Windows.Forms.DataGridView dataGridView2;
+		private System.Windows.Forms.DataGridView dtgvScreenType;
 		private System.Windows.Forms.Panel panel19;
 		private System.Windows.Forms.Panel panel20;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.TextBox txtScreenTypeName;
+		private System.Windows.Forms.Label lblScreenTypeName;
 		private System.Windows.Forms.Panel panel21;
-		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.TextBox txtScreenTypeID;
+		private System.Windows.Forms.Label lblScreenTypeID;
 		private System.Windows.Forms.Panel panel11;
-		private System.Windows.Forms.Panel panel73;
-		private System.Windows.Forms.Button button43;
-		private System.Windows.Forms.TextBox textBox23;
-		private System.Windows.Forms.Button button9;
-		private System.Windows.Forms.Button button10;
-		private System.Windows.Forms.Button button11;
-		private System.Windows.Forms.Button button12;
+		private System.Windows.Forms.Button btnShowScreenType;
+		private System.Windows.Forms.Button btnUpdateScreenType;
+		private System.Windows.Forms.Button btnDeleteScreenType;
+		private System.Windows.Forms.Button btnInsertScreenType;
 		private System.Windows.Forms.TabPage tpCinema;
 		private System.Windows.Forms.Panel panel22;
 		private System.Windows.Forms.Panel panel24;
@@ -2878,22 +2861,19 @@
 		private System.Windows.Forms.Panel panel34;
 		private System.Windows.Forms.Panel panel35;
 		private System.Windows.Forms.Panel panel36;
-		private System.Windows.Forms.DataGridView dataGridView4;
+		private System.Windows.Forms.DataGridView dtgvGenre;
 		private System.Windows.Forms.Panel panel37;
 		private System.Windows.Forms.Panel panel38;
-		private System.Windows.Forms.TextBox textBox8;
-		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.TextBox txtGenreName;
+		private System.Windows.Forms.Label lblGenreName;
 		private System.Windows.Forms.Panel panel39;
-		private System.Windows.Forms.TextBox textBox9;
-		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.TextBox txtGenreID;
+		private System.Windows.Forms.Label lblGenreID;
 		private System.Windows.Forms.Panel panel40;
-		private System.Windows.Forms.Panel panel75;
-		private System.Windows.Forms.Button button45;
-		private System.Windows.Forms.TextBox textBox25;
-		private System.Windows.Forms.Button button17;
-		private System.Windows.Forms.Button button18;
-		private System.Windows.Forms.Button button19;
-		private System.Windows.Forms.Button button20;
+		private System.Windows.Forms.Button btnShowGenre;
+		private System.Windows.Forms.Button btnUpdateGenre;
+		private System.Windows.Forms.Button btnDeleteGenre;
+		private System.Windows.Forms.Button btnInsertGenre;
 		private System.Windows.Forms.TabPage tpFilm;
 		private System.Windows.Forms.Panel panel41;
 		private System.Windows.Forms.Panel panel42;
@@ -3020,12 +3000,15 @@
 		private System.Windows.Forms.Label lblCusAddress;
 		private System.Windows.Forms.TextBox txtCusINumber;
 		private System.Windows.Forms.Label lblCusName;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.TextBox textBox21;
+		private System.Windows.Forms.Button btnSearchCus;
+		private System.Windows.Forms.TextBox txtSearchCus;
 		private System.Windows.Forms.Button btnDeleteCustomer;
 		private System.Windows.Forms.Button btnUpdateCustomer;
 		private System.Windows.Forms.Button btnAddCustomer;
 		private System.Windows.Forms.NumericUpDown nudPoint;
 		private System.Windows.Forms.Label lblCusPoint;
+		private System.Windows.Forms.Panel panel5;
+		private System.Windows.Forms.TextBox txtGenreDesc;
+		private System.Windows.Forms.Label lblGenreDesc;
 	}
 }

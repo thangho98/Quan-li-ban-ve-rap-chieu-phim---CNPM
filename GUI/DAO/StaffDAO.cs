@@ -37,7 +37,7 @@ namespace GUI.DAO
 
 		public static DataTable SearchStaffByName(string name)
 		{
-			List<Staff> searchList = new List<Staff>();
+			//List<Staff> searchList = new List<Staff>();
 			//DataTable data = DataProvider.ExecuteQuery("SELECT * FROM dbo.NhanVien WHERE HoTen = N'" + name + "'");
 			DataTable data = DataProvider.ExecuteQuery("EXEC USP_SearchStaff @hoTen", new object[] { name });
 			//foreach (DataRow item in data.Rows)

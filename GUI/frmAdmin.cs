@@ -16,6 +16,8 @@ namespace GUI
     {
         BindingSource staffList = new BindingSource();
 		BindingSource customerList = new BindingSource();
+		BindingSource genreList = new BindingSource();
+		BindingSource screenTypeList = new BindingSource();
 
 		public frmAdmin()
         {
@@ -26,6 +28,10 @@ namespace GUI
 			LoadStaff();
 
 			LoadCustomer();
+
+			LoadGenre();
+
+			LoadScreenType();
         }
 
 		#region Doanh Thu
@@ -276,6 +282,180 @@ namespace GUI
 			string cusID = txtCusID.Text;
 			DeleteCustomer(cusID);
 			LoadCustomerList();
+		}
+
+		private void btnSearchCus_Click(object sender, EventArgs e)
+		{
+			string cusName = txtSearchCus.Text;
+			customerList.DataSource = CustomerDAO.SearchCustomerByName(cusName);
+		}
+		private void txtSearchCus_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				btnSearchCus.PerformClick();
+				e.SuppressKeyPress = true;
+			}
+		}
+		#endregion
+
+		//Tab 'Dữ liệu'
+		#region Thể Loại
+		void LoadGenre()
+		{
+			dtgvGenre.DataSource = genreList;
+			LoadGenreList();
+			AddGenreBinding();
+		}
+		void LoadGenreList()
+		{
+			genreList.DataSource = GenreDAO.GetListGenre();
+		}
+		void AddGenreBinding()
+		{
+			txtGenreID.DataBindings.Add("Text", dtgvGenre.DataSource, "Mã thể loại", true, DataSourceUpdateMode.Never);
+			txtGenreName.DataBindings.Add("Text", dtgvGenre.DataSource, "Tên thể loại", true, DataSourceUpdateMode.Never);
+			txtGenreDesc.DataBindings.Add("Text", dtgvGenre.DataSource, "Mô tả", true, DataSourceUpdateMode.Never);
+		}
+		private void btnShowGenre_Click(object sender, EventArgs e)
+		{
+			LoadGenreList();
+		}
+
+		void InsertGenre(string id, string name, string desc)
+		{
+			if (GenreDAO.InsertGenre(id, name, desc))
+			{
+				MessageBox.Show("Thêm thể loại thành công");
+			}
+			else
+			{
+				MessageBox.Show("Thêm thể loại thất bại");
+			}
+		}
+		private void btnInsertGenre_Click(object sender, EventArgs e)
+		{
+			string GenreID = txtGenreID.Text;
+			string GenreName = txtGenreName.Text;
+			string GenreDesc = txtGenreDesc.Text;
+			InsertGenre(GenreID, GenreName, GenreDesc);
+			LoadGenreList();
+		}
+
+		void UpdateGenre(string id, string name, string desc)
+		{
+			if (GenreDAO.UpdateGenre(id, name, desc))
+			{
+				MessageBox.Show("Sửa thể loại thành công");
+			}
+			else
+			{
+				MessageBox.Show("Sửa thể loại thất bại");
+			}
+		}
+		private void btnUpdateGenre_Click(object sender, EventArgs e)
+		{
+			string GenreID = txtGenreID.Text;
+			string GenreName = txtGenreName.Text;
+			string GenreDesc = txtGenreDesc.Text;
+			UpdateGenre(GenreID, GenreName, GenreDesc);
+			LoadGenreList();
+		}
+
+		void DeleteGenre(string id)
+		{
+			if (GenreDAO.DeleteGenre(id))
+			{
+				MessageBox.Show("Xóa thể loại thành công");
+			}
+			else
+			{
+				MessageBox.Show("Xóa thể loại thất bại");
+			}
+		}
+		private void btnDeleteGenre_Click(object sender, EventArgs e)
+		{
+			string GenreID = txtGenreID.Text;
+			DeleteGenre(GenreID);
+			LoadGenreList();
+		}
+		#endregion
+
+		#region Loại Màn Hình
+		void LoadScreenType()
+		{
+			dtgvScreenType.DataSource = screenTypeList;
+			LoadScreenTypeList();
+			AddScreenTypeBinding();
+		}
+		void LoadScreenTypeList()
+		{
+			screenTypeList.DataSource = ScreenTypeDAO.GetListScreenType();
+		}
+		void AddScreenTypeBinding()
+		{
+			txtScreenTypeID.DataBindings.Add("Text", dtgvScreenType.DataSource, "Mã loại màn hình");
+			txtScreenTypeName.DataBindings.Add("Text", dtgvScreenType.DataSource, "Tên màn hình");
+		}
+		private void btnShowScreenType_Click(object sender, EventArgs e)
+		{
+			LoadScreenTypeList();
+		}
+
+		void InsertScreenType(string id, string name)
+		{
+			if (ScreenTypeDAO.InsertScreenType(id, name))
+			{
+				MessageBox.Show("Thêm loại màn hình thành công");
+			}
+			else
+			{
+				MessageBox.Show("Thêm loại màn hình thất bại");
+			}
+		}
+		private void btnInsertScreenType_Click(object sender, EventArgs e)
+		{
+			string screenTypeID = txtScreenTypeID.Text;
+			string screenTypeName = txtScreenTypeName.Text;
+			InsertScreenType(screenTypeID, screenTypeName);
+			LoadScreenTypeList();
+		}
+
+		void UpdateScreenType(string id, string name)
+		{
+			if (ScreenTypeDAO.UpdateScreenType(id, name))
+			{
+				MessageBox.Show("Sửa loại màn hình thành công");
+			}
+			else
+			{
+				MessageBox.Show("Sửa loại màn hình thất bại");
+			}
+		}
+		private void btnUpdateScreenType_Click(object sender, EventArgs e)
+		{
+			string screenTypeID = txtScreenTypeID.Text;
+			string screenTypeName = txtScreenTypeName.Text;
+			UpdateScreenType(screenTypeID, screenTypeName);
+			LoadScreenTypeList();
+		}
+
+		void DeleteScreenType(string id)
+		{
+			if (ScreenTypeDAO.DeleteScreenType(id))
+			{
+				MessageBox.Show("Xóa loại màn hình thành công");
+			}
+			else
+			{
+				MessageBox.Show("Xóa loại màn hình thất bại");
+			}
+		}
+		private void btnDeleteScreenType_Click(object sender, EventArgs e)
+		{
+			string screenTypeID = txtScreenTypeID.Text;
+			DeleteScreenType(screenTypeID);
+			LoadScreenTypeList();
 		}
 		#endregion
 

@@ -39,5 +39,10 @@ namespace GUI.DAO
 			int result = DataProvider.ExecuteNonQuery("DELETE dbo.KhachHang WHERE id = '" + id + "'");
 			return result > 0;
 		}
+
+		public static DataTable SearchCustomerByName(string name)
+		{
+			return DataProvider.ExecuteQuery("EXEC USP_SearchCustomer @hoTen", new object[] { name });
+		}
 	}
 }
