@@ -174,22 +174,32 @@
 			this.panel41 = new System.Windows.Forms.Panel();
 			this.panel42 = new System.Windows.Forms.Panel();
 			this.panel43 = new System.Windows.Forms.Panel();
-			this.dataGridView5 = new System.Windows.Forms.DataGridView();
-			this.panel44 = new System.Windows.Forms.Panel();
-			this.panel45 = new System.Windows.Forms.Panel();
-			this.textBox10 = new System.Windows.Forms.TextBox();
-			this.label14 = new System.Windows.Forms.Label();
-			this.panel46 = new System.Windows.Forms.Panel();
-			this.textBox11 = new System.Windows.Forms.TextBox();
-			this.label15 = new System.Windows.Forms.Label();
+			this.clbMovieGenre = new System.Windows.Forms.CheckedListBox();
+			this.dtmMovieEnd = new System.Windows.Forms.DateTimePicker();
+			this.dtmMovieStart = new System.Windows.Forms.DateTimePicker();
+			this.txtMovieYear = new System.Windows.Forms.TextBox();
+			this.txtMovieDirector = new System.Windows.Forms.TextBox();
+			this.txtMovieProductor = new System.Windows.Forms.TextBox();
+			this.txtMovieLength = new System.Windows.Forms.TextBox();
+			this.lblMovieEndDate = new System.Windows.Forms.Label();
+			this.lblMovieStartDate = new System.Windows.Forms.Label();
+			this.lblMovieLength = new System.Windows.Forms.Label();
+			this.txtMovieDesc = new System.Windows.Forms.TextBox();
+			this.lblMovieYear = new System.Windows.Forms.Label();
+			this.lblMovieGenre = new System.Windows.Forms.Label();
+			this.lblMovieDirector = new System.Windows.Forms.Label();
+			this.lblMovieProductor = new System.Windows.Forms.Label();
+			this.lblMovieDesc = new System.Windows.Forms.Label();
+			this.txtMovieName = new System.Windows.Forms.TextBox();
+			this.lblMovieName = new System.Windows.Forms.Label();
+			this.txtMovieID = new System.Windows.Forms.TextBox();
+			this.lblMovieID = new System.Windows.Forms.Label();
+			this.dtgvMovie = new System.Windows.Forms.DataGridView();
 			this.panel47 = new System.Windows.Forms.Panel();
-			this.panel76 = new System.Windows.Forms.Panel();
-			this.button46 = new System.Windows.Forms.Button();
-			this.textBox26 = new System.Windows.Forms.TextBox();
-			this.button21 = new System.Windows.Forms.Button();
-			this.button22 = new System.Windows.Forms.Button();
-			this.button23 = new System.Windows.Forms.Button();
-			this.button24 = new System.Windows.Forms.Button();
+			this.btnShowMovie = new System.Windows.Forms.Button();
+			this.btnUpdateMovie = new System.Windows.Forms.Button();
+			this.btnDeleteMovie = new System.Windows.Forms.Button();
+			this.btnAddMovie = new System.Windows.Forms.Button();
 			this.tpShowTimes = new System.Windows.Forms.TabPage();
 			this.panel48 = new System.Windows.Forms.Panel();
 			this.panel49 = new System.Windows.Forms.Panel();
@@ -323,12 +333,8 @@
 			this.panel41.SuspendLayout();
 			this.panel42.SuspendLayout();
 			this.panel43.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-			this.panel44.SuspendLayout();
-			this.panel45.SuspendLayout();
-			this.panel46.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvMovie)).BeginInit();
 			this.panel47.SuspendLayout();
-			this.panel76.SuspendLayout();
 			this.tpShowTimes.SuspendLayout();
 			this.panel48.SuspendLayout();
 			this.panel49.SuspendLayout();
@@ -1881,7 +1887,6 @@
 			// panel42
 			// 
 			this.panel42.Controls.Add(this.panel43);
-			this.panel42.Controls.Add(this.panel44);
 			this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel42.Location = new System.Drawing.Point(0, 64);
 			this.panel42.Name = "panel42";
@@ -1890,101 +1895,229 @@
 			// 
 			// panel43
 			// 
-			this.panel43.Controls.Add(this.dataGridView5);
-			this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel43.Controls.Add(this.clbMovieGenre);
+			this.panel43.Controls.Add(this.dtmMovieEnd);
+			this.panel43.Controls.Add(this.dtmMovieStart);
+			this.panel43.Controls.Add(this.txtMovieYear);
+			this.panel43.Controls.Add(this.txtMovieDirector);
+			this.panel43.Controls.Add(this.txtMovieProductor);
+			this.panel43.Controls.Add(this.txtMovieLength);
+			this.panel43.Controls.Add(this.lblMovieEndDate);
+			this.panel43.Controls.Add(this.lblMovieStartDate);
+			this.panel43.Controls.Add(this.lblMovieLength);
+			this.panel43.Controls.Add(this.txtMovieDesc);
+			this.panel43.Controls.Add(this.lblMovieYear);
+			this.panel43.Controls.Add(this.lblMovieGenre);
+			this.panel43.Controls.Add(this.lblMovieDirector);
+			this.panel43.Controls.Add(this.lblMovieProductor);
+			this.panel43.Controls.Add(this.lblMovieDesc);
+			this.panel43.Controls.Add(this.txtMovieName);
+			this.panel43.Controls.Add(this.lblMovieName);
+			this.panel43.Controls.Add(this.txtMovieID);
+			this.panel43.Controls.Add(this.lblMovieID);
+			this.panel43.Controls.Add(this.dtgvMovie);
 			this.panel43.Location = new System.Drawing.Point(0, 0);
 			this.panel43.Margin = new System.Windows.Forms.Padding(4);
 			this.panel43.Name = "panel43";
-			this.panel43.Size = new System.Drawing.Size(660, 478);
+			this.panel43.Size = new System.Drawing.Size(1040, 478);
 			this.panel43.TabIndex = 12;
 			// 
-			// dataGridView5
+			// clbMovieGenre
 			// 
-			this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dataGridView5.Location = new System.Drawing.Point(0, 0);
-			this.dataGridView5.Margin = new System.Windows.Forms.Padding(4);
-			this.dataGridView5.Name = "dataGridView5";
-			this.dataGridView5.Size = new System.Drawing.Size(660, 478);
-			this.dataGridView5.TabIndex = 0;
+			this.clbMovieGenre.CheckOnClick = true;
+			this.clbMovieGenre.FormattingEnabled = true;
+			this.clbMovieGenre.Location = new System.Drawing.Point(765, 387);
+			this.clbMovieGenre.MultiColumn = true;
+			this.clbMovieGenre.Name = "clbMovieGenre";
+			this.clbMovieGenre.Size = new System.Drawing.Size(272, 88);
+			this.clbMovieGenre.TabIndex = 4;
 			// 
-			// panel44
+			// dtmMovieEnd
 			// 
-			this.panel44.Controls.Add(this.panel45);
-			this.panel44.Controls.Add(this.panel46);
-			this.panel44.Dock = System.Windows.Forms.DockStyle.Right;
-			this.panel44.Location = new System.Drawing.Point(660, 0);
-			this.panel44.Margin = new System.Windows.Forms.Padding(4);
-			this.panel44.Name = "panel44";
-			this.panel44.Size = new System.Drawing.Size(380, 478);
-			this.panel44.TabIndex = 11;
+			this.dtmMovieEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dtmMovieEnd.Location = new System.Drawing.Point(849, 226);
+			this.dtmMovieEnd.Name = "dtmMovieEnd";
+			this.dtmMovieEnd.Size = new System.Drawing.Size(188, 26);
+			this.dtmMovieEnd.TabIndex = 3;
 			// 
-			// panel45
+			// dtmMovieStart
 			// 
-			this.panel45.Controls.Add(this.textBox10);
-			this.panel45.Controls.Add(this.label14);
-			this.panel45.Location = new System.Drawing.Point(4, 65);
-			this.panel45.Margin = new System.Windows.Forms.Padding(4);
-			this.panel45.Name = "panel45";
-			this.panel45.Size = new System.Drawing.Size(372, 54);
-			this.panel45.TabIndex = 2;
+			this.dtmMovieStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dtmMovieStart.Location = new System.Drawing.Point(849, 194);
+			this.dtmMovieStart.Name = "dtmMovieStart";
+			this.dtmMovieStart.Size = new System.Drawing.Size(188, 26);
+			this.dtmMovieStart.TabIndex = 3;
 			// 
-			// textBox10
+			// txtMovieYear
 			// 
-			this.textBox10.Location = new System.Drawing.Point(167, 10);
-			this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-			this.textBox10.Name = "textBox10";
-			this.textBox10.Size = new System.Drawing.Size(200, 26);
-			this.textBox10.TabIndex = 1;
+			this.txtMovieYear.Location = new System.Drawing.Point(862, 331);
+			this.txtMovieYear.Name = "txtMovieYear";
+			this.txtMovieYear.Size = new System.Drawing.Size(175, 26);
+			this.txtMovieYear.TabIndex = 2;
 			// 
-			// label14
+			// txtMovieDirector
 			// 
-			this.label14.AutoSize = true;
-			this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.label14.Location = new System.Drawing.Point(4, 11);
-			this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(124, 19);
-			this.label14.TabIndex = 0;
-			this.label14.Text = "Tên danh mục:";
+			this.txtMovieDirector.Location = new System.Drawing.Point(849, 299);
+			this.txtMovieDirector.Name = "txtMovieDirector";
+			this.txtMovieDirector.Size = new System.Drawing.Size(188, 26);
+			this.txtMovieDirector.TabIndex = 2;
 			// 
-			// panel46
+			// txtMovieProductor
 			// 
-			this.panel46.Controls.Add(this.textBox11);
-			this.panel46.Controls.Add(this.label15);
-			this.panel46.Location = new System.Drawing.Point(4, 4);
-			this.panel46.Margin = new System.Windows.Forms.Padding(4);
-			this.panel46.Name = "panel46";
-			this.panel46.Size = new System.Drawing.Size(372, 54);
-			this.panel46.TabIndex = 1;
+			this.txtMovieProductor.Location = new System.Drawing.Point(849, 267);
+			this.txtMovieProductor.Name = "txtMovieProductor";
+			this.txtMovieProductor.Size = new System.Drawing.Size(188, 26);
+			this.txtMovieProductor.TabIndex = 2;
 			// 
-			// textBox11
+			// txtMovieLength
 			// 
-			this.textBox11.Location = new System.Drawing.Point(167, 10);
-			this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-			this.textBox11.Name = "textBox11";
-			this.textBox11.ReadOnly = true;
-			this.textBox11.Size = new System.Drawing.Size(200, 26);
-			this.textBox11.TabIndex = 1;
+			this.txtMovieLength.Location = new System.Drawing.Point(849, 153);
+			this.txtMovieLength.Name = "txtMovieLength";
+			this.txtMovieLength.Size = new System.Drawing.Size(188, 26);
+			this.txtMovieLength.TabIndex = 2;
 			// 
-			// label15
+			// lblMovieEndDate
 			// 
-			this.label15.AutoSize = true;
-			this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.label15.Location = new System.Drawing.Point(4, 11);
-			this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(31, 19);
-			this.label15.TabIndex = 0;
-			this.label15.Text = "ID:";
+			this.lblMovieEndDate.AutoSize = true;
+			this.lblMovieEndDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMovieEndDate.Location = new System.Drawing.Point(746, 232);
+			this.lblMovieEndDate.Name = "lblMovieEndDate";
+			this.lblMovieEndDate.Size = new System.Drawing.Size(80, 19);
+			this.lblMovieEndDate.TabIndex = 1;
+			this.lblMovieEndDate.Text = "Ngày KT :";
+			// 
+			// lblMovieStartDate
+			// 
+			this.lblMovieStartDate.AutoSize = true;
+			this.lblMovieStartDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMovieStartDate.Location = new System.Drawing.Point(746, 200);
+			this.lblMovieStartDate.Name = "lblMovieStartDate";
+			this.lblMovieStartDate.Size = new System.Drawing.Size(81, 19);
+			this.lblMovieStartDate.TabIndex = 1;
+			this.lblMovieStartDate.Text = "Ngày KC :";
+			// 
+			// lblMovieLength
+			// 
+			this.lblMovieLength.AutoSize = true;
+			this.lblMovieLength.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMovieLength.Location = new System.Drawing.Point(746, 156);
+			this.lblMovieLength.Name = "lblMovieLength";
+			this.lblMovieLength.Size = new System.Drawing.Size(92, 19);
+			this.lblMovieLength.TabIndex = 1;
+			this.lblMovieLength.Text = "Thời lượng :";
+			// 
+			// txtMovieDesc
+			// 
+			this.txtMovieDesc.Location = new System.Drawing.Point(849, 71);
+			this.txtMovieDesc.Multiline = true;
+			this.txtMovieDesc.Name = "txtMovieDesc";
+			this.txtMovieDesc.Size = new System.Drawing.Size(188, 76);
+			this.txtMovieDesc.TabIndex = 2;
+			// 
+			// lblMovieYear
+			// 
+			this.lblMovieYear.AutoSize = true;
+			this.lblMovieYear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMovieYear.Location = new System.Drawing.Point(746, 334);
+			this.lblMovieYear.Name = "lblMovieYear";
+			this.lblMovieYear.Size = new System.Drawing.Size(110, 19);
+			this.lblMovieYear.TabIndex = 1;
+			this.lblMovieYear.Text = "Năm sản xuất :";
+			// 
+			// lblMovieGenre
+			// 
+			this.lblMovieGenre.AutoSize = true;
+			this.lblMovieGenre.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMovieGenre.Location = new System.Drawing.Point(746, 362);
+			this.lblMovieGenre.Name = "lblMovieGenre";
+			this.lblMovieGenre.Size = new System.Drawing.Size(87, 22);
+			this.lblMovieGenre.TabIndex = 1;
+			this.lblMovieGenre.Text = "Thể loại :";
+			// 
+			// lblMovieDirector
+			// 
+			this.lblMovieDirector.AutoSize = true;
+			this.lblMovieDirector.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMovieDirector.Location = new System.Drawing.Point(746, 300);
+			this.lblMovieDirector.Name = "lblMovieDirector";
+			this.lblMovieDirector.Size = new System.Drawing.Size(93, 22);
+			this.lblMovieDirector.TabIndex = 1;
+			this.lblMovieDirector.Text = "Đạo diễn :";
+			// 
+			// lblMovieProductor
+			// 
+			this.lblMovieProductor.AutoSize = true;
+			this.lblMovieProductor.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMovieProductor.Location = new System.Drawing.Point(746, 268);
+			this.lblMovieProductor.Name = "lblMovieProductor";
+			this.lblMovieProductor.Size = new System.Drawing.Size(91, 22);
+			this.lblMovieProductor.TabIndex = 1;
+			this.lblMovieProductor.Text = "Sản xuất :";
+			// 
+			// lblMovieDesc
+			// 
+			this.lblMovieDesc.AutoSize = true;
+			this.lblMovieDesc.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMovieDesc.Location = new System.Drawing.Point(746, 72);
+			this.lblMovieDesc.Name = "lblMovieDesc";
+			this.lblMovieDesc.Size = new System.Drawing.Size(69, 22);
+			this.lblMovieDesc.TabIndex = 1;
+			this.lblMovieDesc.Text = "Mô tả :";
+			// 
+			// txtMovieName
+			// 
+			this.txtMovieName.Location = new System.Drawing.Point(849, 39);
+			this.txtMovieName.Name = "txtMovieName";
+			this.txtMovieName.Size = new System.Drawing.Size(188, 26);
+			this.txtMovieName.TabIndex = 2;
+			// 
+			// lblMovieName
+			// 
+			this.lblMovieName.AutoSize = true;
+			this.lblMovieName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMovieName.Location = new System.Drawing.Point(746, 40);
+			this.lblMovieName.Name = "lblMovieName";
+			this.lblMovieName.Size = new System.Drawing.Size(97, 22);
+			this.lblMovieName.TabIndex = 1;
+			this.lblMovieName.Text = "Tên phim :";
+			// 
+			// txtMovieID
+			// 
+			this.txtMovieID.Location = new System.Drawing.Point(849, 7);
+			this.txtMovieID.Name = "txtMovieID";
+			this.txtMovieID.Size = new System.Drawing.Size(188, 26);
+			this.txtMovieID.TabIndex = 2;
+			this.txtMovieID.TextChanged += new System.EventHandler(this.txtMovieID_TextChanged);
+			// 
+			// lblMovieID
+			// 
+			this.lblMovieID.AutoSize = true;
+			this.lblMovieID.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMovieID.Location = new System.Drawing.Point(746, 8);
+			this.lblMovieID.Name = "lblMovieID";
+			this.lblMovieID.Size = new System.Drawing.Size(93, 22);
+			this.lblMovieID.TabIndex = 1;
+			this.lblMovieID.Text = "Mã phim :";
+			// 
+			// dtgvMovie
+			// 
+			this.dtgvMovie.AllowUserToAddRows = false;
+			this.dtgvMovie.AllowUserToDeleteRows = false;
+			this.dtgvMovie.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dtgvMovie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dtgvMovie.Location = new System.Drawing.Point(0, 0);
+			this.dtgvMovie.Margin = new System.Windows.Forms.Padding(4);
+			this.dtgvMovie.Name = "dtgvMovie";
+			this.dtgvMovie.ReadOnly = true;
+			this.dtgvMovie.Size = new System.Drawing.Size(739, 478);
+			this.dtgvMovie.TabIndex = 0;
 			// 
 			// panel47
 			// 
-			this.panel47.Controls.Add(this.panel76);
-			this.panel47.Controls.Add(this.button21);
-			this.panel47.Controls.Add(this.button22);
-			this.panel47.Controls.Add(this.button23);
-			this.panel47.Controls.Add(this.button24);
+			this.panel47.Controls.Add(this.btnShowMovie);
+			this.panel47.Controls.Add(this.btnUpdateMovie);
+			this.panel47.Controls.Add(this.btnDeleteMovie);
+			this.panel47.Controls.Add(this.btnAddMovie);
 			this.panel47.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel47.Location = new System.Drawing.Point(0, 0);
 			this.panel47.Margin = new System.Windows.Forms.Padding(4);
@@ -1992,72 +2125,49 @@
 			this.panel47.Size = new System.Drawing.Size(1040, 64);
 			this.panel47.TabIndex = 9;
 			// 
-			// panel76
+			// btnShowMovie
 			// 
-			this.panel76.Controls.Add(this.button46);
-			this.panel76.Controls.Add(this.textBox26);
-			this.panel76.Location = new System.Drawing.Point(664, 14);
-			this.panel76.Name = "panel76";
-			this.panel76.Size = new System.Drawing.Size(373, 31);
-			this.panel76.TabIndex = 8;
+			this.btnShowMovie.Location = new System.Drawing.Point(328, 4);
+			this.btnShowMovie.Margin = new System.Windows.Forms.Padding(4);
+			this.btnShowMovie.Name = "btnShowMovie";
+			this.btnShowMovie.Size = new System.Drawing.Size(100, 57);
+			this.btnShowMovie.TabIndex = 3;
+			this.btnShowMovie.Text = "Xem";
+			this.btnShowMovie.UseVisualStyleBackColor = true;
+			this.btnShowMovie.Click += new System.EventHandler(this.btnShowMovie_Click);
 			// 
-			// button46
+			// btnUpdateMovie
 			// 
-			this.button46.Dock = System.Windows.Forms.DockStyle.Right;
-			this.button46.Image = global::GUI.Properties.Resources.search_icon;
-			this.button46.Location = new System.Drawing.Point(342, 0);
-			this.button46.Name = "button46";
-			this.button46.Size = new System.Drawing.Size(31, 31);
-			this.button46.TabIndex = 7;
-			this.button46.UseVisualStyleBackColor = true;
+			this.btnUpdateMovie.Location = new System.Drawing.Point(220, 4);
+			this.btnUpdateMovie.Margin = new System.Windows.Forms.Padding(4);
+			this.btnUpdateMovie.Name = "btnUpdateMovie";
+			this.btnUpdateMovie.Size = new System.Drawing.Size(100, 57);
+			this.btnUpdateMovie.TabIndex = 2;
+			this.btnUpdateMovie.Text = "Sửa";
+			this.btnUpdateMovie.UseVisualStyleBackColor = true;
+			this.btnUpdateMovie.Click += new System.EventHandler(this.btnUpdateMovie_Click);
 			// 
-			// textBox26
+			// btnDeleteMovie
 			// 
-			this.textBox26.Location = new System.Drawing.Point(0, 0);
-			this.textBox26.Multiline = true;
-			this.textBox26.Name = "textBox26";
-			this.textBox26.Size = new System.Drawing.Size(336, 31);
-			this.textBox26.TabIndex = 6;
+			this.btnDeleteMovie.Location = new System.Drawing.Point(112, 4);
+			this.btnDeleteMovie.Margin = new System.Windows.Forms.Padding(4);
+			this.btnDeleteMovie.Name = "btnDeleteMovie";
+			this.btnDeleteMovie.Size = new System.Drawing.Size(100, 57);
+			this.btnDeleteMovie.TabIndex = 1;
+			this.btnDeleteMovie.Text = "Xóa";
+			this.btnDeleteMovie.UseVisualStyleBackColor = true;
+			this.btnDeleteMovie.Click += new System.EventHandler(this.btnDeleteMovie_Click);
 			// 
-			// button21
+			// btnAddMovie
 			// 
-			this.button21.Location = new System.Drawing.Point(328, 4);
-			this.button21.Margin = new System.Windows.Forms.Padding(4);
-			this.button21.Name = "button21";
-			this.button21.Size = new System.Drawing.Size(100, 57);
-			this.button21.TabIndex = 3;
-			this.button21.Text = "Xem";
-			this.button21.UseVisualStyleBackColor = true;
-			// 
-			// button22
-			// 
-			this.button22.Location = new System.Drawing.Point(220, 4);
-			this.button22.Margin = new System.Windows.Forms.Padding(4);
-			this.button22.Name = "button22";
-			this.button22.Size = new System.Drawing.Size(100, 57);
-			this.button22.TabIndex = 2;
-			this.button22.Text = "Sửa";
-			this.button22.UseVisualStyleBackColor = true;
-			// 
-			// button23
-			// 
-			this.button23.Location = new System.Drawing.Point(112, 4);
-			this.button23.Margin = new System.Windows.Forms.Padding(4);
-			this.button23.Name = "button23";
-			this.button23.Size = new System.Drawing.Size(100, 57);
-			this.button23.TabIndex = 1;
-			this.button23.Text = "Xóa";
-			this.button23.UseVisualStyleBackColor = true;
-			// 
-			// button24
-			// 
-			this.button24.Location = new System.Drawing.Point(4, 4);
-			this.button24.Margin = new System.Windows.Forms.Padding(4);
-			this.button24.Name = "button24";
-			this.button24.Size = new System.Drawing.Size(100, 57);
-			this.button24.TabIndex = 0;
-			this.button24.Text = "Thêm";
-			this.button24.UseVisualStyleBackColor = true;
+			this.btnAddMovie.Location = new System.Drawing.Point(4, 4);
+			this.btnAddMovie.Margin = new System.Windows.Forms.Padding(4);
+			this.btnAddMovie.Name = "btnAddMovie";
+			this.btnAddMovie.Size = new System.Drawing.Size(100, 57);
+			this.btnAddMovie.TabIndex = 0;
+			this.btnAddMovie.Text = "Thêm";
+			this.btnAddMovie.UseVisualStyleBackColor = true;
+			this.btnAddMovie.Click += new System.EventHandler(this.btnAddMovie_Click);
 			// 
 			// tpShowTimes
 			// 
@@ -2885,15 +2995,9 @@
 			this.panel41.ResumeLayout(false);
 			this.panel42.ResumeLayout(false);
 			this.panel43.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-			this.panel44.ResumeLayout(false);
-			this.panel45.ResumeLayout(false);
-			this.panel45.PerformLayout();
-			this.panel46.ResumeLayout(false);
-			this.panel46.PerformLayout();
+			this.panel43.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvMovie)).EndInit();
 			this.panel47.ResumeLayout(false);
-			this.panel76.ResumeLayout(false);
-			this.panel76.PerformLayout();
 			this.tpShowTimes.ResumeLayout(false);
 			this.panel48.ResumeLayout(false);
 			this.panel49.ResumeLayout(false);
@@ -3030,22 +3134,12 @@
 		private System.Windows.Forms.Panel panel41;
 		private System.Windows.Forms.Panel panel42;
 		private System.Windows.Forms.Panel panel43;
-		private System.Windows.Forms.DataGridView dataGridView5;
-		private System.Windows.Forms.Panel panel44;
-		private System.Windows.Forms.Panel panel45;
-		private System.Windows.Forms.TextBox textBox10;
-		private System.Windows.Forms.Label label14;
-		private System.Windows.Forms.Panel panel46;
-		private System.Windows.Forms.TextBox textBox11;
-		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.DataGridView dtgvMovie;
 		private System.Windows.Forms.Panel panel47;
-		private System.Windows.Forms.Panel panel76;
-		private System.Windows.Forms.Button button46;
-		private System.Windows.Forms.TextBox textBox26;
-		private System.Windows.Forms.Button button21;
-		private System.Windows.Forms.Button button22;
-		private System.Windows.Forms.Button button23;
-		private System.Windows.Forms.Button button24;
+		private System.Windows.Forms.Button btnShowMovie;
+		private System.Windows.Forms.Button btnUpdateMovie;
+		private System.Windows.Forms.Button btnDeleteMovie;
+		private System.Windows.Forms.Button btnAddMovie;
 		private System.Windows.Forms.TabPage tpShowTimes;
 		private System.Windows.Forms.Panel panel48;
 		private System.Windows.Forms.Panel panel49;
@@ -3177,5 +3271,25 @@
 		private System.Windows.Forms.Panel panel8;
 		private System.Windows.Forms.TextBox txtCinemaSeats;
 		private System.Windows.Forms.Label lblCinemaSeats;
+		private System.Windows.Forms.CheckedListBox clbMovieGenre;
+		private System.Windows.Forms.DateTimePicker dtmMovieEnd;
+		private System.Windows.Forms.DateTimePicker dtmMovieStart;
+		private System.Windows.Forms.TextBox txtMovieYear;
+		private System.Windows.Forms.TextBox txtMovieDirector;
+		private System.Windows.Forms.TextBox txtMovieProductor;
+		private System.Windows.Forms.TextBox txtMovieLength;
+		private System.Windows.Forms.Label lblMovieEndDate;
+		private System.Windows.Forms.Label lblMovieStartDate;
+		private System.Windows.Forms.Label lblMovieLength;
+		private System.Windows.Forms.TextBox txtMovieDesc;
+		private System.Windows.Forms.Label lblMovieYear;
+		private System.Windows.Forms.Label lblMovieDirector;
+		private System.Windows.Forms.Label lblMovieProductor;
+		private System.Windows.Forms.Label lblMovieDesc;
+		private System.Windows.Forms.TextBox txtMovieName;
+		private System.Windows.Forms.Label lblMovieName;
+		private System.Windows.Forms.TextBox txtMovieID;
+		private System.Windows.Forms.Label lblMovieID;
+		private System.Windows.Forms.Label lblMovieGenre;
 	}
 }

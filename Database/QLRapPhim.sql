@@ -473,9 +473,49 @@ CREATE PROC USP_InsertCinema
 AS
 BEGIN
 	INSERT dbo.PhongChieu ( id , TenPhong , idManHinh , SoChoNgoi , TinhTrang , SoHangGhe , SoGheMotHang)
-	VALUES  (@idCinema , @tenPhong , @idMH , @soChoNgoi , @tinhTrang , @soHangGhe , @soGheMotHang)
+	VALUES (@idCinema , @tenPhong , @idMH , @soChoNgoi , @tinhTrang , @soHangGhe , @soGheMotHang)
 END
 GO
+
+--PHIM
+CREATE PROC USP_GetMovie
+AS
+BEGIN
+	SELECT id AS [Mã phim], TenPhim AS [Tên phim], MoTa AS [Mô tả], ThoiLuong AS [Thời lượng], NgayKhoiChieu AS [Ngày khởi chiếu], NgayKetThuc AS [Ngày kết thúc], SanXuat AS [Sản xuất], DaoDien AS [Đạo diễn], NamSX AS [Năm SX]
+	FROM dbo.Phim
+END
+GO
+
+CREATE PROC USP_GetListGenreByMovie
+@idPhim VARCHAR(50)
+AS
+BEGIN
+	SELECT TL.id, TenTheLoai, TL.MoTa
+	FROM dbo.PhanLoaiPhim PL, dbo.TheLoai TL
+	WHERE idPhim = @idPhim AND PL.idTheLoai = TL.id
+END
+GO
+
+CREATE PROC USP_InsertMovie
+@id VARCHAR(50), @tenPhim NVARCHAR(100), @moTa NVARCHAR(1000), @thoiLuong FLOAT, @ngayKhoiChieu DATE, @ngayKetThuc DATE, @sanXuat NVARCHAR(50), @daoDien NVARCHAR(100), @namSX INT
+AS
+BEGIN
+	INSERT dbo.Phim (id , TenPhim , MoTa , ThoiLuong , NgayKhoiChieu , NgayKetThuc , SanXuat , DaoDien , NamSX)
+	VALUES (@id , @tenPhim , @moTa , @thoiLuong , @ngayKhoiChieu , @ngayKetThuc , @sanXuat , @daoDien , @namSX)
+END
+GO
+
+CREATE PROC USP_UpdateMovie
+@id VARCHAR(50), @tenPhim NVARCHAR(100), @moTa NVARCHAR(1000), @thoiLuong FLOAT, @ngayKhoiChieu DATE, @ngayKetThuc DATE, @sanXuat NVARCHAR(50), @daoDien NVARCHAR(100), @namSX INT
+AS
+BEGIN
+	UPDATE dbo.Phim SET TenPhim = @tenPhim, MoTa = @moTa, ThoiLuong = @thoiLuong, NgayKhoiChieu = @ngayKhoiChieu, NgayKetThuc = @ngayKetThuc, SanXuat = @sanXuat, DaoDien = @daoDien, NamSX = @namSX WHERE id = @id
+END
+GO
+
+
+
+
 
 
 

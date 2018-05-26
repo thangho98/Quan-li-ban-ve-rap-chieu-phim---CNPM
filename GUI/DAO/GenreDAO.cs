@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,7 +10,19 @@ namespace GUI.DAO
 {
 	public class GenreDAO
 	{
-		public static DataTable GetListGenre()
+		public static List<Genre> GetListGenre()
+		{
+			List<Genre> genreList = new List<Genre>();
+			DataTable data = DataProvider.ExecuteQuery("SELECT * FROM dbo.TheLoai");
+			foreach (DataRow item in data.Rows)
+			{
+				Genre genre = new Genre(item);
+				genreList.Add(genre);
+			}
+			return genreList;
+		}
+
+		public static DataTable GetGenre()
 		{
 			return DataProvider.ExecuteQuery("SELECT id AS [Mã thể loại], TenTheLoai AS [Tên thể loại], MoTa AS [Mô tả] FROM dbo.TheLoai");
 		}
