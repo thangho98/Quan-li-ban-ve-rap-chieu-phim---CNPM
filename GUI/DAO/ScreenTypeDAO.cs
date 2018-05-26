@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,7 +10,19 @@ namespace GUI.DAO
 {
     public class ScreenTypeDAO
     {
-        public static DataTable GetListScreenType()
+		public static List<ScreenType> GetListScreenType()
+		{
+			List<ScreenType> screenTypeList = new List<ScreenType>();
+			DataTable data = DataProvider.ExecuteQuery("SELECT * FROM dbo.LoaiManHinh");
+			foreach (DataRow item in data.Rows)
+			{
+				ScreenType screenType = new ScreenType(item);
+				screenTypeList.Add(screenType);
+			}
+			return screenTypeList;
+		}
+
+        public static DataTable GetScreenType()
         {
             return DataProvider.ExecuteQuery("SELECT id AS [Mã loại màn hình], TenMH as [Tên màn hình] FROM dbo.LoaiManHinh");
         }
@@ -36,6 +49,18 @@ namespace GUI.DAO
 		{
 			int result = DataProvider.ExecuteNonQuery("DELETE dbo.LoaiManHinh WHERE id = '" + id + "'");
 			return result > 0;
+		}
+
+		public static ScreenType GetScreenTypeByName(string screenName)
+		{
+			ScreenType screenType = null;
+			DataTable data = DataProvider.ExecuteQuery("SELECT * FROM dbo.LoaiManHinh WHERE TenMH = N'" + screenName + "'");
+			foreach (DataRow item in data.Rows)
+			{
+				screenType = new ScreenType(item);
+				return screenType;
+			}
+			return screenType;
 		}
     }
 }

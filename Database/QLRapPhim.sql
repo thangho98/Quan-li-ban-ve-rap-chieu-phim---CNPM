@@ -458,6 +458,26 @@ BEGIN
 END
 GO
 
+--PHÒNG CHIẾU
+CREATE PROC USP_GetCinema
+AS
+BEGIN
+	SELECT PC.id AS [Mã phòng], TenPhong AS [Tên phòng], TenMH AS [Tên màn hình], PC.SoChoNgoi AS [Số chỗ ngồi], PC.TinhTrang AS [Tình trạng], PC.SoHangGhe AS [Số hàng ghế], PC.SoGheMotHang AS [Ghế mỗi hàng]
+	FROM dbo.PhongChieu AS PC, dbo.LoaiManHinh AS MH
+	WHERE PC.idManHinh = MH.id
+END
+GO
+
+CREATE PROC USP_InsertCinema
+@idCinema VARCHAR(50), @tenPhong NVARCHAR(100), @idMH VARCHAR(50), @soChoNgoi INT, @tinhTrang INT, @soHangGhe INT, @soGheMotHang INT
+AS
+BEGIN
+	INSERT dbo.PhongChieu ( id , TenPhong , idManHinh , SoChoNgoi , TinhTrang , SoHangGhe , SoGheMotHang)
+	VALUES  (@idCinema , @tenPhong , @idMH , @soChoNgoi , @tinhTrang , @soHangGhe , @soGheMotHang)
+END
+GO
+
+
 
 CREATE PROC USP_UpdateAccount
 @username NVARCHAR(100), @pass NVARCHAR(1000), @newPass NVARCHAR(1000)
