@@ -57,5 +57,17 @@ namespace GUI.DAO
 			int result = DataProvider.ExecuteNonQuery("DELETE dbo.Phim WHERE id = '" + id + "'");
 			return result > 0;
 		}
+
+		public static Movie GetMovieByID(string id)
+		{
+			Movie movie = null;
+			DataTable data = DataProvider.ExecuteQuery("SELECT * FROM dbo.Phim WHERE id = '" + id + "'");
+			foreach (DataRow item in data.Rows)
+			{
+				movie = new Movie(item);
+				return movie;
+			}
+			return movie;
+		}
 	}
 }

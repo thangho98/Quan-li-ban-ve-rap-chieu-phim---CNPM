@@ -13,9 +13,9 @@ namespace GUI.DAO
 
         private DataProvider() { }
 
-        private static string connectionSTR = "Data Source=Administrator;Initial Catalog=QLRP;Integrated Security=True";
-
-        public static DataTable ExecuteQuery(string query, object[] parameter = null)
+        //private static string connectionSTR = "Data Source=Administrator;Initial Catalog=QLRP;Integrated Security=True";
+		private static string connectionSTR = "Data Source=DESKTOP-G3TR9OQ;Initial Catalog=QLRP;Integrated Security=True";
+		public static DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
 
@@ -114,3 +114,4 @@ namespace GUI.DAO
         }
     }
 }
+	

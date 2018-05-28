@@ -513,6 +513,23 @@ BEGIN
 END
 GO
 
+--ĐỊNH DẠNG
+CREATE PROC USP_GetListFormatMovie
+AS
+BEGIN
+	SELECT DD.id AS [Mã định dạng], P.id AS [Mã phim], P.TenPhim AS [Tên phim], MH.id AS [Mã MH], MH.TenMH AS [Tên MH]
+	FROM dbo.DinhDangPhim DD, Phim P, dbo.LoaiManHinh MH
+	WHERE DD.idPhim = P.id AND DD.idLoaiManHinh = MH.id
+END
+GO
+
+CREATE PROC USP_InsertFormatMovie
+@id VARCHAR(50), @idPhim VARCHAR(50), @idLoaiManHinh VARCHAR(50)
+AS
+BEGIN
+	INSERT dbo.DinhDangPhim ( id, idPhim, idLoaiManHinh )
+	VALUES  ( @id, @idPhim, @idLoaiManHinh )
+END
 
 
 

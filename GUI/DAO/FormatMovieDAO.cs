@@ -26,7 +26,7 @@ namespace GUI.DAO
             return listFormat;
         }
 
-        public static DataTable GetFormatMovie(string movieID, string screenTypeID)
+        public static DataTable GetFormatMovieByID(string movieID, string screenTypeID)
         {
             string query = "select d.id, p.TenPhim, m.TenMH " +
                 "from Phim p, DinhDangPhim d, LoaiManHinh m " +
@@ -34,5 +34,30 @@ namespace GUI.DAO
                 + "and p.id = '" + movieID + "' and m.id = '" + screenTypeID + "'";
             return DataProvider.ExecuteQuery(query);
         }
+
+		public static DataTable GetFormatMovie()
+		{
+			return DataProvider.ExecuteQuery("EXEC USP_GetListFormatMovie");
+		}
+
+		public static bool InsertFormatMovie(string id, string idMovie, string idScreen)
+		{
+			int result = DataProvider.ExecuteNonQuery("EXEC USP_InsertFormatMovie @id , @idPhim , @idLoaiManHinh ", new object[] { id, idMovie, idScreen });
+			return result > 0;
+		}
+
+		public static bool UpdateFormatMovie(string id, string idMovie, string idScreen)
+		{
+			string command = string.Format("UPDATE dbo.DinhDangPhim SET idPhim = '{0}', idLoaiManHinh = '{1}' WHERE id = '{2}'", idMovie, idScreen, id);
+			int result = DataProvider.ExecuteNonQuery(command);
+			return result > 0;
+		}
+
+		public static bool DeleteFormatMovie(string id)
+		{
+			//TODO : Xóa Ve tương ứng
+			int result = DataProvider.ExecuteNonQuery("DELETE dbo.DinhDangPhim WHERE id = '" + id + "'");
+			return result > 0;
+		}
     }
 }
