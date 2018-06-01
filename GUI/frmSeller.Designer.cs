@@ -119,6 +119,7 @@
             this.dtpThoiGian.Size = new System.Drawing.Size(289, 30);
             this.dtpThoiGian.TabIndex = 3;
             this.dtpThoiGian.Value = new System.DateTime(2018, 4, 15, 10, 8, 45, 0);
+            this.dtpThoiGian.ValueChanged += new System.EventHandler(this.dtpThoiGian_ValueChanged);
             // 
             // cboFilmName
             // 
@@ -210,7 +211,7 @@
             this.lvLichChieu.TabIndex = 0;
             this.lvLichChieu.UseCompatibleStateImageBehavior = false;
             this.lvLichChieu.View = System.Windows.Forms.View.Details;
-            this.lvLichChieu.SelectedIndexChanged += new System.EventHandler(this.lvLichChieu_SelectedIndexChanged);
+            this.lvLichChieu.Click += new System.EventHandler(this.lvLichChieu_Click);
             // 
             // columnHeader5
             // 

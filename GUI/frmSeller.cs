@@ -17,18 +17,18 @@ namespace GUI
         public frmSeller()
         {
             InitializeComponent();
+            dtpThoiGian.Value = DateTime.Now;
+            LoadMovie(dtpThoiGian.Value);
         }
 
         private void frmSeller_Load(object sender, EventArgs e)
         {
-            dtpThoiGian.Value = DateTime.Now;
-            LoadMovie();
             timer1.Start();
         }
 
-        private void LoadMovie()
+        private void LoadMovie(DateTime date)
         {
-            cboFilmName.DataSource = MovieDAO.GetListMovie(DateTime.Now);
+            cboFilmName.DataSource = MovieDAO.GetListMovieByDate(date);
             cboFilmName.DisplayMember = "Name";
         }
 
@@ -54,7 +54,7 @@ namespace GUI
 
         private void LoadListShowTimeByFilm(string formatMovieID)
         {
-            DataTable data = ShowTimesDAO.GetListShowTimeByFormatMovie(formatMovieID);
+            DataTable data = ShowTimesDAO.GetListShowTimeByFormatMovie(formatMovieID,dtpThoiGian.Value);
             foreach(DataRow row in data.Rows)
             {
                 ShowTimes showTimes = new ShowTimes(row);
@@ -83,24 +83,30 @@ namespace GUI
             }
         }
 
-        private void lvLichChieu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lvLichChieu.SelectedItems.Count > 0)
-            {
-                ShowTimes showTimes = lvLichChieu.SelectedItems[0].Tag as ShowTimes;
-                Movie movie = cboFilmName.SelectedItem as Movie;
-                frmTheatre frm = new frmTheatre(showTimes,movie);
-                if (frm.ShowDialog() == DialogResult.OK)
-                {
-
-                }
-            }
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             //Load lại form để cập nhật cơ sở dữ liệu
             this.OnLoad(null);
+        }
+
+        private void lvLichChieu_Click(object sender, EventArgs e)
+        {
+            if (lvLichChieu.SelectedItems.Count > 0)
+            {
+                timer1.Stop();
+                ShowTimes showTimes = lvLichChieu.SelectedItems[0].Tag as ShowTimes;
+                Movie movie = cboFilmName.SelectedItem as Movie;
+                frmTheatre frm = new frmTheatre(showTimes, movie);
+                this.Hide();
+                frm.ShowDialog();
+                this.OnLoad(null);
+                this.Show();
+            }
+        }
+
+        private void dtpThoiGian_ValueChanged(object sender, EventArgs e)
+        {
+            LoadMovie(dtpThoiGian.Value);
         }
     }
 }
