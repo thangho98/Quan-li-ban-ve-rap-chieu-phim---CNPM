@@ -27,7 +27,7 @@ namespace GUI.DTO
             this.BirthDate = DateTime.Parse(row["NgaySinh"].ToString());
             this.Address = row["DiaChi"].ToString();
             this.Phone = row["SDT"].ToString();
-            this.IdentityCard = int.Parse(row["CMND"].ToString());
+            this.IdentityCard = Int32.Parse(row["CMND"].ToString());
         }
 
         public string ID { get; set; }

@@ -64,7 +64,7 @@ namespace GUI
 
         private void LoadDataCinema(string cinemaName)
         {
-            Cinema cinema = CinemaDAO.GetCinema(cinemaName);
+            Cinema cinema = CinemaDAO.GetCinemaByName(cinemaName);
             int Row = cinema.Row;
             int Column = cinema.SeatInRow;
             flpSeat.Size = new Size((SIZE + 20 + GAP) * Column, (SIZE + GAP) * Row);
