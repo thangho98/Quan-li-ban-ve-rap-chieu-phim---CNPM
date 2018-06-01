@@ -17,12 +17,12 @@ namespace GUI
         public frmSeller()
         {
             InitializeComponent();
+            dtpThoiGian.Value = DateTime.Now;
+            LoadMovie(dtpThoiGian.Value);
         }
 
         private void frmSeller_Load(object sender, EventArgs e)
         {
-            dtpThoiGian.Value = DateTime.Now;
-            //LoadMovie(dtpThoiGian.Value);
             timer1.Start();
         }
 
@@ -93,6 +93,7 @@ namespace GUI
         {
             if (lvLichChieu.SelectedItems.Count > 0)
             {
+                timer1.Stop();
                 ShowTimes showTimes = lvLichChieu.SelectedItems[0].Tag as ShowTimes;
                 Movie movie = cboFilmName.SelectedItem as Movie;
                 frmTheatre frm = new frmTheatre(showTimes, movie);
