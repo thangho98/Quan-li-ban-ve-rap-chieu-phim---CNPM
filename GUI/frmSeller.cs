@@ -23,6 +23,7 @@ namespace GUI
 
         private void frmSeller_Load(object sender, EventArgs e)
         {
+            LoadMovie(dtpThoiGian.Value);
             timer1.Start();
         }
 
