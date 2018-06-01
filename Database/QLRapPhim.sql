@@ -375,6 +375,7 @@ BEGIN
 	where p.id = d.idPhim and d.id = l.idDinhDang and l.idPhong = pc.id
 	and d.id = @ID and CONVERT(DATE, @Date) = CONVERT(DATE, L.ThoiGianChieu)
 	order by l.ThoiGianChieu
+END
 GO
 
 --DOANH THU

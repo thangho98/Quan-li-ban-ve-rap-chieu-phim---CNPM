@@ -28,11 +28,7 @@ namespace GUI
 
         private void LoadMovie(DateTime date)
         {
-<<<<<<< HEAD
             cboFilmName.DataSource = MovieDAO.GetListMovieByDate(date);
-=======
-            cboFilmName.DataSource = MovieDAO.GetListMovieByDate(DateTime.Now);
->>>>>>> Thang2
             cboFilmName.DisplayMember = "Name";
         }
 
