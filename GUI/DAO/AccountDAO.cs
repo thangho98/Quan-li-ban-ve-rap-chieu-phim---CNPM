@@ -12,7 +12,7 @@ namespace GUI.DAO
     {
         private AccountDAO() { }
 
-        public static bool Login(string userName, string passWord)
+        public static int Login(string userName, string passWord)
         {
             //byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
             //byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
@@ -32,7 +32,13 @@ namespace GUI.DAO
 
             DataTable result = DataProvider.ExecuteQuery(query, new object[] { userName, passWord  /*list*/});
 
-            return result.Rows.Count > 0;
+            if (result == null)
+                return -1;
+            else if (result.Rows.Count > 0)
+                return 1;
+            else
+                return 0;
+            
         }
 
         public static bool UpdateAccount(string userName, string displayName, string pass, string newPass)

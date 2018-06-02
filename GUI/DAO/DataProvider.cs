@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GUI.DAO
 {
@@ -13,39 +14,64 @@ namespace GUI.DAO
 
         private DataProvider() { }
 
-        private static string connectionSTR = "Data Source=THAITHANG-PC;Initial Catalog=QuanLyRapPhim;User ID=sa;pwd = thaithang1";
+        private static string connectionSTR = Properties.Settings.Default.connectionSTR;//= "Data Source=THAITHANG-PC;Initial Catalog=QuanLyRapPhim;User ID=sa;pwd=thaithang1";
+        
+        public static bool TestConnectionSQL(string conn)
+        {
+            bool result = false;
+            connectionSTR = conn;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionSTR))
+                {
+                    connection.Open();
+                    result = true;
+                    connection.Close();
+                }
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+            return result;
+        }
 
         public static DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
-
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            try
             {
-                connection.Open();
-
-                SqlCommand command = new SqlCommand(query, connection);
-
-                if (parameter != null)
+                using (SqlConnection connection = new SqlConnection(connectionSTR))
                 {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
+                    connection.Open();
+
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    if (parameter != null)
                     {
-                        if (item.Contains('@'))
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
                         }
                     }
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                    adapter.Fill(data);
+
+                    connection.Close();
                 }
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-
-                adapter.Fill(data);
-
-                connection.Close();
             }
-
+            catch(Exception ex)
+            {
+                return null;
+            }
             return data;
         }
 
