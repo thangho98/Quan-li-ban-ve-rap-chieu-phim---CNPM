@@ -14,6 +14,8 @@ namespace GUI.DAO
 
         private DataProvider() { }
 
+        //private static string connectionSTR = "Data Source=THAITHANG-PC;Initial Catalog=QLRP;Integrated Security=True";
+        //private static string connectionSTR = "Data Source=DESKTOP-G3TR9OQ;Initial Catalog=QLRP;Integrated Security=True";
         private static string connectionSTR = Properties.Settings.Default.connectionSTR;//= "Data Source=THAITHANG-PC;Initial Catalog=QuanLyRapPhim;User ID=sa;pwd=thaithang1";
         
         public static bool TestConnectionSQL(string conn)
@@ -29,18 +31,19 @@ namespace GUI.DAO
                     connection.Close();
                 }
             }
-            catch(Exception e)
+            catch
             {
                 return false;
             }
             return result;
         }
 
-        public static DataTable ExecuteQuery(string query, object[] parameter = null)
+      
+		public static DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
-            try
-            {
+            //try
+            //{
                 using (SqlConnection connection = new SqlConnection(connectionSTR))
                 {
                     connection.Open();
@@ -67,11 +70,11 @@ namespace GUI.DAO
 
                     connection.Close();
                 }
-            }
-            catch(Exception ex)
-            {
-                return null;
-            }
+            //}
+            //catch
+            //{
+            //    return null;
+            //}
             return data;
         }
 
@@ -140,3 +143,4 @@ namespace GUI.DAO
         }
     }
 }
+	

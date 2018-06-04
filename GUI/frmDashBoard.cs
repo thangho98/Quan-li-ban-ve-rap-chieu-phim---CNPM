@@ -13,7 +13,14 @@ namespace GUI
 {
     public partial class frmDashBoard : Form
     {
-        private Account loginAccount;
+		public frmDashBoard(Account acc)
+		{
+			InitializeComponent();
+
+			this.LoginAccount = acc;
+		}
+
+		private Account loginAccount;
 
         public Account LoginAccount
         {
@@ -24,14 +31,7 @@ namespace GUI
         void ChangeAccount(int type)
         {
             if (loginAccount.Type == 2) btnAdmin.Enabled = false;
-            lblAccountInfo.Text += " (" + LoginAccount.UserName+ ")";
-        }
-
-        public frmDashBoard(Account acc)
-        {
-            InitializeComponent();
-
-            this.LoginAccount = acc;
+            lblAccountInfo.Text += LoginAccount.UserName;
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
@@ -49,5 +49,12 @@ namespace GUI
 			frm.ShowDialog();
             this.Show();
         }
-    }
+
+		private void btnAccountSettings_Click(object sender, EventArgs e)
+		{
+			frmAccountSettings frm = new frmAccountSettings(loginAccount);
+			frm.ShowDialog();
+			this.Show();
+		}
+	}
 }

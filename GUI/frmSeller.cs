@@ -37,6 +37,8 @@ namespace GUI
         {
             if(cboFilmName.SelectedIndex != -1)
             {
+                cboFormatFilm.DataSource = null;
+                lvLichChieu.Items.Clear();
                 Movie movie = cboFilmName.SelectedItem as Movie;
                 cboFormatFilm.DataSource = FormatMovieDAO.GetListFormatMovieByMovie(movie.ID);
                 cboFormatFilm.DisplayMember = "ScreenTypeName";
@@ -56,6 +58,7 @@ namespace GUI
         private void LoadListShowTimeByFilm(string formatMovieID)
         {
             DataTable data = ShowTimesDAO.GetListShowTimeByFormatMovie(formatMovieID,dtpThoiGian.Value);
+            //if (data == null) return;
             foreach(DataRow row in data.Rows)
             {
                 ShowTimes showTimes = new ShowTimes(row);

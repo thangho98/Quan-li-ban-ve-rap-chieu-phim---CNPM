@@ -101,7 +101,8 @@ CREATE TABLE LichChieu
 	ThoiGianChieu DATETIME NOT NULL,
 	idPhong VARCHAR(50) NOT NULL,
 	idDinhDang VARCHAR(50) NOT NULL,
-	GiaVe Money NOT NULL
+	GiaVe Money NOT NULL,
+	alter table dbo.LichChieu add TrangThai INT NOT NULL DEFAULT '0', --0: Chưa tạo vé cho lịch chiếu || 1: Đã tạo vé
 
 	FOREIGN KEY (idPhong) REFERENCES dbo.PhongChieu(id),
 	FOREIGN KEY (idDinhDang) REFERENCES dbo.DinhDangPhim(id),
@@ -146,20 +147,10 @@ CREATE TABLE Ve
 	TienBanVe MONEY DEFAULT '0'
 
 	FOREIGN KEY (idLichChieu) REFERENCES dbo.LichChieu(id),
-	--FOREIGN KEY (idCheDoKM) REFERENCES dbo.CheDoKM(id),
+	FOREIGN KEY (idCheDoKM) REFERENCES dbo.CheDoKM(id),
 	FOREIGN KEY (idKhachHang) REFERENCES dbo.KhachHang(id)
 )
 GO
-
-
-CREATE PROC USP_Login
-@userName nvarchar(1000), @pass nvarchar(1000)
-AS
-BEGIN
-	SELECT * FROM dbo.TaiKhoan WHERE UserName = @userName AND Pass = @pass
-END
-GO
-
 
 SET IDENTITY_INSERT Ve OFF
 GO
@@ -532,17 +523,203 @@ END
 GO
 
 --LỊCH CHIẾU
-CREATE PROC USP_GetListShowTimeByFormatMovie
+CREATE PROC USP_GetListShowTimesByFormatMovie
 @ID varchar(50), @Date Datetime
 AS
 BEGIN
-	select l.id, pc.TenPhong, p.TenPhim, l.ThoiGianChieu, d.id as idDinhDang, l.GiaVe 
+	select l.id, pc.TenPhong, p.TenPhim, l.ThoiGianChieu, d.id as idDinhDang, l.GiaVe, l.TrangThai
 	from Phim p ,DinhDangPhim d, LichChieu l, PhongChieu pc
 	where p.id = d.idPhim and d.id = l.idDinhDang and l.idPhong = pc.id
-	and d.id = @ID and CONVERT(DATE, @Date) = CONVERT(DATE, L.ThoiGianChieu)
+	and d.id = @ID and CONVERT(DATE, @Date) = CONVERT(DATE, l.ThoiGianChieu)
 	order by l.ThoiGianChieu
 END
 GO
+
+CREATE PROC USP_GetAllListShowTimes
+AS
+BEGIN
+	select l.id, pc.TenPhong, p.TenPhim, l.ThoiGianChieu, d.id as idDinhDang, l.GiaVe, l.TrangThai
+	from Phim p ,DinhDangPhim d, LichChieu l, PhongChieu pc
+	where p.id = d.idPhim and d.id = l.idDinhDang and l.idPhong = pc.id
+	order by l.ThoiGianChieu
+END
+GO
+
+CREATE PROC USP_UpdateStatusShowTimes
+@idLichChieu NVARCHAR(50), @status int
+AS
+BEGIN
+	UPDATE dbo.LichChieu
+	SET TrangThai = @status
+	WHERE id = @idLichChieu
+END
+GO
+
+--DOANH THU
+CREATE PROC USP_GetRevenueByMovieAndDate
+@idMovie VARCHAR(50), @fromDate date, @toDate date
+AS
+BEGIN
+	SELECT P.TenPhim AS [Tên phim], CONVERT(DATE, LC.ThoiGianChieu) AS [Ngày chiếu], CONVERT(TIME(0),LC.ThoiGianChieu) AS [Giờ chiếu], COUNT(V.id) AS [Số vé đã bán], SUM(TienBanVe) AS [Tiền vé]
+	FROM dbo.Ve AS V, dbo.LichChieu AS LC, dbo.DinhDangPhim AS DDP, Phim AS P
+	WHERE V.idLichChieu = LC.id AND LC.idDinhDang = DDP.id AND DDP.idPhim = P.id AND V.TrangThai = 1 AND P.id = @idMovie AND LC.ThoiGianChieu >= @fromDate AND LC.ThoiGianChieu <= @toDate
+	GROUP BY idLichChieu, P.TenPhim, LC.ThoiGianChieu
+END
+GO
+
+CREATE FUNCTION [dbo].[fuConvertToUnsign1] ( @strInput NVARCHAR(4000) ) RETURNS NVARCHAR(4000) AS BEGIN IF @strInput IS NULL RETURN @strInput IF @strInput = '' RETURN @strInput DECLARE @RT NVARCHAR(4000) DECLARE @SIGN_CHARS NCHAR(136) DECLARE @UNSIGN_CHARS NCHAR (136) SET @SIGN_CHARS = N'ăâđêôơưàảãạáằẳẵặắầẩẫậấèẻẽẹéềểễệế ìỉĩịíòỏõọóồổỗộốờởỡợớùủũụúừửữựứỳỷỹỵý ĂÂĐÊÔƠƯÀẢÃẠÁẰẲẴẶẮẦẨẪẬẤÈẺẼẸÉỀỂỄỆẾÌỈĨỊÍ ÒỎÕỌÓỒỔỖỘỐỜỞỠỢỚÙỦŨỤÚỪỬỮỰỨỲỶỸỴÝ' +NCHAR(272)+ NCHAR(208) SET @UNSIGN_CHARS = N'aadeoouaaaaaaaaaaaaaaaeeeeeeeeee iiiiiooooooooooooooouuuuuuuuuuyyyyy AADEOOUAAAAAAAAAAAAAAAEEEEEEEEEEIIIII OOOOOOOOOOOOOOOUUUUUUUUUUYYYYYDD' DECLARE @COUNTER int DECLARE @COUNTER1 int SET @COUNTER = 1 WHILE (@COUNTER <=LEN(@strInput)) BEGIN SET @COUNTER1 = 1 WHILE (@COUNTER1 <=LEN(@SIGN_CHARS)+1) BEGIN IF UNICODE(SUBSTRING(@SIGN_CHARS, @COUNTER1,1)) = UNICODE(SUBSTRING(@strInput,@COUNTER ,1) ) BEGIN IF @COUNTER=1 SET @strInput = SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)-1) ELSE SET @strInput = SUBSTRING(@strInput, 1, @COUNTER-1) +SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)- @COUNTER) BREAK END SET @COUNTER1 = @COUNTER1 +1 END SET @COUNTER = @COUNTER +1 END SET @strInput = replace(@strInput,' ','-') RETURN @strInput END
+GO
+
+--NHÂN VIÊN
+CREATE PROC USP_GetStaff
+AS
+BEGIN
+	SELECT id AS [Mã nhân viên], HoTen AS [Họ tên], NgaySinh AS [Ngày sinh], DiaChi AS [Địa chỉ], SDT AS [SĐT], CMND AS [CMND]
+	FROM dbo.NhanVien
+END
+GO
+
+CREATE PROC USP_InsertStaff
+@idStaff VARCHAR(50), @hoTen NVARCHAR(100), @ngaySinh date, @diaChi NVARCHAR(100), @sdt VARCHAR(100), @cmnd INT
+AS
+BEGIN
+	INSERT dbo.NhanVien (id, HoTen, NgaySinh, DiaChi, SDT, CMND)
+	VALUES (@idStaff, @hoTen, @ngaySinh, @diaChi, @sdt, @cmnd)
+END
+GO
+
+CREATE PROC USP_SearchStaff
+@hoTen NVARCHAR(100)
+AS
+BEGIN
+	SELECT id AS [Mã nhân viên], HoTen AS [Họ tên], NgaySinh AS [Ngày sinh], DiaChi AS [Địa chỉ], SDT AS [SĐT], CMND AS [CMND]
+	FROM dbo.NhanVien
+	WHERE dbo.fuConvertToUnsign1(HoTen) LIKE N'%' + dbo.fuConvertToUnsign1(@hoTen) + N'%'
+END
+GO
+
+--KHÁCH HÀNG
+CREATE PROC USP_GetCustomer
+AS
+BEGIN
+	SELECT id AS [Mã khách hàng], HoTen AS [Họ tên], NgaySinh AS [Ngày sinh], DiaChi AS [Địa chỉ], SDT AS [SĐT], CMND AS [CMND], DiemTichLuy AS [Điểm tích lũy]
+	FROM dbo.KhachHang
+END
+GO
+
+CREATE PROC USP_InsertCustomer
+@idCus VARCHAR(50), @hoTen NVARCHAR(100), @ngaySinh date, @diaChi NVARCHAR(100), @sdt VARCHAR(100), @cmnd INT
+AS
+BEGIN
+	INSERT dbo.KhachHang (id, HoTen, NgaySinh, DiaChi, SDT, CMND, DiemTichLuy)
+	VALUES (@idCus, @hoTen, @ngaySinh, @diaChi, @sdt, @cmnd, 0)
+END
+GO
+
+CREATE PROC USP_SearchCustomer
+@hoTen NVARCHAR(100)
+AS
+BEGIN
+	SELECT id AS [Mã khách hàng], HoTen AS [Họ tên], NgaySinh AS [Ngày sinh], DiaChi AS [Địa chỉ], SDT AS [SĐT], CMND AS [CMND], DiemTichLuy AS [Điểm tích lũy]
+	FROM dbo.KhachHang
+	WHERE dbo.fuConvertToUnsign1(HoTen) LIKE N'%' + dbo.fuConvertToUnsign1(@hoTen) + N'%'
+END
+GO
+
+--THỂ LOẠI
+CREATE PROC USP_InsertGenre
+@idGenre VARCHAR(50), @ten NVARCHAR(100), @moTa NVARCHAR(100)
+AS
+BEGIN
+	INSERT dbo.TheLoai (id, TenTheLoai, MoTa)
+	VALUES  (@idGenre, @ten, @moTa)
+END
+GO
+
+--LOẠI MÀN HÌNH
+CREATE PROC USP_InsertScreenType
+@idScreenType VARCHAR(50), @ten NVARCHAR(100)
+AS
+BEGIN
+	INSERT dbo.LoaiManHinh ( id, TenMH )
+	VALUES  (@idScreenType, @ten)
+END
+GO
+
+--PHÒNG CHIẾU
+CREATE PROC USP_GetCinema
+AS
+BEGIN
+	SELECT PC.id AS [Mã phòng], TenPhong AS [Tên phòng], TenMH AS [Tên màn hình], PC.SoChoNgoi AS [Số chỗ ngồi], PC.TinhTrang AS [Tình trạng], PC.SoHangGhe AS [Số hàng ghế], PC.SoGheMotHang AS [Ghế mỗi hàng]
+	FROM dbo.PhongChieu AS PC, dbo.LoaiManHinh AS MH
+	WHERE PC.idManHinh = MH.id
+END
+GO
+
+CREATE PROC USP_InsertCinema
+@idCinema VARCHAR(50), @tenPhong NVARCHAR(100), @idMH VARCHAR(50), @soChoNgoi INT, @tinhTrang INT, @soHangGhe INT, @soGheMotHang INT
+AS
+BEGIN
+	INSERT dbo.PhongChieu ( id , TenPhong , idManHinh , SoChoNgoi , TinhTrang , SoHangGhe , SoGheMotHang)
+	VALUES (@idCinema , @tenPhong , @idMH , @soChoNgoi , @tinhTrang , @soHangGhe , @soGheMotHang)
+END
+GO
+
+--PHIM
+CREATE PROC USP_GetMovie
+AS
+BEGIN
+	SELECT id AS [Mã phim], TenPhim AS [Tên phim], MoTa AS [Mô tả], ThoiLuong AS [Thời lượng], NgayKhoiChieu AS [Ngày khởi chiếu], NgayKetThuc AS [Ngày kết thúc], SanXuat AS [Sản xuất], DaoDien AS [Đạo diễn], NamSX AS [Năm SX]
+	FROM dbo.Phim
+END
+GO
+
+CREATE PROC USP_GetListGenreByMovie
+@idPhim VARCHAR(50)
+AS
+BEGIN
+	SELECT TL.id, TenTheLoai, TL.MoTa
+	FROM dbo.PhanLoaiPhim PL, dbo.TheLoai TL
+	WHERE idPhim = @idPhim AND PL.idTheLoai = TL.id
+END
+GO
+
+CREATE PROC USP_InsertMovie
+@id VARCHAR(50), @tenPhim NVARCHAR(100), @moTa NVARCHAR(1000), @thoiLuong FLOAT, @ngayKhoiChieu DATE, @ngayKetThuc DATE, @sanXuat NVARCHAR(50), @daoDien NVARCHAR(100), @namSX INT
+AS
+BEGIN
+	INSERT dbo.Phim (id , TenPhim , MoTa , ThoiLuong , NgayKhoiChieu , NgayKetThuc , SanXuat , DaoDien , NamSX)
+	VALUES (@id , @tenPhim , @moTa , @thoiLuong , @ngayKhoiChieu , @ngayKetThuc , @sanXuat , @daoDien , @namSX)
+END
+GO
+
+CREATE PROC USP_UpdateMovie
+@id VARCHAR(50), @tenPhim NVARCHAR(100), @moTa NVARCHAR(1000), @thoiLuong FLOAT, @ngayKhoiChieu DATE, @ngayKetThuc DATE, @sanXuat NVARCHAR(50), @daoDien NVARCHAR(100), @namSX INT
+AS
+BEGIN
+	UPDATE dbo.Phim SET TenPhim = @tenPhim, MoTa = @moTa, ThoiLuong = @thoiLuong, NgayKhoiChieu = @ngayKhoiChieu, NgayKetThuc = @ngayKetThuc, SanXuat = @sanXuat, DaoDien = @daoDien, NamSX = @namSX WHERE id = @id
+END
+GO
+
+--ĐỊNH DẠNG
+CREATE PROC USP_GetListFormatMovie
+AS
+BEGIN
+	SELECT DD.id AS [Mã định dạng], P.id AS [Mã phim], P.TenPhim AS [Tên phim], MH.id AS [Mã MH], MH.TenMH AS [Tên MH]
+	FROM dbo.DinhDangPhim DD, Phim P, dbo.LoaiManHinh MH
+	WHERE DD.idPhim = P.id AND DD.idLoaiManHinh = MH.id
+END
+GO
+
+CREATE PROC USP_InsertFormatMovie
+@id VARCHAR(50), @idPhim VARCHAR(50), @idLoaiManHinh VARCHAR(50)
+AS
+BEGIN
+	INSERT dbo.DinhDangPhim ( id, idPhim, idLoaiManHinh )
+	VALUES  ( @id, @idPhim, @idLoaiManHinh )
+END
+GO
+
 
 --TÀI KHOẢN
 CREATE PROC USP_UpdateAccount
@@ -558,3 +735,35 @@ BEGIN
     END
 END
 GO
+
+CREATE PROC USP_Login
+@userName nvarchar(1000), @pass nvarchar(1000)
+AS
+BEGIN
+	SELECT * FROM dbo.TaiKhoan WHERE UserName = @userName AND Pass = @pass
+END
+GO
+
+--VÉ
+CREATE PROC USP_InsertTicketByShowTimes
+@idlichChieu VARCHAR(50), @maGheNgoi VARCHAR(50)
+AS
+BEGIN
+	INSERT INTO dbo.Ve
+	(
+		idLichChieu,
+		MaGheNgoi,
+		idKhachHang,
+		idCheDoKM
+	)
+	VALUES
+	(
+		@idlichChieu,
+		@maGheNgoi,
+		NULL,
+		NUll
+	)
+END
+GO
+
+exec USP_InsertTicketByShowTimes @idlichChieu , @maGheNgoi

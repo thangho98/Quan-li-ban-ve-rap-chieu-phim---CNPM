@@ -38,5 +38,11 @@ namespace GUI.DAO
                 + type + ", TienBanVe =" + price + " where id = '" + ticketID + "'";
             return DataProvider.ExecuteNonQuery(query);
         }
+
+        public static int InsertTicketByShowTimes(string showTimesID, string seatName)
+        {
+            string query = "USP_InsertTicketByShowTimes @idlichChieu , @maGheNgoi";
+            return DataProvider.ExecuteNonQuery(query, new object[] { showTimesID, seatName });
+        }
     }
 }
