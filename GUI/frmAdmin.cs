@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;//thư viện thay đổi vùng/quốc gia
 
 namespace GUI
 {
@@ -79,9 +80,10 @@ namespace GUI
 
 		void LoadRevenue(string idMovie, DateTime fromDate, DateTime toDate)
 		{
-			dtgvRevenue.DataSource = RevenueDAO.GetRevenue(idMovie, fromDate, toDate);
-			txtDoanhThu.Text = GetSumRevenue().ToString() + " VNĐ";
-		}
+            CultureInfo culture = new CultureInfo("vi-VN");
+            dtgvRevenue.DataSource = RevenueDAO.GetRevenue(idMovie, fromDate, toDate);
+			txtDoanhThu.Text = GetSumRevenue().ToString("c", culture);
+        }
 
 		private void btnShowRevenue_Click(object sender, EventArgs e)
 		{

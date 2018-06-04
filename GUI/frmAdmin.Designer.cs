@@ -231,6 +231,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnAddTicketByShowTime = new System.Windows.Forms.Button();
             this.panel61 = new System.Windows.Forms.Panel();
             this.panel78 = new System.Windows.Forms.Panel();
             this.button48 = new System.Windows.Forms.Button();
@@ -238,7 +239,6 @@
             this.button29 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
-            this.btnAddTicketByShowTime = new System.Windows.Forms.Button();
             this.tpPromotion = new System.Windows.Forms.TabPage();
             this.panel62 = new System.Windows.Forms.Panel();
             this.panel63 = new System.Windows.Forms.Panel();
@@ -1144,10 +1144,10 @@
             this.tcData.Controls.Add(this.tpCinema);
             this.tcData.Controls.Add(this.tpGenre);
             this.tcData.Controls.Add(this.tpFilm);
+            this.tcData.Controls.Add(this.tpFormatMovie);
             this.tcData.Controls.Add(this.tpShowTimes);
             this.tcData.Controls.Add(this.tpTicket);
             this.tcData.Controls.Add(this.tpPromotion);
-            this.tcData.Controls.Add(this.tpFormatMovie);
             this.tcData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcData.Location = new System.Drawing.Point(3, 3);
             this.tcData.Name = "tcData";
@@ -2485,6 +2485,17 @@
             this.columnHeader4.Text = "Trạng Thái";
             this.columnHeader4.Width = 100;
             // 
+            // btnAddTicketByShowTime
+            // 
+            this.btnAddTicketByShowTime.Location = new System.Drawing.Point(10, 291);
+            this.btnAddTicketByShowTime.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddTicketByShowTime.Name = "btnAddTicketByShowTime";
+            this.btnAddTicketByShowTime.Size = new System.Drawing.Size(100, 57);
+            this.btnAddTicketByShowTime.TabIndex = 0;
+            this.btnAddTicketByShowTime.Text = "Tự Động Thêm Vé";
+            this.btnAddTicketByShowTime.UseVisualStyleBackColor = true;
+            this.btnAddTicketByShowTime.Click += new System.EventHandler(this.btnAddTicketByShowTime_Click);
+            // 
             // panel61
             // 
             this.panel61.Controls.Add(this.panel78);
@@ -2554,17 +2565,6 @@
             this.button31.TabIndex = 1;
             this.button31.Text = "Xóa";
             this.button31.UseVisualStyleBackColor = true;
-            // 
-            // btnAddTicketByShowTime
-            // 
-            this.btnAddTicketByShowTime.Location = new System.Drawing.Point(10, 291);
-            this.btnAddTicketByShowTime.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddTicketByShowTime.Name = "btnAddTicketByShowTime";
-            this.btnAddTicketByShowTime.Size = new System.Drawing.Size(100, 57);
-            this.btnAddTicketByShowTime.TabIndex = 0;
-            this.btnAddTicketByShowTime.Text = "Tự Động Thêm Vé";
-            this.btnAddTicketByShowTime.UseVisualStyleBackColor = true;
-            this.btnAddTicketByShowTime.Click += new System.EventHandler(this.btnAddTicketByShowTime_Click);
             // 
             // tpPromotion
             // 
@@ -2989,6 +2989,7 @@
             this.txtDoanhThu.Name = "txtDoanhThu";
             this.txtDoanhThu.Size = new System.Drawing.Size(235, 35);
             this.txtDoanhThu.TabIndex = 7;
+            this.txtDoanhThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblDenNgay
             // 
