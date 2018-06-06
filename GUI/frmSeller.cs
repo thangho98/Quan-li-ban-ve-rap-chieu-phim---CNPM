@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using GUI.DAO;
+﻿using GUI.DAO;
 using GUI.DTO;
+using System;
+using System.Data;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -35,7 +30,7 @@ namespace GUI
 
         private void cboFilmName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cboFilmName.SelectedIndex != -1)
+            if (cboFilmName.SelectedIndex != -1)
             {
                 cboFormatFilm.DataSource = null;
                 lvLichChieu.Items.Clear();
@@ -47,7 +42,7 @@ namespace GUI
 
         private void cboFormatFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cboFormatFilm.SelectedIndex != -1)
+            if (cboFormatFilm.SelectedIndex != -1)
             {
                 lvLichChieu.Items.Clear();
                 FormatMovie format = cboFormatFilm.SelectedItem as FormatMovie;
@@ -57,9 +52,9 @@ namespace GUI
 
         private void LoadListShowTimeByFilm(string formatMovieID)
         {
-            DataTable data = ShowTimesDAO.GetListShowTimeByFormatMovie(formatMovieID,dtpThoiGian.Value);
+            DataTable data = ShowTimesDAO.GetListShowTimeByFormatMovie(formatMovieID, dtpThoiGian.Value);
             //if (data == null) return;
-            foreach(DataRow row in data.Rows)
+            foreach (DataRow row in data.Rows)
             {
                 ShowTimes showTimes = new ShowTimes(row);
                 ListViewItem lvi = new ListViewItem("");
@@ -79,7 +74,7 @@ namespace GUI
                 //thêm ảnh status
                 if (status == 1)
                     lvi.ImageIndex = 2;
-                else if(status > 0.5f)
+                else if (status > 0.5f)
                     lvi.ImageIndex = 1;
                 else lvi.ImageIndex = 0;
 

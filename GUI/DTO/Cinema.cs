@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI.DTO
 {
@@ -43,7 +40,7 @@ namespace GUI.DTO
         public string Status { get; set; }
 
         public int Row { get; set; }
-        
+
         public int SeatInRow { get; set; }
     }
 }

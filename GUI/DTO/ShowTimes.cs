@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI.DTO
 {
     public class ShowTimes
     {
-        public ShowTimes(string iD, DateTime time, string cinemaName, 
+        public ShowTimes(string iD, DateTime time, string cinemaName,
             string formatMovieID, string movieName, float ticketPrice, int status)
         {
             this.ID = iD;

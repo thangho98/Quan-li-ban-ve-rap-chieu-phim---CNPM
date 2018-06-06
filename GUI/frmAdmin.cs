@@ -89,10 +89,16 @@ namespace GUI
 		{
 			LoadRevenue(cboSelectMovie.SelectedValue.ToString(), dtmFromDate.Value, dtmToDate.Value);
 		}
-		#endregion
 
-		#region Nhân Viên
-		void LoadStaff()
+        private void btnReportRevenue_Click(object sender, EventArgs e)
+        {
+            frmReport frm = new frmReport(cboSelectMovie.SelectedValue.ToString(), dtmFromDate.Value, dtmToDate.Value);
+            frm.ShowDialog();
+        }
+        #endregion
+
+        #region Nhân Viên
+        void LoadStaff()
 		{
 			dtgvStaff.DataSource = staffList;
 			LoadStaffList();
@@ -985,5 +991,6 @@ namespace GUI
             }
         }
         #endregion
+        
     }
 }

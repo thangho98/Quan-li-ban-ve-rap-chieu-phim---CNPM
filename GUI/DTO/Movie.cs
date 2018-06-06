@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI.DTO
 {
@@ -51,7 +48,7 @@ namespace GUI.DTO
         public DateTime EndDate { get; set; }
 
         public string Country { get; set; }
-        
+
         public int YearProduction { get; set; }
 
         public string Director { get; set; }

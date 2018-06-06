@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace GUI.DAO
 {
@@ -17,7 +13,7 @@ namespace GUI.DAO
         //private static string connectionSTR = "Data Source=THAITHANG-PC;Initial Catalog=QLRP;Integrated Security=True";
         //private static string connectionSTR = "Data Source=DESKTOP-G3TR9OQ;Initial Catalog=QLRP;Integrated Security=True";
         private static string connectionSTR = Properties.Settings.Default.connectionSTR;//= "Data Source=THAITHANG-PC;Initial Catalog=QuanLyRapPhim;User ID=sa;pwd=thaithang1";
-        
+
         public static bool TestConnectionSQL(string conn)
         {
             bool result = false;
@@ -38,38 +34,38 @@ namespace GUI.DAO
             return result;
         }
 
-      
-		public static DataTable ExecuteQuery(string query, object[] parameter = null)
+
+        public static DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
             //try
             //{
-                using (SqlConnection connection = new SqlConnection(connectionSTR))
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                if (parameter != null)
                 {
-                    connection.Open();
-
-                    SqlCommand command = new SqlCommand(query, connection);
-
-                    if (parameter != null)
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
                     {
-                        string[] listPara = query.Split(' ');
-                        int i = 0;
-                        foreach (string item in listPara)
+                        if (item.Contains('@'))
                         {
-                            if (item.Contains('@'))
-                            {
-                                command.Parameters.AddWithValue(item, parameter[i]);
-                                i++;
-                            }
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
                         }
                     }
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-
-                    adapter.Fill(data);
-
-                    connection.Close();
                 }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                adapter.Fill(data);
+
+                connection.Close();
+            }
             //}
             //catch
             //{
@@ -143,4 +139,3 @@ namespace GUI.DAO
         }
     }
 }
-	

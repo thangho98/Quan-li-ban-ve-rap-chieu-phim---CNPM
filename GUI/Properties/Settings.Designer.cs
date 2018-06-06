@@ -82,5 +82,15 @@ namespace GUI.Properties {
                 this["connectionSTR"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=THAITHANG-PC;Initial Catalog=QLRP;Integrated Security=True")]
+        public string QLRPConnectionString {
+            get {
+                return ((string)(this["QLRPConnectionString"]));
+            }
+        }
     }
 }

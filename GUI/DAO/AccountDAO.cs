@@ -1,11 +1,9 @@
 ﻿using GUI.DTO;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Security.Cryptography;//thư viện để mã hóa mật khẩu
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI.DAO
 {
@@ -39,7 +37,7 @@ namespace GUI.DAO
             string pass = PasswordEncryption(passWord);
 
             string query = "USP_Login @userName , @passWord";
-			DataTable result = DataProvider.ExecuteQuery(query, new object[] { userName, pass });
+            DataTable result = DataProvider.ExecuteQuery(query, new object[] { userName, pass });
 
             if (result == null)
                 return -1;
@@ -47,9 +45,9 @@ namespace GUI.DAO
                 return 1;
             else
                 return 0;
-            
+
         }
-        
+
         public static bool UpdateAccountPassword(string userName, string passWord, string newPassWord)
         {
 
@@ -73,9 +71,9 @@ namespace GUI.DAO
             return null;
         }
 
-		public static void DeleteAccountByIdStaff(string idStaff)
-		{
-			DataProvider.ExecuteQuery("DELETE dbo.TaiKhoan WHERE idNV = '" + idStaff + "'");
-		}
+        public static void DeleteAccountByIdStaff(string idStaff)
+        {
+            DataProvider.ExecuteQuery("DELETE dbo.TaiKhoan WHERE idNV = '" + idStaff + "'");
+        }
     }
 }

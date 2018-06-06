@@ -2,14 +2,10 @@
 using GUI.DTO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Globalization;//thư viện thay đổi vùng/quốc gia
+using System.Linq;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -95,7 +91,7 @@ namespace GUI
             {
                 Button btnSeat = new Button() { Width = SIZE + 20, Height = SIZE };
                 btnSeat.Text = list[i].SeatName;
-                if(list[i].Status == 1)
+                if (list[i].Status == 1)
                     btnSeat.BackColor = Color.Red;
                 else
                     btnSeat.BackColor = Color.White;
@@ -175,11 +171,11 @@ namespace GUI
                 chkCustomer.Enabled = false;
             }
         }
-        
+
         //dùng để ẩn hiện lable điểm tích lũy của khách hàng thành viên
         private void ShowOrHideLablePoint()
         {
-            if(chkCustomer.Checked ==true)
+            if (chkCustomer.Checked == true)
             {
                 lblPoint.Visible = true;
                 lblDiemTichLuy.Visible = true;
@@ -193,7 +189,7 @@ namespace GUI
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn hủy tất cả những vé đã chọn ko?", 
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn hủy tất cả những vé đã chọn ko?",
                 "Hủy Mua Vé", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No) return;
             foreach (Button btn in listSeatSelected)
@@ -226,20 +222,20 @@ namespace GUI
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            if(listSeatSelected.Count == 0)
+            if (listSeatSelected.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn vé trước khi thanh toán!");
                 return;
             }
             string message = "Bạn có chắc chắn mua những vé: \n";
-            foreach(Button btn in listSeatSelected)
+            foreach (Button btn in listSeatSelected)
             {
                 message += "[" + btn.Text + "] ";
             }
             message += "\nKhông?";
             DialogResult result = MessageBox.Show(message, "Hỏi Mua",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if(result ==DialogResult.OK)
+            if (result == DialogResult.OK)
             {
                 int ret = 0;
                 foreach (Button btn in listSeatSelected)
@@ -247,7 +243,7 @@ namespace GUI
                     Ticket ticket = btn.Tag as Ticket;
                     ret += TicketDAO.BuyTicket(ticket.ID, ticket.Type, ticket.Price);
                 }
-                if(ret==listSeatSelected.Count)
+                if (ret == listSeatSelected.Count)
                 {
                     MessageBox.Show("Bạn đã mua vé thành công!");
                 }

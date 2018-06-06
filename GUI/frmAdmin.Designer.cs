@@ -200,6 +200,22 @@
             this.btnUpdateMovie = new System.Windows.Forms.Button();
             this.btnDeleteMovie = new System.Windows.Forms.Button();
             this.btnAddMovie = new System.Windows.Forms.Button();
+            this.tpFormatMovie = new System.Windows.Forms.TabPage();
+            this.cboFormat_ScreenID = new System.Windows.Forms.ComboBox();
+            this.lblFormat_ScreenName = new System.Windows.Forms.Label();
+            this.cboFormat_MovieID = new System.Windows.Forms.ComboBox();
+            this.lblFormat_ScreenID = new System.Windows.Forms.Label();
+            this.lblFormat_MovieName = new System.Windows.Forms.Label();
+            this.lblFormat_MovieID = new System.Windows.Forms.Label();
+            this.txtFormat_ScreenName = new System.Windows.Forms.TextBox();
+            this.lblFormatID = new System.Windows.Forms.Label();
+            this.txtFormat_MovieName = new System.Windows.Forms.TextBox();
+            this.txtFormatID = new System.Windows.Forms.TextBox();
+            this.dtgvFormat = new System.Windows.Forms.DataGridView();
+            this.btnShowFormat = new System.Windows.Forms.Button();
+            this.btnUpdateFormat = new System.Windows.Forms.Button();
+            this.btnDeleteFormat = new System.Windows.Forms.Button();
+            this.btnInsertFormat = new System.Windows.Forms.Button();
             this.tpShowTimes = new System.Windows.Forms.TabPage();
             this.panel48 = new System.Windows.Forms.Panel();
             this.panel49 = new System.Windows.Forms.Panel();
@@ -259,22 +275,6 @@
             this.button34 = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
-            this.tpFormatMovie = new System.Windows.Forms.TabPage();
-            this.cboFormat_ScreenID = new System.Windows.Forms.ComboBox();
-            this.lblFormat_ScreenName = new System.Windows.Forms.Label();
-            this.cboFormat_MovieID = new System.Windows.Forms.ComboBox();
-            this.lblFormat_ScreenID = new System.Windows.Forms.Label();
-            this.lblFormat_MovieName = new System.Windows.Forms.Label();
-            this.lblFormat_MovieID = new System.Windows.Forms.Label();
-            this.txtFormat_ScreenName = new System.Windows.Forms.TextBox();
-            this.lblFormatID = new System.Windows.Forms.Label();
-            this.txtFormat_MovieName = new System.Windows.Forms.TextBox();
-            this.txtFormatID = new System.Windows.Forms.TextBox();
-            this.dtgvFormat = new System.Windows.Forms.DataGridView();
-            this.btnShowFormat = new System.Windows.Forms.Button();
-            this.btnUpdateFormat = new System.Windows.Forms.Button();
-            this.btnDeleteFormat = new System.Windows.Forms.Button();
-            this.btnInsertFormat = new System.Windows.Forms.Button();
             this.tpRevenue = new System.Windows.Forms.TabPage();
             this.lblSelectMovie = new System.Windows.Forms.Label();
             this.lblTongDoanhThu = new System.Windows.Forms.Label();
@@ -282,6 +282,7 @@
             this.lblDenNgay = new System.Windows.Forms.Label();
             this.lblTuNgay = new System.Windows.Forms.Label();
             this.dtgvRevenue = new System.Windows.Forms.DataGridView();
+            this.btnReportRevenue = new System.Windows.Forms.Button();
             this.btnShowRevenue = new System.Windows.Forms.Button();
             this.cboSelectMovie = new System.Windows.Forms.ComboBox();
             this.dtmToDate = new System.Windows.Forms.DateTimePicker();
@@ -350,6 +351,8 @@
             this.panel43.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMovie)).BeginInit();
             this.panel47.SuspendLayout();
+            this.tpFormatMovie.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvFormat)).BeginInit();
             this.tpShowTimes.SuspendLayout();
             this.panel48.SuspendLayout();
             this.panel49.SuspendLayout();
@@ -378,8 +381,6 @@
             this.panel67.SuspendLayout();
             this.panel68.SuspendLayout();
             this.panel79.SuspendLayout();
-            this.tpFormatMovie.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvFormat)).BeginInit();
             this.tpRevenue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRevenue)).BeginInit();
             this.tcAdmin.SuspendLayout();
@@ -2185,6 +2186,181 @@
             this.btnAddMovie.UseVisualStyleBackColor = true;
             this.btnAddMovie.Click += new System.EventHandler(this.btnAddMovie_Click);
             // 
+            // tpFormatMovie
+            // 
+            this.tpFormatMovie.Controls.Add(this.cboFormat_ScreenID);
+            this.tpFormatMovie.Controls.Add(this.lblFormat_ScreenName);
+            this.tpFormatMovie.Controls.Add(this.cboFormat_MovieID);
+            this.tpFormatMovie.Controls.Add(this.lblFormat_ScreenID);
+            this.tpFormatMovie.Controls.Add(this.lblFormat_MovieName);
+            this.tpFormatMovie.Controls.Add(this.lblFormat_MovieID);
+            this.tpFormatMovie.Controls.Add(this.txtFormat_ScreenName);
+            this.tpFormatMovie.Controls.Add(this.lblFormatID);
+            this.tpFormatMovie.Controls.Add(this.txtFormat_MovieName);
+            this.tpFormatMovie.Controls.Add(this.txtFormatID);
+            this.tpFormatMovie.Controls.Add(this.dtgvFormat);
+            this.tpFormatMovie.Controls.Add(this.btnShowFormat);
+            this.tpFormatMovie.Controls.Add(this.btnUpdateFormat);
+            this.tpFormatMovie.Controls.Add(this.btnDeleteFormat);
+            this.tpFormatMovie.Controls.Add(this.btnInsertFormat);
+            this.tpFormatMovie.Location = new System.Drawing.Point(4, 31);
+            this.tpFormatMovie.Name = "tpFormatMovie";
+            this.tpFormatMovie.Padding = new System.Windows.Forms.Padding(3);
+            this.tpFormatMovie.Size = new System.Drawing.Size(1166, 542);
+            this.tpFormatMovie.TabIndex = 7;
+            this.tpFormatMovie.Text = "Định dạng";
+            this.tpFormatMovie.UseVisualStyleBackColor = true;
+            // 
+            // cboFormat_ScreenID
+            // 
+            this.cboFormat_ScreenID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFormat_ScreenID.FormattingEnabled = true;
+            this.cboFormat_ScreenID.Location = new System.Drawing.Point(877, 224);
+            this.cboFormat_ScreenID.Name = "cboFormat_ScreenID";
+            this.cboFormat_ScreenID.Size = new System.Drawing.Size(166, 30);
+            this.cboFormat_ScreenID.TabIndex = 11;
+            this.cboFormat_ScreenID.SelectedValueChanged += new System.EventHandler(this.cboFormat_ScreenID_SelectedValueChanged);
+            // 
+            // lblFormat_ScreenName
+            // 
+            this.lblFormat_ScreenName.AutoSize = true;
+            this.lblFormat_ScreenName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormat_ScreenName.Location = new System.Drawing.Point(751, 260);
+            this.lblFormat_ScreenName.Name = "lblFormat_ScreenName";
+            this.lblFormat_ScreenName.Size = new System.Drawing.Size(135, 23);
+            this.lblFormat_ScreenName.TabIndex = 10;
+            this.lblFormat_ScreenName.Text = "Tên màn hình :";
+            // 
+            // cboFormat_MovieID
+            // 
+            this.cboFormat_MovieID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFormat_MovieID.FormattingEnabled = true;
+            this.cboFormat_MovieID.Location = new System.Drawing.Point(877, 130);
+            this.cboFormat_MovieID.Name = "cboFormat_MovieID";
+            this.cboFormat_MovieID.Size = new System.Drawing.Size(166, 30);
+            this.cboFormat_MovieID.TabIndex = 11;
+            this.cboFormat_MovieID.SelectedValueChanged += new System.EventHandler(this.cboFormat_MovieID_SelectedValueChanged);
+            // 
+            // lblFormat_ScreenID
+            // 
+            this.lblFormat_ScreenID.AutoSize = true;
+            this.lblFormat_ScreenID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormat_ScreenID.Location = new System.Drawing.Point(751, 227);
+            this.lblFormat_ScreenID.Name = "lblFormat_ScreenID";
+            this.lblFormat_ScreenID.Size = new System.Drawing.Size(131, 23);
+            this.lblFormat_ScreenID.TabIndex = 10;
+            this.lblFormat_ScreenID.Text = "Mã màn hình :";
+            // 
+            // lblFormat_MovieName
+            // 
+            this.lblFormat_MovieName.AutoSize = true;
+            this.lblFormat_MovieName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormat_MovieName.Location = new System.Drawing.Point(751, 166);
+            this.lblFormat_MovieName.Name = "lblFormat_MovieName";
+            this.lblFormat_MovieName.Size = new System.Drawing.Size(99, 23);
+            this.lblFormat_MovieName.TabIndex = 10;
+            this.lblFormat_MovieName.Text = "Tên phim :";
+            // 
+            // lblFormat_MovieID
+            // 
+            this.lblFormat_MovieID.AutoSize = true;
+            this.lblFormat_MovieID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormat_MovieID.Location = new System.Drawing.Point(751, 133);
+            this.lblFormat_MovieID.Name = "lblFormat_MovieID";
+            this.lblFormat_MovieID.Size = new System.Drawing.Size(95, 23);
+            this.lblFormat_MovieID.TabIndex = 10;
+            this.lblFormat_MovieID.Text = "Mã phim :";
+            // 
+            // txtFormat_ScreenName
+            // 
+            this.txtFormat_ScreenName.Location = new System.Drawing.Point(877, 257);
+            this.txtFormat_ScreenName.Name = "txtFormat_ScreenName";
+            this.txtFormat_ScreenName.ReadOnly = true;
+            this.txtFormat_ScreenName.Size = new System.Drawing.Size(166, 30);
+            this.txtFormat_ScreenName.TabIndex = 9;
+            // 
+            // lblFormatID
+            // 
+            this.lblFormatID.AutoSize = true;
+            this.lblFormatID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormatID.Location = new System.Drawing.Point(751, 71);
+            this.lblFormatID.Name = "lblFormatID";
+            this.lblFormatID.Size = new System.Drawing.Size(135, 23);
+            this.lblFormatID.TabIndex = 10;
+            this.lblFormatID.Text = "Mã định dạng :";
+            // 
+            // txtFormat_MovieName
+            // 
+            this.txtFormat_MovieName.Location = new System.Drawing.Point(877, 163);
+            this.txtFormat_MovieName.Name = "txtFormat_MovieName";
+            this.txtFormat_MovieName.ReadOnly = true;
+            this.txtFormat_MovieName.Size = new System.Drawing.Size(166, 30);
+            this.txtFormat_MovieName.TabIndex = 9;
+            // 
+            // txtFormatID
+            // 
+            this.txtFormatID.Location = new System.Drawing.Point(877, 68);
+            this.txtFormatID.Name = "txtFormatID";
+            this.txtFormatID.Size = new System.Drawing.Size(166, 30);
+            this.txtFormatID.TabIndex = 9;
+            this.txtFormatID.TextChanged += new System.EventHandler(this.txtFormatID_TextChanged);
+            // 
+            // dtgvFormat
+            // 
+            this.dtgvFormat.AllowUserToAddRows = false;
+            this.dtgvFormat.AllowUserToDeleteRows = false;
+            this.dtgvFormat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvFormat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvFormat.Location = new System.Drawing.Point(6, 68);
+            this.dtgvFormat.Name = "dtgvFormat";
+            this.dtgvFormat.ReadOnly = true;
+            this.dtgvFormat.Size = new System.Drawing.Size(739, 474);
+            this.dtgvFormat.TabIndex = 8;
+            // 
+            // btnShowFormat
+            // 
+            this.btnShowFormat.Location = new System.Drawing.Point(328, 4);
+            this.btnShowFormat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShowFormat.Name = "btnShowFormat";
+            this.btnShowFormat.Size = new System.Drawing.Size(100, 57);
+            this.btnShowFormat.TabIndex = 7;
+            this.btnShowFormat.Text = "Xem";
+            this.btnShowFormat.UseVisualStyleBackColor = true;
+            this.btnShowFormat.Click += new System.EventHandler(this.btnShowFormat_Click);
+            // 
+            // btnUpdateFormat
+            // 
+            this.btnUpdateFormat.Location = new System.Drawing.Point(220, 4);
+            this.btnUpdateFormat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateFormat.Name = "btnUpdateFormat";
+            this.btnUpdateFormat.Size = new System.Drawing.Size(100, 57);
+            this.btnUpdateFormat.TabIndex = 6;
+            this.btnUpdateFormat.Text = "Sửa";
+            this.btnUpdateFormat.UseVisualStyleBackColor = true;
+            this.btnUpdateFormat.Click += new System.EventHandler(this.btnUpdateFormat_Click);
+            // 
+            // btnDeleteFormat
+            // 
+            this.btnDeleteFormat.Location = new System.Drawing.Point(112, 4);
+            this.btnDeleteFormat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteFormat.Name = "btnDeleteFormat";
+            this.btnDeleteFormat.Size = new System.Drawing.Size(100, 57);
+            this.btnDeleteFormat.TabIndex = 5;
+            this.btnDeleteFormat.Text = "Xóa";
+            this.btnDeleteFormat.UseVisualStyleBackColor = true;
+            this.btnDeleteFormat.Click += new System.EventHandler(this.btnDeleteFormat_Click);
+            // 
+            // btnInsertFormat
+            // 
+            this.btnInsertFormat.Location = new System.Drawing.Point(4, 4);
+            this.btnInsertFormat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsertFormat.Name = "btnInsertFormat";
+            this.btnInsertFormat.Size = new System.Drawing.Size(100, 57);
+            this.btnInsertFormat.TabIndex = 4;
+            this.btnInsertFormat.Text = "Thêm";
+            this.btnInsertFormat.UseVisualStyleBackColor = true;
+            this.btnInsertFormat.Click += new System.EventHandler(this.btnInsertFormat_Click);
+            // 
             // tpShowTimes
             // 
             this.tpShowTimes.Controls.Add(this.panel48);
@@ -2767,181 +2943,6 @@
             this.button36.Text = "Thêm";
             this.button36.UseVisualStyleBackColor = true;
             // 
-            // tpFormatMovie
-            // 
-            this.tpFormatMovie.Controls.Add(this.cboFormat_ScreenID);
-            this.tpFormatMovie.Controls.Add(this.lblFormat_ScreenName);
-            this.tpFormatMovie.Controls.Add(this.cboFormat_MovieID);
-            this.tpFormatMovie.Controls.Add(this.lblFormat_ScreenID);
-            this.tpFormatMovie.Controls.Add(this.lblFormat_MovieName);
-            this.tpFormatMovie.Controls.Add(this.lblFormat_MovieID);
-            this.tpFormatMovie.Controls.Add(this.txtFormat_ScreenName);
-            this.tpFormatMovie.Controls.Add(this.lblFormatID);
-            this.tpFormatMovie.Controls.Add(this.txtFormat_MovieName);
-            this.tpFormatMovie.Controls.Add(this.txtFormatID);
-            this.tpFormatMovie.Controls.Add(this.dtgvFormat);
-            this.tpFormatMovie.Controls.Add(this.btnShowFormat);
-            this.tpFormatMovie.Controls.Add(this.btnUpdateFormat);
-            this.tpFormatMovie.Controls.Add(this.btnDeleteFormat);
-            this.tpFormatMovie.Controls.Add(this.btnInsertFormat);
-            this.tpFormatMovie.Location = new System.Drawing.Point(4, 31);
-            this.tpFormatMovie.Name = "tpFormatMovie";
-            this.tpFormatMovie.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFormatMovie.Size = new System.Drawing.Size(1166, 542);
-            this.tpFormatMovie.TabIndex = 7;
-            this.tpFormatMovie.Text = "Định dạng";
-            this.tpFormatMovie.UseVisualStyleBackColor = true;
-            // 
-            // cboFormat_ScreenID
-            // 
-            this.cboFormat_ScreenID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFormat_ScreenID.FormattingEnabled = true;
-            this.cboFormat_ScreenID.Location = new System.Drawing.Point(877, 224);
-            this.cboFormat_ScreenID.Name = "cboFormat_ScreenID";
-            this.cboFormat_ScreenID.Size = new System.Drawing.Size(166, 30);
-            this.cboFormat_ScreenID.TabIndex = 11;
-            this.cboFormat_ScreenID.SelectedValueChanged += new System.EventHandler(this.cboFormat_ScreenID_SelectedValueChanged);
-            // 
-            // lblFormat_ScreenName
-            // 
-            this.lblFormat_ScreenName.AutoSize = true;
-            this.lblFormat_ScreenName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormat_ScreenName.Location = new System.Drawing.Point(751, 260);
-            this.lblFormat_ScreenName.Name = "lblFormat_ScreenName";
-            this.lblFormat_ScreenName.Size = new System.Drawing.Size(135, 23);
-            this.lblFormat_ScreenName.TabIndex = 10;
-            this.lblFormat_ScreenName.Text = "Tên màn hình :";
-            // 
-            // cboFormat_MovieID
-            // 
-            this.cboFormat_MovieID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFormat_MovieID.FormattingEnabled = true;
-            this.cboFormat_MovieID.Location = new System.Drawing.Point(877, 130);
-            this.cboFormat_MovieID.Name = "cboFormat_MovieID";
-            this.cboFormat_MovieID.Size = new System.Drawing.Size(166, 30);
-            this.cboFormat_MovieID.TabIndex = 11;
-            this.cboFormat_MovieID.SelectedValueChanged += new System.EventHandler(this.cboFormat_MovieID_SelectedValueChanged);
-            // 
-            // lblFormat_ScreenID
-            // 
-            this.lblFormat_ScreenID.AutoSize = true;
-            this.lblFormat_ScreenID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormat_ScreenID.Location = new System.Drawing.Point(751, 227);
-            this.lblFormat_ScreenID.Name = "lblFormat_ScreenID";
-            this.lblFormat_ScreenID.Size = new System.Drawing.Size(131, 23);
-            this.lblFormat_ScreenID.TabIndex = 10;
-            this.lblFormat_ScreenID.Text = "Mã màn hình :";
-            // 
-            // lblFormat_MovieName
-            // 
-            this.lblFormat_MovieName.AutoSize = true;
-            this.lblFormat_MovieName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormat_MovieName.Location = new System.Drawing.Point(751, 166);
-            this.lblFormat_MovieName.Name = "lblFormat_MovieName";
-            this.lblFormat_MovieName.Size = new System.Drawing.Size(99, 23);
-            this.lblFormat_MovieName.TabIndex = 10;
-            this.lblFormat_MovieName.Text = "Tên phim :";
-            // 
-            // lblFormat_MovieID
-            // 
-            this.lblFormat_MovieID.AutoSize = true;
-            this.lblFormat_MovieID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormat_MovieID.Location = new System.Drawing.Point(751, 133);
-            this.lblFormat_MovieID.Name = "lblFormat_MovieID";
-            this.lblFormat_MovieID.Size = new System.Drawing.Size(95, 23);
-            this.lblFormat_MovieID.TabIndex = 10;
-            this.lblFormat_MovieID.Text = "Mã phim :";
-            // 
-            // txtFormat_ScreenName
-            // 
-            this.txtFormat_ScreenName.Location = new System.Drawing.Point(877, 257);
-            this.txtFormat_ScreenName.Name = "txtFormat_ScreenName";
-            this.txtFormat_ScreenName.ReadOnly = true;
-            this.txtFormat_ScreenName.Size = new System.Drawing.Size(166, 30);
-            this.txtFormat_ScreenName.TabIndex = 9;
-            // 
-            // lblFormatID
-            // 
-            this.lblFormatID.AutoSize = true;
-            this.lblFormatID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormatID.Location = new System.Drawing.Point(751, 71);
-            this.lblFormatID.Name = "lblFormatID";
-            this.lblFormatID.Size = new System.Drawing.Size(135, 23);
-            this.lblFormatID.TabIndex = 10;
-            this.lblFormatID.Text = "Mã định dạng :";
-            // 
-            // txtFormat_MovieName
-            // 
-            this.txtFormat_MovieName.Location = new System.Drawing.Point(877, 163);
-            this.txtFormat_MovieName.Name = "txtFormat_MovieName";
-            this.txtFormat_MovieName.ReadOnly = true;
-            this.txtFormat_MovieName.Size = new System.Drawing.Size(166, 30);
-            this.txtFormat_MovieName.TabIndex = 9;
-            // 
-            // txtFormatID
-            // 
-            this.txtFormatID.Location = new System.Drawing.Point(877, 68);
-            this.txtFormatID.Name = "txtFormatID";
-            this.txtFormatID.Size = new System.Drawing.Size(166, 30);
-            this.txtFormatID.TabIndex = 9;
-            this.txtFormatID.TextChanged += new System.EventHandler(this.txtFormatID_TextChanged);
-            // 
-            // dtgvFormat
-            // 
-            this.dtgvFormat.AllowUserToAddRows = false;
-            this.dtgvFormat.AllowUserToDeleteRows = false;
-            this.dtgvFormat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvFormat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvFormat.Location = new System.Drawing.Point(6, 68);
-            this.dtgvFormat.Name = "dtgvFormat";
-            this.dtgvFormat.ReadOnly = true;
-            this.dtgvFormat.Size = new System.Drawing.Size(739, 474);
-            this.dtgvFormat.TabIndex = 8;
-            // 
-            // btnShowFormat
-            // 
-            this.btnShowFormat.Location = new System.Drawing.Point(328, 4);
-            this.btnShowFormat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnShowFormat.Name = "btnShowFormat";
-            this.btnShowFormat.Size = new System.Drawing.Size(100, 57);
-            this.btnShowFormat.TabIndex = 7;
-            this.btnShowFormat.Text = "Xem";
-            this.btnShowFormat.UseVisualStyleBackColor = true;
-            this.btnShowFormat.Click += new System.EventHandler(this.btnShowFormat_Click);
-            // 
-            // btnUpdateFormat
-            // 
-            this.btnUpdateFormat.Location = new System.Drawing.Point(220, 4);
-            this.btnUpdateFormat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUpdateFormat.Name = "btnUpdateFormat";
-            this.btnUpdateFormat.Size = new System.Drawing.Size(100, 57);
-            this.btnUpdateFormat.TabIndex = 6;
-            this.btnUpdateFormat.Text = "Sửa";
-            this.btnUpdateFormat.UseVisualStyleBackColor = true;
-            this.btnUpdateFormat.Click += new System.EventHandler(this.btnUpdateFormat_Click);
-            // 
-            // btnDeleteFormat
-            // 
-            this.btnDeleteFormat.Location = new System.Drawing.Point(112, 4);
-            this.btnDeleteFormat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDeleteFormat.Name = "btnDeleteFormat";
-            this.btnDeleteFormat.Size = new System.Drawing.Size(100, 57);
-            this.btnDeleteFormat.TabIndex = 5;
-            this.btnDeleteFormat.Text = "Xóa";
-            this.btnDeleteFormat.UseVisualStyleBackColor = true;
-            this.btnDeleteFormat.Click += new System.EventHandler(this.btnDeleteFormat_Click);
-            // 
-            // btnInsertFormat
-            // 
-            this.btnInsertFormat.Location = new System.Drawing.Point(4, 4);
-            this.btnInsertFormat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnInsertFormat.Name = "btnInsertFormat";
-            this.btnInsertFormat.Size = new System.Drawing.Size(100, 57);
-            this.btnInsertFormat.TabIndex = 4;
-            this.btnInsertFormat.Text = "Thêm";
-            this.btnInsertFormat.UseVisualStyleBackColor = true;
-            this.btnInsertFormat.Click += new System.EventHandler(this.btnInsertFormat_Click);
-            // 
             // tpRevenue
             // 
             this.tpRevenue.Controls.Add(this.lblSelectMovie);
@@ -2950,6 +2951,7 @@
             this.tpRevenue.Controls.Add(this.lblDenNgay);
             this.tpRevenue.Controls.Add(this.lblTuNgay);
             this.tpRevenue.Controls.Add(this.dtgvRevenue);
+            this.tpRevenue.Controls.Add(this.btnReportRevenue);
             this.tpRevenue.Controls.Add(this.btnShowRevenue);
             this.tpRevenue.Controls.Add(this.cboSelectMovie);
             this.tpRevenue.Controls.Add(this.dtmToDate);
@@ -2975,7 +2977,7 @@
             // 
             this.lblTongDoanhThu.AutoSize = true;
             this.lblTongDoanhThu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongDoanhThu.Location = new System.Drawing.Point(678, 542);
+            this.lblTongDoanhThu.Location = new System.Drawing.Point(652, 546);
             this.lblTongDoanhThu.Name = "lblTongDoanhThu";
             this.lblTongDoanhThu.Size = new System.Drawing.Size(147, 23);
             this.lblTongDoanhThu.TabIndex = 8;
@@ -2985,7 +2987,7 @@
             // 
             this.txtDoanhThu.Enabled = false;
             this.txtDoanhThu.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoanhThu.Location = new System.Drawing.Point(826, 540);
+            this.txtDoanhThu.Location = new System.Drawing.Point(805, 540);
             this.txtDoanhThu.Name = "txtDoanhThu";
             this.txtDoanhThu.Size = new System.Drawing.Size(235, 35);
             this.txtDoanhThu.TabIndex = 7;
@@ -3021,12 +3023,23 @@
             this.dtgvRevenue.Size = new System.Drawing.Size(1033, 421);
             this.dtgvRevenue.TabIndex = 4;
             // 
+            // btnReportRevenue
+            // 
+            this.btnReportRevenue.AutoSize = true;
+            this.btnReportRevenue.Location = new System.Drawing.Point(600, 58);
+            this.btnReportRevenue.Name = "btnReportRevenue";
+            this.btnReportRevenue.Size = new System.Drawing.Size(92, 32);
+            this.btnReportRevenue.TabIndex = 3;
+            this.btnReportRevenue.Text = "Báo Cáo";
+            this.btnReportRevenue.UseVisualStyleBackColor = true;
+            this.btnReportRevenue.Click += new System.EventHandler(this.btnReportRevenue_Click);
+            // 
             // btnShowRevenue
             // 
             this.btnShowRevenue.AutoSize = true;
-            this.btnShowRevenue.Location = new System.Drawing.Point(486, 60);
+            this.btnShowRevenue.Location = new System.Drawing.Point(486, 58);
             this.btnShowRevenue.Name = "btnShowRevenue";
-            this.btnShowRevenue.Size = new System.Drawing.Size(92, 32);
+            this.btnShowRevenue.Size = new System.Drawing.Size(97, 32);
             this.btnShowRevenue.TabIndex = 3;
             this.btnShowRevenue.Text = "Thống kê";
             this.btnShowRevenue.UseVisualStyleBackColor = true;
@@ -3169,6 +3182,9 @@
             this.panel43.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMovie)).EndInit();
             this.panel47.ResumeLayout(false);
+            this.tpFormatMovie.ResumeLayout(false);
+            this.tpFormatMovie.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvFormat)).EndInit();
             this.tpShowTimes.ResumeLayout(false);
             this.panel48.ResumeLayout(false);
             this.panel49.ResumeLayout(false);
@@ -3204,9 +3220,6 @@
             this.panel68.ResumeLayout(false);
             this.panel79.ResumeLayout(false);
             this.panel79.PerformLayout();
-            this.tpFormatMovie.ResumeLayout(false);
-            this.tpFormatMovie.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvFormat)).EndInit();
             this.tpRevenue.ResumeLayout(false);
             this.tpRevenue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRevenue)).EndInit();
@@ -3476,5 +3489,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button btnReportRevenue;
     }
 }

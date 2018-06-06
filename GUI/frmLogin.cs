@@ -1,13 +1,7 @@
 ﻿using GUI.DAO;
 using GUI.DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
@@ -33,7 +27,7 @@ namespace GUI
                 frm.ShowDialog();
                 this.Show();
             }
-            else if(result == 0)
+            else if (result == 0)
             {
                 MessageBox.Show("SAI TÊN TÀI KHOẢN HOẶC MẬT KHẨU!!!!", "THÔNG BÁO");
             }

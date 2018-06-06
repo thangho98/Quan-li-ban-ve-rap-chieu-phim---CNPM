@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataRevenue" targetNamespace="http://tempuri.org/DataRevenue.xsd" xmlns:mstns="http://tempuri.org/DataRevenue.xsd" xmlns="http://tempuri.org/DataRevenue.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataRevenue" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataRevenue" msprop:Generator_UserDSName="DataRevenue">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DOANHTHU" msprop:Generator_TableClassName="DOANHTHUDataTable" msprop:Generator_TableVarName="tableDOANHTHU" msprop:Generator_TablePropName="DOANHTHU" msprop:Generator_RowDeletingName="DOANHTHURowDeleting" msprop:Generator_RowChangingName="DOANHTHURowChanging" msprop:Generator_RowEvHandlerName="DOANHTHURowChangeEventHandler" msprop:Generator_RowDeletedName="DOANHTHURowDeleted" msprop:Generator_UserTableName="DOANHTHU" msprop:Generator_RowChangedName="DOANHTHURowChanged" msprop:Generator_RowEvArgName="DOANHTHURowChangeEvent" msprop:Generator_RowClassName="DOANHTHURow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TenPhim" msprop:Generator_ColumnVarNameInTable="columnTenPhim" msprop:Generator_ColumnPropNameInRow="TenPhim" msprop:Generator_ColumnPropNameInTable="TenPhimColumn" msprop:Generator_UserColumnName="TenPhim" type="xs:string" minOccurs="0" />
+              <xs:element name="NgayChieu" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNgayChieu" msprop:Generator_ColumnPropNameInRow="NgayChieu" msprop:Generator_ColumnPropNameInTable="NgayChieuColumn" msprop:Generator_UserColumnName="NgayChieu" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GioChieu" msprop:Generator_ColumnVarNameInTable="columnGioChieu" msprop:Generator_ColumnPropNameInRow="GioChieu" msprop:Generator_ColumnPropNameInTable="GioChieuColumn" msprop:Generator_UserColumnName="GioChieu" type="xs:duration" minOccurs="0" />
+              <xs:element name="SoVeDaBan" msprop:Generator_ColumnVarNameInTable="columnSoVeDaBan" msprop:Generator_ColumnPropNameInRow="SoVeDaBan" msprop:Generator_ColumnPropNameInTable="SoVeDaBanColumn" msprop:Generator_UserColumnName="SoVeDaBan" type="xs:int" minOccurs="0" />
+              <xs:element name="TienBanVe" msprop:Generator_ColumnVarNameInTable="columnTienBanVe" msprop:Generator_ColumnPropNameInRow="TienBanVe" msprop:Generator_ColumnPropNameInTable="TienBanVeColumn" msprop:Generator_UserColumnName="TienBanVe" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
