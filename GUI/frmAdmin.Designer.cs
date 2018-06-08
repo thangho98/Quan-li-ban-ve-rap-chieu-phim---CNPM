@@ -173,7 +173,8 @@
             this.tpFilm = new System.Windows.Forms.TabPage();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel42 = new System.Windows.Forms.Panel();
-            this.panel43 = new System.Windows.Forms.Panel();
+            this.btnUpLoadPictureFilm = new System.Windows.Forms.Button();
+            this.picFilm = new System.Windows.Forms.PictureBox();
             this.clbMovieGenre = new System.Windows.Forms.CheckedListBox();
             this.dtmMovieEnd = new System.Windows.Forms.DateTimePicker();
             this.dtmMovieStart = new System.Windows.Forms.DateTimePicker();
@@ -194,6 +195,7 @@
             this.lblMovieName = new System.Windows.Forms.Label();
             this.txtMovieID = new System.Windows.Forms.TextBox();
             this.lblMovieID = new System.Windows.Forms.Label();
+            this.panel43 = new System.Windows.Forms.Panel();
             this.dtgvMovie = new System.Windows.Forms.DataGridView();
             this.panel47 = new System.Windows.Forms.Panel();
             this.btnShowMovie = new System.Windows.Forms.Button();
@@ -348,6 +350,7 @@
             this.tpFilm.SuspendLayout();
             this.panel41.SuspendLayout();
             this.panel42.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFilm)).BeginInit();
             this.panel43.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMovie)).BeginInit();
             this.panel47.SuspendLayout();
@@ -391,7 +394,7 @@
             this.tpAccount.Controls.Add(this.panel7);
             this.tpAccount.Location = new System.Drawing.Point(4, 31);
             this.tpAccount.Name = "tpAccount";
-            this.tpAccount.Size = new System.Drawing.Size(1180, 583);
+            this.tpAccount.Size = new System.Drawing.Size(1388, 583);
             this.tpAccount.TabIndex = 6;
             this.tpAccount.Text = "Tài Khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
@@ -403,7 +406,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1180, 583);
+            this.panel7.Size = new System.Drawing.Size(1388, 583);
             this.panel7.TabIndex = 1;
             // 
             // panel10
@@ -413,7 +416,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(0, 64);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1180, 519);
+            this.panel10.Size = new System.Drawing.Size(1388, 519);
             this.panel10.TabIndex = 10;
             // 
             // panel23
@@ -423,7 +426,7 @@
             this.panel23.Location = new System.Drawing.Point(0, 0);
             this.panel23.Margin = new System.Windows.Forms.Padding(4);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(807, 519);
+            this.panel23.Size = new System.Drawing.Size(1015, 519);
             this.panel23.TabIndex = 12;
             // 
             // dataGridView10
@@ -433,7 +436,7 @@
             this.dataGridView10.Location = new System.Drawing.Point(0, 0);
             this.dataGridView10.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(807, 519);
+            this.dataGridView10.Size = new System.Drawing.Size(1015, 519);
             this.dataGridView10.TabIndex = 0;
             // 
             // panel25
@@ -443,7 +446,7 @@
             this.panel25.Controls.Add(this.panel27);
             this.panel25.Controls.Add(this.panel80);
             this.panel25.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel25.Location = new System.Drawing.Point(807, 0);
+            this.panel25.Location = new System.Drawing.Point(1015, 0);
             this.panel25.Margin = new System.Windows.Forms.Padding(4);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(373, 519);
@@ -562,7 +565,7 @@
             this.panel29.Location = new System.Drawing.Point(0, 0);
             this.panel29.Margin = new System.Windows.Forms.Padding(4);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(1180, 64);
+            this.panel29.Size = new System.Drawing.Size(1388, 64);
             this.panel29.TabIndex = 9;
             // 
             // pnSearch
@@ -645,7 +648,7 @@
             this.tpCustomer.Controls.Add(this.dtgvCustomer);
             this.tpCustomer.Location = new System.Drawing.Point(4, 31);
             this.tpCustomer.Name = "tpCustomer";
-            this.tpCustomer.Size = new System.Drawing.Size(1180, 583);
+            this.tpCustomer.Size = new System.Drawing.Size(1388, 583);
             this.tpCustomer.TabIndex = 3;
             this.tpCustomer.Text = "Khách Hàng";
             this.tpCustomer.UseVisualStyleBackColor = true;
@@ -884,7 +887,7 @@
             this.tpStaff.Controls.Add(this.panel1);
             this.tpStaff.Location = new System.Drawing.Point(4, 31);
             this.tpStaff.Name = "tpStaff";
-            this.tpStaff.Size = new System.Drawing.Size(1180, 583);
+            this.tpStaff.Size = new System.Drawing.Size(1388, 583);
             this.tpStaff.TabIndex = 2;
             this.tpStaff.Text = "Nhân Viên";
             this.tpStaff.UseVisualStyleBackColor = true;
@@ -895,7 +898,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1180, 583);
+            this.panel1.Size = new System.Drawing.Size(1388, 583);
             this.panel1.TabIndex = 1;
             // 
             // panel3
@@ -904,7 +907,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1180, 583);
+            this.panel3.Size = new System.Drawing.Size(1388, 583);
             this.panel3.TabIndex = 10;
             // 
             // panel4
@@ -922,7 +925,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1180, 583);
+            this.panel4.Size = new System.Drawing.Size(1388, 583);
             this.panel4.TabIndex = 12;
             // 
             // grpStaff
@@ -1134,7 +1137,7 @@
             this.tpData.Location = new System.Drawing.Point(4, 31);
             this.tpData.Name = "tpData";
             this.tpData.Padding = new System.Windows.Forms.Padding(3);
-            this.tpData.Size = new System.Drawing.Size(1180, 583);
+            this.tpData.Size = new System.Drawing.Size(1388, 583);
             this.tpData.TabIndex = 1;
             this.tpData.Text = "Dữ Liệu";
             this.tpData.UseVisualStyleBackColor = true;
@@ -1153,7 +1156,7 @@
             this.tcData.Location = new System.Drawing.Point(3, 3);
             this.tcData.Name = "tcData";
             this.tcData.SelectedIndex = 0;
-            this.tcData.Size = new System.Drawing.Size(1174, 577);
+            this.tcData.Size = new System.Drawing.Size(1382, 577);
             this.tcData.TabIndex = 0;
             // 
             // tpScreenType
@@ -1161,7 +1164,7 @@
             this.tpScreenType.Controls.Add(this.panel2);
             this.tpScreenType.Location = new System.Drawing.Point(4, 31);
             this.tpScreenType.Name = "tpScreenType";
-            this.tpScreenType.Size = new System.Drawing.Size(1166, 542);
+            this.tpScreenType.Size = new System.Drawing.Size(1374, 542);
             this.tpScreenType.TabIndex = 3;
             this.tpScreenType.Text = "Loại màn hình";
             this.tpScreenType.UseVisualStyleBackColor = true;
@@ -1173,7 +1176,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1166, 542);
+            this.panel2.Size = new System.Drawing.Size(1374, 542);
             this.panel2.TabIndex = 0;
             // 
             // panel13
@@ -1183,7 +1186,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(0, 64);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1166, 478);
+            this.panel13.Size = new System.Drawing.Size(1374, 478);
             this.panel13.TabIndex = 10;
             // 
             // panel14
@@ -1193,7 +1196,7 @@
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(786, 478);
+            this.panel14.Size = new System.Drawing.Size(994, 478);
             this.panel14.TabIndex = 12;
             // 
             // dtgvScreenType
@@ -1207,7 +1210,7 @@
             this.dtgvScreenType.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvScreenType.Name = "dtgvScreenType";
             this.dtgvScreenType.ReadOnly = true;
-            this.dtgvScreenType.Size = new System.Drawing.Size(786, 478);
+            this.dtgvScreenType.Size = new System.Drawing.Size(994, 478);
             this.dtgvScreenType.TabIndex = 0;
             // 
             // panel19
@@ -1215,7 +1218,7 @@
             this.panel19.Controls.Add(this.panel20);
             this.panel19.Controls.Add(this.panel21);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel19.Location = new System.Drawing.Point(786, 0);
+            this.panel19.Location = new System.Drawing.Point(994, 0);
             this.panel19.Margin = new System.Windows.Forms.Padding(4);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(380, 478);
@@ -1289,7 +1292,7 @@
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1166, 64);
+            this.panel11.Size = new System.Drawing.Size(1374, 64);
             this.panel11.TabIndex = 9;
             // 
             // btnShowScreenType
@@ -1342,7 +1345,7 @@
             this.tpCinema.Location = new System.Drawing.Point(4, 31);
             this.tpCinema.Name = "tpCinema";
             this.tpCinema.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCinema.Size = new System.Drawing.Size(1166, 542);
+            this.tpCinema.Size = new System.Drawing.Size(1374, 542);
             this.tpCinema.TabIndex = 1;
             this.tpCinema.Text = "Phòng Chiếu";
             this.tpCinema.UseVisualStyleBackColor = true;
@@ -1354,7 +1357,7 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel22.Location = new System.Drawing.Point(3, 3);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(1160, 536);
+            this.panel22.Size = new System.Drawing.Size(1368, 536);
             this.panel22.TabIndex = 1;
             // 
             // panel24
@@ -1364,7 +1367,7 @@
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel24.Location = new System.Drawing.Point(0, 64);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1160, 472);
+            this.panel24.Size = new System.Drawing.Size(1368, 472);
             this.panel24.TabIndex = 10;
             // 
             // panel28
@@ -1374,7 +1377,7 @@
             this.panel28.Location = new System.Drawing.Point(0, 0);
             this.panel28.Margin = new System.Windows.Forms.Padding(4);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(859, 472);
+            this.panel28.Size = new System.Drawing.Size(1067, 472);
             this.panel28.TabIndex = 12;
             // 
             // dtgvCinema
@@ -1388,7 +1391,7 @@
             this.dtgvCinema.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvCinema.Name = "dtgvCinema";
             this.dtgvCinema.ReadOnly = true;
-            this.dtgvCinema.Size = new System.Drawing.Size(859, 472);
+            this.dtgvCinema.Size = new System.Drawing.Size(1067, 472);
             this.dtgvCinema.TabIndex = 0;
             // 
             // panel30
@@ -1401,7 +1404,7 @@
             this.panel30.Controls.Add(this.panel31);
             this.panel30.Controls.Add(this.panel32);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel30.Location = new System.Drawing.Point(859, 0);
+            this.panel30.Location = new System.Drawing.Point(1067, 0);
             this.panel30.Margin = new System.Windows.Forms.Padding(4);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(301, 472);
@@ -1622,7 +1625,7 @@
             this.panel33.Location = new System.Drawing.Point(0, 0);
             this.panel33.Margin = new System.Windows.Forms.Padding(4);
             this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(1160, 64);
+            this.panel33.Size = new System.Drawing.Size(1368, 64);
             this.panel33.TabIndex = 9;
             // 
             // btnShowCinema
@@ -1674,7 +1677,7 @@
             this.tpGenre.Controls.Add(this.panel34);
             this.tpGenre.Location = new System.Drawing.Point(4, 31);
             this.tpGenre.Name = "tpGenre";
-            this.tpGenre.Size = new System.Drawing.Size(1166, 542);
+            this.tpGenre.Size = new System.Drawing.Size(1374, 542);
             this.tpGenre.TabIndex = 2;
             this.tpGenre.Text = "Thể Loại";
             this.tpGenre.UseVisualStyleBackColor = true;
@@ -1686,7 +1689,7 @@
             this.panel34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel34.Location = new System.Drawing.Point(0, 0);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(1166, 542);
+            this.panel34.Size = new System.Drawing.Size(1374, 542);
             this.panel34.TabIndex = 1;
             // 
             // panel35
@@ -1696,7 +1699,7 @@
             this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel35.Location = new System.Drawing.Point(0, 64);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(1166, 478);
+            this.panel35.Size = new System.Drawing.Size(1374, 478);
             this.panel35.TabIndex = 10;
             // 
             // panel36
@@ -1706,7 +1709,7 @@
             this.panel36.Location = new System.Drawing.Point(0, 0);
             this.panel36.Margin = new System.Windows.Forms.Padding(4);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(786, 478);
+            this.panel36.Size = new System.Drawing.Size(994, 478);
             this.panel36.TabIndex = 12;
             // 
             // dtgvGenre
@@ -1720,7 +1723,7 @@
             this.dtgvGenre.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvGenre.Name = "dtgvGenre";
             this.dtgvGenre.ReadOnly = true;
-            this.dtgvGenre.Size = new System.Drawing.Size(786, 478);
+            this.dtgvGenre.Size = new System.Drawing.Size(994, 478);
             this.dtgvGenre.TabIndex = 0;
             // 
             // panel37
@@ -1729,7 +1732,7 @@
             this.panel37.Controls.Add(this.panel38);
             this.panel37.Controls.Add(this.panel39);
             this.panel37.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel37.Location = new System.Drawing.Point(786, 0);
+            this.panel37.Location = new System.Drawing.Point(994, 0);
             this.panel37.Margin = new System.Windows.Forms.Padding(4);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(380, 478);
@@ -1833,7 +1836,7 @@
             this.panel40.Location = new System.Drawing.Point(0, 0);
             this.panel40.Margin = new System.Windows.Forms.Padding(4);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(1166, 64);
+            this.panel40.Size = new System.Drawing.Size(1374, 64);
             this.panel40.TabIndex = 9;
             // 
             // btnShowGenre
@@ -1886,7 +1889,7 @@
             this.tpFilm.Location = new System.Drawing.Point(4, 31);
             this.tpFilm.Name = "tpFilm";
             this.tpFilm.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFilm.Size = new System.Drawing.Size(1166, 542);
+            this.tpFilm.Size = new System.Drawing.Size(1374, 542);
             this.tpFilm.TabIndex = 0;
             this.tpFilm.Text = "Phim";
             this.tpFilm.UseVisualStyleBackColor = true;
@@ -1898,223 +1901,245 @@
             this.panel41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel41.Location = new System.Drawing.Point(3, 3);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(1160, 536);
+            this.panel41.Size = new System.Drawing.Size(1368, 536);
             this.panel41.TabIndex = 1;
             // 
             // panel42
             // 
+            this.panel42.Controls.Add(this.btnUpLoadPictureFilm);
+            this.panel42.Controls.Add(this.picFilm);
+            this.panel42.Controls.Add(this.clbMovieGenre);
+            this.panel42.Controls.Add(this.dtmMovieEnd);
+            this.panel42.Controls.Add(this.dtmMovieStart);
+            this.panel42.Controls.Add(this.txtMovieYear);
+            this.panel42.Controls.Add(this.txtMovieDirector);
+            this.panel42.Controls.Add(this.txtMovieProductor);
+            this.panel42.Controls.Add(this.txtMovieLength);
+            this.panel42.Controls.Add(this.lblMovieEndDate);
+            this.panel42.Controls.Add(this.lblMovieStartDate);
+            this.panel42.Controls.Add(this.lblMovieLength);
+            this.panel42.Controls.Add(this.txtMovieDesc);
+            this.panel42.Controls.Add(this.lblMovieYear);
+            this.panel42.Controls.Add(this.lblMovieGenre);
+            this.panel42.Controls.Add(this.lblMovieDirector);
+            this.panel42.Controls.Add(this.lblMovieProductor);
+            this.panel42.Controls.Add(this.lblMovieDesc);
+            this.panel42.Controls.Add(this.txtMovieName);
+            this.panel42.Controls.Add(this.lblMovieName);
+            this.panel42.Controls.Add(this.txtMovieID);
+            this.panel42.Controls.Add(this.lblMovieID);
             this.panel42.Controls.Add(this.panel43);
             this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel42.Location = new System.Drawing.Point(0, 64);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(1160, 472);
+            this.panel42.Size = new System.Drawing.Size(1368, 472);
             this.panel42.TabIndex = 10;
             // 
-            // panel43
+            // btnUpLoadPictureFilm
             // 
-            this.panel43.Controls.Add(this.clbMovieGenre);
-            this.panel43.Controls.Add(this.dtmMovieEnd);
-            this.panel43.Controls.Add(this.dtmMovieStart);
-            this.panel43.Controls.Add(this.txtMovieYear);
-            this.panel43.Controls.Add(this.txtMovieDirector);
-            this.panel43.Controls.Add(this.txtMovieProductor);
-            this.panel43.Controls.Add(this.txtMovieLength);
-            this.panel43.Controls.Add(this.lblMovieEndDate);
-            this.panel43.Controls.Add(this.lblMovieStartDate);
-            this.panel43.Controls.Add(this.lblMovieLength);
-            this.panel43.Controls.Add(this.txtMovieDesc);
-            this.panel43.Controls.Add(this.lblMovieYear);
-            this.panel43.Controls.Add(this.lblMovieGenre);
-            this.panel43.Controls.Add(this.lblMovieDirector);
-            this.panel43.Controls.Add(this.lblMovieProductor);
-            this.panel43.Controls.Add(this.lblMovieDesc);
-            this.panel43.Controls.Add(this.txtMovieName);
-            this.panel43.Controls.Add(this.lblMovieName);
-            this.panel43.Controls.Add(this.txtMovieID);
-            this.panel43.Controls.Add(this.lblMovieID);
-            this.panel43.Controls.Add(this.dtgvMovie);
-            this.panel43.Location = new System.Drawing.Point(0, 0);
-            this.panel43.Margin = new System.Windows.Forms.Padding(4);
-            this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(1040, 478);
-            this.panel43.TabIndex = 12;
+            this.btnUpLoadPictureFilm.Location = new System.Drawing.Point(1167, 214);
+            this.btnUpLoadPictureFilm.Name = "btnUpLoadPictureFilm";
+            this.btnUpLoadPictureFilm.Size = new System.Drawing.Size(133, 41);
+            this.btnUpLoadPictureFilm.TabIndex = 34;
+            this.btnUpLoadPictureFilm.Text = "Chọn hình ảnh";
+            this.btnUpLoadPictureFilm.UseVisualStyleBackColor = true;
+            this.btnUpLoadPictureFilm.Click += new System.EventHandler(this.btnUpLoadPictureFilm_Click);
+            // 
+            // picFilm
+            // 
+            this.picFilm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picFilm.Location = new System.Drawing.Point(1138, 17);
+            this.picFilm.Name = "picFilm";
+            this.picFilm.Size = new System.Drawing.Size(186, 176);
+            this.picFilm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFilm.TabIndex = 33;
+            this.picFilm.TabStop = false;
             // 
             // clbMovieGenre
             // 
             this.clbMovieGenre.CheckOnClick = true;
             this.clbMovieGenre.FormattingEnabled = true;
-            this.clbMovieGenre.Location = new System.Drawing.Point(765, 387);
+            this.clbMovieGenre.Location = new System.Drawing.Point(757, 387);
             this.clbMovieGenre.MultiColumn = true;
             this.clbMovieGenre.Name = "clbMovieGenre";
-            this.clbMovieGenre.Size = new System.Drawing.Size(272, 79);
-            this.clbMovieGenre.TabIndex = 4;
+            this.clbMovieGenre.Size = new System.Drawing.Size(574, 79);
+            this.clbMovieGenre.TabIndex = 32;
             // 
             // dtmMovieEnd
             // 
             this.dtmMovieEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtmMovieEnd.Location = new System.Drawing.Point(849, 226);
+            this.dtmMovieEnd.Location = new System.Drawing.Point(867, 227);
             this.dtmMovieEnd.Name = "dtmMovieEnd";
-            this.dtmMovieEnd.Size = new System.Drawing.Size(188, 30);
-            this.dtmMovieEnd.TabIndex = 3;
+            this.dtmMovieEnd.Size = new System.Drawing.Size(209, 30);
+            this.dtmMovieEnd.TabIndex = 31;
             // 
             // dtmMovieStart
             // 
             this.dtmMovieStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtmMovieStart.Location = new System.Drawing.Point(849, 194);
+            this.dtmMovieStart.Location = new System.Drawing.Point(867, 195);
             this.dtmMovieStart.Name = "dtmMovieStart";
-            this.dtmMovieStart.Size = new System.Drawing.Size(188, 30);
-            this.dtmMovieStart.TabIndex = 3;
+            this.dtmMovieStart.Size = new System.Drawing.Size(209, 30);
+            this.dtmMovieStart.TabIndex = 30;
             // 
             // txtMovieYear
             // 
-            this.txtMovieYear.Location = new System.Drawing.Point(862, 331);
+            this.txtMovieYear.Location = new System.Drawing.Point(867, 332);
             this.txtMovieYear.Name = "txtMovieYear";
-            this.txtMovieYear.Size = new System.Drawing.Size(175, 30);
-            this.txtMovieYear.TabIndex = 2;
+            this.txtMovieYear.Size = new System.Drawing.Size(209, 30);
+            this.txtMovieYear.TabIndex = 28;
             // 
             // txtMovieDirector
             // 
-            this.txtMovieDirector.Location = new System.Drawing.Point(849, 299);
+            this.txtMovieDirector.Location = new System.Drawing.Point(867, 300);
             this.txtMovieDirector.Name = "txtMovieDirector";
-            this.txtMovieDirector.Size = new System.Drawing.Size(188, 30);
-            this.txtMovieDirector.TabIndex = 2;
+            this.txtMovieDirector.Size = new System.Drawing.Size(209, 30);
+            this.txtMovieDirector.TabIndex = 27;
             // 
             // txtMovieProductor
             // 
-            this.txtMovieProductor.Location = new System.Drawing.Point(849, 267);
+            this.txtMovieProductor.Location = new System.Drawing.Point(867, 268);
             this.txtMovieProductor.Name = "txtMovieProductor";
-            this.txtMovieProductor.Size = new System.Drawing.Size(188, 30);
-            this.txtMovieProductor.TabIndex = 2;
+            this.txtMovieProductor.Size = new System.Drawing.Size(209, 30);
+            this.txtMovieProductor.TabIndex = 26;
             // 
             // txtMovieLength
             // 
-            this.txtMovieLength.Location = new System.Drawing.Point(849, 153);
+            this.txtMovieLength.Location = new System.Drawing.Point(867, 154);
             this.txtMovieLength.Name = "txtMovieLength";
-            this.txtMovieLength.Size = new System.Drawing.Size(188, 30);
-            this.txtMovieLength.TabIndex = 2;
+            this.txtMovieLength.Size = new System.Drawing.Size(209, 30);
+            this.txtMovieLength.TabIndex = 25;
             // 
             // lblMovieEndDate
             // 
             this.lblMovieEndDate.AutoSize = true;
             this.lblMovieEndDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovieEndDate.Location = new System.Drawing.Point(746, 232);
+            this.lblMovieEndDate.Location = new System.Drawing.Point(738, 232);
             this.lblMovieEndDate.Name = "lblMovieEndDate";
             this.lblMovieEndDate.Size = new System.Drawing.Size(98, 23);
-            this.lblMovieEndDate.TabIndex = 1;
+            this.lblMovieEndDate.TabIndex = 22;
             this.lblMovieEndDate.Text = "Ngày KT :";
             // 
             // lblMovieStartDate
             // 
             this.lblMovieStartDate.AutoSize = true;
             this.lblMovieStartDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovieStartDate.Location = new System.Drawing.Point(746, 200);
+            this.lblMovieStartDate.Location = new System.Drawing.Point(738, 200);
             this.lblMovieStartDate.Name = "lblMovieStartDate";
             this.lblMovieStartDate.Size = new System.Drawing.Size(99, 23);
-            this.lblMovieStartDate.TabIndex = 1;
+            this.lblMovieStartDate.TabIndex = 20;
             this.lblMovieStartDate.Text = "Ngày KC :";
             // 
             // lblMovieLength
             // 
             this.lblMovieLength.AutoSize = true;
             this.lblMovieLength.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovieLength.Location = new System.Drawing.Point(746, 156);
+            this.lblMovieLength.Location = new System.Drawing.Point(738, 156);
             this.lblMovieLength.Name = "lblMovieLength";
             this.lblMovieLength.Size = new System.Drawing.Size(114, 23);
-            this.lblMovieLength.TabIndex = 1;
+            this.lblMovieLength.TabIndex = 13;
             this.lblMovieLength.Text = "Thời lượng :";
             // 
             // txtMovieDesc
             // 
-            this.txtMovieDesc.Location = new System.Drawing.Point(849, 71);
+            this.txtMovieDesc.Location = new System.Drawing.Point(867, 72);
             this.txtMovieDesc.Multiline = true;
             this.txtMovieDesc.Name = "txtMovieDesc";
-            this.txtMovieDesc.Size = new System.Drawing.Size(188, 76);
-            this.txtMovieDesc.TabIndex = 2;
+            this.txtMovieDesc.Size = new System.Drawing.Size(209, 76);
+            this.txtMovieDesc.TabIndex = 24;
             // 
             // lblMovieYear
             // 
             this.lblMovieYear.AutoSize = true;
             this.lblMovieYear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovieYear.Location = new System.Drawing.Point(746, 334);
+            this.lblMovieYear.Location = new System.Drawing.Point(738, 334);
             this.lblMovieYear.Name = "lblMovieYear";
             this.lblMovieYear.Size = new System.Drawing.Size(136, 23);
-            this.lblMovieYear.TabIndex = 1;
+            this.lblMovieYear.TabIndex = 19;
             this.lblMovieYear.Text = "Năm sản xuất :";
             // 
             // lblMovieGenre
             // 
             this.lblMovieGenre.AutoSize = true;
             this.lblMovieGenre.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovieGenre.Location = new System.Drawing.Point(746, 362);
+            this.lblMovieGenre.Location = new System.Drawing.Point(738, 362);
             this.lblMovieGenre.Name = "lblMovieGenre";
             this.lblMovieGenre.Size = new System.Drawing.Size(109, 26);
-            this.lblMovieGenre.TabIndex = 1;
+            this.lblMovieGenre.TabIndex = 18;
             this.lblMovieGenre.Text = "Thể loại :";
             // 
             // lblMovieDirector
             // 
             this.lblMovieDirector.AutoSize = true;
             this.lblMovieDirector.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovieDirector.Location = new System.Drawing.Point(746, 300);
+            this.lblMovieDirector.Location = new System.Drawing.Point(738, 300);
             this.lblMovieDirector.Name = "lblMovieDirector";
             this.lblMovieDirector.Size = new System.Drawing.Size(117, 26);
-            this.lblMovieDirector.TabIndex = 1;
+            this.lblMovieDirector.TabIndex = 17;
             this.lblMovieDirector.Text = "Đạo diễn :";
             // 
             // lblMovieProductor
             // 
             this.lblMovieProductor.AutoSize = true;
             this.lblMovieProductor.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovieProductor.Location = new System.Drawing.Point(746, 268);
+            this.lblMovieProductor.Location = new System.Drawing.Point(738, 268);
             this.lblMovieProductor.Name = "lblMovieProductor";
             this.lblMovieProductor.Size = new System.Drawing.Size(115, 26);
-            this.lblMovieProductor.TabIndex = 1;
+            this.lblMovieProductor.TabIndex = 16;
             this.lblMovieProductor.Text = "Sản xuất :";
             // 
             // lblMovieDesc
             // 
             this.lblMovieDesc.AutoSize = true;
             this.lblMovieDesc.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovieDesc.Location = new System.Drawing.Point(746, 72);
+            this.lblMovieDesc.Location = new System.Drawing.Point(738, 72);
             this.lblMovieDesc.Name = "lblMovieDesc";
             this.lblMovieDesc.Size = new System.Drawing.Size(87, 26);
-            this.lblMovieDesc.TabIndex = 1;
+            this.lblMovieDesc.TabIndex = 15;
             this.lblMovieDesc.Text = "Mô tả :";
             // 
             // txtMovieName
             // 
-            this.txtMovieName.Location = new System.Drawing.Point(849, 39);
+            this.txtMovieName.Location = new System.Drawing.Point(867, 40);
             this.txtMovieName.Name = "txtMovieName";
-            this.txtMovieName.Size = new System.Drawing.Size(188, 30);
-            this.txtMovieName.TabIndex = 2;
+            this.txtMovieName.Size = new System.Drawing.Size(209, 30);
+            this.txtMovieName.TabIndex = 29;
             // 
             // lblMovieName
             // 
             this.lblMovieName.AutoSize = true;
             this.lblMovieName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovieName.Location = new System.Drawing.Point(746, 40);
+            this.lblMovieName.Location = new System.Drawing.Point(738, 40);
             this.lblMovieName.Name = "lblMovieName";
             this.lblMovieName.Size = new System.Drawing.Size(123, 26);
-            this.lblMovieName.TabIndex = 1;
+            this.lblMovieName.TabIndex = 14;
             this.lblMovieName.Text = "Tên phim :";
             // 
             // txtMovieID
             // 
-            this.txtMovieID.Location = new System.Drawing.Point(849, 7);
+            this.txtMovieID.Location = new System.Drawing.Point(867, 8);
             this.txtMovieID.Name = "txtMovieID";
-            this.txtMovieID.Size = new System.Drawing.Size(188, 30);
-            this.txtMovieID.TabIndex = 2;
+            this.txtMovieID.Size = new System.Drawing.Size(209, 30);
+            this.txtMovieID.TabIndex = 23;
             this.txtMovieID.TextChanged += new System.EventHandler(this.txtMovieID_TextChanged);
             // 
             // lblMovieID
             // 
             this.lblMovieID.AutoSize = true;
             this.lblMovieID.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovieID.Location = new System.Drawing.Point(746, 8);
+            this.lblMovieID.Location = new System.Drawing.Point(738, 8);
             this.lblMovieID.Name = "lblMovieID";
             this.lblMovieID.Size = new System.Drawing.Size(119, 26);
-            this.lblMovieID.TabIndex = 1;
+            this.lblMovieID.TabIndex = 21;
             this.lblMovieID.Text = "Mã phim :";
+            // 
+            // panel43
+            // 
+            this.panel43.Controls.Add(this.dtgvMovie);
+            this.panel43.Location = new System.Drawing.Point(0, 0);
+            this.panel43.Margin = new System.Windows.Forms.Padding(4);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(728, 478);
+            this.panel43.TabIndex = 12;
             // 
             // dtgvMovie
             // 
@@ -2122,11 +2147,12 @@
             this.dtgvMovie.AllowUserToDeleteRows = false;
             this.dtgvMovie.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvMovie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvMovie.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvMovie.Location = new System.Drawing.Point(0, 0);
             this.dtgvMovie.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvMovie.Name = "dtgvMovie";
             this.dtgvMovie.ReadOnly = true;
-            this.dtgvMovie.Size = new System.Drawing.Size(739, 478);
+            this.dtgvMovie.Size = new System.Drawing.Size(728, 478);
             this.dtgvMovie.TabIndex = 0;
             // 
             // panel47
@@ -2139,7 +2165,7 @@
             this.panel47.Location = new System.Drawing.Point(0, 0);
             this.panel47.Margin = new System.Windows.Forms.Padding(4);
             this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(1160, 64);
+            this.panel47.Size = new System.Drawing.Size(1368, 64);
             this.panel47.TabIndex = 9;
             // 
             // btnShowMovie
@@ -2206,7 +2232,7 @@
             this.tpFormatMovie.Location = new System.Drawing.Point(4, 31);
             this.tpFormatMovie.Name = "tpFormatMovie";
             this.tpFormatMovie.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFormatMovie.Size = new System.Drawing.Size(1166, 542);
+            this.tpFormatMovie.Size = new System.Drawing.Size(1374, 542);
             this.tpFormatMovie.TabIndex = 7;
             this.tpFormatMovie.Text = "Định dạng";
             this.tpFormatMovie.UseVisualStyleBackColor = true;
@@ -2366,7 +2392,7 @@
             this.tpShowTimes.Controls.Add(this.panel48);
             this.tpShowTimes.Location = new System.Drawing.Point(4, 31);
             this.tpShowTimes.Name = "tpShowTimes";
-            this.tpShowTimes.Size = new System.Drawing.Size(1166, 542);
+            this.tpShowTimes.Size = new System.Drawing.Size(1374, 542);
             this.tpShowTimes.TabIndex = 6;
             this.tpShowTimes.Text = "Lịch Chiếu";
             this.tpShowTimes.UseVisualStyleBackColor = true;
@@ -2378,7 +2404,7 @@
             this.panel48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel48.Location = new System.Drawing.Point(0, 0);
             this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(1166, 542);
+            this.panel48.Size = new System.Drawing.Size(1374, 542);
             this.panel48.TabIndex = 1;
             // 
             // panel49
@@ -2388,7 +2414,7 @@
             this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel49.Location = new System.Drawing.Point(0, 64);
             this.panel49.Name = "panel49";
-            this.panel49.Size = new System.Drawing.Size(1166, 478);
+            this.panel49.Size = new System.Drawing.Size(1374, 478);
             this.panel49.TabIndex = 10;
             // 
             // panel50
@@ -2398,7 +2424,7 @@
             this.panel50.Location = new System.Drawing.Point(0, 0);
             this.panel50.Margin = new System.Windows.Forms.Padding(4);
             this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(786, 478);
+            this.panel50.Size = new System.Drawing.Size(994, 478);
             this.panel50.TabIndex = 12;
             // 
             // dataGridView6
@@ -2408,7 +2434,7 @@
             this.dataGridView6.Location = new System.Drawing.Point(0, 0);
             this.dataGridView6.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(786, 478);
+            this.dataGridView6.Size = new System.Drawing.Size(994, 478);
             this.dataGridView6.TabIndex = 0;
             // 
             // panel51
@@ -2416,7 +2442,7 @@
             this.panel51.Controls.Add(this.panel52);
             this.panel51.Controls.Add(this.panel53);
             this.panel51.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel51.Location = new System.Drawing.Point(786, 0);
+            this.panel51.Location = new System.Drawing.Point(994, 0);
             this.panel51.Margin = new System.Windows.Forms.Padding(4);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(380, 478);
@@ -2492,7 +2518,7 @@
             this.panel54.Location = new System.Drawing.Point(0, 0);
             this.panel54.Margin = new System.Windows.Forms.Padding(4);
             this.panel54.Name = "panel54";
-            this.panel54.Size = new System.Drawing.Size(1166, 64);
+            this.panel54.Size = new System.Drawing.Size(1374, 64);
             this.panel54.TabIndex = 9;
             // 
             // panel77
@@ -2567,7 +2593,7 @@
             this.tpTicket.Controls.Add(this.panel55);
             this.tpTicket.Location = new System.Drawing.Point(4, 31);
             this.tpTicket.Name = "tpTicket";
-            this.tpTicket.Size = new System.Drawing.Size(1166, 542);
+            this.tpTicket.Size = new System.Drawing.Size(1374, 542);
             this.tpTicket.TabIndex = 4;
             this.tpTicket.Text = "Vé";
             this.tpTicket.UseVisualStyleBackColor = true;
@@ -2579,7 +2605,7 @@
             this.panel55.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel55.Location = new System.Drawing.Point(0, 0);
             this.panel55.Name = "panel55";
-            this.panel55.Size = new System.Drawing.Size(1166, 542);
+            this.panel55.Size = new System.Drawing.Size(1374, 542);
             this.panel55.TabIndex = 1;
             // 
             // panel56
@@ -2589,7 +2615,7 @@
             this.panel56.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel56.Location = new System.Drawing.Point(0, 64);
             this.panel56.Name = "panel56";
-            this.panel56.Size = new System.Drawing.Size(1166, 478);
+            this.panel56.Size = new System.Drawing.Size(1374, 478);
             this.panel56.TabIndex = 10;
             // 
             // panel57
@@ -2599,7 +2625,7 @@
             this.panel57.Location = new System.Drawing.Point(0, 0);
             this.panel57.Margin = new System.Windows.Forms.Padding(4);
             this.panel57.Name = "panel57";
-            this.panel57.Size = new System.Drawing.Size(622, 478);
+            this.panel57.Size = new System.Drawing.Size(830, 478);
             this.panel57.TabIndex = 12;
             // 
             // dtgvTicket
@@ -2609,7 +2635,7 @@
             this.dtgvTicket.Location = new System.Drawing.Point(0, 0);
             this.dtgvTicket.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvTicket.Name = "dtgvTicket";
-            this.dtgvTicket.Size = new System.Drawing.Size(622, 478);
+            this.dtgvTicket.Size = new System.Drawing.Size(830, 478);
             this.dtgvTicket.TabIndex = 0;
             // 
             // panel58
@@ -2617,7 +2643,7 @@
             this.panel58.Controls.Add(this.lsvAllListShowTimes);
             this.panel58.Controls.Add(this.btnAddTicketByShowTime);
             this.panel58.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel58.Location = new System.Drawing.Point(622, 0);
+            this.panel58.Location = new System.Drawing.Point(830, 0);
             this.panel58.Margin = new System.Windows.Forms.Padding(4);
             this.panel58.Name = "panel58";
             this.panel58.Size = new System.Drawing.Size(544, 478);
@@ -2682,7 +2708,7 @@
             this.panel61.Location = new System.Drawing.Point(0, 0);
             this.panel61.Margin = new System.Windows.Forms.Padding(4);
             this.panel61.Name = "panel61";
-            this.panel61.Size = new System.Drawing.Size(1166, 64);
+            this.panel61.Size = new System.Drawing.Size(1374, 64);
             this.panel61.TabIndex = 9;
             // 
             // panel78
@@ -2747,7 +2773,7 @@
             this.tpPromotion.Controls.Add(this.panel62);
             this.tpPromotion.Location = new System.Drawing.Point(4, 31);
             this.tpPromotion.Name = "tpPromotion";
-            this.tpPromotion.Size = new System.Drawing.Size(1166, 542);
+            this.tpPromotion.Size = new System.Drawing.Size(1374, 542);
             this.tpPromotion.TabIndex = 5;
             this.tpPromotion.Text = "Khuyến mãi";
             this.tpPromotion.UseVisualStyleBackColor = true;
@@ -2759,7 +2785,7 @@
             this.panel62.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel62.Location = new System.Drawing.Point(0, 0);
             this.panel62.Name = "panel62";
-            this.panel62.Size = new System.Drawing.Size(1166, 542);
+            this.panel62.Size = new System.Drawing.Size(1374, 542);
             this.panel62.TabIndex = 1;
             // 
             // panel63
@@ -2769,7 +2795,7 @@
             this.panel63.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel63.Location = new System.Drawing.Point(0, 64);
             this.panel63.Name = "panel63";
-            this.panel63.Size = new System.Drawing.Size(1166, 478);
+            this.panel63.Size = new System.Drawing.Size(1374, 478);
             this.panel63.TabIndex = 10;
             // 
             // panel64
@@ -2779,7 +2805,7 @@
             this.panel64.Location = new System.Drawing.Point(0, 0);
             this.panel64.Margin = new System.Windows.Forms.Padding(4);
             this.panel64.Name = "panel64";
-            this.panel64.Size = new System.Drawing.Size(786, 478);
+            this.panel64.Size = new System.Drawing.Size(994, 478);
             this.panel64.TabIndex = 12;
             // 
             // dataGridView8
@@ -2789,7 +2815,7 @@
             this.dataGridView8.Location = new System.Drawing.Point(0, 0);
             this.dataGridView8.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(786, 478);
+            this.dataGridView8.Size = new System.Drawing.Size(994, 478);
             this.dataGridView8.TabIndex = 0;
             // 
             // panel65
@@ -2797,7 +2823,7 @@
             this.panel65.Controls.Add(this.panel66);
             this.panel65.Controls.Add(this.panel67);
             this.panel65.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel65.Location = new System.Drawing.Point(786, 0);
+            this.panel65.Location = new System.Drawing.Point(994, 0);
             this.panel65.Margin = new System.Windows.Forms.Padding(4);
             this.panel65.Name = "panel65";
             this.panel65.Size = new System.Drawing.Size(380, 478);
@@ -2873,7 +2899,7 @@
             this.panel68.Location = new System.Drawing.Point(0, 0);
             this.panel68.Margin = new System.Windows.Forms.Padding(4);
             this.panel68.Name = "panel68";
-            this.panel68.Size = new System.Drawing.Size(1166, 64);
+            this.panel68.Size = new System.Drawing.Size(1374, 64);
             this.panel68.TabIndex = 9;
             // 
             // panel79
@@ -2958,7 +2984,7 @@
             this.tpRevenue.Controls.Add(this.dtmFromDate);
             this.tpRevenue.Location = new System.Drawing.Point(4, 31);
             this.tpRevenue.Name = "tpRevenue";
-            this.tpRevenue.Size = new System.Drawing.Size(1180, 583);
+            this.tpRevenue.Size = new System.Drawing.Size(1388, 583);
             this.tpRevenue.TabIndex = 4;
             this.tpRevenue.Text = "Doanh thu";
             this.tpRevenue.UseVisualStyleBackColor = true;
@@ -3084,14 +3110,14 @@
             this.tcAdmin.Location = new System.Drawing.Point(0, 0);
             this.tcAdmin.Name = "tcAdmin";
             this.tcAdmin.SelectedIndex = 0;
-            this.tcAdmin.Size = new System.Drawing.Size(1188, 618);
+            this.tcAdmin.Size = new System.Drawing.Size(1396, 618);
             this.tcAdmin.TabIndex = 0;
             // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 618);
+            this.ClientSize = new System.Drawing.Size(1396, 618);
             this.Controls.Add(this.tcAdmin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -3178,8 +3204,9 @@
             this.tpFilm.ResumeLayout(false);
             this.panel41.ResumeLayout(false);
             this.panel42.ResumeLayout(false);
+            this.panel42.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFilm)).EndInit();
             this.panel43.ResumeLayout(false);
-            this.panel43.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMovie)).EndInit();
             this.panel47.ResumeLayout(false);
             this.tpFormatMovie.ResumeLayout(false);
@@ -3448,26 +3475,6 @@
 		private System.Windows.Forms.Panel panel8;
 		private System.Windows.Forms.TextBox txtCinemaSeats;
 		private System.Windows.Forms.Label lblCinemaSeats;
-		private System.Windows.Forms.CheckedListBox clbMovieGenre;
-		private System.Windows.Forms.DateTimePicker dtmMovieEnd;
-		private System.Windows.Forms.DateTimePicker dtmMovieStart;
-		private System.Windows.Forms.TextBox txtMovieYear;
-		private System.Windows.Forms.TextBox txtMovieDirector;
-		private System.Windows.Forms.TextBox txtMovieProductor;
-		private System.Windows.Forms.TextBox txtMovieLength;
-		private System.Windows.Forms.Label lblMovieEndDate;
-		private System.Windows.Forms.Label lblMovieStartDate;
-		private System.Windows.Forms.Label lblMovieLength;
-		private System.Windows.Forms.TextBox txtMovieDesc;
-		private System.Windows.Forms.Label lblMovieYear;
-		private System.Windows.Forms.Label lblMovieDirector;
-		private System.Windows.Forms.Label lblMovieProductor;
-		private System.Windows.Forms.Label lblMovieDesc;
-		private System.Windows.Forms.TextBox txtMovieName;
-		private System.Windows.Forms.Label lblMovieName;
-		private System.Windows.Forms.TextBox txtMovieID;
-		private System.Windows.Forms.Label lblMovieID;
-		private System.Windows.Forms.Label lblMovieGenre;
 		private System.Windows.Forms.TabPage tpFormatMovie;
 		private System.Windows.Forms.DataGridView dtgvFormat;
 		private System.Windows.Forms.Button btnShowFormat;
@@ -3490,5 +3497,27 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button btnReportRevenue;
+        private System.Windows.Forms.Button btnUpLoadPictureFilm;
+        private System.Windows.Forms.PictureBox picFilm;
+        private System.Windows.Forms.CheckedListBox clbMovieGenre;
+        private System.Windows.Forms.DateTimePicker dtmMovieEnd;
+        private System.Windows.Forms.DateTimePicker dtmMovieStart;
+        private System.Windows.Forms.TextBox txtMovieYear;
+        private System.Windows.Forms.TextBox txtMovieDirector;
+        private System.Windows.Forms.TextBox txtMovieProductor;
+        private System.Windows.Forms.TextBox txtMovieLength;
+        private System.Windows.Forms.Label lblMovieEndDate;
+        private System.Windows.Forms.Label lblMovieStartDate;
+        private System.Windows.Forms.Label lblMovieLength;
+        private System.Windows.Forms.TextBox txtMovieDesc;
+        private System.Windows.Forms.Label lblMovieYear;
+        private System.Windows.Forms.Label lblMovieGenre;
+        private System.Windows.Forms.Label lblMovieDirector;
+        private System.Windows.Forms.Label lblMovieProductor;
+        private System.Windows.Forms.Label lblMovieDesc;
+        private System.Windows.Forms.TextBox txtMovieName;
+        private System.Windows.Forms.Label lblMovieName;
+        private System.Windows.Forms.TextBox txtMovieID;
+        private System.Windows.Forms.Label lblMovieID;
     }
 }

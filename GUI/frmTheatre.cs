@@ -44,6 +44,7 @@ namespace GUI
             lblTime.Text = Times.Time.ToShortDateString() + " | "
                 + Times.Time.ToShortTimeString() + " - "
                 + Times.Time.AddMinutes(Movie.Time).ToShortTimeString();
+            picFilm.Image = MovieDAO.byteArrayToImage(Movie.Poster);
 
             rdoAdult.Checked = true;
             chkCustomer.Enabled = false;
