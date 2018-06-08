@@ -21,7 +21,7 @@ GO
 CREATE TABLE TaiKhoan
 (
 	UserName NVARCHAR(100) NOT NULL,
-	Pass VARCHAR(1000) NOT NULL,
+	Pass VARCHAR(1000) NOT NULL DEFAULT 0,
 	LoaiTK INT NOT NULL DEFAULT 2, -- 1:admin || 2:staff
 	idNV VARCHAR(50) NOT NULL,
 
@@ -359,7 +359,7 @@ INSERT [dbo].[Ve] ([id], [LoaiVe], [idLichChieu], [MaGheNgoi], [idKhachHang], [i
 SET IDENTITY_INSERT [dbo].[Ve] OFF
 GO
 
---TÀI KHOẢN
+--TÀI KHOẢN (Đổi mật khẩu & đăng nhập)
 CREATE PROC USP_UpdateAccount
 @username NVARCHAR(100), @pass VARCHAR(1000), @newPass VARCHAR(1000)
 AS
@@ -381,6 +381,36 @@ BEGIN
 	SELECT * FROM dbo.TaiKhoan WHERE UserName = @userName AND Pass = @pass
 END
 GO
+
+--TÀI KHOẢN (frmAdmin)
+CREATE PROC USP_GetAccountList
+AS
+BEGIN
+	SELECT TK.UserName AS [Username], TK.LoaiTK AS [Loại tài khoản], NV.id AS [Mã nhân viên], NV.HoTen AS [Tên nhân viên]
+	FROM dbo.TaiKhoan TK, dbo.NhanVien NV
+	WHERE NV.id = TK.idNV
+END
+GO
+
+CREATE PROC USP_InsertAccount
+@username NVARCHAR(100), @loaiTK INT, @idnv VARCHAR(50)
+AS
+BEGIN
+	INSERT dbo.TaiKhoan ( UserName, LoaiTK, idNV )
+	VALUES ( @username, @loaiTK, @idnv )
+END
+GO
+
+CREATE PROC USP_SearchAccount
+@hoTen NVARCHAR(100)
+AS
+BEGIN
+	SELECT TK.UserName AS [Username], TK.LoaiTK AS [Loại tài khoản], NV.id AS [Mã nhân viên], NV.HoTen AS [Tên nhân viên]
+	FROM dbo.TaiKhoan TK, dbo.NhanVien NV
+	WHERE NV.id = TK.idNV AND dbo.fuConvertToUnsign1(NV.HoTen) LIKE N'%' + dbo.fuConvertToUnsign1(@hoTen) + N'%'
+END
+GO
+
 
 --DOANH THU
 CREATE PROC USP_GetRevenueByMovieAndDate

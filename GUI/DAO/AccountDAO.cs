@@ -75,5 +75,34 @@ namespace GUI.DAO
         {
             DataProvider.ExecuteQuery("DELETE dbo.TaiKhoan WHERE idNV = '" + idStaff + "'");
         }
+
+		public static DataTable GetAccountList()
+		{
+			return DataProvider.ExecuteQuery("USP_GetAccountList");
+		}
+
+		public static bool InsertAccount(string username, int accountType, string staffID)
+		{
+			int result = DataProvider.ExecuteNonQuery("EXEC USP_InsertAccount @username , @loaiTK , @idnv ", new object[] { username, accountType, staffID });
+			return result > 0;
+		}
+
+		public static bool UpdateAccount(string username, int accountType, string staffID)
+		{
+			string command = string.Format("UPDATE dbo.TaiKhoan SET LoaiTK = {0}, idNV = '{1}' WHERE UserName = N'{2}'", accountType, staffID, username);
+			int result = DataProvider.ExecuteNonQuery(command);
+			return result > 0;
+		}
+
+		public static bool DeleteAccount(string username)
+		{
+			int result = DataProvider.ExecuteNonQuery("DELETE dbo.TaiKhoan WHERE UserName = N'" + username + "'");
+			return result > 0;
+		}
+
+		public static DataTable SearchAccountByStaffName(string name)
+		{
+			return DataProvider.ExecuteQuery("EXEC USP_SearchAccount @hoten ", new object[] { name });
+		}
     }
 }
