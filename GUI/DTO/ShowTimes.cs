@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI.DTO
 {
     public class ShowTimes
     {
-        public ShowTimes(string iD, DateTime time, string cinemaName, 
-            string formatMovieID, string movieName, float ticketPrice)
+        public ShowTimes(string iD, DateTime time, string cinemaName,
+            string formatMovieID, string movieName, float ticketPrice, int status)
         {
             this.ID = iD;
             this.CinemaName = cinemaName;
@@ -18,6 +15,7 @@ namespace GUI.DTO
             this.Time = time;
             this.FormatMovieID = formatMovieID;
             this.TicketPrice = ticketPrice;
+            this.Status = status;
         }
 
         public ShowTimes(DataRow row)
@@ -31,6 +29,7 @@ namespace GUI.DTO
                 this.TicketPrice = 0;
             else
                 this.TicketPrice = float.Parse(row["GiaVe"].ToString());
+            this.Status = (int)row["TrangThai"];
         }
 
         public string ID { get; set; }
@@ -44,5 +43,12 @@ namespace GUI.DTO
         public string MovieName { get; set; }
 
         public float TicketPrice { get; set; }
+
+        public int Status { get; set; }
+
+        //public override string ToString()
+        //{
+        //    return MovieName + " " + CinemaName + " " + Time.ToString("HH:mm:ss dd/MM/yyyy");
+        //}
     }
 }

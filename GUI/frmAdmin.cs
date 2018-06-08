@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;//thư viện thay đổi vùng/quốc gia
+using System.IO;
 
 namespace GUI
 {
@@ -22,7 +24,8 @@ namespace GUI
 		BindingSource movieList = new BindingSource();
 		BindingSource formatList = new BindingSource();
 
-		public frmAdmin()
+
+        public frmAdmin()
         {
             InitializeComponent();
 
@@ -41,7 +44,10 @@ namespace GUI
 			LoadMovie();
 
 			LoadFormatMovie();
-		}
+
+            LoadAllListShowTimes();
+
+        }
 
 		#region Doanh Thu
 		void LoadRevenue()
@@ -76,18 +82,25 @@ namespace GUI
 
 		void LoadRevenue(string idMovie, DateTime fromDate, DateTime toDate)
 		{
-			dtgvRevenue.DataSource = RevenueDAO.GetRevenue(idMovie, fromDate, toDate);
-			txtDoanhThu.Text = GetSumRevenue().ToString() + " VNĐ";
-		}
+            CultureInfo culture = new CultureInfo("vi-VN");
+            dtgvRevenue.DataSource = RevenueDAO.GetRevenue(idMovie, fromDate, toDate);
+			txtDoanhThu.Text = GetSumRevenue().ToString("c", culture);
+        }
 
 		private void btnShowRevenue_Click(object sender, EventArgs e)
 		{
 			LoadRevenue(cboSelectMovie.SelectedValue.ToString(), dtmFromDate.Value, dtmToDate.Value);
 		}
-		#endregion
 
-		#region Nhân Viên
-		void LoadStaff()
+        private void btnReportRevenue_Click(object sender, EventArgs e)
+        {
+            frmReport frm = new frmReport(cboSelectMovie.SelectedValue.ToString(), dtmFromDate.Value, dtmToDate.Value);
+            frm.ShowDialog();
+        }
+        #endregion
+
+        #region Nhân Viên
+        void LoadStaff()
 		{
 			dtgvStaff.DataSource = staffList;
 			LoadStaffList();
@@ -625,8 +638,9 @@ namespace GUI
 			checkedList.DisplayMember = "Name";
 		}
 		private void txtMovieID_TextChanged(object sender, EventArgs e)
-			//Use to binding the CheckedListBox Genre of Movie
+			//Use to binding the CheckedListBox Genre of Movie and picture of Movie
 		{
+            picFilm.Image = null;
 			for (int i = 0; i < clbMovieGenre.Items.Count; i++)
 			{
 				clbMovieGenre.SetItemChecked(i, false);
@@ -646,11 +660,15 @@ namespace GUI
 					}
 				}
 			}
+
+            Movie movie = MovieDAO.GetMovieByID(txtMovieID.Text);
+            if(movie.Poster!=null)
+                picFilm.Image = MovieDAO.byteArrayToImage(movie.Poster);
 		}
 
-		void InsertMovie(string id, string name, string desc, float length, DateTime startDate, DateTime endDate, string productor, string director, int year)
+		void InsertMovie(string id, string name, string desc, float length, DateTime startDate, DateTime endDate, string productor, string director, int year, byte[] image)
 		{
-			if (MovieDAO.InsertMovie(id, name, desc, length, startDate, endDate, productor, director, year))
+            if (MovieDAO.InsertMovie(id, name, desc, length, startDate, endDate, productor, director, year, image))
 			{
 				MessageBox.Show("Thêm phim thành công");
 			}
@@ -669,7 +687,29 @@ namespace GUI
 			}
 			MovieByGenreDAO.InsertMovie_Genre(movieID, checkedGenreList);
 		}
-		private void btnAddMovie_Click(object sender, EventArgs e)
+
+        private void btnUpLoadPictureFilm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filePathImage = null;
+                OpenFileDialog openFile = new OpenFileDialog();
+                openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+                openFile.FilterIndex = 1;
+                openFile.RestoreDirectory = true;
+                if (openFile.ShowDialog() == DialogResult.OK)
+                {
+                    filePathImage = openFile.FileName;
+                    picFilm.Image = Image.FromFile(filePathImage.ToString());
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
+
+        private void btnAddMovie_Click(object sender, EventArgs e)
 		{
 			string movieID = txtMovieID.Text;
 			string movieName = txtMovieName.Text;
@@ -680,14 +720,15 @@ namespace GUI
 			string productor = txtMovieProductor.Text;
 			string director = txtMovieDirector.Text;
 			int year = int.Parse(txtMovieYear.Text);
-			InsertMovie(movieID, movieName, movieDesc, movieLength, startDate, endDate, productor, director, year);
+            if (picFilm.Image == null) return;
+			InsertMovie(movieID, movieName, movieDesc, movieLength, startDate, endDate, productor, director, year, MovieDAO.imageToByteArray(picFilm.Image));
 			InsertMovie_Genre(movieID, clbMovieGenre);
-			LoadMovieList();
-		}
+            LoadMovieList();
+        }
 
-		void UpdateMovie(string id, string name, string desc, float length, DateTime startDate, DateTime endDate, string productor, string director, int year)
+		void UpdateMovie(string id, string name, string desc, float length, DateTime startDate, DateTime endDate, string productor, string director, int year, byte[] image)
 		{
-			if (MovieDAO.UpdateMovie(id, name, desc, length, startDate, endDate, productor, director, year))
+			if (MovieDAO.UpdateMovie(id, name, desc, length, startDate, endDate, productor, director, year, image))
 			{
 				MessageBox.Show("Sửa phim thành công");
 			}
@@ -716,10 +757,11 @@ namespace GUI
 			string productor = txtMovieProductor.Text;
 			string director = txtMovieDirector.Text;
 			int year = int.Parse(txtMovieYear.Text);
-			UpdateMovie(movieID, movieName, movieDesc, movieLength, startDate, endDate, productor, director, year);
+            if (picFilm.Image == null) return;
+            UpdateMovie(movieID, movieName, movieDesc, movieLength, startDate, endDate, productor, director, year, MovieDAO.imageToByteArray(picFilm.Image));
 			UpdateMovie_Genre(movieID, clbMovieGenre);
 			LoadMovieList();
-		}
+        }
 
 		void DeleteMovie(string id)
 		{
@@ -892,7 +934,93 @@ namespace GUI
 			DeleteFormat(formatID);
 			LoadFormatMovieList();
 		}
-		#endregion
+        #endregion
 
-	}
+        #region Vé
+        void LoadAllListShowTimes()
+        {
+            lsvAllListShowTimes.Items.Clear();
+
+            List<ShowTimes> allListShowTime = ShowTimesDAO.GetAllListShowTimes();
+            foreach(ShowTimes showTimes in allListShowTime)
+            {
+                ListViewItem lvi = new ListViewItem(showTimes.CinemaName);
+                lvi.SubItems.Add(showTimes.MovieName);
+                lvi.SubItems.Add(showTimes.Time.ToString("HH:mm:ss dd/MM/yyyy"));
+                lvi.Tag = showTimes;
+
+                if (showTimes.Status == 1)
+                {
+                    lvi.SubItems.Add("Đã tạo");
+                }
+                else
+                {
+                    lvi.SubItems.Add("Chưa Tạo");
+                }
+                lsvAllListShowTimes.Items.Add(lvi);
+            }
+        }
+
+        void LoadTicketsByShowTimes(string showTimesID)
+        {
+            List<Ticket> listTicket = TicketDAO.GetListTicketByShowTimes(showTimesID);
+            dtgvTicket.DataSource = listTicket;
+        }
+
+        void AutoCreateTicketsByShowTimes(ShowTimes showTimes)
+        {
+            int result = 0;
+            Cinema cinema = CinemaDAO.GetCinemaByName(showTimes.CinemaName);
+            int Row = cinema.Row;
+            int Column = cinema.SeatInRow;
+            for (int i = 0; i < Row; i++)
+            {
+                int temp = i + 65;
+                char nameRow = (char)(temp);
+                for (int j = 1; j <= Column; j++)
+                {
+                    string seatName = nameRow.ToString() + j;
+                    result += TicketDAO.InsertTicketByShowTimes(showTimes.ID, seatName);
+                }
+            }
+            if (result == Row * Column)
+            {
+                int ret = ShowTimesDAO.UpdateStatusShowTimes(showTimes.ID, 1);
+                if (ret > 0)
+                    MessageBox.Show("TẠO VÉ TỰ ĐỘNG THÀNH CÔNG!", "THÔNG BÁO");
+            }
+            else
+                MessageBox.Show("TẠO VÉ TỰ ĐỘNG THẤT BẠI!", "THÔNG BÁO");
+        }
+
+        private void btnAddTicketByShowTime_Click(object sender, EventArgs e)
+        {
+            if (lsvAllListShowTimes.SelectedItems.Count > 0)
+            {
+                ShowTimes showTimes = lsvAllListShowTimes.SelectedItems[0].Tag as ShowTimes;
+                if (showTimes.Status == 1)
+                {
+                    MessageBox.Show("LỊCH CHIẾU NÀY ĐÃ ĐƯỢC TẠO VÉ!!!", "THÔNG BÁO");
+                    return;
+                }
+                AutoCreateTicketsByShowTimes(showTimes);
+                LoadAllListShowTimes();
+                LoadTicketsByShowTimes(showTimes.ID);
+            }
+            else
+            {
+                MessageBox.Show("BẠN CHƯA CHỌN LỊCH CHIẾU ĐỂ TẠO!!!", "THÔNG BÁO");
+            }
+        }
+
+        private void lsvAllListShowTimes_Click(object sender, EventArgs e)
+        {
+            if (lsvAllListShowTimes.SelectedItems.Count > 0)
+            {
+                ShowTimes showTimes = lsvAllListShowTimes.SelectedItems[0].Tag as ShowTimes;
+                LoadTicketsByShowTimes(showTimes.ID);
+            }
+        }
+        #endregion
+    }
 }

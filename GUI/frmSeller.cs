@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using GUI.DAO;
+﻿using GUI.DAO;
 using GUI.DTO;
+using System;
+using System.Data;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -17,25 +12,28 @@ namespace GUI
         public frmSeller()
         {
             InitializeComponent();
+            dtpThoiGian.Value = DateTime.Now;
+            LoadMovie(dtpThoiGian.Value);
         }
 
         private void frmSeller_Load(object sender, EventArgs e)
         {
-            dtpThoiGian.Value = DateTime.Now;
-            LoadMovie();
+            LoadMovie(dtpThoiGian.Value);
             timer1.Start();
         }
 
-        private void LoadMovie()
+        private void LoadMovie(DateTime date)
         {
-            cboFilmName.DataSource = MovieDAO.GetListMovieByDate(DateTime.Now);
+            cboFilmName.DataSource = MovieDAO.GetListMovieByDate(date);
             cboFilmName.DisplayMember = "Name";
         }
 
         private void cboFilmName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cboFilmName.SelectedIndex != -1)
+            if (cboFilmName.SelectedIndex != -1)
             {
+                cboFormatFilm.DataSource = null;
+                lvLichChieu.Items.Clear();
                 Movie movie = cboFilmName.SelectedItem as Movie;
                 cboFormatFilm.DataSource = FormatMovieDAO.GetListFormatMovieByMovie(movie.ID);
                 cboFormatFilm.DisplayMember = "ScreenTypeName";
@@ -44,7 +42,7 @@ namespace GUI
 
         private void cboFormatFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cboFormatFilm.SelectedIndex != -1)
+            if (cboFormatFilm.SelectedIndex != -1)
             {
                 lvLichChieu.Items.Clear();
                 FormatMovie format = cboFormatFilm.SelectedItem as FormatMovie;
@@ -54,8 +52,9 @@ namespace GUI
 
         private void LoadListShowTimeByFilm(string formatMovieID)
         {
-            DataTable data = ShowTimesDAO.GetListShowTimeByFormatMovie(formatMovieID);
-            foreach(DataRow row in data.Rows)
+            DataTable data = ShowTimesDAO.GetListShowTimeByFormatMovie(formatMovieID, dtpThoiGian.Value);
+            //if (data == null) return;
+            foreach (DataRow row in data.Rows)
             {
                 ShowTimes showTimes = new ShowTimes(row);
                 ListViewItem lvi = new ListViewItem("");
@@ -75,7 +74,7 @@ namespace GUI
                 //thêm ảnh status
                 if (status == 1)
                     lvi.ImageIndex = 2;
-                else if(status > 0.5f)
+                else if (status > 0.5f)
                     lvi.ImageIndex = 1;
                 else lvi.ImageIndex = 0;
 
@@ -83,24 +82,30 @@ namespace GUI
             }
         }
 
-        private void lvLichChieu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lvLichChieu.SelectedItems.Count > 0)
-            {
-                ShowTimes showTimes = lvLichChieu.SelectedItems[0].Tag as ShowTimes;
-                Movie movie = cboFilmName.SelectedItem as Movie;
-                frmTheatre frm = new frmTheatre(showTimes,movie);
-                if (frm.ShowDialog() == DialogResult.OK)
-                {
-
-                }
-            }
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             //Load lại form để cập nhật cơ sở dữ liệu
             this.OnLoad(null);
+        }
+
+        private void lvLichChieu_Click(object sender, EventArgs e)
+        {
+            if (lvLichChieu.SelectedItems.Count > 0)
+            {
+                timer1.Stop();
+                ShowTimes showTimes = lvLichChieu.SelectedItems[0].Tag as ShowTimes;
+                Movie movie = cboFilmName.SelectedItem as Movie;
+                frmTheatre frm = new frmTheatre(showTimes, movie);
+                this.Hide();
+                frm.ShowDialog();
+                this.OnLoad(null);
+                this.Show();
+            }
+        }
+
+        private void dtpThoiGian_ValueChanged(object sender, EventArgs e)
+        {
+            LoadMovie(dtpThoiGian.Value);
         }
     }
 }

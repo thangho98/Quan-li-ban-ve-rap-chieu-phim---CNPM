@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI.DTO
 {
@@ -31,7 +28,7 @@ namespace GUI.DTO
         public string Password { get; set; }
 
         public string StaffID { get; set; }
-        
+
         public string UserName { get; set; }
 
     }

@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI.DAO
 {
@@ -13,12 +10,36 @@ namespace GUI.DAO
 
         private DataProvider() { }
 
-        //private static string connectionSTR = "Data Source=Administrator;Initial Catalog=QLRP;Integrated Security=True";
-		private static string connectionSTR = "Data Source=DESKTOP-G3TR9OQ;Initial Catalog=QLRP;Integrated Security=True";
-		public static DataTable ExecuteQuery(string query, object[] parameter = null)
+        //private static string connectionSTR = "Data Source=THAITHANG-PC;Initial Catalog=QLRP;Integrated Security=True";
+        //private static string connectionSTR = "Data Source=DESKTOP-G3TR9OQ;Initial Catalog=QLRP;Integrated Security=True";
+        private static string connectionSTR = Properties.Settings.Default.connectionSTR;//= "Data Source=THAITHANG-PC;Initial Catalog=QuanLyRapPhim;User ID=sa;pwd=thaithang1";
+
+        public static bool TestConnectionSQL(string conn)
+        {
+            bool result = false;
+            connectionSTR = conn;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionSTR))
+                {
+                    connection.Open();
+                    result = true;
+                    connection.Close();
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            return result;
+        }
+
+
+        public static DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
-
+            //try
+            //{
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
@@ -45,7 +66,11 @@ namespace GUI.DAO
 
                 connection.Close();
             }
-
+            //}
+            //catch
+            //{
+            //    return null;
+            //}
             return data;
         }
 
@@ -114,4 +139,3 @@ namespace GUI.DAO
         }
     }
 }
-	

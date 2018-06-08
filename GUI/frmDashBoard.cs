@@ -1,26 +1,20 @@
 ﻿using GUI.DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
 {
     public partial class frmDashBoard : Form
     {
-		public frmDashBoard(Account acc)
-		{
-			InitializeComponent();
+        public frmDashBoard(Account acc)
+        {
+            InitializeComponent();
 
-			this.LoginAccount = acc;
-		}
+            this.LoginAccount = acc;
+        }
 
-		private Account loginAccount;
+        private Account loginAccount;
 
         public Account LoginAccount
         {
@@ -46,15 +40,15 @@ namespace GUI
         {
             this.Hide();
             frmSeller frm = new frmSeller();
-			frm.ShowDialog();
+            frm.ShowDialog();
             this.Show();
         }
 
-		private void btnAccountSettings_Click(object sender, EventArgs e)
-		{
-			frmAccountSettings frm = new frmAccountSettings(loginAccount);
-			frm.ShowDialog();
-			this.Show();
-		}
-	}
+        private void btnAccountSettings_Click(object sender, EventArgs e)
+        {
+            frmAccountSettings frm = new frmAccountSettings(loginAccount);
+            frm.ShowDialog();
+            this.Show();
+        }
+    }
 }

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI.DTO
 {
@@ -33,7 +30,7 @@ namespace GUI.DTO
             this.SeatName = row["MaGheNgoi"].ToString();
             this.CustomerID = row["idKhachHang"].ToString();
             this.PromotionID = row["idCheDoKM"].ToString();
-            this.Status =(int)row["TrangThai"];
+            this.Status = (int)row["TrangThai"];
             if (row["TienBanVe"].ToString() == "")
                 this.Price = 0;
             else

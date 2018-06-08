@@ -62,6 +62,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
+            this.picFilm = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -70,6 +71,7 @@
             this.grpLoaiVe.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFilm)).BeginInit();
             this.SuspendLayout();
             // 
             // flpSeat
@@ -110,7 +112,7 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(935, 174);
+            this.panel2.Location = new System.Drawing.Point(925, 462);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(184, 92);
             this.panel2.TabIndex = 4;
@@ -450,12 +452,23 @@
             this.lblDiscount.TabIndex = 10;
             this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // picFilm
+            // 
+            this.picFilm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picFilm.Location = new System.Drawing.Point(925, 154);
+            this.picFilm.Name = "picFilm";
+            this.picFilm.Size = new System.Drawing.Size(184, 252);
+            this.picFilm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFilm.TabIndex = 7;
+            this.picFilm.TabStop = false;
+            // 
             // frmTheatre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(1131, 765);
+            this.Controls.Add(this.picFilm);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -481,6 +494,7 @@
             this.groupBox2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFilm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -521,5 +535,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblTicketPrice;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox picFilm;
     }
 }

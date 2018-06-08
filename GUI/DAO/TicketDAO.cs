@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI.DAO
 {
@@ -34,9 +32,15 @@ namespace GUI.DAO
         }
         public static int BuyTicket(string ticketID, int type, float price)
         {
-            string query = "Update dbo.Ve set TrangThai = 1, LoaiVe = " 
+            string query = "Update dbo.Ve set TrangThai = 1, LoaiVe = "
                 + type + ", TienBanVe =" + price + " where id = '" + ticketID + "'";
             return DataProvider.ExecuteNonQuery(query);
+        }
+
+        public static int InsertTicketByShowTimes(string showTimesID, string seatName)
+        {
+            string query = "USP_InsertTicketByShowTimes @idlichChieu , @maGheNgoi";
+            return DataProvider.ExecuteNonQuery(query, new object[] { showTimesID, seatName });
         }
     }
 }
