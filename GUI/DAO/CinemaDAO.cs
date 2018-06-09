@@ -1,5 +1,6 @@
 ﻿using GUI.DTO;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
@@ -13,6 +14,27 @@ namespace GUI.DAO
             DataTable data = DataProvider.ExecuteQuery(query);
             return new Cinema(data.Rows[0]);
         }
+
+		public static Cinema GetCinemaByID(string id)
+		{
+			string query = "select * from dbo.PhongChieu where id = '" + id + "'";
+			DataTable data = DataProvider.ExecuteQuery(query);
+			if (data.Rows.Count>0)
+				return new Cinema(data.Rows[0]);
+			return null;
+		}
+
+		public static List<Cinema> GetCinema()
+		{
+			List<Cinema> cinemaList = new List<Cinema>();
+			DataTable data = DataProvider.ExecuteQuery("SELECT * FROM dbo.PhongChieu");
+			foreach (DataRow item in data.Rows)
+			{
+				Cinema cinema = new Cinema(item);
+				cinemaList.Add(cinema);
+			}
+			return cinemaList;
+		}
 
         public static DataTable GetListCinema()
         {

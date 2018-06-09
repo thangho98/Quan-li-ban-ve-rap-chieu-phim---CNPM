@@ -33,7 +33,30 @@ namespace GUI.DAO
             return DataProvider.ExecuteQuery(query);
         }
 
-        public static DataTable GetFormatMovie()
+		public static FormatMovie GetFormatMovieByName(string movieName, string screenTypeName)
+		{
+			string command =	"SELECT DD.id, P.TenPhim, MH.TenMH " +
+								"FROM dbo.DinhDangPhim DD, dbo.Phim P, dbo.LoaiManHinh MH " +
+								"WHERE DD.idPhim = P.id AND DD.idLoaiManHinh = MH.id AND P.TenPhim = N'" + movieName + "' AND MH.TENMH = N'" + screenTypeName + "'";
+			DataTable data = DataProvider.ExecuteQuery(command);
+			return new FormatMovie(data.Rows[0]);
+		}
+
+		public static List<FormatMovie> GetFormatMovie()
+		{
+			List<FormatMovie> formatMovieList = new List<FormatMovie>();
+			DataTable data = DataProvider.ExecuteQuery("SELECT DD.id, P.TenPhim, MH.TenMH " +
+														"FROM dbo.DinhDangPhim DD, dbo.Phim P, dbo.LoaiManHinh MH " +
+														"WHERE DD.idPhim = P.id AND DD.idLoaiManHinh = MH.id");
+			foreach (DataRow item in data.Rows)
+			{
+				FormatMovie formatMovie = new FormatMovie(item);
+				formatMovieList.Add(formatMovie);
+			}
+			return formatMovieList;
+		}
+
+        public static DataTable GetListFormatMovie()
         {
             return DataProvider.ExecuteQuery("EXEC USP_GetListFormatMovie");
         }

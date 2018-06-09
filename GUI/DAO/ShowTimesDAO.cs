@@ -29,5 +29,36 @@ namespace GUI.DAO
             string query = "USP_UpdateStatusShowTimes @idLichChieu , @status";
             return DataProvider.ExecuteNonQuery(query, new object[] { showTimesID, status });
         }
-    }
+
+		public static DataTable GetListShowtime()
+		{
+			return DataProvider.ExecuteQuery("EXEC USP_GetShowtime");
+		}
+
+		public static bool InsertShowtime(string id, string cinemaID, string formatMovieID, DateTime time, float ticketPrice)
+		{
+			int result = DataProvider.ExecuteNonQuery("EXEC USP_InsertShowtime @id , @idPhong , @idDinhDang , @thoiGianChieu , @giaVe ", new object[] { id, cinemaID, formatMovieID, time, ticketPrice });
+			return result > 0;
+		}
+
+		public static bool UpdateShowtime(string id, string cinemaID, string formatMovieID, DateTime time, float ticketPrice)
+		{
+			string command = string.Format("UPDATE dbo.LichChieu SET idPhong = '{0}', idDinhDang = '{1}', ThoiGianChieu = '{2}', GiaVe = {3} WHERE id = '{4}'", cinemaID, formatMovieID, time, ticketPrice, id);
+			int result = DataProvider.ExecuteNonQuery(command);
+			return result > 0;
+		}
+
+		public static bool DeleteShowtime(string id)
+		{
+			//TODO : Xóa vé trước
+			int result = DataProvider.ExecuteNonQuery("DELETE dbo.LichChieu WHERE id = '" + id + "'");
+			return result > 0;
+		}
+
+		public static DataTable SearchShowtimeByMovieName(string movieName)
+		{
+			DataTable data = DataProvider.ExecuteQuery("EXEC USP_SearchShowtimeByMovieName @tenPhim ", new object[] { movieName });
+			return data;
+		}
+	}
 }
