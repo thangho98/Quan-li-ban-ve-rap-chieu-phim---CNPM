@@ -104,5 +104,11 @@ namespace GUI.DAO
 		{
 			return DataProvider.ExecuteQuery("EXEC USP_SearchAccount @hoten ", new object[] { name });
 		}
+
+		public static bool ResetPassword(string username)
+		{
+			int result = DataProvider.ExecuteNonQuery("UPDATE dbo.TaiKhoan SET Pass = '5512317111114510840231031535810616566202691' WHERE UserName = '" + username + "'");
+			return result > 0;
+		}
     }
 }

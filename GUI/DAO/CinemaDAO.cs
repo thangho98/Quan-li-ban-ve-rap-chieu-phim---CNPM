@@ -56,6 +56,8 @@ namespace GUI.DAO
 
         public static bool DeleteCinema(string id)
         {
+			DataProvider.ExecuteNonQuery("DELETE dbo.LichChieu WHERE idPhong = '" + id + "'");
+
             int result = DataProvider.ExecuteNonQuery("DELETE dbo.PhongChieu WHERE id = '" + id + "'");
             return result > 0;
         }

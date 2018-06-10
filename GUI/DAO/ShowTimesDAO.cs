@@ -50,7 +50,8 @@ namespace GUI.DAO
 
 		public static bool DeleteShowtime(string id)
 		{
-			//TODO : Xóa vé trước
+			DataProvider.ExecuteNonQuery("DELETE dbo.Ve WHERE idLichChieu = '" + id + "'");
+
 			int result = DataProvider.ExecuteNonQuery("DELETE dbo.LichChieu WHERE id = '" + id + "'");
 			return result > 0;
 		}

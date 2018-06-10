@@ -76,8 +76,9 @@ namespace GUI.DAO
 
         public static bool DeleteFormatMovie(string id)
         {
-            //TODO : Xóa Ve tương ứng
-            int result = DataProvider.ExecuteNonQuery("DELETE dbo.DinhDangPhim WHERE id = '" + id + "'");
+			DataProvider.ExecuteNonQuery("DELETE dbo.LichChieu WHERE idDinhDang = '" + id + "'");
+
+			int result = DataProvider.ExecuteNonQuery("DELETE dbo.DinhDangPhim WHERE id = '" + id + "'");
             return result > 0;
         }
     }

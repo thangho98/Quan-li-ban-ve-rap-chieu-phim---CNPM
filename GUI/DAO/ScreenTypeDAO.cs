@@ -45,7 +45,10 @@ namespace GUI.DAO
 
         public static bool DeleteScreenType(string id)
         {
-            int result = DataProvider.ExecuteNonQuery("DELETE dbo.LoaiManHinh WHERE id = '" + id + "'");
+			DataProvider.ExecuteNonQuery("DELETE dbo.PhongChieu WHERE idManHinh = '" + id + "'");
+			DataProvider.ExecuteNonQuery("DELETE dbo.DinhDangPhim WHERE idLoaiManHinh = '" + id + "'");
+
+			int result = DataProvider.ExecuteNonQuery("DELETE dbo.LoaiManHinh WHERE id = '" + id + "'");
             return result > 0;
         }
 

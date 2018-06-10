@@ -40,7 +40,9 @@ namespace GUI.DAO
 
         public static bool DeleteGenre(string id)
         {
-            int result = DataProvider.ExecuteNonQuery("DELETE dbo.TheLoai WHERE id = '" + id + "'");
+			DataProvider.ExecuteNonQuery("DELETE dbo.PhanLoaiPhim WHERE idTheLoai = '" + id + "'");
+
+			int result = DataProvider.ExecuteNonQuery("DELETE dbo.TheLoai WHERE id = '" + id + "'");
             return result > 0;
         }
     }

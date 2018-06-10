@@ -444,6 +444,24 @@ namespace GUI
 			LoadAccountList();
 		}
 
+		void ResetPassword(string username)
+		{
+			if (AccountDAO.ResetPassword(username))
+			{
+				MessageBox.Show("Reset mật khẩu thành công");
+			}
+			else
+			{
+				MessageBox.Show("Reset mật khẩu thất bại");
+			}
+		}
+		private void btnResetPass_Click(object sender, EventArgs e)
+		{
+			string username = txtUsername.Text;
+			ResetPassword(username);
+			LoadAccountList();
+		}
+
 		private void btnSearchAccount_Click(object sender, EventArgs e)
 		{
 			string staffName = txtSearchAccount.Text;

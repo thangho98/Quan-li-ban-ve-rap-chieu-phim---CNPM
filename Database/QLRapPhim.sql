@@ -21,7 +21,7 @@ GO
 CREATE TABLE TaiKhoan
 (
 	UserName NVARCHAR(100) NOT NULL,
-	Pass VARCHAR(1000) NOT NULL DEFAULT 0,
+	Pass VARCHAR(1000) NOT NULL,
 	LoaiTK INT NOT NULL DEFAULT 2, -- 1:admin || 2:staff
 	idNV VARCHAR(50) NOT NULL,
 
@@ -396,8 +396,8 @@ CREATE PROC USP_InsertAccount
 @username NVARCHAR(100), @loaiTK INT, @idnv VARCHAR(50)
 AS
 BEGIN
-	INSERT dbo.TaiKhoan ( UserName, LoaiTK, idNV )
-	VALUES ( @username, @loaiTK, @idnv )
+	INSERT dbo.TaiKhoan ( UserName, Pass, LoaiTK, idNV )
+	VALUES ( @username, '5512317111114510840231031535810616566202691', @loaiTK, @idnv )
 END
 GO
 
@@ -541,9 +541,6 @@ BEGIN
 END
 GO
 
-SELECT DD.id, P.TenPhim, MH.TenMH
-FROM dbo.DinhDangPhim DD, dbo.Phim P, dbo.LoaiManHinh MH
-WHERE DD.idPhim = P.id AND DD.idLoaiManHinh = MH.id
 
 --LỊCH CHIẾU
 CREATE PROC USP_GetListShowTimesByFormatMovie

@@ -68,7 +68,10 @@ namespace GUI.DAO
 
         public static bool DeleteMovie(string id)
         {
-            MovieByGenreDAO.DeleteMovie_GenreByMovieID(id);
+			DataProvider.ExecuteNonQuery("DELETE dbo.PhanLoaiPhim WHERE idPhim = '" + id + "'");
+			DataProvider.ExecuteNonQuery("DELETE dbo.DinhDangPhim WHERE idPhim = '" + id + "'");
+
+			MovieByGenreDAO.DeleteMovie_GenreByMovieID(id);
             int result = DataProvider.ExecuteNonQuery("DELETE dbo.Phim WHERE id = '" + id + "'");
             return result > 0;
         }

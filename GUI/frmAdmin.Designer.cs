@@ -296,6 +296,7 @@
 			this.dtmFromDate = new System.Windows.Forms.DateTimePicker();
 			this.tcAdmin = new System.Windows.Forms.TabControl();
 			this.toolTipAccountType = new System.Windows.Forms.ToolTip(this.components);
+			this.btnResetPass = new System.Windows.Forms.Button();
 			this.tpAccount.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.grpAccount.SuspendLayout();
@@ -389,6 +390,7 @@
 			// tpAccount
 			// 
 			this.tpAccount.Controls.Add(this.groupBox1);
+			this.tpAccount.Controls.Add(this.btnResetPass);
 			this.tpAccount.Controls.Add(this.btnDeleteAccount);
 			this.tpAccount.Controls.Add(this.btnUpdateAccount);
 			this.tpAccount.Controls.Add(this.btnInsertAccount);
@@ -436,7 +438,7 @@
 			// 
 			// btnDeleteAccount
 			// 
-			this.btnDeleteAccount.Location = new System.Drawing.Point(618, 156);
+			this.btnDeleteAccount.Location = new System.Drawing.Point(628, 156);
 			this.btnDeleteAccount.Name = "btnDeleteAccount";
 			this.btnDeleteAccount.Size = new System.Drawing.Size(90, 32);
 			this.btnDeleteAccount.TabIndex = 15;
@@ -446,7 +448,7 @@
 			// 
 			// btnUpdateAccount
 			// 
-			this.btnUpdateAccount.Location = new System.Drawing.Point(496, 156);
+			this.btnUpdateAccount.Location = new System.Drawing.Point(506, 156);
 			this.btnUpdateAccount.Name = "btnUpdateAccount";
 			this.btnUpdateAccount.Size = new System.Drawing.Size(90, 32);
 			this.btnUpdateAccount.TabIndex = 16;
@@ -456,7 +458,7 @@
 			// 
 			// btnInsertAccount
 			// 
-			this.btnInsertAccount.Location = new System.Drawing.Point(371, 156);
+			this.btnInsertAccount.Location = new System.Drawing.Point(381, 156);
 			this.btnInsertAccount.Name = "btnInsertAccount";
 			this.btnInsertAccount.Size = new System.Drawing.Size(90, 32);
 			this.btnInsertAccount.TabIndex = 17;
@@ -3195,6 +3197,16 @@
 			this.tcAdmin.Size = new System.Drawing.Size(1396, 618);
 			this.tcAdmin.TabIndex = 0;
 			// 
+			// btnResetPass
+			// 
+			this.btnResetPass.Location = new System.Drawing.Point(601, 81);
+			this.btnResetPass.Name = "btnResetPass";
+			this.btnResetPass.Size = new System.Drawing.Size(117, 55);
+			this.btnResetPass.TabIndex = 15;
+			this.btnResetPass.Text = "Reset mật khẩu";
+			this.btnResetPass.UseVisualStyleBackColor = true;
+			this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
+			// 
 			// frmAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -3595,5 +3607,6 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox txtScreenTypeName_Showtime;
 		private System.Windows.Forms.TextBox txtMovieName_Showtime;
+		private System.Windows.Forms.Button btnResetPass;
 	}
 }
