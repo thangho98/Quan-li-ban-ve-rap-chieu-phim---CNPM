@@ -41,18 +41,23 @@
             this.lblInformation = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pnCustomer = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericFreeTickets = new System.Windows.Forms.NumericUpDown();
+            this.btnFreeTicket = new System.Windows.Forms.Button();
+            this.lblPlusPoint = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblCustomerName = new System.Windows.Forms.Label();
+            this.lblPoint = new System.Windows.Forms.Label();
+            this.lblDiemTichLuy = new System.Windows.Forms.Label();
+            this.chkCustomer = new System.Windows.Forms.CheckBox();
             this.grpLoaiVe = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.rdoStudent = new System.Windows.Forms.RadioButton();
             this.lblTicketPrice = new System.Windows.Forms.Label();
             this.rdoAdult = new System.Windows.Forms.RadioButton();
             this.rdoChild = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblPoint = new System.Windows.Forms.Label();
-            this.lblDiemTichLuy = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.chkCustomer = new System.Windows.Forms.CheckBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -63,13 +68,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
             this.picFilm = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.grpLoaiVe.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.pnCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFreeTickets)).BeginInit();
+            this.grpLoaiVe.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFilm)).BeginInit();
             this.SuspendLayout();
@@ -112,9 +120,9 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(925, 462);
+            this.panel2.Location = new System.Drawing.Point(898, 440);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(184, 92);
+            this.panel2.Size = new System.Drawing.Size(211, 92);
             this.panel2.TabIndex = 4;
             // 
             // button1
@@ -188,23 +196,150 @@
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.groupBox2);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 577);
+            this.panel5.Location = new System.Drawing.Point(0, 584);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1131, 188);
+            this.panel5.Size = new System.Drawing.Size(1131, 202);
             this.panel5.TabIndex = 6;
             // 
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.groupBox2);
             this.panel7.Controls.Add(this.grpLoaiVe);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(305, 186);
+            this.panel7.Size = new System.Drawing.Size(709, 200);
             this.panel7.TabIndex = 17;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.pnCustomer);
+            this.groupBox2.Controls.Add(this.chkCustomer);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(303, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(404, 198);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thành Viên:";
+            // 
+            // pnCustomer
+            // 
+            this.pnCustomer.Controls.Add(this.label7);
+            this.pnCustomer.Controls.Add(this.label6);
+            this.pnCustomer.Controls.Add(this.numericFreeTickets);
+            this.pnCustomer.Controls.Add(this.btnFreeTicket);
+            this.pnCustomer.Controls.Add(this.lblPlusPoint);
+            this.pnCustomer.Controls.Add(this.label4);
+            this.pnCustomer.Controls.Add(this.lblCustomerName);
+            this.pnCustomer.Controls.Add(this.lblPoint);
+            this.pnCustomer.Controls.Add(this.lblDiemTichLuy);
+            this.pnCustomer.Location = new System.Drawing.Point(6, 54);
+            this.pnCustomer.Name = "pnCustomer";
+            this.pnCustomer.Size = new System.Drawing.Size(387, 141);
+            this.pnCustomer.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 104);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(151, 25);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Đổi vé miễn phí:";
+            // 
+            // numericFreeTickets
+            // 
+            this.numericFreeTickets.Location = new System.Drawing.Point(177, 107);
+            this.numericFreeTickets.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericFreeTickets.Name = "numericFreeTickets";
+            this.numericFreeTickets.Size = new System.Drawing.Size(73, 30);
+            this.numericFreeTickets.TabIndex = 23;
+            this.numericFreeTickets.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericFreeTickets.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btnFreeTicket
+            // 
+            this.btnFreeTicket.Location = new System.Drawing.Point(257, 100);
+            this.btnFreeTicket.Name = "btnFreeTicket";
+            this.btnFreeTicket.Size = new System.Drawing.Size(114, 37);
+            this.btnFreeTicket.TabIndex = 22;
+            this.btnFreeTicket.Text = "Đổi Vé";
+            this.btnFreeTicket.UseVisualStyleBackColor = true;
+            this.btnFreeTicket.Click += new System.EventHandler(this.btnFreeTicket_Click);
+            // 
+            // lblPlusPoint
+            // 
+            this.lblPlusPoint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPlusPoint.BackColor = System.Drawing.Color.White;
+            this.lblPlusPoint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPlusPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlusPoint.ForeColor = System.Drawing.Color.Red;
+            this.lblPlusPoint.Location = new System.Drawing.Point(177, 68);
+            this.lblPlusPoint.Name = "lblPlusPoint";
+            this.lblPlusPoint.Size = new System.Drawing.Size(193, 30);
+            this.lblPlusPoint.TabIndex = 21;
+            this.lblPlusPoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(172, 25);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Điểm Cộng Thêm:";
+            // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.Location = new System.Drawing.Point(172, 2);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(193, 25);
+            this.lblCustomerName.TabIndex = 19;
+            // 
+            // lblPoint
+            // 
+            this.lblPoint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPoint.BackColor = System.Drawing.Color.White;
+            this.lblPoint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPoint.ForeColor = System.Drawing.Color.Red;
+            this.lblPoint.Location = new System.Drawing.Point(177, 33);
+            this.lblPoint.Name = "lblPoint";
+            this.lblPoint.Size = new System.Drawing.Size(193, 30);
+            this.lblPoint.TabIndex = 17;
+            this.lblPoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblDiemTichLuy
+            // 
+            this.lblDiemTichLuy.AutoSize = true;
+            this.lblDiemTichLuy.Location = new System.Drawing.Point(4, 33);
+            this.lblDiemTichLuy.Name = "lblDiemTichLuy";
+            this.lblDiemTichLuy.Size = new System.Drawing.Size(143, 25);
+            this.lblDiemTichLuy.TabIndex = 16;
+            this.lblDiemTichLuy.Text = "Điểm Tích Lũy:";
+            // 
+            // chkCustomer
+            // 
+            this.chkCustomer.AutoSize = true;
+            this.chkCustomer.Location = new System.Drawing.Point(6, 29);
+            this.chkCustomer.Name = "chkCustomer";
+            this.chkCustomer.Size = new System.Drawing.Size(250, 29);
+            this.chkCustomer.TabIndex = 0;
+            this.chkCustomer.Text = "Khách Hàng Thành Viên";
+            this.chkCustomer.UseVisualStyleBackColor = true;
+            this.chkCustomer.Click += new System.EventHandler(this.chkCustomer_Click);
             // 
             // grpLoaiVe
             // 
@@ -213,10 +348,10 @@
             this.grpLoaiVe.Controls.Add(this.lblTicketPrice);
             this.grpLoaiVe.Controls.Add(this.rdoAdult);
             this.grpLoaiVe.Controls.Add(this.rdoChild);
-            this.grpLoaiVe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpLoaiVe.Dock = System.Windows.Forms.DockStyle.Left;
             this.grpLoaiVe.Location = new System.Drawing.Point(0, 0);
             this.grpLoaiVe.Name = "grpLoaiVe";
-            this.grpLoaiVe.Size = new System.Drawing.Size(303, 184);
+            this.grpLoaiVe.Size = new System.Drawing.Size(303, 198);
             this.grpLoaiVe.TabIndex = 17;
             this.grpLoaiVe.TabStop = false;
             this.grpLoaiVe.Text = "Loại Vé:";
@@ -224,7 +359,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 113);
+            this.label12.Location = new System.Drawing.Point(6, 136);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 25);
             this.label12.TabIndex = 10;
@@ -233,7 +368,7 @@
             // rdoStudent
             // 
             this.rdoStudent.AutoSize = true;
-            this.rdoStudent.Location = new System.Drawing.Point(169, 29);
+            this.rdoStudent.Location = new System.Drawing.Point(156, 43);
             this.rdoStudent.Name = "rdoStudent";
             this.rdoStudent.Size = new System.Drawing.Size(118, 29);
             this.rdoStudent.TabIndex = 5;
@@ -249,7 +384,7 @@
             this.lblTicketPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTicketPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTicketPrice.ForeColor = System.Drawing.Color.Red;
-            this.lblTicketPrice.Location = new System.Drawing.Point(84, 110);
+            this.lblTicketPrice.Location = new System.Drawing.Point(90, 133);
             this.lblTicketPrice.Name = "lblTicketPrice";
             this.lblTicketPrice.Size = new System.Drawing.Size(203, 30);
             this.lblTicketPrice.TabIndex = 9;
@@ -258,7 +393,7 @@
             // rdoAdult
             // 
             this.rdoAdult.AutoSize = true;
-            this.rdoAdult.Location = new System.Drawing.Point(28, 29);
+            this.rdoAdult.Location = new System.Drawing.Point(28, 43);
             this.rdoAdult.Name = "rdoAdult";
             this.rdoAdult.Size = new System.Drawing.Size(122, 29);
             this.rdoAdult.TabIndex = 4;
@@ -270,7 +405,7 @@
             // rdoChild
             // 
             this.rdoChild.AutoSize = true;
-            this.rdoChild.Location = new System.Drawing.Point(28, 64);
+            this.rdoChild.Location = new System.Drawing.Point(28, 87);
             this.rdoChild.Name = "rdoChild";
             this.rdoChild.Size = new System.Drawing.Size(219, 29);
             this.rdoChild.TabIndex = 3;
@@ -278,72 +413,6 @@
             this.rdoChild.Text = "Trẻ Em (Dưới 12 tuổi)";
             this.rdoChild.UseVisualStyleBackColor = true;
             this.rdoChild.Click += new System.EventHandler(this.rdoChild_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.lblPoint);
-            this.groupBox2.Controls.Add(this.lblDiemTichLuy);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.chkCustomer);
-            this.groupBox2.Location = new System.Drawing.Point(305, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(404, 210);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Khuyến Mãi";
-            // 
-            // lblPoint
-            // 
-            this.lblPoint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPoint.BackColor = System.Drawing.Color.White;
-            this.lblPoint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPoint.ForeColor = System.Drawing.Color.Red;
-            this.lblPoint.Location = new System.Drawing.Point(149, 123);
-            this.lblPoint.Name = "lblPoint";
-            this.lblPoint.Size = new System.Drawing.Size(249, 30);
-            this.lblPoint.TabIndex = 13;
-            this.lblPoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblPoint.Visible = false;
-            // 
-            // lblDiemTichLuy
-            // 
-            this.lblDiemTichLuy.AutoSize = true;
-            this.lblDiemTichLuy.Location = new System.Drawing.Point(6, 126);
-            this.lblDiemTichLuy.Name = "lblDiemTichLuy";
-            this.lblDiemTichLuy.Size = new System.Drawing.Size(137, 25);
-            this.lblDiemTichLuy.TabIndex = 3;
-            this.lblDiemTichLuy.Text = "Điểm Tích Lũy";
-            this.lblDiemTichLuy.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 39);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 25);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Loại KM:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(297, 33);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // chkCustomer
-            // 
-            this.chkCustomer.AutoSize = true;
-            this.chkCustomer.Location = new System.Drawing.Point(11, 82);
-            this.chkCustomer.Name = "chkCustomer";
-            this.chkCustomer.Size = new System.Drawing.Size(250, 29);
-            this.chkCustomer.TabIndex = 0;
-            this.chkCustomer.Text = "Khách Hàng Thành Viên";
-            this.chkCustomer.UseVisualStyleBackColor = true;
-            this.chkCustomer.Click += new System.EventHandler(this.chkCustomer_Click);
             // 
             // panel6
             // 
@@ -359,13 +428,13 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(709, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(420, 186);
+            this.panel6.Size = new System.Drawing.Size(420, 200);
             this.panel6.TabIndex = 14;
             // 
             // btnCancel
             // 
             this.btnCancel.AutoSize = true;
-            this.btnCancel.Location = new System.Drawing.Point(304, 139);
+            this.btnCancel.Location = new System.Drawing.Point(304, 148);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 35);
             this.btnCancel.TabIndex = 12;
@@ -380,7 +449,7 @@
             this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.Red;
-            this.lblTotal.Location = new System.Drawing.Point(154, 17);
+            this.lblTotal.Location = new System.Drawing.Point(154, 9);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(254, 30);
             this.lblTotal.TabIndex = 9;
@@ -388,7 +457,7 @@
             // 
             // btnPayment
             // 
-            this.btnPayment.Location = new System.Drawing.Point(154, 139);
+            this.btnPayment.Location = new System.Drawing.Point(154, 148);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(133, 35);
             this.btnPayment.TabIndex = 11;
@@ -400,7 +469,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 52);
+            this.label5.Location = new System.Drawing.Point(5, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(126, 25);
             this.label5.TabIndex = 8;
@@ -413,7 +482,7 @@
             this.lblPayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPayment.ForeColor = System.Drawing.Color.Red;
-            this.lblPayment.Location = new System.Drawing.Point(154, 98);
+            this.lblPayment.Location = new System.Drawing.Point(154, 93);
             this.lblPayment.Name = "lblPayment";
             this.lblPayment.Size = new System.Drawing.Size(254, 30);
             this.lblPayment.TabIndex = 10;
@@ -446,7 +515,7 @@
             this.lblDiscount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiscount.ForeColor = System.Drawing.Color.Red;
-            this.lblDiscount.Location = new System.Drawing.Point(154, 57);
+            this.lblDiscount.Location = new System.Drawing.Point(154, 51);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(254, 30);
             this.lblDiscount.TabIndex = 10;
@@ -455,19 +524,28 @@
             // picFilm
             // 
             this.picFilm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picFilm.Location = new System.Drawing.Point(925, 154);
+            this.picFilm.Location = new System.Drawing.Point(898, 154);
             this.picFilm.Name = "picFilm";
-            this.picFilm.Size = new System.Drawing.Size(184, 252);
+            this.picFilm.Size = new System.Drawing.Size(211, 259);
             this.picFilm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFilm.TabIndex = 7;
             this.picFilm.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 2);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(167, 25);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Tên Khách Hàng:";
             // 
             // frmTheatre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(1131, 765);
+            this.ClientSize = new System.Drawing.Size(1131, 786);
             this.Controls.Add(this.picFilm);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -475,6 +553,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flpSeat);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmTheatre";
@@ -488,10 +567,13 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.grpLoaiVe.ResumeLayout(false);
-            this.grpLoaiVe.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.pnCustomer.ResumeLayout(false);
+            this.pnCustomer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFreeTickets)).EndInit();
+            this.grpLoaiVe.ResumeLayout(false);
+            this.grpLoaiVe.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFilm)).EndInit();
@@ -520,21 +602,27 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnPayment;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox chkCustomer;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.GroupBox grpLoaiVe;
         private System.Windows.Forms.RadioButton rdoStudent;
         private System.Windows.Forms.RadioButton rdoAdult;
         private System.Windows.Forms.RadioButton rdoChild;
-        private System.Windows.Forms.Label lblPoint;
-        private System.Windows.Forms.Label lblDiemTichLuy;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblTicketPrice;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox picFilm;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox chkCustomer;
+        private System.Windows.Forms.Panel pnCustomer;
+        private System.Windows.Forms.Label lblCustomerName;
+        private System.Windows.Forms.Label lblPoint;
+        private System.Windows.Forms.Label lblDiemTichLuy;
+        private System.Windows.Forms.Label lblPlusPoint;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnFreeTicket;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown numericFreeTickets;
+        private System.Windows.Forms.Label label7;
     }
 }
