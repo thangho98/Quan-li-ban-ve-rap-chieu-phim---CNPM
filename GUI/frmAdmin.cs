@@ -31,31 +31,93 @@ namespace GUI
         {
             InitializeComponent();
 
-			LoadRevenue();
-			
-			LoadStaff();
+            LoadRevenue();
 
-			LoadCustomer();
+            LoadStaff();
 
-			LoadAccount();
+            LoadCustomer();
 
-			LoadGenre();
+            LoadAccount();
 
-			LoadScreenType();
+            LoadGenre();
 
-			LoadCinema();
+            LoadScreenType();
 
-			LoadMovie();
+            LoadCinema();
 
-			LoadFormatMovie();
+            LoadMovie();
 
-			LoadShowtime();
+            LoadFormatMovie();
+
+            LoadShowtime();
 
             LoadAllListShowTimes();
         }
 
-		#region Doanh Thu
-		void LoadRevenue()
+        //cập nhật lại dữ liệu khi chuyển tab
+        private void tcAdmin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tcAdmin.SelectedIndex == 0)
+            {
+                LoadRevenue();
+            }
+            else if (tcAdmin.SelectedIndex == 1)
+            {
+                tcData_SelectedIndexChanged(this, new EventArgs());
+            }
+            else if (tcAdmin.SelectedIndex == 2)
+            {
+                LoadStaffList();
+            }
+            else if (tcAdmin.SelectedIndex == 3)
+            {
+                LoadCinemaList();
+            }
+            else if (tcAdmin.SelectedIndex == 4)
+            {
+                LoadAccountList();
+            }
+        }
+
+        private void tcData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tcData.SelectedIndex == 0)
+            {
+                LoadShowtimeList();
+            }
+            else if(tcData.SelectedIndex == 1)
+            {
+                LoadCinemaList();
+            }
+            else if (tcData.SelectedIndex == 2)
+            {
+                LoadGenreList();
+            }
+            else if (tcData.SelectedIndex == 3)
+            {
+                LoadMovieList();
+            }
+            else if (tcData.SelectedIndex == 4)
+            {
+                LoadFormatMovieList();
+            }
+            else if (tcData.SelectedIndex == 5)
+            {
+                LoadShowtimeList();
+            }
+            else if (tcData.SelectedIndex == 6)
+            {
+                LoadAllListShowTimes();
+                dtgvTicket.DataSource = null;
+            }
+            else if (tcData.SelectedIndex == 7)
+            {
+
+            }
+        }
+
+        #region Doanh Thu
+        void LoadRevenue()
 		{
 			LoadMovieIntoCombobox(cboSelectMovie);
 			LoadDateTimePickerRevenue();//Set "Từ ngày" & "Đến ngày ngày" về đầu tháng & cuối tháng
@@ -406,9 +468,9 @@ namespace GUI
 			LoadAccountList();
 		}
 
-		void UpdateAccount(string username, int accountType, string idStaff)
+		void UpdateAccount(string username, int accountType)
 		{
-			if (AccountDAO.UpdateAccount(username, accountType, idStaff))
+			if (AccountDAO.UpdateAccount(username, accountType))
 			{
 				MessageBox.Show("Sửa tài khoản thành công");
 			}
@@ -421,8 +483,7 @@ namespace GUI
 		{
 			string username = txtUsername.Text;
 			int accountType = (int)nudAccountType.Value;
-			string staffID = cboStaffID_Account.SelectedValue.ToString();
-			UpdateAccount(username, accountType, staffID);
+			UpdateAccount(username, accountType);
 			LoadAccountList();
 		}
 
@@ -1317,7 +1378,7 @@ namespace GUI
                 MessageBox.Show("TẠO VÉ TỰ ĐỘNG THẤT BẠI!", "THÔNG BÁO");
         }
 
-        private void btnAddTicketByShowTime_Click(object sender, EventArgs e)
+        private void btnAddTicketsByShowTime_Click(object sender, EventArgs e)
         {
             if (lsvAllListShowTimes.SelectedItems.Count > 0)
             {
@@ -1345,7 +1406,80 @@ namespace GUI
                 LoadTicketsByShowTimes(showTimes.ID);
             }
         }
-		#endregion
 
-	}
+        private void btnDeleteTicketsByShowTime_Click(object sender, EventArgs e)
+        {
+            if (lsvAllListShowTimes.SelectedItems.Count > 0)
+            {
+                ShowTimes showTimes = lsvAllListShowTimes.SelectedItems[0].Tag as ShowTimes;
+                if (showTimes.Status == 0)
+                {
+                    MessageBox.Show("LỊCH CHIẾU NÀY CHƯA ĐƯỢC TẠO VÉ!!!", "THÔNG BÁO");
+                    return;
+                }
+                DeleteTicketsByShowTimes(showTimes);
+                LoadAllListShowTimes();
+                LoadTicketsByShowTimes(showTimes.ID);
+            }
+            else
+            {
+                MessageBox.Show("BẠN CHƯA CHỌN LỊCH CHIẾU ĐỂ XÓA!!!", "THÔNG BÁO");
+            }
+        }
+
+        private void DeleteTicketsByShowTimes(ShowTimes showTimes)
+        {
+            Cinema cinema = CinemaDAO.GetCinemaByName(showTimes.CinemaName);
+            int Row = cinema.Row;
+            int Column = cinema.SeatInRow;
+            int result = TicketDAO.DeleteTicketsByShowTimes(showTimes.ID);
+            if (result == Row * Column)
+            {
+                int ret = ShowTimesDAO.UpdateStatusShowTimes(showTimes.ID, 0);
+                if (ret > 0)
+                    MessageBox.Show("XÓA TẤT CẢ CÁC VÉ CỦA LỊCH CHIẾU ID=" + showTimes.ID + " THÀNH CÔNG!", "THÔNG BÁO");
+            }
+            else
+                MessageBox.Show("XÓA TẤT CẢ CÁC VÉ CỦA LỊCH CHIẾU ID=" + showTimes.ID + " THẤT BẠI!", "THÔNG BÁO");
+        }
+
+        private void btnAllListShowTimes_Click(object sender, EventArgs e)
+        {
+            LoadAllListShowTimes();
+        }
+
+        private void btnShowShowTimeNotCreateTickets_Click(object sender, EventArgs e)
+        {
+            LoadListShowTimesNotCreateTickets();
+        }
+
+        private void LoadListShowTimesNotCreateTickets()
+        {
+            lsvAllListShowTimes.Items.Clear();
+
+            List<ShowTimes> allListShowTime = ShowTimesDAO.GetListShowTimesNotCreateTickets();
+            foreach (ShowTimes showTimes in allListShowTime)
+            {
+                ListViewItem lvi = new ListViewItem(showTimes.CinemaName);
+                lvi.SubItems.Add(showTimes.MovieName);
+                lvi.SubItems.Add(showTimes.Time.ToString("HH:mm:ss dd/MM/yyyy"));
+                lvi.Tag = showTimes;
+
+                if (showTimes.Status == 1)
+                {
+                    lvi.SubItems.Add("Đã tạo");
+                }
+                else
+                {
+                    lvi.SubItems.Add("Chưa Tạo");
+                }
+                lsvAllListShowTimes.Items.Add(lvi);
+            }
+        }
+
+
+        #endregion
+
+        
+    }
 }

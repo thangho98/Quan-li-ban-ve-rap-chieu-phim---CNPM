@@ -42,5 +42,11 @@ namespace GUI.DAO
             string query = "USP_InsertTicketByShowTimes @idlichChieu , @maGheNgoi";
             return DataProvider.ExecuteNonQuery(query, new object[] { showTimesID, seatName });
         }
+
+        public static int DeleteTicketsByShowTimes(string showTimesID)
+        {
+            string query = "USP_DeleteTicketsByShowTimes @idlichChieu";
+            return DataProvider.ExecuteNonQuery(query, new object[] { showTimesID });
+        }
     }
 }

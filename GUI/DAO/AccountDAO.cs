@@ -48,13 +48,13 @@ namespace GUI.DAO
 
         }
 
-        public static bool UpdateAccountPassword(string userName, string passWord, string newPassWord)
+        public static bool UpdatePasswordForAccount(string userName, string passWord, string newPassWord)
         {
 
             string oldPass = PasswordEncryption(passWord);
             string newPass = PasswordEncryption(newPassWord);
 
-            int result = DataProvider.ExecuteNonQuery("EXEC USP_UpdateAccount @username , @pass , @newPass", new object[] { userName, oldPass, newPass });
+            int result = DataProvider.ExecuteNonQuery("EXEC USP_UpdatePasswordForAccount @username , @pass , @newPass", new object[] { userName, oldPass, newPass });
 
             return result > 0;
         }
@@ -87,9 +87,9 @@ namespace GUI.DAO
 			return result > 0;
 		}
 
-		public static bool UpdateAccount(string username, int accountType, string staffID)
+		public static bool UpdateAccount(string username, int accountType)
 		{
-			string command = string.Format("UPDATE dbo.TaiKhoan SET LoaiTK = {0}, idNV = '{1}' WHERE UserName = N'{2}'", accountType, staffID, username);
+			string command = string.Format("USP_UpdateAccount  @username , @loaiTK", new object[] { username, accountType});
 			int result = DataProvider.ExecuteNonQuery(command);
 			return result > 0;
 		}
@@ -107,7 +107,7 @@ namespace GUI.DAO
 
 		public static bool ResetPassword(string username)
 		{
-			int result = DataProvider.ExecuteNonQuery("UPDATE dbo.TaiKhoan SET Pass = '5512317111114510840231031535810616566202691' WHERE UserName = '" + username + "'");
+			int result = DataProvider.ExecuteNonQuery("USP_ResetPasswordtAccount @username", new object[] { username});
 			return result > 0;
 		}
     }

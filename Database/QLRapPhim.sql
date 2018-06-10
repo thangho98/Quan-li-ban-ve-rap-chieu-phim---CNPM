@@ -360,7 +360,7 @@ SET IDENTITY_INSERT [dbo].[Ve] OFF
 GO
 
 --TÀI KHOẢN (Đổi mật khẩu & đăng nhập)
-CREATE PROC USP_UpdateAccount
+CREATE PROC USP_UpdatePasswordForAccount
 @username NVARCHAR(100), @pass VARCHAR(1000), @newPass VARCHAR(1000)
 AS
 BEGIN
@@ -398,6 +398,26 @@ AS
 BEGIN
 	INSERT dbo.TaiKhoan ( UserName, Pass, LoaiTK, idNV )
 	VALUES ( @username, '5512317111114510840231031535810616566202691', @loaiTK, @idnv )
+END
+GO
+
+CREATE PROC USP_UpdateAccount
+@username NVARCHAR(100), @loaiTK INT
+AS
+BEGIN
+	UPDATE dbo.TaiKhoan 
+	SET LoaiTK = @loaiTK
+	WHERE UserName = @username
+END
+GO
+
+CREATE PROC USP_ResetPasswordtAccount
+@username NVARCHAR(100)
+AS
+BEGIN
+	UPDATE dbo.TaiKhoan 
+	SET Pass = '5512317111114510840231031535810616566202691' 
+	WHERE UserName = @username
 END
 GO
 
@@ -672,5 +692,14 @@ BEGIN
 		NULL,
 		NUll
 	)
+END
+GO
+
+CREATE PROC USP_DeleteTicketsByShowTimes
+@idlichChieu VARCHAR(50)
+AS
+BEGIN
+	DELETE FROM dbo.Ve
+	WHERE idLichChieu = @idlichChieu
 END
 GO

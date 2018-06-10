@@ -46,7 +46,7 @@ namespace GUI
             }
             else
             {
-                if (AccountDAO.UpdateAccountPassword(username, confirmPass, newPass))
+                if (AccountDAO.UpdatePasswordForAccount(username, confirmPass, newPass))
                 {
                     MessageBox.Show("Cập nhật thành công!");
                 }
