@@ -107,31 +107,6 @@ namespace GUI
             }
         }
 
-        //private void BtnSeat_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //    if (e.Button == MouseButtons.Right)
-        //    {
-        //        Button btnSeat = sender as Button;
-        //        btnSeat.Focus();
-        //        if (btnSeat.BackColor == Color.Yellow)
-        //        {
-        //            Ticket ticket = btnSeat.Tag as Ticket;
-
-        //            displayPrice = ticket.Price;
-
-        //            if (ticket.Type == 1)
-        //                rdoAdult.Checked = true;
-        //            else if (ticket.Type == 2)
-        //                rdoStudent.Checked = true;
-        //            else
-        //                rdoChild.Checked = true;
-
-        //            LoadBill();
-        //            MessageBox.Show(ticket.SeatName + "\t" + ticket.Type + "\n" + ticket.Price);
-        //        }
-        //    }
-        //}
-
         private void BtnSeat_Click(object sender, EventArgs e)
         {
             Button btnSeat = sender as Button;
@@ -146,6 +121,7 @@ namespace GUI
                 ticket.Price = ticketPrice;
                 displayPrice = ticket.Price;
                 total += ticketPrice;
+                payment = total - discount;
                 ticket.Type = 1;
 
                 listSeatSelected.Add(btnSeat);
@@ -158,8 +134,10 @@ namespace GUI
                 Ticket ticket = btnSeat.Tag as Ticket;
 
                 total -= ticket.Price;
+                payment = total - discount;
                 ticket.Price = 0;
                 displayPrice = ticket.Price;
+                ticket.Type = 0;
 
                 listSeatSelected.Remove(btnSeat);
                 plusPoint--;
@@ -359,18 +337,18 @@ namespace GUI
 
             if (freeTickets > listSeat.Count)
             {
-                MessageBox.Show("BẠN CHỈ ĐỔI ĐƯỢC TỐT ĐA " + listSeatSelected.Count + " VÉ", "THÔNG BÁO");
+                MessageBox.Show("BẠN CHỈ ĐỔI ĐƯỢC TỐT ĐA [" + listSeatSelected.Count + "] VÉ", "THÔNG BÁO");
                 return;
             }
             int pointFreeTicket = freeTickets * 20;
             if (customer.Point < pointFreeTicket)
             {
-                MessageBox.Show("BẠN KHÔNG ĐỦ ĐIỂM TÍCH LŨY ĐỂ ĐỔI " + freeTickets + " VÉ", "THÔNG BÁO");
+                MessageBox.Show("BẠN KHÔNG ĐỦ ĐIỂM TÍCH LŨY ĐỂ ĐỔI [" + freeTickets + "] VÉ", "THÔNG BÁO");
                 return;
             }
             else
             {
-                DialogResult result = MessageBox.Show("BẠN CÓ MUỐN DÙNG ĐIỂM TÍCH LŨY ĐỂ ĐỔI " + freeTickets + " VÉ MIỄN PHÍ KHÔNG?",
+                DialogResult result = MessageBox.Show("BẠN CÓ MUỐN DÙNG ĐIỂM TÍCH LŨY ĐỂ ĐỔI [" + freeTickets + "] VÉ MIỄN PHÍ KHÔNG?",
                                         "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
@@ -379,7 +357,7 @@ namespace GUI
 
                     if (CustomerDAO.UpdatePointCustomer(customer.ID, customer.Point))
                     {
-                        MessageBox.Show("BẠN ĐÃ DỔI ĐƯỢC " + freeTickets + " VÉ MIỄN PHÍ THÀNH CÔNG", "THÔNG BÁO");
+                        MessageBox.Show("BẠN ĐÃ DỔI ĐƯỢC [" + freeTickets + "] VÉ MIỄN PHÍ THÀNH CÔNG", "THÔNG BÁO");
                     }
                     lblPoint.Text = "" + customer.Point;
                     lblPlusPoint.Text = "" + plusPoint;
