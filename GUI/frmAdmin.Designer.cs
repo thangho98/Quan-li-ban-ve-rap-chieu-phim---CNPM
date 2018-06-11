@@ -32,7 +32,6 @@
             this.tpAccount = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSearchAccount = new System.Windows.Forms.TextBox();
-            this.btnSearchAccount = new System.Windows.Forms.Button();
             this.btnResetPass = new System.Windows.Forms.Button();
             this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnUpdateAccount = new System.Windows.Forms.Button();
@@ -49,7 +48,6 @@
             this.lblStaffID_Account = new System.Windows.Forms.Label();
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.tpCustomer = new System.Windows.Forms.TabPage();
-            this.btnSearchCus = new System.Windows.Forms.Button();
             this.txtSearchCus = new System.Windows.Forms.TextBox();
             this.btnDeleteCustomer = new System.Windows.Forms.Button();
             this.btnUpdateCustomer = new System.Windows.Forms.Button();
@@ -88,7 +86,6 @@
             this.lblStaffAddress = new System.Windows.Forms.Label();
             this.txtStaffINumber = new System.Windows.Forms.TextBox();
             this.lblStaffName = new System.Windows.Forms.Label();
-            this.btnSearchStaff = new System.Windows.Forms.Button();
             this.txtSearchStaff = new System.Windows.Forms.TextBox();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
             this.btnUpdateStaff = new System.Windows.Forms.Button();
@@ -120,27 +117,6 @@
             this.panel28 = new System.Windows.Forms.Panel();
             this.dtgvCinema = new System.Windows.Forms.DataGridView();
             this.panel30 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.cboCinemaScreenType = new System.Windows.Forms.ComboBox();
-            this.lblScreenType = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.txtSeatsPerRow = new System.Windows.Forms.TextBox();
-            this.lblSeatsPerRow = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.txtNumberOfRows = new System.Windows.Forms.TextBox();
-            this.lblNumberOfRows = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.txtCinemaStatus = new System.Windows.Forms.TextBox();
-            this.lblCinemaStatus = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txtCinemaSeats = new System.Windows.Forms.TextBox();
-            this.lblCinemaSeats = new System.Windows.Forms.Label();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.txtCinemaName = new System.Windows.Forms.TextBox();
-            this.lblCinemaName = new System.Windows.Forms.Label();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.txtCinemaID = new System.Windows.Forms.TextBox();
-            this.lblCinemaID = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
             this.btnShowCinema = new System.Windows.Forms.Button();
             this.btnUpdateCinema = new System.Windows.Forms.Button();
@@ -170,7 +146,6 @@
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel42 = new System.Windows.Forms.Panel();
             this.btnUpLoadPictureFilm = new System.Windows.Forms.Button();
-            this.picFilm = new System.Windows.Forms.PictureBox();
             this.clbMovieGenre = new System.Windows.Forms.CheckedListBox();
             this.dtmMovieEnd = new System.Windows.Forms.DateTimePicker();
             this.dtmMovieStart = new System.Windows.Forms.DateTimePicker();
@@ -238,7 +213,6 @@
             this.txtTicketPrice_Showtime = new System.Windows.Forms.TextBox();
             this.txtShowtimeID = new System.Windows.Forms.TextBox();
             this.panel54 = new System.Windows.Forms.Panel();
-            this.btnSearchShowtime = new System.Windows.Forms.Button();
             this.txtSearchShowtime = new System.Windows.Forms.TextBox();
             this.btnShowShowtime = new System.Windows.Forms.Button();
             this.btnUpdateShowtime = new System.Windows.Forms.Button();
@@ -276,6 +250,32 @@
             this.dtmFromDate = new System.Windows.Forms.DateTimePicker();
             this.tcAdmin = new System.Windows.Forms.TabControl();
             this.toolTipAccountType = new System.Windows.Forms.ToolTip(this.components);
+            this.lblCinemaID = new System.Windows.Forms.Label();
+            this.txtCinemaID = new System.Windows.Forms.TextBox();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.lblCinemaName = new System.Windows.Forms.Label();
+            this.txtCinemaName = new System.Windows.Forms.TextBox();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.lblCinemaSeats = new System.Windows.Forms.Label();
+            this.txtCinemaSeats = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lblCinemaStatus = new System.Windows.Forms.Label();
+            this.txtCinemaStatus = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lblNumberOfRows = new System.Windows.Forms.Label();
+            this.txtNumberOfRows = new System.Windows.Forms.TextBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.lblSeatsPerRow = new System.Windows.Forms.Label();
+            this.txtSeatsPerRow = new System.Windows.Forms.TextBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.lblScreenType = new System.Windows.Forms.Label();
+            this.cboCinemaScreenType = new System.Windows.Forms.ComboBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.picFilm = new System.Windows.Forms.PictureBox();
+            this.btnSearchShowtime = new System.Windows.Forms.Button();
+            this.btnSearchStaff = new System.Windows.Forms.Button();
+            this.btnSearchCus = new System.Windows.Forms.Button();
+            this.btnSearchAccount = new System.Windows.Forms.Button();
             this.tpAccount.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grpAccount.SuspendLayout();
@@ -308,13 +308,6 @@
             this.panel28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCinema)).BeginInit();
             this.panel30.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel31.SuspendLayout();
-            this.panel32.SuspendLayout();
             this.panel33.SuspendLayout();
             this.tpGenre.SuspendLayout();
             this.panel34.SuspendLayout();
@@ -329,7 +322,6 @@
             this.tpFilm.SuspendLayout();
             this.panel41.SuspendLayout();
             this.panel42.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFilm)).BeginInit();
             this.panel43.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMovie)).BeginInit();
             this.panel47.SuspendLayout();
@@ -353,6 +345,14 @@
             this.tpRevenue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRevenue)).BeginInit();
             this.tcAdmin.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.panel31.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFilm)).BeginInit();
             this.SuspendLayout();
             // 
             // tpAccount
@@ -367,7 +367,7 @@
             this.tpAccount.Controls.Add(this.dtgvAccount);
             this.tpAccount.Location = new System.Drawing.Point(4, 31);
             this.tpAccount.Name = "tpAccount";
-            this.tpAccount.Size = new System.Drawing.Size(1317, 583);
+            this.tpAccount.Size = new System.Drawing.Size(1311, 583);
             this.tpAccount.TabIndex = 6;
             this.tpAccount.Text = "Tài Khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
@@ -392,17 +392,6 @@
             this.txtSearchAccount.Size = new System.Drawing.Size(132, 30);
             this.txtSearchAccount.TabIndex = 18;
             this.txtSearchAccount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchAccount_KeyDown);
-            // 
-            // btnSearchAccount
-            // 
-            this.btnSearchAccount.BackgroundImage = global::GUI.Properties.Resources.search_icon;
-            this.btnSearchAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchAccount.Location = new System.Drawing.Point(168, 25);
-            this.btnSearchAccount.Name = "btnSearchAccount";
-            this.btnSearchAccount.Size = new System.Drawing.Size(26, 26);
-            this.btnSearchAccount.TabIndex = 19;
-            this.btnSearchAccount.UseVisualStyleBackColor = true;
-            this.btnSearchAccount.Click += new System.EventHandler(this.btnSearchAccount_Click);
             // 
             // btnResetPass
             // 
@@ -591,21 +580,10 @@
             this.tpCustomer.Controls.Add(this.dtgvCustomer);
             this.tpCustomer.Location = new System.Drawing.Point(4, 31);
             this.tpCustomer.Name = "tpCustomer";
-            this.tpCustomer.Size = new System.Drawing.Size(1317, 583);
+            this.tpCustomer.Size = new System.Drawing.Size(1311, 583);
             this.tpCustomer.TabIndex = 3;
             this.tpCustomer.Text = "Khách Hàng";
             this.tpCustomer.UseVisualStyleBackColor = true;
-            // 
-            // btnSearchCus
-            // 
-            this.btnSearchCus.BackgroundImage = global::GUI.Properties.Resources.search_icon;
-            this.btnSearchCus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchCus.Location = new System.Drawing.Point(967, 174);
-            this.btnSearchCus.Name = "btnSearchCus";
-            this.btnSearchCus.Size = new System.Drawing.Size(26, 26);
-            this.btnSearchCus.TabIndex = 13;
-            this.btnSearchCus.UseVisualStyleBackColor = true;
-            this.btnSearchCus.Click += new System.EventHandler(this.btnSearchCus_Click);
             // 
             // txtSearchCus
             // 
@@ -665,7 +643,7 @@
             this.grpCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpCustomer.Location = new System.Drawing.Point(23, 17);
             this.grpCustomer.Name = "grpCustomer";
-            this.grpCustomer.Size = new System.Drawing.Size(985, 145);
+            this.grpCustomer.Size = new System.Drawing.Size(970, 145);
             this.grpCustomer.TabIndex = 8;
             this.grpCustomer.TabStop = false;
             this.grpCustomer.Text = "Thông tin khách hàng";
@@ -673,7 +651,7 @@
             // nudPoint
             // 
             this.nudPoint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPoint.Location = new System.Drawing.Point(895, 37);
+            this.nudPoint.Location = new System.Drawing.Point(878, 32);
             this.nudPoint.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -760,7 +738,7 @@
             // 
             this.lblCusPoint.AutoSize = true;
             this.lblCusPoint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCusPoint.Location = new System.Drawing.Point(765, 39);
+            this.lblCusPoint.Location = new System.Drawing.Point(739, 37);
             this.lblCusPoint.Name = "lblCusPoint";
             this.lblCusPoint.Size = new System.Drawing.Size(133, 23);
             this.lblCusPoint.TabIndex = 4;
@@ -830,7 +808,7 @@
             this.tpStaff.Controls.Add(this.panel1);
             this.tpStaff.Location = new System.Drawing.Point(4, 31);
             this.tpStaff.Name = "tpStaff";
-            this.tpStaff.Size = new System.Drawing.Size(1317, 583);
+            this.tpStaff.Size = new System.Drawing.Size(1311, 583);
             this.tpStaff.TabIndex = 2;
             this.tpStaff.Text = "Nhân Viên";
             this.tpStaff.UseVisualStyleBackColor = true;
@@ -841,7 +819,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1317, 583);
+            this.panel1.Size = new System.Drawing.Size(1311, 583);
             this.panel1.TabIndex = 1;
             // 
             // panel3
@@ -850,7 +828,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1317, 583);
+            this.panel3.Size = new System.Drawing.Size(1311, 583);
             this.panel3.TabIndex = 10;
             // 
             // panel4
@@ -868,7 +846,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1317, 583);
+            this.panel4.Size = new System.Drawing.Size(1311, 583);
             this.panel4.TabIndex = 12;
             // 
             // grpStaff
@@ -1002,17 +980,6 @@
             this.lblStaffName.TabIndex = 4;
             this.lblStaffName.Text = "Họ tên :";
             // 
-            // btnSearchStaff
-            // 
-            this.btnSearchStaff.BackgroundImage = global::GUI.Properties.Resources.search_icon;
-            this.btnSearchStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchStaff.Location = new System.Drawing.Point(932, 169);
-            this.btnSearchStaff.Name = "btnSearchStaff";
-            this.btnSearchStaff.Size = new System.Drawing.Size(26, 26);
-            this.btnSearchStaff.TabIndex = 6;
-            this.btnSearchStaff.UseVisualStyleBackColor = true;
-            this.btnSearchStaff.Click += new System.EventHandler(this.btnSearchStaff_Click);
-            // 
             // txtSearchStaff
             // 
             this.txtSearchStaff.Location = new System.Drawing.Point(794, 169);
@@ -1107,7 +1074,7 @@
             this.tpScreenType.Controls.Add(this.panel2);
             this.tpScreenType.Location = new System.Drawing.Point(4, 31);
             this.tpScreenType.Name = "tpScreenType";
-            this.tpScreenType.Size = new System.Drawing.Size(1303, 542);
+            this.tpScreenType.Size = new System.Drawing.Size(1297, 542);
             this.tpScreenType.TabIndex = 3;
             this.tpScreenType.Text = "Loại màn hình";
             this.tpScreenType.UseVisualStyleBackColor = true;
@@ -1119,7 +1086,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1303, 542);
+            this.panel2.Size = new System.Drawing.Size(1297, 542);
             this.panel2.TabIndex = 0;
             // 
             // panel13
@@ -1129,7 +1096,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(0, 64);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1303, 478);
+            this.panel13.Size = new System.Drawing.Size(1297, 478);
             this.panel13.TabIndex = 10;
             // 
             // panel14
@@ -1139,7 +1106,7 @@
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(923, 478);
+            this.panel14.Size = new System.Drawing.Size(917, 478);
             this.panel14.TabIndex = 12;
             // 
             // dtgvScreenType
@@ -1153,7 +1120,7 @@
             this.dtgvScreenType.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvScreenType.Name = "dtgvScreenType";
             this.dtgvScreenType.ReadOnly = true;
-            this.dtgvScreenType.Size = new System.Drawing.Size(923, 478);
+            this.dtgvScreenType.Size = new System.Drawing.Size(917, 478);
             this.dtgvScreenType.TabIndex = 0;
             // 
             // panel19
@@ -1161,7 +1128,7 @@
             this.panel19.Controls.Add(this.panel20);
             this.panel19.Controls.Add(this.panel21);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel19.Location = new System.Drawing.Point(923, 0);
+            this.panel19.Location = new System.Drawing.Point(917, 0);
             this.panel19.Margin = new System.Windows.Forms.Padding(4);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(380, 478);
@@ -1235,7 +1202,7 @@
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1303, 64);
+            this.panel11.Size = new System.Drawing.Size(1297, 64);
             this.panel11.TabIndex = 9;
             // 
             // btnShowScreenType
@@ -1288,7 +1255,7 @@
             this.tpCinema.Location = new System.Drawing.Point(4, 31);
             this.tpCinema.Name = "tpCinema";
             this.tpCinema.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCinema.Size = new System.Drawing.Size(1303, 542);
+            this.tpCinema.Size = new System.Drawing.Size(1297, 542);
             this.tpCinema.TabIndex = 1;
             this.tpCinema.Text = "Phòng Chiếu";
             this.tpCinema.UseVisualStyleBackColor = true;
@@ -1300,7 +1267,7 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel22.Location = new System.Drawing.Point(3, 3);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(1297, 536);
+            this.panel22.Size = new System.Drawing.Size(1291, 542);
             this.panel22.TabIndex = 1;
             // 
             // panel24
@@ -1310,7 +1277,7 @@
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel24.Location = new System.Drawing.Point(0, 64);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1297, 472);
+            this.panel24.Size = new System.Drawing.Size(1291, 478);
             this.panel24.TabIndex = 10;
             // 
             // panel28
@@ -1320,7 +1287,7 @@
             this.panel28.Location = new System.Drawing.Point(0, 0);
             this.panel28.Margin = new System.Windows.Forms.Padding(4);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(996, 472);
+            this.panel28.Size = new System.Drawing.Size(990, 478);
             this.panel28.TabIndex = 12;
             // 
             // dtgvCinema
@@ -1334,7 +1301,7 @@
             this.dtgvCinema.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvCinema.Name = "dtgvCinema";
             this.dtgvCinema.ReadOnly = true;
-            this.dtgvCinema.Size = new System.Drawing.Size(996, 472);
+            this.dtgvCinema.Size = new System.Drawing.Size(990, 478);
             this.dtgvCinema.TabIndex = 0;
             // 
             // panel30
@@ -1347,216 +1314,11 @@
             this.panel30.Controls.Add(this.panel31);
             this.panel30.Controls.Add(this.panel32);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel30.Location = new System.Drawing.Point(996, 0);
+            this.panel30.Location = new System.Drawing.Point(990, 0);
             this.panel30.Margin = new System.Windows.Forms.Padding(4);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(301, 472);
+            this.panel30.Size = new System.Drawing.Size(301, 478);
             this.panel30.TabIndex = 11;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.cboCinemaScreenType);
-            this.panel6.Controls.Add(this.lblScreenType);
-            this.panel6.Location = new System.Drawing.Point(0, 127);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(302, 54);
-            this.panel6.TabIndex = 2;
-            // 
-            // cboCinemaScreenType
-            // 
-            this.cboCinemaScreenType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCinemaScreenType.FormattingEnabled = true;
-            this.cboCinemaScreenType.Location = new System.Drawing.Point(137, 11);
-            this.cboCinemaScreenType.Name = "cboCinemaScreenType";
-            this.cboCinemaScreenType.Size = new System.Drawing.Size(149, 30);
-            this.cboCinemaScreenType.TabIndex = 1;
-            // 
-            // lblScreenType
-            // 
-            this.lblScreenType.AutoSize = true;
-            this.lblScreenType.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblScreenType.Location = new System.Drawing.Point(4, 11);
-            this.lblScreenType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblScreenType.Name = "lblScreenType";
-            this.lblScreenType.Size = new System.Drawing.Size(111, 24);
-            this.lblScreenType.TabIndex = 0;
-            this.lblScreenType.Text = "Màn hình :";
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.txtSeatsPerRow);
-            this.panel15.Controls.Add(this.lblSeatsPerRow);
-            this.panel15.Location = new System.Drawing.Point(0, 375);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(299, 54);
-            this.panel15.TabIndex = 2;
-            // 
-            // txtSeatsPerRow
-            // 
-            this.txtSeatsPerRow.Location = new System.Drawing.Point(136, 8);
-            this.txtSeatsPerRow.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSeatsPerRow.Name = "txtSeatsPerRow";
-            this.txtSeatsPerRow.Size = new System.Drawing.Size(149, 30);
-            this.txtSeatsPerRow.TabIndex = 1;
-            // 
-            // lblSeatsPerRow
-            // 
-            this.lblSeatsPerRow.AutoSize = true;
-            this.lblSeatsPerRow.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblSeatsPerRow.Location = new System.Drawing.Point(4, 11);
-            this.lblSeatsPerRow.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSeatsPerRow.Name = "lblSeatsPerRow";
-            this.lblSeatsPerRow.Size = new System.Drawing.Size(155, 24);
-            this.lblSeatsPerRow.TabIndex = 0;
-            this.lblSeatsPerRow.Text = "Ghế mỗi hàng :";
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.txtNumberOfRows);
-            this.panel12.Controls.Add(this.lblNumberOfRows);
-            this.panel12.Location = new System.Drawing.Point(0, 313);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(299, 54);
-            this.panel12.TabIndex = 2;
-            // 
-            // txtNumberOfRows
-            // 
-            this.txtNumberOfRows.Location = new System.Drawing.Point(136, 8);
-            this.txtNumberOfRows.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNumberOfRows.Name = "txtNumberOfRows";
-            this.txtNumberOfRows.Size = new System.Drawing.Size(149, 30);
-            this.txtNumberOfRows.TabIndex = 1;
-            // 
-            // lblNumberOfRows
-            // 
-            this.lblNumberOfRows.AutoSize = true;
-            this.lblNumberOfRows.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblNumberOfRows.Location = new System.Drawing.Point(4, 11);
-            this.lblNumberOfRows.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNumberOfRows.Name = "lblNumberOfRows";
-            this.lblNumberOfRows.Size = new System.Drawing.Size(142, 24);
-            this.lblNumberOfRows.TabIndex = 0;
-            this.lblNumberOfRows.Text = "Số hàng ghế :";
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.txtCinemaStatus);
-            this.panel9.Controls.Add(this.lblCinemaStatus);
-            this.panel9.Location = new System.Drawing.Point(0, 251);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(299, 54);
-            this.panel9.TabIndex = 2;
-            // 
-            // txtCinemaStatus
-            // 
-            this.txtCinemaStatus.Location = new System.Drawing.Point(136, 8);
-            this.txtCinemaStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCinemaStatus.Name = "txtCinemaStatus";
-            this.txtCinemaStatus.Size = new System.Drawing.Size(149, 30);
-            this.txtCinemaStatus.TabIndex = 1;
-            // 
-            // lblCinemaStatus
-            // 
-            this.lblCinemaStatus.AutoSize = true;
-            this.lblCinemaStatus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblCinemaStatus.Location = new System.Drawing.Point(4, 11);
-            this.lblCinemaStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCinemaStatus.Name = "lblCinemaStatus";
-            this.lblCinemaStatus.Size = new System.Drawing.Size(122, 24);
-            this.lblCinemaStatus.TabIndex = 0;
-            this.lblCinemaStatus.Text = "Tình trạng :";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.txtCinemaSeats);
-            this.panel8.Controls.Add(this.lblCinemaSeats);
-            this.panel8.Location = new System.Drawing.Point(0, 189);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(299, 54);
-            this.panel8.TabIndex = 2;
-            // 
-            // txtCinemaSeats
-            // 
-            this.txtCinemaSeats.Location = new System.Drawing.Point(136, 8);
-            this.txtCinemaSeats.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCinemaSeats.Name = "txtCinemaSeats";
-            this.txtCinemaSeats.Size = new System.Drawing.Size(149, 30);
-            this.txtCinemaSeats.TabIndex = 1;
-            // 
-            // lblCinemaSeats
-            // 
-            this.lblCinemaSeats.AutoSize = true;
-            this.lblCinemaSeats.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblCinemaSeats.Location = new System.Drawing.Point(4, 11);
-            this.lblCinemaSeats.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCinemaSeats.Name = "lblCinemaSeats";
-            this.lblCinemaSeats.Size = new System.Drawing.Size(136, 24);
-            this.lblCinemaSeats.TabIndex = 0;
-            this.lblCinemaSeats.Text = "Số chỗ ngồi :";
-            // 
-            // panel31
-            // 
-            this.panel31.Controls.Add(this.txtCinemaName);
-            this.panel31.Controls.Add(this.lblCinemaName);
-            this.panel31.Location = new System.Drawing.Point(0, 65);
-            this.panel31.Margin = new System.Windows.Forms.Padding(4);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(299, 54);
-            this.panel31.TabIndex = 2;
-            // 
-            // txtCinemaName
-            // 
-            this.txtCinemaName.Location = new System.Drawing.Point(136, 8);
-            this.txtCinemaName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCinemaName.Name = "txtCinemaName";
-            this.txtCinemaName.Size = new System.Drawing.Size(149, 30);
-            this.txtCinemaName.TabIndex = 1;
-            // 
-            // lblCinemaName
-            // 
-            this.lblCinemaName.AutoSize = true;
-            this.lblCinemaName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblCinemaName.Location = new System.Drawing.Point(4, 11);
-            this.lblCinemaName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCinemaName.Name = "lblCinemaName";
-            this.lblCinemaName.Size = new System.Drawing.Size(125, 24);
-            this.lblCinemaName.TabIndex = 0;
-            this.lblCinemaName.Text = "Tên phòng :";
-            // 
-            // panel32
-            // 
-            this.panel32.Controls.Add(this.txtCinemaID);
-            this.panel32.Controls.Add(this.lblCinemaID);
-            this.panel32.Location = new System.Drawing.Point(0, 4);
-            this.panel32.Margin = new System.Windows.Forms.Padding(4);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(299, 54);
-            this.panel32.TabIndex = 1;
-            // 
-            // txtCinemaID
-            // 
-            this.txtCinemaID.Location = new System.Drawing.Point(135, 10);
-            this.txtCinemaID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCinemaID.Name = "txtCinemaID";
-            this.txtCinemaID.Size = new System.Drawing.Size(150, 30);
-            this.txtCinemaID.TabIndex = 1;
-            this.txtCinemaID.TextChanged += new System.EventHandler(this.txtCinemaID_TextChanged);
-            // 
-            // lblCinemaID
-            // 
-            this.lblCinemaID.AutoSize = true;
-            this.lblCinemaID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblCinemaID.Location = new System.Drawing.Point(4, 13);
-            this.lblCinemaID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCinemaID.Name = "lblCinemaID";
-            this.lblCinemaID.Size = new System.Drawing.Size(117, 24);
-            this.lblCinemaID.TabIndex = 0;
-            this.lblCinemaID.Text = "Mã phòng :";
             // 
             // panel33
             // 
@@ -1568,7 +1330,7 @@
             this.panel33.Location = new System.Drawing.Point(0, 0);
             this.panel33.Margin = new System.Windows.Forms.Padding(4);
             this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(1297, 64);
+            this.panel33.Size = new System.Drawing.Size(1291, 64);
             this.panel33.TabIndex = 9;
             // 
             // btnShowCinema
@@ -1620,7 +1382,7 @@
             this.tpGenre.Controls.Add(this.panel34);
             this.tpGenre.Location = new System.Drawing.Point(4, 31);
             this.tpGenre.Name = "tpGenre";
-            this.tpGenre.Size = new System.Drawing.Size(1303, 542);
+            this.tpGenre.Size = new System.Drawing.Size(1297, 542);
             this.tpGenre.TabIndex = 2;
             this.tpGenre.Text = "Thể Loại";
             this.tpGenre.UseVisualStyleBackColor = true;
@@ -1632,7 +1394,7 @@
             this.panel34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel34.Location = new System.Drawing.Point(0, 0);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(1303, 542);
+            this.panel34.Size = new System.Drawing.Size(1297, 548);
             this.panel34.TabIndex = 1;
             // 
             // panel35
@@ -1642,7 +1404,7 @@
             this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel35.Location = new System.Drawing.Point(0, 64);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(1303, 478);
+            this.panel35.Size = new System.Drawing.Size(1297, 484);
             this.panel35.TabIndex = 10;
             // 
             // panel36
@@ -1652,7 +1414,7 @@
             this.panel36.Location = new System.Drawing.Point(0, 0);
             this.panel36.Margin = new System.Windows.Forms.Padding(4);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(923, 478);
+            this.panel36.Size = new System.Drawing.Size(917, 484);
             this.panel36.TabIndex = 12;
             // 
             // dtgvGenre
@@ -1666,7 +1428,7 @@
             this.dtgvGenre.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvGenre.Name = "dtgvGenre";
             this.dtgvGenre.ReadOnly = true;
-            this.dtgvGenre.Size = new System.Drawing.Size(923, 478);
+            this.dtgvGenre.Size = new System.Drawing.Size(917, 484);
             this.dtgvGenre.TabIndex = 0;
             // 
             // panel37
@@ -1675,10 +1437,10 @@
             this.panel37.Controls.Add(this.panel38);
             this.panel37.Controls.Add(this.panel39);
             this.panel37.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel37.Location = new System.Drawing.Point(923, 0);
+            this.panel37.Location = new System.Drawing.Point(917, 0);
             this.panel37.Margin = new System.Windows.Forms.Padding(4);
             this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(380, 478);
+            this.panel37.Size = new System.Drawing.Size(380, 484);
             this.panel37.TabIndex = 11;
             // 
             // panel5
@@ -1779,7 +1541,7 @@
             this.panel40.Location = new System.Drawing.Point(0, 0);
             this.panel40.Margin = new System.Windows.Forms.Padding(4);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(1303, 64);
+            this.panel40.Size = new System.Drawing.Size(1297, 64);
             this.panel40.TabIndex = 9;
             // 
             // btnShowGenre
@@ -1844,7 +1606,7 @@
             this.panel41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel41.Location = new System.Drawing.Point(3, 3);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(1291, 536);
+            this.panel41.Size = new System.Drawing.Size(1291, 542);
             this.panel41.TabIndex = 1;
             // 
             // panel42
@@ -1875,7 +1637,7 @@
             this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel42.Location = new System.Drawing.Point(0, 64);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(1291, 472);
+            this.panel42.Size = new System.Drawing.Size(1291, 478);
             this.panel42.TabIndex = 10;
             // 
             // btnUpLoadPictureFilm
@@ -1887,16 +1649,6 @@
             this.btnUpLoadPictureFilm.Text = "Chọn hình ảnh";
             this.btnUpLoadPictureFilm.UseVisualStyleBackColor = true;
             this.btnUpLoadPictureFilm.Click += new System.EventHandler(this.btnUpLoadPictureFilm_Click);
-            // 
-            // picFilm
-            // 
-            this.picFilm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picFilm.Location = new System.Drawing.Point(1096, 8);
-            this.picFilm.Name = "picFilm";
-            this.picFilm.Size = new System.Drawing.Size(186, 217);
-            this.picFilm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFilm.TabIndex = 33;
-            this.picFilm.TabStop = false;
             // 
             // clbMovieGenre
             // 
@@ -2175,7 +1927,7 @@
             this.tpFormatMovie.Location = new System.Drawing.Point(4, 31);
             this.tpFormatMovie.Name = "tpFormatMovie";
             this.tpFormatMovie.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFormatMovie.Size = new System.Drawing.Size(1303, 542);
+            this.tpFormatMovie.Size = new System.Drawing.Size(1297, 542);
             this.tpFormatMovie.TabIndex = 7;
             this.tpFormatMovie.Text = "Định dạng";
             this.tpFormatMovie.UseVisualStyleBackColor = true;
@@ -2184,7 +1936,7 @@
             // 
             this.cboFormat_ScreenID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFormat_ScreenID.FormattingEnabled = true;
-            this.cboFormat_ScreenID.Location = new System.Drawing.Point(877, 224);
+            this.cboFormat_ScreenID.Location = new System.Drawing.Point(890, 225);
             this.cboFormat_ScreenID.Name = "cboFormat_ScreenID";
             this.cboFormat_ScreenID.Size = new System.Drawing.Size(166, 30);
             this.cboFormat_ScreenID.TabIndex = 11;
@@ -2204,7 +1956,7 @@
             // 
             this.cboFormat_MovieID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFormat_MovieID.FormattingEnabled = true;
-            this.cboFormat_MovieID.Location = new System.Drawing.Point(877, 130);
+            this.cboFormat_MovieID.Location = new System.Drawing.Point(890, 131);
             this.cboFormat_MovieID.Name = "cboFormat_MovieID";
             this.cboFormat_MovieID.Size = new System.Drawing.Size(166, 30);
             this.cboFormat_MovieID.TabIndex = 11;
@@ -2242,7 +1994,7 @@
             // 
             // txtFormat_ScreenName
             // 
-            this.txtFormat_ScreenName.Location = new System.Drawing.Point(877, 257);
+            this.txtFormat_ScreenName.Location = new System.Drawing.Point(890, 258);
             this.txtFormat_ScreenName.Name = "txtFormat_ScreenName";
             this.txtFormat_ScreenName.ReadOnly = true;
             this.txtFormat_ScreenName.Size = new System.Drawing.Size(166, 30);
@@ -2260,7 +2012,7 @@
             // 
             // txtFormat_MovieName
             // 
-            this.txtFormat_MovieName.Location = new System.Drawing.Point(877, 163);
+            this.txtFormat_MovieName.Location = new System.Drawing.Point(890, 164);
             this.txtFormat_MovieName.Name = "txtFormat_MovieName";
             this.txtFormat_MovieName.ReadOnly = true;
             this.txtFormat_MovieName.Size = new System.Drawing.Size(166, 30);
@@ -2268,7 +2020,7 @@
             // 
             // txtFormatID
             // 
-            this.txtFormatID.Location = new System.Drawing.Point(877, 68);
+            this.txtFormatID.Location = new System.Drawing.Point(890, 69);
             this.txtFormatID.Name = "txtFormatID";
             this.txtFormatID.Size = new System.Drawing.Size(166, 30);
             this.txtFormatID.TabIndex = 9;
@@ -2335,7 +2087,7 @@
             this.tpShowTimes.Controls.Add(this.panel48);
             this.tpShowTimes.Location = new System.Drawing.Point(4, 31);
             this.tpShowTimes.Name = "tpShowTimes";
-            this.tpShowTimes.Size = new System.Drawing.Size(1303, 542);
+            this.tpShowTimes.Size = new System.Drawing.Size(1297, 542);
             this.tpShowTimes.TabIndex = 6;
             this.tpShowTimes.Text = "Lịch Chiếu";
             this.tpShowTimes.UseVisualStyleBackColor = true;
@@ -2347,7 +2099,7 @@
             this.panel48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel48.Location = new System.Drawing.Point(0, 0);
             this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(1303, 542);
+            this.panel48.Size = new System.Drawing.Size(1297, 542);
             this.panel48.TabIndex = 1;
             // 
             // panel49
@@ -2357,7 +2109,7 @@
             this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel49.Location = new System.Drawing.Point(0, 64);
             this.panel49.Name = "panel49";
-            this.panel49.Size = new System.Drawing.Size(1303, 478);
+            this.panel49.Size = new System.Drawing.Size(1297, 478);
             this.panel49.TabIndex = 10;
             // 
             // panel50
@@ -2367,7 +2119,7 @@
             this.panel50.Location = new System.Drawing.Point(0, 0);
             this.panel50.Margin = new System.Windows.Forms.Padding(4);
             this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(923, 478);
+            this.panel50.Size = new System.Drawing.Size(917, 478);
             this.panel50.TabIndex = 12;
             // 
             // dtgvShowtime
@@ -2381,7 +2133,7 @@
             this.dtgvShowtime.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvShowtime.Name = "dtgvShowtime";
             this.dtgvShowtime.ReadOnly = true;
-            this.dtgvShowtime.Size = new System.Drawing.Size(923, 478);
+            this.dtgvShowtime.Size = new System.Drawing.Size(917, 478);
             this.dtgvShowtime.TabIndex = 0;
             // 
             // panel51
@@ -2400,7 +2152,7 @@
             this.panel51.Controls.Add(this.txtTicketPrice_Showtime);
             this.panel51.Controls.Add(this.txtShowtimeID);
             this.panel51.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel51.Location = new System.Drawing.Point(923, 0);
+            this.panel51.Location = new System.Drawing.Point(917, 0);
             this.panel51.Margin = new System.Windows.Forms.Padding(4);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(380, 478);
@@ -2583,18 +2335,8 @@
             this.panel54.Location = new System.Drawing.Point(0, 0);
             this.panel54.Margin = new System.Windows.Forms.Padding(4);
             this.panel54.Name = "panel54";
-            this.panel54.Size = new System.Drawing.Size(1303, 64);
+            this.panel54.Size = new System.Drawing.Size(1297, 64);
             this.panel54.TabIndex = 9;
-            // 
-            // btnSearchShowtime
-            // 
-            this.btnSearchShowtime.Image = global::GUI.Properties.Resources.search_icon;
-            this.btnSearchShowtime.Location = new System.Drawing.Point(967, 30);
-            this.btnSearchShowtime.Name = "btnSearchShowtime";
-            this.btnSearchShowtime.Size = new System.Drawing.Size(27, 27);
-            this.btnSearchShowtime.TabIndex = 7;
-            this.btnSearchShowtime.UseVisualStyleBackColor = true;
-            this.btnSearchShowtime.Click += new System.EventHandler(this.btnSearchShowtime_Click);
             // 
             // txtSearchShowtime
             // 
@@ -2655,7 +2397,7 @@
             this.tpTicket.Controls.Add(this.panel55);
             this.tpTicket.Location = new System.Drawing.Point(4, 31);
             this.tpTicket.Name = "tpTicket";
-            this.tpTicket.Size = new System.Drawing.Size(1269, 542);
+            this.tpTicket.Size = new System.Drawing.Size(1297, 542);
             this.tpTicket.TabIndex = 4;
             this.tpTicket.Text = "Vé";
             this.tpTicket.UseVisualStyleBackColor = true;
@@ -2667,7 +2409,7 @@
             this.panel55.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel55.Location = new System.Drawing.Point(0, 0);
             this.panel55.Name = "panel55";
-            this.panel55.Size = new System.Drawing.Size(1269, 542);
+            this.panel55.Size = new System.Drawing.Size(1297, 542);
             this.panel55.TabIndex = 1;
             // 
             // panel56
@@ -2677,7 +2419,7 @@
             this.panel56.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel56.Location = new System.Drawing.Point(0, 64);
             this.panel56.Name = "panel56";
-            this.panel56.Size = new System.Drawing.Size(1269, 478);
+            this.panel56.Size = new System.Drawing.Size(1297, 478);
             this.panel56.TabIndex = 10;
             // 
             // panel57
@@ -2687,7 +2429,7 @@
             this.panel57.Location = new System.Drawing.Point(0, 0);
             this.panel57.Margin = new System.Windows.Forms.Padding(4);
             this.panel57.Name = "panel57";
-            this.panel57.Size = new System.Drawing.Size(725, 478);
+            this.panel57.Size = new System.Drawing.Size(753, 478);
             this.panel57.TabIndex = 12;
             // 
             // dtgvTicket
@@ -2697,14 +2439,14 @@
             this.dtgvTicket.Location = new System.Drawing.Point(0, 0);
             this.dtgvTicket.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvTicket.Name = "dtgvTicket";
-            this.dtgvTicket.Size = new System.Drawing.Size(725, 478);
+            this.dtgvTicket.Size = new System.Drawing.Size(753, 478);
             this.dtgvTicket.TabIndex = 0;
             // 
             // panel58
             // 
             this.panel58.Controls.Add(this.lsvAllListShowTimes);
             this.panel58.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel58.Location = new System.Drawing.Point(725, 0);
+            this.panel58.Location = new System.Drawing.Point(753, 0);
             this.panel58.Margin = new System.Windows.Forms.Padding(4);
             this.panel58.Name = "panel58";
             this.panel58.Size = new System.Drawing.Size(544, 478);
@@ -2760,7 +2502,7 @@
             this.panel61.Location = new System.Drawing.Point(0, 0);
             this.panel61.Margin = new System.Windows.Forms.Padding(4);
             this.panel61.Name = "panel61";
-            this.panel61.Size = new System.Drawing.Size(1269, 64);
+            this.panel61.Size = new System.Drawing.Size(1297, 64);
             this.panel61.TabIndex = 9;
             // 
             // btnShowAllTicketsByShowTime
@@ -2844,7 +2586,7 @@
             this.tpRevenue.Controls.Add(this.dtmFromDate);
             this.tpRevenue.Location = new System.Drawing.Point(4, 31);
             this.tpRevenue.Name = "tpRevenue";
-            this.tpRevenue.Size = new System.Drawing.Size(1317, 583);
+            this.tpRevenue.Size = new System.Drawing.Size(1311, 583);
             this.tpRevenue.TabIndex = 4;
             this.tpRevenue.Text = "Doanh thu";
             this.tpRevenue.UseVisualStyleBackColor = true;
@@ -2974,6 +2716,264 @@
             this.tcAdmin.TabIndex = 0;
             this.tcAdmin.SelectedIndexChanged += new System.EventHandler(this.tcAdmin_SelectedIndexChanged);
             // 
+            // lblCinemaID
+            // 
+            this.lblCinemaID.AutoSize = true;
+            this.lblCinemaID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCinemaID.Location = new System.Drawing.Point(4, 13);
+            this.lblCinemaID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCinemaID.Name = "lblCinemaID";
+            this.lblCinemaID.Size = new System.Drawing.Size(117, 24);
+            this.lblCinemaID.TabIndex = 0;
+            this.lblCinemaID.Text = "Mã phòng :";
+            // 
+            // txtCinemaID
+            // 
+            this.txtCinemaID.Location = new System.Drawing.Point(135, 10);
+            this.txtCinemaID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCinemaID.Name = "txtCinemaID";
+            this.txtCinemaID.Size = new System.Drawing.Size(150, 30);
+            this.txtCinemaID.TabIndex = 1;
+            this.txtCinemaID.TextChanged += new System.EventHandler(this.txtCinemaID_TextChanged);
+            // 
+            // panel32
+            // 
+            this.panel32.Controls.Add(this.txtCinemaID);
+            this.panel32.Controls.Add(this.lblCinemaID);
+            this.panel32.Location = new System.Drawing.Point(0, 4);
+            this.panel32.Margin = new System.Windows.Forms.Padding(4);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(299, 54);
+            this.panel32.TabIndex = 1;
+            // 
+            // lblCinemaName
+            // 
+            this.lblCinemaName.AutoSize = true;
+            this.lblCinemaName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCinemaName.Location = new System.Drawing.Point(4, 11);
+            this.lblCinemaName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCinemaName.Name = "lblCinemaName";
+            this.lblCinemaName.Size = new System.Drawing.Size(125, 24);
+            this.lblCinemaName.TabIndex = 0;
+            this.lblCinemaName.Text = "Tên phòng :";
+            // 
+            // txtCinemaName
+            // 
+            this.txtCinemaName.Location = new System.Drawing.Point(136, 8);
+            this.txtCinemaName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCinemaName.Name = "txtCinemaName";
+            this.txtCinemaName.Size = new System.Drawing.Size(149, 30);
+            this.txtCinemaName.TabIndex = 1;
+            // 
+            // panel31
+            // 
+            this.panel31.Controls.Add(this.txtCinemaName);
+            this.panel31.Controls.Add(this.lblCinemaName);
+            this.panel31.Location = new System.Drawing.Point(0, 65);
+            this.panel31.Margin = new System.Windows.Forms.Padding(4);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(299, 54);
+            this.panel31.TabIndex = 2;
+            // 
+            // lblCinemaSeats
+            // 
+            this.lblCinemaSeats.AutoSize = true;
+            this.lblCinemaSeats.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCinemaSeats.Location = new System.Drawing.Point(4, 11);
+            this.lblCinemaSeats.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCinemaSeats.Name = "lblCinemaSeats";
+            this.lblCinemaSeats.Size = new System.Drawing.Size(136, 24);
+            this.lblCinemaSeats.TabIndex = 0;
+            this.lblCinemaSeats.Text = "Số chỗ ngồi :";
+            // 
+            // txtCinemaSeats
+            // 
+            this.txtCinemaSeats.Location = new System.Drawing.Point(136, 8);
+            this.txtCinemaSeats.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCinemaSeats.Name = "txtCinemaSeats";
+            this.txtCinemaSeats.Size = new System.Drawing.Size(149, 30);
+            this.txtCinemaSeats.TabIndex = 1;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.txtCinemaSeats);
+            this.panel8.Controls.Add(this.lblCinemaSeats);
+            this.panel8.Location = new System.Drawing.Point(0, 189);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(299, 54);
+            this.panel8.TabIndex = 2;
+            // 
+            // lblCinemaStatus
+            // 
+            this.lblCinemaStatus.AutoSize = true;
+            this.lblCinemaStatus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCinemaStatus.Location = new System.Drawing.Point(4, 11);
+            this.lblCinemaStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCinemaStatus.Name = "lblCinemaStatus";
+            this.lblCinemaStatus.Size = new System.Drawing.Size(122, 24);
+            this.lblCinemaStatus.TabIndex = 0;
+            this.lblCinemaStatus.Text = "Tình trạng :";
+            // 
+            // txtCinemaStatus
+            // 
+            this.txtCinemaStatus.Location = new System.Drawing.Point(136, 8);
+            this.txtCinemaStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCinemaStatus.Name = "txtCinemaStatus";
+            this.txtCinemaStatus.Size = new System.Drawing.Size(149, 30);
+            this.txtCinemaStatus.TabIndex = 1;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.txtCinemaStatus);
+            this.panel9.Controls.Add(this.lblCinemaStatus);
+            this.panel9.Location = new System.Drawing.Point(0, 251);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(299, 54);
+            this.panel9.TabIndex = 2;
+            // 
+            // lblNumberOfRows
+            // 
+            this.lblNumberOfRows.AutoSize = true;
+            this.lblNumberOfRows.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblNumberOfRows.Location = new System.Drawing.Point(4, 11);
+            this.lblNumberOfRows.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumberOfRows.Name = "lblNumberOfRows";
+            this.lblNumberOfRows.Size = new System.Drawing.Size(142, 24);
+            this.lblNumberOfRows.TabIndex = 0;
+            this.lblNumberOfRows.Text = "Số hàng ghế :";
+            // 
+            // txtNumberOfRows
+            // 
+            this.txtNumberOfRows.Location = new System.Drawing.Point(136, 8);
+            this.txtNumberOfRows.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumberOfRows.Name = "txtNumberOfRows";
+            this.txtNumberOfRows.Size = new System.Drawing.Size(149, 30);
+            this.txtNumberOfRows.TabIndex = 1;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.txtNumberOfRows);
+            this.panel12.Controls.Add(this.lblNumberOfRows);
+            this.panel12.Location = new System.Drawing.Point(0, 313);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(299, 54);
+            this.panel12.TabIndex = 2;
+            // 
+            // lblSeatsPerRow
+            // 
+            this.lblSeatsPerRow.AutoSize = true;
+            this.lblSeatsPerRow.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblSeatsPerRow.Location = new System.Drawing.Point(4, 11);
+            this.lblSeatsPerRow.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSeatsPerRow.Name = "lblSeatsPerRow";
+            this.lblSeatsPerRow.Size = new System.Drawing.Size(155, 24);
+            this.lblSeatsPerRow.TabIndex = 0;
+            this.lblSeatsPerRow.Text = "Ghế mỗi hàng :";
+            // 
+            // txtSeatsPerRow
+            // 
+            this.txtSeatsPerRow.Location = new System.Drawing.Point(136, 8);
+            this.txtSeatsPerRow.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeatsPerRow.Name = "txtSeatsPerRow";
+            this.txtSeatsPerRow.Size = new System.Drawing.Size(149, 30);
+            this.txtSeatsPerRow.TabIndex = 1;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.txtSeatsPerRow);
+            this.panel15.Controls.Add(this.lblSeatsPerRow);
+            this.panel15.Location = new System.Drawing.Point(0, 375);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(299, 54);
+            this.panel15.TabIndex = 2;
+            // 
+            // lblScreenType
+            // 
+            this.lblScreenType.AutoSize = true;
+            this.lblScreenType.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblScreenType.Location = new System.Drawing.Point(4, 11);
+            this.lblScreenType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblScreenType.Name = "lblScreenType";
+            this.lblScreenType.Size = new System.Drawing.Size(111, 24);
+            this.lblScreenType.TabIndex = 0;
+            this.lblScreenType.Text = "Màn hình :";
+            // 
+            // cboCinemaScreenType
+            // 
+            this.cboCinemaScreenType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCinemaScreenType.FormattingEnabled = true;
+            this.cboCinemaScreenType.Location = new System.Drawing.Point(137, 11);
+            this.cboCinemaScreenType.Name = "cboCinemaScreenType";
+            this.cboCinemaScreenType.Size = new System.Drawing.Size(149, 30);
+            this.cboCinemaScreenType.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.cboCinemaScreenType);
+            this.panel6.Controls.Add(this.lblScreenType);
+            this.panel6.Location = new System.Drawing.Point(0, 127);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(302, 54);
+            this.panel6.TabIndex = 2;
+            // 
+            // picFilm
+            // 
+            this.picFilm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picFilm.Location = new System.Drawing.Point(1096, 8);
+            this.picFilm.Name = "picFilm";
+            this.picFilm.Size = new System.Drawing.Size(186, 217);
+            this.picFilm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFilm.TabIndex = 33;
+            this.picFilm.TabStop = false;
+            // 
+            // btnSearchShowtime
+            // 
+            this.btnSearchShowtime.Image = global::GUI.Properties.Resources.search_icon;
+            this.btnSearchShowtime.Location = new System.Drawing.Point(967, 30);
+            this.btnSearchShowtime.Name = "btnSearchShowtime";
+            this.btnSearchShowtime.Size = new System.Drawing.Size(27, 27);
+            this.btnSearchShowtime.TabIndex = 7;
+            this.btnSearchShowtime.UseVisualStyleBackColor = true;
+            this.btnSearchShowtime.Click += new System.EventHandler(this.btnSearchShowtime_Click);
+            // 
+            // btnSearchStaff
+            // 
+            this.btnSearchStaff.BackgroundImage = global::GUI.Properties.Resources.search_icon;
+            this.btnSearchStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchStaff.Location = new System.Drawing.Point(932, 169);
+            this.btnSearchStaff.Name = "btnSearchStaff";
+            this.btnSearchStaff.Size = new System.Drawing.Size(26, 26);
+            this.btnSearchStaff.TabIndex = 6;
+            this.btnSearchStaff.UseVisualStyleBackColor = true;
+            this.btnSearchStaff.Click += new System.EventHandler(this.btnSearchStaff_Click);
+            // 
+            // btnSearchCus
+            // 
+            this.btnSearchCus.BackgroundImage = global::GUI.Properties.Resources.search_icon;
+            this.btnSearchCus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchCus.Location = new System.Drawing.Point(967, 174);
+            this.btnSearchCus.Name = "btnSearchCus";
+            this.btnSearchCus.Size = new System.Drawing.Size(26, 26);
+            this.btnSearchCus.TabIndex = 13;
+            this.btnSearchCus.UseVisualStyleBackColor = true;
+            this.btnSearchCus.Click += new System.EventHandler(this.btnSearchCus_Click);
+            // 
+            // btnSearchAccount
+            // 
+            this.btnSearchAccount.BackgroundImage = global::GUI.Properties.Resources.search_icon;
+            this.btnSearchAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchAccount.Location = new System.Drawing.Point(168, 25);
+            this.btnSearchAccount.Name = "btnSearchAccount";
+            this.btnSearchAccount.Size = new System.Drawing.Size(26, 26);
+            this.btnSearchAccount.TabIndex = 19;
+            this.btnSearchAccount.UseVisualStyleBackColor = true;
+            this.btnSearchAccount.Click += new System.EventHandler(this.btnSearchAccount_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -3025,20 +3025,6 @@
             this.panel28.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCinema)).EndInit();
             this.panel30.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel31.ResumeLayout(false);
-            this.panel31.PerformLayout();
-            this.panel32.ResumeLayout(false);
-            this.panel32.PerformLayout();
             this.panel33.ResumeLayout(false);
             this.tpGenre.ResumeLayout(false);
             this.panel34.ResumeLayout(false);
@@ -3057,7 +3043,6 @@
             this.panel41.ResumeLayout(false);
             this.panel42.ResumeLayout(false);
             this.panel42.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFilm)).EndInit();
             this.panel43.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMovie)).EndInit();
             this.panel47.ResumeLayout(false);
@@ -3086,6 +3071,21 @@
             this.tpRevenue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRevenue)).EndInit();
             this.tcAdmin.ResumeLayout(false);
+            this.panel32.ResumeLayout(false);
+            this.panel32.PerformLayout();
+            this.panel31.ResumeLayout(false);
+            this.panel31.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFilm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3099,7 +3099,6 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Panel panel4;
-		private System.Windows.Forms.DataGridView dtgvStaff;
 		private System.Windows.Forms.TabPage tpData;
 		private System.Windows.Forms.TabControl tcData;
 		private System.Windows.Forms.TabPage tpScreenType;
@@ -3125,12 +3124,6 @@
 		private System.Windows.Forms.Panel panel28;
 		private System.Windows.Forms.DataGridView dtgvCinema;
 		private System.Windows.Forms.Panel panel30;
-		private System.Windows.Forms.Panel panel31;
-		private System.Windows.Forms.TextBox txtCinemaName;
-		private System.Windows.Forms.Label lblCinemaName;
-		private System.Windows.Forms.Panel panel32;
-		private System.Windows.Forms.TextBox txtCinemaID;
-		private System.Windows.Forms.Label lblCinemaID;
 		private System.Windows.Forms.Panel panel33;
 		private System.Windows.Forms.Button btnShowCinema;
 		private System.Windows.Forms.Button btnUpdateCinema;
@@ -3198,27 +3191,8 @@
 		private System.Windows.Forms.TextBox txtDoanhThu;
 		private System.Windows.Forms.Label lblSelectMovie;
 		private System.Windows.Forms.Label lblTongDoanhThu;
-        private System.Windows.Forms.Button btnShowStaff;
         private System.Windows.Forms.DataGridView dtgvCustomer;
         private System.Windows.Forms.Button btnShowCustomer;
-        private System.Windows.Forms.TextBox txtStaffId;
-        private System.Windows.Forms.TextBox txtStaffINumber;
-        private System.Windows.Forms.TextBox txtStaffBirth;
-        private System.Windows.Forms.TextBox txtStaffPhone;
-        private System.Windows.Forms.TextBox txtStaffName;
-        private System.Windows.Forms.TextBox txtStaffAddress;
-        private System.Windows.Forms.Button btnAddStaff;
-        private System.Windows.Forms.Label lblStaffID;
-        private System.Windows.Forms.Label lblStaffINumber;
-        private System.Windows.Forms.Label lblStaffBirth;
-        private System.Windows.Forms.Label lblStaffPhone;
-        private System.Windows.Forms.Label lblStaffAddress;
-        private System.Windows.Forms.Label lblStaffName;
-		private System.Windows.Forms.Button btnUpdateStaff;
-		private System.Windows.Forms.Button btnDeleteStaff;
-		private System.Windows.Forms.Button btnSearchStaff;
-		private System.Windows.Forms.TextBox txtSearchStaff;
-		private System.Windows.Forms.GroupBox grpStaff;
 		private System.Windows.Forms.GroupBox grpCustomer;
 		private System.Windows.Forms.Label lblCusID;
 		private System.Windows.Forms.TextBox txtCusID;
@@ -3242,21 +3216,6 @@
 		private System.Windows.Forms.Panel panel5;
 		private System.Windows.Forms.TextBox txtGenreDesc;
 		private System.Windows.Forms.Label lblGenreDesc;
-		private System.Windows.Forms.Panel panel6;
-		private System.Windows.Forms.ComboBox cboCinemaScreenType;
-		private System.Windows.Forms.Label lblScreenType;
-		private System.Windows.Forms.Panel panel15;
-		private System.Windows.Forms.TextBox txtSeatsPerRow;
-		private System.Windows.Forms.Label lblSeatsPerRow;
-		private System.Windows.Forms.Panel panel12;
-		private System.Windows.Forms.TextBox txtNumberOfRows;
-		private System.Windows.Forms.Label lblNumberOfRows;
-		private System.Windows.Forms.Panel panel9;
-		private System.Windows.Forms.TextBox txtCinemaStatus;
-		private System.Windows.Forms.Label lblCinemaStatus;
-		private System.Windows.Forms.Panel panel8;
-		private System.Windows.Forms.TextBox txtCinemaSeats;
-		private System.Windows.Forms.Label lblCinemaSeats;
 		private System.Windows.Forms.TabPage tpFormatMovie;
 		private System.Windows.Forms.DataGridView dtgvFormat;
 		private System.Windows.Forms.Button btnShowFormat;
@@ -3339,5 +3298,46 @@
         private System.Windows.Forms.Button btnAllListShowTimes;
         private System.Windows.Forms.Button btnShowAllTicketsByShowTime;
         private System.Windows.Forms.Button btnShowAllTicketsBoughtByShowTime;
+        private System.Windows.Forms.GroupBox grpStaff;
+        private System.Windows.Forms.Label lblStaffID;
+        private System.Windows.Forms.TextBox txtStaffId;
+        private System.Windows.Forms.TextBox txtStaffAddress;
+        private System.Windows.Forms.Label lblStaffINumber;
+        private System.Windows.Forms.TextBox txtStaffName;
+        private System.Windows.Forms.Label lblStaffBirth;
+        private System.Windows.Forms.TextBox txtStaffPhone;
+        private System.Windows.Forms.Label lblStaffPhone;
+        private System.Windows.Forms.TextBox txtStaffBirth;
+        private System.Windows.Forms.Label lblStaffAddress;
+        private System.Windows.Forms.TextBox txtStaffINumber;
+        private System.Windows.Forms.Label lblStaffName;
+        private System.Windows.Forms.Button btnSearchStaff;
+        private System.Windows.Forms.TextBox txtSearchStaff;
+        private System.Windows.Forms.Button btnDeleteStaff;
+        private System.Windows.Forms.Button btnUpdateStaff;
+        private System.Windows.Forms.Button btnAddStaff;
+        private System.Windows.Forms.Button btnShowStaff;
+        private System.Windows.Forms.DataGridView dtgvStaff;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.ComboBox cboCinemaScreenType;
+        private System.Windows.Forms.Label lblScreenType;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.TextBox txtSeatsPerRow;
+        private System.Windows.Forms.Label lblSeatsPerRow;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.TextBox txtNumberOfRows;
+        private System.Windows.Forms.Label lblNumberOfRows;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox txtCinemaStatus;
+        private System.Windows.Forms.Label lblCinemaStatus;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox txtCinemaSeats;
+        private System.Windows.Forms.Label lblCinemaSeats;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.TextBox txtCinemaName;
+        private System.Windows.Forms.Label lblCinemaName;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.TextBox txtCinemaID;
+        private System.Windows.Forms.Label lblCinemaID;
     }
 }
