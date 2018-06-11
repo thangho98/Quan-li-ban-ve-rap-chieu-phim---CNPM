@@ -24,6 +24,17 @@ namespace GUI.DAO
             }
             return listShowTimes;
         }
+        public static List<ShowTimes> GetListShowTimesNotCreateTickets()
+        {
+            List<ShowTimes> listShowTimes = new List<ShowTimes>();
+            DataTable data = DataProvider.ExecuteQuery("USP_GetListShowTimesNotCreateTickets");
+            foreach (DataRow row in data.Rows)
+            {
+                ShowTimes showTimes = new ShowTimes(row);
+                listShowTimes.Add(showTimes);
+            }
+            return listShowTimes;
+        }
         public static int UpdateStatusShowTimes(string showTimesID, int status)
         {
             string query = "USP_UpdateStatusShowTimes @idLichChieu , @status";
@@ -50,7 +61,7 @@ namespace GUI.DAO
 
 		public static bool DeleteShowtime(string id)
 		{
-			DataProvider.ExecuteNonQuery("DELETE dbo.Ve WHERE idLichChieu = '" + id + "'");
+            TicketDAO.DeleteTicketsByShowTimes(id);
 
 			int result = DataProvider.ExecuteNonQuery("DELETE dbo.LichChieu WHERE id = '" + id + "'");
 			return result > 0;

@@ -14,6 +14,7 @@ namespace GUI
             InitializeComponent();
         }
 
+        public Customer customer;
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
@@ -24,7 +25,7 @@ namespace GUI
                 MessageBox.Show("ID hoặc Họ tên của Khách Hàng không chính xác!\nVui lòng nhập lại thông tin.");
                 return;
             }
-            Customer customer = new Customer(data.Rows[0]);
+            customer = new Customer(data.Rows[0]);
 
             DialogResult = DialogResult.OK;
         }

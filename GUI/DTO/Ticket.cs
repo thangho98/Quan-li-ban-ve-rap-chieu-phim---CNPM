@@ -17,7 +17,6 @@ namespace GUI.DTO
             this.ShowTimesID = showTimesID;
             this.SeatName = seatName;
             this.CustomerID = customerID;
-            this.PromotionID = promotionID;
             this.Status = status;
             this.Price = price;
         }
@@ -29,7 +28,6 @@ namespace GUI.DTO
             this.ShowTimesID = row["idLichChieu"].ToString();
             this.SeatName = row["MaGheNgoi"].ToString();
             this.CustomerID = row["idKhachHang"].ToString();
-            this.PromotionID = row["idCheDoKM"].ToString();
             this.Status = (int)row["TrangThai"];
             if (row["TienBanVe"].ToString() == "")
                 this.Price = 0;
@@ -46,8 +44,6 @@ namespace GUI.DTO
         public string SeatName { get; set; }
 
         public string CustomerID { get; set; }
-
-        public string PromotionID { get; set; }
 
         public float Price { get; set; }
 

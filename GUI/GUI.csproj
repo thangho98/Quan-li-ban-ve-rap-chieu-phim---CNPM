@@ -111,7 +111,6 @@
     <Compile Include="DTO\Customer.cs" />
     <Compile Include="DTO\Movie.cs" />
     <Compile Include="DTO\MovieByGenre.cs" />
-    <Compile Include="DTO\Promotion.cs" />
     <Compile Include="DTO\ScreenType.cs" />
     <Compile Include="DTO\ShowTimes.cs" />
     <Compile Include="DTO\Staff.cs" />
