@@ -72,19 +72,21 @@ namespace GUI
             else if (tcAdmin.SelectedIndex == 4)
             {
                 LoadAccountList();
-            }
+				LoadStaffIntoComboBox(cboStaffID_Account);
+			}
         }
 
         private void tcData_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tcData.SelectedIndex == 0)
             {
-                LoadShowtimeList();
+				LoadScreenTypeList();
             }
             else if (tcData.SelectedIndex == 1)
             {
                 LoadCinemaList();
-            }
+				LoadScreenTypeIntoComboBox(cboCinemaScreenType);
+			}
             else if (tcData.SelectedIndex == 2)
             {
                 LoadGenreList();
@@ -92,15 +94,20 @@ namespace GUI
             else if (tcData.SelectedIndex == 3)
             {
                 LoadMovieList();
-            }
+				LoadGenreIntoCheckedList(clbMovieGenre);
+			}
             else if (tcData.SelectedIndex == 4)
             {
                 LoadFormatMovieList();
-            }
+				LoadMovieIDIntoCombobox(cboFormat_MovieID);
+				LoadScreenIDIntoCombobox(cboFormat_ScreenID);
+			}
             else if (tcData.SelectedIndex == 5)
             {
                 LoadShowtimeList();
-            }
+				LoadCinemaIntoComboBox(cboCinemaID_Showtime);
+				LoadFormatMovieIntoComboBox(cboFormatID_Showtime);
+			}
             else if (tcData.SelectedIndex == 6)
             {
                 LoadAllListShowTimes();
@@ -872,6 +879,10 @@ namespace GUI
             }
 
             Movie movie = MovieDAO.GetMovieByID(txtMovieID.Text);
+
+			if (movie == null)
+				return;
+
             if (movie.Poster != null)
                 picFilm.Image = MovieDAO.byteArrayToImage(movie.Poster);
         }
@@ -930,7 +941,11 @@ namespace GUI
             string productor = txtMovieProductor.Text;
             string director = txtMovieDirector.Text;
             int year = int.Parse(txtMovieYear.Text);
-            if (picFilm.Image == null) return;
+			if (picFilm.Image == null)
+			{
+				MessageBox.Show("Mời bạn thêm hình ảnh cho phim trước");
+				return;
+			}
             InsertMovie(movieID, movieName, movieDesc, movieLength, startDate, endDate, productor, director, year, MovieDAO.imageToByteArray(picFilm.Image));
             InsertMovie_Genre(movieID, clbMovieGenre);
             LoadMovieList();

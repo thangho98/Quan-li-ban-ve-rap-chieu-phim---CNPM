@@ -6,7 +6,6 @@ GO
 
 --drop database QLRP
 
-
 CREATE TABLE NhanVien
 (
 	id VARCHAR(50) PRIMARY KEY,

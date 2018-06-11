@@ -252,6 +252,8 @@ namespace GUI
 
                         ret += TicketDAO.BuyTicket(ticket.ID, ticket.Type, customer.ID, ticket.Price);
                     }
+					customer.Point += plusPoint;
+					CustomerDAO.UpdatePointCustomer(customer.ID, customer.Point);
                 }
                 else
                 {
