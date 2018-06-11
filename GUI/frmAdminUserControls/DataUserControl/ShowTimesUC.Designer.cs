@@ -194,7 +194,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(7, 244);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(313, 98);
+            this.groupBox2.Size = new System.Drawing.Size(328, 98);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thời gian chiếu";
@@ -204,7 +204,7 @@
             this.dtmShowtimeTime.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtmShowtimeTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtmShowtimeTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtmShowtimeTime.Location = new System.Drawing.Point(125, 57);
+            this.dtmShowtimeTime.Location = new System.Drawing.Point(147, 55);
             this.dtmShowtimeTime.Name = "dtmShowtimeTime";
             this.dtmShowtimeTime.ShowUpDown = true;
             this.dtmShowtimeTime.Size = new System.Drawing.Size(166, 30);
@@ -225,7 +225,7 @@
             this.dtmShowtimeDate.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtmShowtimeDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtmShowtimeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtmShowtimeDate.Location = new System.Drawing.Point(125, 25);
+            this.dtmShowtimeDate.Location = new System.Drawing.Point(147, 20);
             this.dtmShowtimeDate.Name = "dtmShowtimeDate";
             this.dtmShowtimeDate.Size = new System.Drawing.Size(166, 30);
             this.dtmShowtimeDate.TabIndex = 14;

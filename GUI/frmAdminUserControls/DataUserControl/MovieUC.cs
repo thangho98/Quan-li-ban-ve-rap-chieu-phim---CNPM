@@ -80,6 +80,10 @@ namespace GUI.frmAdminUserControls.DataUserControl
             }
 
             Movie movie = MovieDAO.GetMovieByID(txtMovieID.Text);
+
+            if (movie == null)
+                return;
+
             if (movie.Poster != null)
                 picFilm.Image = MovieDAO.byteArrayToImage(movie.Poster);
         }
@@ -138,7 +142,11 @@ namespace GUI.frmAdminUserControls.DataUserControl
             string productor = txtMovieProductor.Text;
             string director = txtMovieDirector.Text;
             int year = int.Parse(txtMovieYear.Text);
-            if (picFilm.Image == null) return;
+            if (picFilm.Image == null)
+            {
+                MessageBox.Show("Mời bạn thêm hình ảnh cho phim trước");
+                return;
+            }
             InsertMovie(movieID, movieName, movieDesc, movieLength, startDate, endDate, productor, director, year, MovieDAO.imageToByteArray(picFilm.Image));
             InsertMovie_Genre(movieID, clbMovieGenre);
             LoadMovieList();
@@ -175,7 +183,11 @@ namespace GUI.frmAdminUserControls.DataUserControl
             string productor = txtMovieProductor.Text;
             string director = txtMovieDirector.Text;
             int year = int.Parse(txtMovieYear.Text);
-            if (picFilm.Image == null) return;
+            if (picFilm.Image == null)
+            {
+                MessageBox.Show("Mời bạn thêm hình ảnh cho phim trước");
+                return;
+            }
             UpdateMovie(movieID, movieName, movieDesc, movieLength, startDate, endDate, productor, director, year, MovieDAO.imageToByteArray(picFilm.Image));
             UpdateMovie_Genre(movieID, clbMovieGenre);
             LoadMovieList();

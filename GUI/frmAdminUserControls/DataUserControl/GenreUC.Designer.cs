@@ -132,7 +132,7 @@
             this.dtgvGenre.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvGenre.Name = "dtgvGenre";
             this.dtgvGenre.ReadOnly = true;
-            this.dtgvGenre.Size = new System.Drawing.Size(1164, 574);
+            this.dtgvGenre.Size = new System.Drawing.Size(1014, 574);
             this.dtgvGenre.TabIndex = 1;
             // 
             // panel2
@@ -141,9 +141,9 @@
             this.panel2.Controls.Add(this.panel38);
             this.panel2.Controls.Add(this.panel39);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1164, 0);
+            this.panel2.Location = new System.Drawing.Point(1014, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(384, 574);
+            this.panel2.Size = new System.Drawing.Size(534, 574);
             this.panel2.TabIndex = 0;
             // 
             // panel5
@@ -153,7 +153,7 @@
             this.panel5.Location = new System.Drawing.Point(4, 131);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(372, 182);
+            this.panel5.Size = new System.Drawing.Size(526, 182);
             this.panel5.TabIndex = 5;
             // 
             // txtGenreDesc
@@ -162,7 +162,7 @@
             this.txtGenreDesc.Margin = new System.Windows.Forms.Padding(4);
             this.txtGenreDesc.Multiline = true;
             this.txtGenreDesc.Name = "txtGenreDesc";
-            this.txtGenreDesc.Size = new System.Drawing.Size(279, 156);
+            this.txtGenreDesc.Size = new System.Drawing.Size(408, 156);
             this.txtGenreDesc.TabIndex = 1;
             // 
             // lblGenreDesc
@@ -183,7 +183,7 @@
             this.panel38.Location = new System.Drawing.Point(4, 69);
             this.panel38.Margin = new System.Windows.Forms.Padding(4);
             this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(372, 54);
+            this.panel38.Size = new System.Drawing.Size(526, 54);
             this.panel38.TabIndex = 4;
             // 
             // txtGenreName
@@ -191,7 +191,7 @@
             this.txtGenreName.Location = new System.Drawing.Point(167, 10);
             this.txtGenreName.Margin = new System.Windows.Forms.Padding(4);
             this.txtGenreName.Name = "txtGenreName";
-            this.txtGenreName.Size = new System.Drawing.Size(200, 22);
+            this.txtGenreName.Size = new System.Drawing.Size(329, 22);
             this.txtGenreName.TabIndex = 1;
             // 
             // lblGenreName
@@ -212,7 +212,7 @@
             this.panel39.Location = new System.Drawing.Point(4, 8);
             this.panel39.Margin = new System.Windows.Forms.Padding(4);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(372, 54);
+            this.panel39.Size = new System.Drawing.Size(526, 54);
             this.panel39.TabIndex = 3;
             // 
             // txtGenreID
@@ -220,7 +220,7 @@
             this.txtGenreID.Location = new System.Drawing.Point(167, 10);
             this.txtGenreID.Margin = new System.Windows.Forms.Padding(4);
             this.txtGenreID.Name = "txtGenreID";
-            this.txtGenreID.Size = new System.Drawing.Size(200, 22);
+            this.txtGenreID.Size = new System.Drawing.Size(329, 22);
             this.txtGenreID.TabIndex = 1;
             // 
             // lblGenreID
