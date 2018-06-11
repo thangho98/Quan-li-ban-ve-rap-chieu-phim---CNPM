@@ -128,7 +128,7 @@
             this.dtgvFormat.Location = new System.Drawing.Point(0, 0);
             this.dtgvFormat.Name = "dtgvFormat";
             this.dtgvFormat.ReadOnly = true;
-            this.dtgvFormat.Size = new System.Drawing.Size(1135, 574);
+            this.dtgvFormat.Size = new System.Drawing.Size(1098, 574);
             this.dtgvFormat.TabIndex = 9;
             // 
             // panel3
@@ -144,9 +144,9 @@
             this.panel3.Controls.Add(this.txtFormat_MovieName);
             this.panel3.Controls.Add(this.txtFormatID);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1135, 0);
+            this.panel3.Location = new System.Drawing.Point(1098, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(413, 574);
+            this.panel3.Size = new System.Drawing.Size(450, 574);
             this.panel3.TabIndex = 0;
             // 
             // cboFormat_ScreenID
@@ -155,7 +155,7 @@
             this.cboFormat_ScreenID.FormattingEnabled = true;
             this.cboFormat_ScreenID.Location = new System.Drawing.Point(170, 172);
             this.cboFormat_ScreenID.Name = "cboFormat_ScreenID";
-            this.cboFormat_ScreenID.Size = new System.Drawing.Size(219, 24);
+            this.cboFormat_ScreenID.Size = new System.Drawing.Size(249, 24);
             this.cboFormat_ScreenID.TabIndex = 20;
             this.cboFormat_ScreenID.SelectedIndexChanged += new System.EventHandler(this.cboFormat_ScreenID_SelectedValueChanged);
             // 
@@ -175,7 +175,7 @@
             this.cboFormat_MovieID.FormattingEnabled = true;
             this.cboFormat_MovieID.Location = new System.Drawing.Point(170, 78);
             this.cboFormat_MovieID.Name = "cboFormat_MovieID";
-            this.cboFormat_MovieID.Size = new System.Drawing.Size(219, 24);
+            this.cboFormat_MovieID.Size = new System.Drawing.Size(249, 24);
             this.cboFormat_MovieID.TabIndex = 21;
             this.cboFormat_MovieID.SelectedIndexChanged += new System.EventHandler(this.cboFormat_MovieID_SelectedValueChanged);
             // 
@@ -214,7 +214,7 @@
             this.txtFormat_ScreenName.Location = new System.Drawing.Point(170, 209);
             this.txtFormat_ScreenName.Name = "txtFormat_ScreenName";
             this.txtFormat_ScreenName.ReadOnly = true;
-            this.txtFormat_ScreenName.Size = new System.Drawing.Size(219, 22);
+            this.txtFormat_ScreenName.Size = new System.Drawing.Size(249, 22);
             this.txtFormat_ScreenName.TabIndex = 12;
             // 
             // lblFormatID
@@ -232,14 +232,14 @@
             this.txtFormat_MovieName.Location = new System.Drawing.Point(170, 111);
             this.txtFormat_MovieName.Name = "txtFormat_MovieName";
             this.txtFormat_MovieName.ReadOnly = true;
-            this.txtFormat_MovieName.Size = new System.Drawing.Size(219, 22);
+            this.txtFormat_MovieName.Size = new System.Drawing.Size(249, 22);
             this.txtFormat_MovieName.TabIndex = 13;
             // 
             // txtFormatID
             // 
             this.txtFormatID.Location = new System.Drawing.Point(170, 16);
             this.txtFormatID.Name = "txtFormatID";
-            this.txtFormatID.Size = new System.Drawing.Size(219, 22);
+            this.txtFormatID.Size = new System.Drawing.Size(249, 22);
             this.txtFormatID.TabIndex = 14;
             this.txtFormatID.TextChanged += new System.EventHandler(this.txtFormatID_TextChanged);
             // 

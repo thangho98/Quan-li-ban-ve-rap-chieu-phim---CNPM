@@ -132,9 +132,9 @@
             // 
             this.panel1.Controls.Add(this.lsvAllListShowTimes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1000, 64);
+            this.panel1.Location = new System.Drawing.Point(859, 64);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(548, 574);
+            this.panel1.Size = new System.Drawing.Size(689, 574);
             this.panel1.TabIndex = 11;
             // 
             // lsvAllListShowTimes
@@ -147,9 +147,9 @@
             this.lsvAllListShowTimes.FullRowSelect = true;
             this.lsvAllListShowTimes.GridLines = true;
             this.lsvAllListShowTimes.HideSelection = false;
-            this.lsvAllListShowTimes.Location = new System.Drawing.Point(8, 7);
+            this.lsvAllListShowTimes.Location = new System.Drawing.Point(7, 7);
             this.lsvAllListShowTimes.Name = "lsvAllListShowTimes";
-            this.lsvAllListShowTimes.Size = new System.Drawing.Size(531, 564);
+            this.lsvAllListShowTimes.Size = new System.Drawing.Size(663, 564);
             this.lsvAllListShowTimes.TabIndex = 9;
             this.lsvAllListShowTimes.UseCompatibleStateImageBehavior = false;
             this.lsvAllListShowTimes.View = System.Windows.Forms.View.Details;
@@ -185,7 +185,7 @@
             this.dtgvTicket.Location = new System.Drawing.Point(0, 64);
             this.dtgvTicket.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvTicket.Name = "dtgvTicket";
-            this.dtgvTicket.Size = new System.Drawing.Size(1000, 574);
+            this.dtgvTicket.Size = new System.Drawing.Size(859, 574);
             this.dtgvTicket.TabIndex = 12;
             // 
             // TicketsUC
