@@ -448,7 +448,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!TienBanVe.Value</Value>
+                              <Value>= String.Format( new System.Globalization.CultureInfo("vi-VN"), "{0:c}", Fields!TienBanVe.Value)</Value>
                               <Style>
                                 <Format>0.00 '₫';(0.00 '₫')</Format>
                                 <rd:FormatSymbolCulture>vi-VN</rd:FormatSymbolCulture>
@@ -472,6 +472,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
