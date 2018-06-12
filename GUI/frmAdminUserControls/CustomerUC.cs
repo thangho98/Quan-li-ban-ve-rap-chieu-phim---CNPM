@@ -111,5 +111,14 @@ namespace GUI.frmAdminUserControls
             string cusName = txtSearchCus.Text;
             customerList.DataSource = CustomerDAO.SearchCustomerByName(cusName);
         }
-    }
+
+		private void txtSearchCus_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				btnSearchCus.PerformClick();
+				e.SuppressKeyPress = true;//Tắt tiếng *ting của windows
+			}
+		}
+	}
 }
