@@ -79,7 +79,7 @@ namespace GUI.frmAdminUserControls
         {
             if (AccountDAO.InsertAccount(username, accountType, idStaff))
             {
-                MessageBox.Show("Thêm tài khoản thành công");
+                MessageBox.Show("Thêm tài khoản thành công, mật khẩu mặc định : 1");
             }
             else
             {
@@ -136,7 +136,7 @@ namespace GUI.frmAdminUserControls
         {
             if (AccountDAO.ResetPassword(username))
             {
-                MessageBox.Show("Reset mật khẩu thành công");
+                MessageBox.Show("Reset mật khẩu thành công, mật khẩu mặc định : 1");
             }
             else
             {
