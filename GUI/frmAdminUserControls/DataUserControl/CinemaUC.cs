@@ -27,12 +27,12 @@ namespace GUI.frmAdminUserControls.DataUserControl
         }
         void AddCinemaBinding()
         {
-            txtCinemaID.DataBindings.Add("Text", dtgvCinema.DataSource, "Mã phòng");
-            txtCinemaName.DataBindings.Add("Text", dtgvCinema.DataSource, "Tên phòng");
-            txtCinemaSeats.DataBindings.Add("Text", dtgvCinema.DataSource, "Số chỗ ngồi");
-            txtCinemaStatus.DataBindings.Add("Text", dtgvCinema.DataSource, "Tình trạng");
-            txtNumberOfRows.DataBindings.Add("Text", dtgvCinema.DataSource, "Số hàng ghế");
-            txtSeatsPerRow.DataBindings.Add("Text", dtgvCinema.DataSource, "Ghế mỗi hàng");
+            txtCinemaID.DataBindings.Add("Text", dtgvCinema.DataSource, "Mã phòng", true, DataSourceUpdateMode.Never);
+            txtCinemaName.DataBindings.Add("Text", dtgvCinema.DataSource, "Tên phòng", true, DataSourceUpdateMode.Never);
+            txtCinemaSeats.DataBindings.Add("Text", dtgvCinema.DataSource, "Số chỗ ngồi", true, DataSourceUpdateMode.Never);
+            txtCinemaStatus.DataBindings.Add("Text", dtgvCinema.DataSource, "Tình trạng", true, DataSourceUpdateMode.Never);
+            txtNumberOfRows.DataBindings.Add("Text", dtgvCinema.DataSource, "Số hàng ghế", true, DataSourceUpdateMode.Never);
+            txtSeatsPerRow.DataBindings.Add("Text", dtgvCinema.DataSource, "Ghế mỗi hàng", true, DataSourceUpdateMode.Never);
             LoadScreenTypeIntoComboBox(cboCinemaScreenType);
         }
         void LoadScreenTypeIntoComboBox(ComboBox cbo)

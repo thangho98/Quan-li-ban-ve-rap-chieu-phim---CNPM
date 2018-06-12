@@ -34,15 +34,15 @@ namespace GUI.frmAdminUserControls.DataUserControl
         }
         void AddMovieBinding()
         {
-            txtMovieID.DataBindings.Add("Text", dtgvMovie.DataSource, "Mã phim");
-            txtMovieName.DataBindings.Add("Text", dtgvMovie.DataSource, "Tên phim");
-            txtMovieDesc.DataBindings.Add("Text", dtgvMovie.DataSource, "Mô tả");
-            txtMovieLength.DataBindings.Add("Text", dtgvMovie.DataSource, "Thời lượng");
-            dtmMovieStart.DataBindings.Add("Value", dtgvMovie.DataSource, "Ngày khởi chiếu");
-            dtmMovieEnd.DataBindings.Add("Value", dtgvMovie.DataSource, "Ngày kết thúc");
-            txtMovieProductor.DataBindings.Add("Text", dtgvMovie.DataSource, "Sản xuất");
-            txtMovieDirector.DataBindings.Add("Text", dtgvMovie.DataSource, "Đạo diễn");
-            txtMovieYear.DataBindings.Add("Text", dtgvMovie.DataSource, "Năm SX");
+            txtMovieID.DataBindings.Add("Text", dtgvMovie.DataSource, "Mã phim", true,  DataSourceUpdateMode.Never);
+            txtMovieName.DataBindings.Add("Text", dtgvMovie.DataSource, "Tên phim", true, DataSourceUpdateMode.Never);
+            txtMovieDesc.DataBindings.Add("Text", dtgvMovie.DataSource, "Mô tả", true, DataSourceUpdateMode.Never);
+            txtMovieLength.DataBindings.Add("Text", dtgvMovie.DataSource, "Thời lượng", true, DataSourceUpdateMode.Never);
+            dtmMovieStart.DataBindings.Add("Value", dtgvMovie.DataSource, "Ngày khởi chiếu", true, DataSourceUpdateMode.Never);
+            dtmMovieEnd.DataBindings.Add("Value", dtgvMovie.DataSource, "Ngày kết thúc", true, DataSourceUpdateMode.Never);
+            txtMovieProductor.DataBindings.Add("Text", dtgvMovie.DataSource, "Sản xuất", true, DataSourceUpdateMode.Never);
+            txtMovieDirector.DataBindings.Add("Text", dtgvMovie.DataSource, "Đạo diễn", true, DataSourceUpdateMode.Never);
+            txtMovieYear.DataBindings.Add("Text", dtgvMovie.DataSource, "Năm SX", true, DataSourceUpdateMode.Never);
             LoadGenreIntoCheckedList(clbMovieGenre);
         }
         void LoadGenreIntoCheckedList(CheckedListBox checkedList)
