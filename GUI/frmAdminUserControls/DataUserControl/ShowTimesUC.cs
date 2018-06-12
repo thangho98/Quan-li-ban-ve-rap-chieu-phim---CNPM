@@ -98,7 +98,8 @@ namespace GUI.frmAdminUserControls.DataUserControl
                 iCinema++;
             }
             cboCinemaID_Showtime.SelectedIndex = indexCinema;
-            #endregion
+			#endregion
+			toolTipCinema.SetToolTip(cboCinemaID_Showtime, "Danh sách phòng chiếu hỗ trợ loại màn hình trên");
         }
 
         //Insert
