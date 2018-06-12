@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
+﻿using GUI.frmAdminUserControls.DataUserControl;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using GUI.frmAdminUserControls.DataUserControl;
 
 namespace GUI.frmAdminUserControls
 {

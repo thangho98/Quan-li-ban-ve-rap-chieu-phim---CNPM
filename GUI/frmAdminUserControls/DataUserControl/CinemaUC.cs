@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using GUI.DAO;
+﻿using GUI.DAO;
 using GUI.DTO;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace GUI.frmAdminUserControls.DataUserControl
 {
@@ -68,11 +62,6 @@ namespace GUI.frmAdminUserControls.DataUserControl
                 i++;
             }
             cboCinemaScreenType.SelectedIndex = index;
-        }
-
-        private void btnShowCinema_Click(object sender, EventArgs e)
-        {
-            LoadCinemaList();
         }
 
         void InsertCinema(string id, string name, string idMH, int seats, int status, int numberOfRows, int seatsPerRow)
