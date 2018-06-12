@@ -139,6 +139,24 @@ CREATE TABLE Ve
 )
 GO
 
+CREATE TRIGGER UTG_CheckDateLichChieu
+ON dbo.LichChieu
+FOR INSERT
+AS
+BEGIN
+	DECLARE @count INT = 0
+
+	SELECT @count = COUNT(*)
+	FROM Inserted LC, dbo.Phim P, dbo.DinhDangPhim DD
+	WHERE LC.idDinhDang = DD.id AND DD.idPhim = P.id AND (LC.ThoiGianChieu > P.NgayKetThuc OR LC.ThoiGianChieu < P.NgayKhoiChieu)
+
+	IF (@count > 0)
+	BEGIN
+		ROLLBACK TRAN
+    END
+END
+GO
+
 
 INSERT [dbo].[TheLoai] ([id], [TenTheLoai], [MoTa]) VALUES (N'TL01', N'Hành Động', NULL)
 INSERT [dbo].[TheLoai] ([id], [TenTheLoai], [MoTa]) VALUES (N'TL02', N'Hoạt Hình', NULL)
