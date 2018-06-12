@@ -6,11 +6,11 @@ namespace GUI.DTO
 {
     public class FormatMovie
     {
-        public FormatMovie(string iD, string movieID, string screenTypeID)
+        public FormatMovie(string iD, string movieName, string screenTypeName)
         {
             this.ID = iD;
-            this.MovieName = movieID;
-            this.ScreenTypeName = screenTypeID;
+            this.MovieName = movieName;
+            this.ScreenTypeName = screenTypeName;
         }
 
         public FormatMovie(DataRow row)

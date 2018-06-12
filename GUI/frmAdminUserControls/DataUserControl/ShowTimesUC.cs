@@ -19,6 +19,7 @@ namespace GUI.frmAdminUserControls.DataUserControl
         {
             dtgvShowtime.DataSource = showtimeList;
             LoadShowtimeList();
+            LoadFormatMovieIntoComboBox();
             AddShowtimeBinding();
         }
         void LoadShowtimeList()
@@ -34,30 +35,49 @@ namespace GUI.frmAdminUserControls.DataUserControl
         void AddShowtimeBinding()
         {
             txtShowtimeID.DataBindings.Add("Text", dtgvShowtime.DataSource, "Mã lịch chiếu", true, DataSourceUpdateMode.Never);
-            LoadCinemaIntoComboBox(cboCinemaID_Showtime);
-            LoadFormatMovieIntoComboBox(cboFormatID_Showtime);
             dtmShowtimeDate.DataBindings.Add("Value", dtgvShowtime.DataSource, "Thời gian chiếu", true, DataSourceUpdateMode.Never);
             dtmShowtimeTime.DataBindings.Add("Value", dtgvShowtime.DataSource, "Thời gian chiếu", true, DataSourceUpdateMode.Never);
             txtTicketPrice_Showtime.DataBindings.Add("Text", dtgvShowtime.DataSource, "Giá vé", true, DataSourceUpdateMode.Never);
         }
-        void LoadCinemaIntoComboBox(ComboBox cbo)
+        void LoadFormatMovieIntoComboBox()
         {
-            cbo.DataSource = CinemaDAO.GetCinema();
-            cbo.DisplayMember = "Name";
-        }
-        void LoadFormatMovieIntoComboBox(ComboBox cbo)
-        {
-            cbo.DataSource = FormatMovieDAO.GetFormatMovie();
-            cbo.DisplayMember = "ID";
+            cboFormatID_Showtime.DataSource = FormatMovieDAO.GetFormatMovie();
+            cboFormatID_Showtime.DisplayMember = "ID";
         }
         private void cboFormatID_Showtime_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FormatMovie formatMovieSelecting = (FormatMovie)cboFormatID_Showtime.SelectedItem;
-            txtMovieName_Showtime.Text = formatMovieSelecting.MovieName;
-            txtScreenTypeName_Showtime.Text = formatMovieSelecting.ScreenTypeName;
+            if (cboFormatID_Showtime.SelectedIndex != -1)
+            {
+                FormatMovie formatMovieSelecting = (FormatMovie)cboFormatID_Showtime.SelectedItem;
+                txtMovieName_Showtime.Text = formatMovieSelecting.MovieName;
+                txtScreenTypeName_Showtime.Text = formatMovieSelecting.ScreenTypeName;
+
+                cboCinemaID_Showtime.DataSource = null;
+                ScreenType screenType = ScreenTypeDAO.GetScreenTypeByName(formatMovieSelecting.ScreenTypeName);
+                cboCinemaID_Showtime.DataSource = CinemaDAO.GetCinemaByScreenTypeID(screenType.ID);
+                cboCinemaID_Showtime.DisplayMember = "Name";
+            }
         }
         private void txtShowtimeID_TextChanged(object sender, EventArgs e)
         {
+            #region Change selected index of ComboBox FormatMovie
+            string movieName = (string)dtgvShowtime.SelectedCells[0].OwningRow.Cells["Tên phim"].Value;
+            string screenTypeName = (string)dtgvShowtime.SelectedCells[0].OwningRow.Cells["Màn hình"].Value;
+            FormatMovie formatMovieSelecting = FormatMovieDAO.GetFormatMovieByName(movieName, screenTypeName);
+            if (formatMovieSelecting == null)
+                return;
+            int indexFormatMovie = -1;
+            for (int i = 0; i < cboFormatID_Showtime.Items.Count; i++)
+            {
+                FormatMovie item = cboFormatID_Showtime.Items[i] as FormatMovie;
+                if (item.ID == formatMovieSelecting.ID)
+                {
+                    indexFormatMovie = i;
+                    break;
+                }
+            }
+            cboFormatID_Showtime.SelectedIndex = indexFormatMovie;
+            #endregion
             #region Change selected index of ComboBox Cinema
             string cinemaID = (string)dtgvShowtime.SelectedCells[0].OwningRow.Cells["Mã phòng"].Value;
             Cinema cinemaSelecting = CinemaDAO.GetCinemaByID(cinemaID);
@@ -78,24 +98,6 @@ namespace GUI.frmAdminUserControls.DataUserControl
                 iCinema++;
             }
             cboCinemaID_Showtime.SelectedIndex = indexCinema;
-            #endregion
-            #region Change selected index of ComboBox FormatMovie
-            string movieName = (string)dtgvShowtime.SelectedCells[0].OwningRow.Cells["Tên phim"].Value;
-            string screenTypeName = (string)dtgvShowtime.SelectedCells[0].OwningRow.Cells["Màn hình"].Value;
-            FormatMovie formatMovieSelecting = FormatMovieDAO.GetFormatMovieByName(movieName, screenTypeName);
-            if (formatMovieSelecting == null)
-                return;
-            int indexFormatMovie = -1;
-            for (int i = 0; i < cboFormatID_Showtime.Items.Count; i++)
-            {
-                FormatMovie item = cboFormatID_Showtime.Items[i] as FormatMovie;
-                if (item.ID == formatMovieSelecting.ID)
-                {
-                    indexFormatMovie = i;
-                    break;
-                }
-            }
-            cboFormatID_Showtime.SelectedIndex = indexFormatMovie;
             #endregion
         }
 

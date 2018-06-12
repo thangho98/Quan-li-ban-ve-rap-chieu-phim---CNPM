@@ -105,8 +105,7 @@ namespace GUI
             else if (tcData.SelectedIndex == 5)
             {
                 LoadShowtimeList();
-				LoadCinemaIntoComboBox(cboCinemaID_Showtime);
-				LoadFormatMovieIntoComboBox(cboFormatID_Showtime);
+				LoadFormatMovieIntoComboBox();
 			}
             else if (tcData.SelectedIndex == 6)
             {
@@ -1180,27 +1179,29 @@ namespace GUI
         void AddShowtimeBinding()
         {
             txtShowtimeID.DataBindings.Add("Text", dtgvShowtime.DataSource, "Mã lịch chiếu", true, DataSourceUpdateMode.Never);
-            LoadCinemaIntoComboBox(cboCinemaID_Showtime);
-            LoadFormatMovieIntoComboBox(cboFormatID_Showtime);
+            LoadFormatMovieIntoComboBox();
             dtmShowtimeDate.DataBindings.Add("Value", dtgvShowtime.DataSource, "Thời gian chiếu", true, DataSourceUpdateMode.Never);
             dtmShowtimeTime.DataBindings.Add("Value", dtgvShowtime.DataSource, "Thời gian chiếu", true, DataSourceUpdateMode.Never);
             txtTicketPrice_Showtime.DataBindings.Add("Text", dtgvShowtime.DataSource, "Giá vé", true, DataSourceUpdateMode.Never);
         }
-        void LoadCinemaIntoComboBox(ComboBox cbo)
+        void LoadFormatMovieIntoComboBox()
         {
-            cbo.DataSource = CinemaDAO.GetCinema();
-            cbo.DisplayMember = "Name";
-        }
-        void LoadFormatMovieIntoComboBox(ComboBox cbo)
-        {
-            cbo.DataSource = FormatMovieDAO.GetFormatMovie();
-            cbo.DisplayMember = "ID";
+            cboFormatID_Showtime.DataSource = FormatMovieDAO.GetFormatMovie();
+            cboFormatID_Showtime.DisplayMember = "ID";
         }
         private void cboFormatID_Showtime_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FormatMovie formatMovieSelecting = (FormatMovie)cboFormatID_Showtime.SelectedItem;
-            txtMovieName_Showtime.Text = formatMovieSelecting.MovieName;
-            txtScreenTypeName_Showtime.Text = formatMovieSelecting.ScreenTypeName;
+            if (cboFormatID_Showtime.SelectedIndex != -1)
+            {
+                FormatMovie formatMovieSelecting = (FormatMovie)cboFormatID_Showtime.SelectedItem;
+                txtMovieName_Showtime.Text = formatMovieSelecting.MovieName;
+                txtScreenTypeName_Showtime.Text = formatMovieSelecting.ScreenTypeName;
+
+                cboCinemaID_Showtime.DataSource = null;
+                ScreenType screenType = ScreenTypeDAO.GetScreenTypeByName(formatMovieSelecting.ScreenTypeName);
+                cboCinemaID_Showtime.DataSource = CinemaDAO.GetCinemaByScreenTypeID(screenType.ID);
+                cboCinemaID_Showtime.DisplayMember = "Name";
+            }
         }
         private void txtShowtimeID_TextChanged(object sender, EventArgs e)
         {

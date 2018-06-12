@@ -24,10 +24,10 @@ namespace GUI.DAO
 			return null;
 		}
 
-		public static List<Cinema> GetCinema()
+		public static List<Cinema> GetCinemaByScreenTypeID(string screenTypeID)
 		{
 			List<Cinema> cinemaList = new List<Cinema>();
-			DataTable data = DataProvider.ExecuteQuery("SELECT * FROM dbo.PhongChieu");
+            DataTable data = DataProvider.ExecuteQuery("SELECT * FROM dbo.PhongChieu where idManHinh ='" + screenTypeID + "'");
 			foreach (DataRow item in data.Rows)
 			{
 				Cinema cinema = new Cinema(item);
