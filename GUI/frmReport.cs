@@ -57,11 +57,21 @@ namespace GUI
             adapter.Fill(dataSet, "DOANHTHU");
 
             this.rpViewer.LocalReport.ReportEmbeddedResource = "GUI.Report.rdlc";
+            this.rpViewer.RefreshReport();
 
             ReportDataSource rds = new ReportDataSource();
             rds.Name = "DataSetRevenue";
             rds.Value = dataSet.Tables[0];
             this.rpViewer.LocalReport.DataSources.Add(rds);
+
+            //set parameter cho report
+            ReportParameter[] reportParameter = new ReportParameter[2];
+            reportParameter[0] = new ReportParameter("FromDate");
+            reportParameter[0].Values.Add(FromDate.ToShortDateString());
+            reportParameter[1] = new ReportParameter("ToDate");
+            reportParameter[1].Values.Add(ToDate.ToShortDateString());
+
+            this.rpViewer.LocalReport.SetParameters(reportParameter);
         }
     }
 }

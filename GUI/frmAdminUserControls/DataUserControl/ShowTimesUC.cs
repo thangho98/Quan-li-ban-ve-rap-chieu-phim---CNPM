@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using GUI.DAO;
+﻿using GUI.DAO;
 using GUI.DTO;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace GUI.frmAdminUserControls.DataUserControl
 {
@@ -177,14 +171,6 @@ namespace GUI.frmAdminUserControls.DataUserControl
         {
             string movieName = txtSearchShowtime.Text;
             showtimeList.DataSource = ShowTimesDAO.SearchShowtimeByMovieName(movieName);
-        }
-        private void txtSearchShowtime_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnSearchShowtime.PerformClick();
-                e.SuppressKeyPress = true;
-            }
         }
     }
 }
