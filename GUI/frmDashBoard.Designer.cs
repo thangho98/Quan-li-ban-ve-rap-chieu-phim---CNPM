@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelX = new System.Windows.Forms.Label();
             this.btnSeller = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.lblAccountInfo = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labelX);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -48,17 +48,17 @@
             this.panel1.Size = new System.Drawing.Size(308, 69);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // labelX
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 69);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Dashboard";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX.Location = new System.Drawing.Point(0, 0);
+            this.labelX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelX.Name = "labelX";
+            this.labelX.Size = new System.Drawing.Size(308, 69);
+            this.labelX.TabIndex = 0;
+            this.labelX.Text = "Dashboard";
+            this.labelX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnSeller
             // 
@@ -117,7 +117,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmDashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Phần Mềm Quản Lí Bán vé";
+            this.Text = "Bảng Điều Khiển";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,7 +129,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSeller;
         private System.Windows.Forms.Button btnAdmin;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelX;
         private System.Windows.Forms.Label lblAccountInfo;
 		private System.Windows.Forms.Button btnChangePassword;
 	}

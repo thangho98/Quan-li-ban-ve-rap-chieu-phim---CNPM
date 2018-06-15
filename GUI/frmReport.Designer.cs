@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.rpViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
@@ -37,6 +36,7 @@
             // 
             this.rpViewer.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSetRevenue";
+            reportDataSource1.Value = null;
             this.rpViewer.LocalReport.DataSources.Add(reportDataSource1);
             this.rpViewer.LocalReport.ReportEmbeddedResource = "GUI.Report.rdlc";
             this.rpViewer.Location = new System.Drawing.Point(0, 0);
@@ -53,7 +53,7 @@
             this.Controls.Add(this.rpViewer);
             this.Name = "frmReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReport";
+            this.Text = "Báo Cáo";
             this.Load += new System.EventHandler(this.frmReport_Load);
             this.ResumeLayout(false);
 

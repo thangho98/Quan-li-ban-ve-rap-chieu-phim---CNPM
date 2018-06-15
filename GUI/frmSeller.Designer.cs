@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSeller));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelX = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpThoiGian = new System.Windows.Forms.DateTimePicker();
@@ -59,7 +59,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.labelX);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -67,18 +67,18 @@
             this.panel2.Size = new System.Drawing.Size(1027, 72);
             this.panel2.TabIndex = 9;
             // 
-            // label5
+            // labelX
             // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1027, 72);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Lịch Chiếu Phim";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX.ForeColor = System.Drawing.Color.Blue;
+            this.labelX.Location = new System.Drawing.Point(0, 0);
+            this.labelX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelX.Name = "labelX";
+            this.labelX.Size = new System.Drawing.Size(1027, 72);
+            this.labelX.TabIndex = 0;
+            this.labelX.Text = "Lịch Chiếu Phim";
+            this.labelX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -265,7 +265,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmSeller";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSeller";
+            this.Text = "Lịch Chiếu Phim";
             this.Load += new System.EventHandler(this.frmSeller_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -279,7 +279,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelX;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtpThoiGian;
@@ -295,8 +295,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

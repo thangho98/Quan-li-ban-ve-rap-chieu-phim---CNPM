@@ -34,7 +34,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelX = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -104,14 +104,14 @@
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "admin";
             // 
-            // label1
+            // labelX
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 382);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Design by: Nhóm 2 - SE104.I24";
+            this.labelX.AutoSize = true;
+            this.labelX.Location = new System.Drawing.Point(23, 382);
+            this.labelX.Name = "labelX";
+            this.labelX.Size = new System.Drawing.Size(287, 25);
+            this.labelX.TabIndex = 2;
+            this.labelX.Text = "Design by: Nhóm 2 - SE104.I24";
             // 
             // menuStrip1
             // 
@@ -150,7 +150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(359, 427);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelX);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -176,7 +176,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelX;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label3;

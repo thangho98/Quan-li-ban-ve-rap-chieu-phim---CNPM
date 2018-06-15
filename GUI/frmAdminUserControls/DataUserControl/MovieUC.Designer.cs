@@ -73,7 +73,7 @@
             this.panel47.Controls.Add(this.btnAddMovie);
             this.panel47.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel47.Location = new System.Drawing.Point(0, 278);
-            this.panel47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel47.Margin = new System.Windows.Forms.Padding(4);
             this.panel47.Name = "panel47";
             this.panel47.Size = new System.Drawing.Size(1548, 64);
             this.panel47.TabIndex = 10;
@@ -81,7 +81,7 @@
             // btnShowMovie
             // 
             this.btnShowMovie.Location = new System.Drawing.Point(328, 4);
-            this.btnShowMovie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShowMovie.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowMovie.Name = "btnShowMovie";
             this.btnShowMovie.Size = new System.Drawing.Size(100, 57);
             this.btnShowMovie.TabIndex = 3;
@@ -92,7 +92,7 @@
             // btnUpdateMovie
             // 
             this.btnUpdateMovie.Location = new System.Drawing.Point(220, 4);
-            this.btnUpdateMovie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateMovie.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateMovie.Name = "btnUpdateMovie";
             this.btnUpdateMovie.Size = new System.Drawing.Size(100, 57);
             this.btnUpdateMovie.TabIndex = 2;
@@ -103,7 +103,7 @@
             // btnDeleteMovie
             // 
             this.btnDeleteMovie.Location = new System.Drawing.Point(112, 4);
-            this.btnDeleteMovie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteMovie.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteMovie.Name = "btnDeleteMovie";
             this.btnDeleteMovie.Size = new System.Drawing.Size(100, 57);
             this.btnDeleteMovie.TabIndex = 1;
@@ -114,7 +114,7 @@
             // btnAddMovie
             // 
             this.btnAddMovie.Location = new System.Drawing.Point(4, 4);
-            this.btnAddMovie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddMovie.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMovie.Name = "btnAddMovie";
             this.btnAddMovie.Size = new System.Drawing.Size(100, 57);
             this.btnAddMovie.TabIndex = 0;
@@ -142,7 +142,7 @@
             this.dtgvMovie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvMovie.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvMovie.Location = new System.Drawing.Point(0, 342);
-            this.dtgvMovie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgvMovie.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvMovie.Name = "dtgvMovie";
             this.dtgvMovie.ReadOnly = true;
             this.dtgvMovie.Size = new System.Drawing.Size(1548, 296);
@@ -181,7 +181,7 @@
             // 
             // btnUpLoadPictureFilm
             // 
-            this.btnUpLoadPictureFilm.Location = new System.Drawing.Point(965, 231);
+            this.btnUpLoadPictureFilm.Location = new System.Drawing.Point(972, 231);
             this.btnUpLoadPictureFilm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpLoadPictureFilm.Name = "btnUpLoadPictureFilm";
             this.btnUpLoadPictureFilm.Size = new System.Drawing.Size(127, 41);

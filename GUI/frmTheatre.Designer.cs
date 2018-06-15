@@ -51,7 +51,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.lblPoint = new System.Windows.Forms.Label();
-            this.lblDiemTichLuy = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.chkCustomer = new System.Windows.Forms.CheckBox();
             this.grpLoaiVe = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -236,7 +236,7 @@
             this.pnCustomer.Controls.Add(this.label4);
             this.pnCustomer.Controls.Add(this.lblCustomerName);
             this.pnCustomer.Controls.Add(this.lblPoint);
-            this.pnCustomer.Controls.Add(this.lblDiemTichLuy);
+            this.pnCustomer.Controls.Add(this.label11);
             this.pnCustomer.Location = new System.Drawing.Point(6, 54);
             this.pnCustomer.Name = "pnCustomer";
             this.pnCustomer.Size = new System.Drawing.Size(387, 141);
@@ -330,14 +330,14 @@
             this.lblPoint.TabIndex = 17;
             this.lblPoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblDiemTichLuy
+            // label11
             // 
-            this.lblDiemTichLuy.AutoSize = true;
-            this.lblDiemTichLuy.Location = new System.Drawing.Point(4, 33);
-            this.lblDiemTichLuy.Name = "lblDiemTichLuy";
-            this.lblDiemTichLuy.Size = new System.Drawing.Size(143, 25);
-            this.lblDiemTichLuy.TabIndex = 16;
-            this.lblDiemTichLuy.Text = "Điểm Tích Lũy:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(4, 33);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(143, 25);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Điểm Tích Lũy:";
             // 
             // chkCustomer
             // 
@@ -558,7 +558,7 @@
             this.MaximizeBox = false;
             this.Name = "frmTheatre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Theatre";
+            this.Text = "Bán Vé";
             this.Load += new System.EventHandler(this.frmTheatre_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -617,7 +617,7 @@
         private System.Windows.Forms.Panel pnCustomer;
         private System.Windows.Forms.Label lblCustomerName;
         private System.Windows.Forms.Label lblPoint;
-        private System.Windows.Forms.Label lblDiemTichLuy;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblPlusPoint;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnFreeTicket;

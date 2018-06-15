@@ -182,6 +182,7 @@ namespace GUI
                 btn.BackColor = Color.White;
             }
             RestoreDefault();
+            this.OnLoad(new EventArgs());
         }
 
         private void RestoreDefault()
@@ -248,7 +249,7 @@ namespace GUI
                 }
             }
             RestoreDefault();
-            this.OnLoad(null);
+            this.OnLoad(new EventArgs());
         }
 
         private void rdoStudent_Click(object sender, EventArgs e)
@@ -325,7 +326,6 @@ namespace GUI
             else
             {
                 ShowOrHideLablePoint();
-                plusPoint = 0;
                 customer = null;
             }
         }
