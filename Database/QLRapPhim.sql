@@ -139,24 +139,50 @@ CREATE TABLE Ve
 )
 GO
 
-CREATE TRIGGER UTG_CheckDateLichChieu
+--Trigger
+CREATE TRIGGER UTG_INSERT_CheckDateLichChieu
 ON dbo.LichChieu
-FOR INSERT
+FOR INSERT, UPDATE
 AS
 BEGIN
-	DECLARE @count INT = 0
+	DECLARE @idDinhDang VARCHAR(50), @ThoiGianChieu DATE, @NgayKhoiChieu DATE, @NgayKetThuc DATE
 
-	SELECT @count = COUNT(*)
-	FROM Inserted LC, dbo.Phim P, dbo.DinhDangPhim DD
-	WHERE LC.idDinhDang = DD.id AND DD.idPhim = P.id AND (LC.ThoiGianChieu > P.NgayKetThuc OR LC.ThoiGianChieu < P.NgayKhoiChieu)
+	SELECT @idDinhDang = idDinhDang, @ThoiGianChieu = CONVERT(DATE, ThoiGianChieu) from INSERTED
 
-	IF (@count > 0)
+	SELECT @NgayKhoiChieu = P.NgayKhoiChieu, @NgayKetThuc = P.NgayKetThuc
+	FROM dbo.Phim P, dbo.DinhDangPhim DD
+	WHERE @idDinhDang = DD.id AND DD.idPhim = P.id
+
+	IF ( @ThoiGianChieu > @NgayKetThuc or @ThoiGianChieu < @NgayKhoiChieu)
 	BEGIN
 		ROLLBACK TRAN
+		Raiserror('Lịch Chiếu lớn hơn hoặc bằng Ngày Khởi Chiếu và nhỏ hơn hoặc bằng Ngày Kết Thúc',16,1)
+		Return
     END
 END
 GO
 
+CREATE TRIGGER UTG_CheckTimeLichChieu
+ON dbo.LichChieu
+FOR INSERT, UPDATE
+AS
+BEGIN
+	DECLARE @count INT = 0, @ThoiGianChieu DATETIME, @idPhong VARCHAR(50)
+
+	SELECT @idPhong = idPhong, @ThoiGianChieu = ThoiGianChieu from INSERTED
+
+	SELECT @count = COUNT(*)
+	FROM dbo.LichChieu LC, dbo.DinhDangPhim DD, dbo.Phim P
+	WHERE LC.idPhong = @idPhong AND LC.idDinhDang = DD.id AND DD.idPhim = P.id AND (@ThoiGianChieu >= LC.ThoiGianChieu AND @ThoiGianChieu <= DATEADD(MINUTE, P.ThoiLuong, LC.ThoiGianChieu))
+
+	IF (@count > 1)
+	BEGIN
+		ROLLBACK TRAN
+		Raiserror('Thời Gian Chiếu đã trùng với một lịch chiếu khác cùng Phòng Chiếu',16,1)
+		Return
+	END
+END
+GO
 
 --Stored Procedures
 --TÀI KHOẢN (Đổi mật khẩu & đăng nhập)
@@ -390,6 +416,16 @@ AS
 BEGIN
 	INSERT dbo.LichChieu ( id , idPhong , idDinhDang, ThoiGianChieu  , GiaVe , TrangThai )
 	VALUES  ( @id , @idPhong , @idDinhDang, @thoiGianChieu  , @giaVe , 0 )
+END
+GO
+
+CREATE PROC USP_UpdateShowtime
+@id VARCHAR(50), @idPhong VARCHAR(50), @idDinhDang VARCHAR(50), @thoiGianChieu DATETIME, @giaVe FLOAT
+AS
+BEGIN
+	UPDATE dbo.LichChieu 
+	SET idPhong = @idPhong, idDinhDang = @idDinhDang, ThoiGianChieu = @thoiGianChieu , GiaVe = @giaVe
+	WHERE id = @id
 END
 GO
 

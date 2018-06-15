@@ -54,8 +54,8 @@ namespace GUI.DAO
 
 		public static bool UpdateShowtime(string id, string cinemaID, string formatMovieID, DateTime time, float ticketPrice)
 		{
-			string command = string.Format("UPDATE dbo.LichChieu SET idPhong = '{0}', idDinhDang = '{1}', ThoiGianChieu = '{2}', GiaVe = {3} WHERE id = '{4}'", cinemaID, formatMovieID, time, ticketPrice, id);
-			int result = DataProvider.ExecuteNonQuery(command);
+			string command = string.Format("USP_UpdateShowtime @id , @idPhong , @idDinhDang , @thoiGianChieu , @giaVe ");
+			int result = DataProvider.ExecuteNonQuery(command, new object[] { id, cinemaID, formatMovieID, time, ticketPrice });
 			return result > 0;
 		}
 
