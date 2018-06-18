@@ -4,6 +4,9 @@ GO
 USE QLRP
 GO
 
+SET DATEFORMAT DMY
+GO
+
 --drop database QLRP
 
 CREATE TABLE NhanVien
