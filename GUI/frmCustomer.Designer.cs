@@ -87,7 +87,6 @@
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(302, 30);
             this.txtCustomerName.TabIndex = 2;
-            this.txtCustomerName.Text = "Nguyễn Văn A";
             // 
             // txtCustomerID
             // 
@@ -96,7 +95,6 @@
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(302, 30);
             this.txtCustomerID.TabIndex = 1;
-            this.txtCustomerID.Text = "KH01";
             // 
             // label4
             // 
